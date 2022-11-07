@@ -58,7 +58,8 @@
 
 .student_teacher_profile_right {
   width: 32%;
-  height: 25%;
+  /* height: 25%; */
+  align-self: flex-start;
   text-align: left;
   margin-left: 25px;
   border: 1px solid black;
