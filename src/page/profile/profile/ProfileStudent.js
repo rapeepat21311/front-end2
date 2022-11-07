@@ -9,7 +9,7 @@ import "./profileStudent.css";
 export default function ProfileStudent() {
   const { user } = useSelector((state) => ({ ...state }));
 
-  console.log("check ----> ", user.username);
+  // console.log("check ----> ", user._id);
   // const [user, setUser] = useContext(userContext);
   // useEffect(() => {
   //   //code
@@ -33,31 +33,31 @@ export default function ProfileStudent() {
         <div className="profile_student_left">
           <div className="student_profile_left">
             <h4>รหัสนักศึกษา </h4>
-            <p key={user.username}>{user.studentId}</p>
+            <p>{user.studentId}</p>
             <h4>เลขประจำตัวประชาชน </h4>
-            <p key={user.username}> {user.idNumber}</p>
+            <p> {user.idNumber}</p>
             <h4>ชื่อ(ภาษาไทย) </h4>
-            <p key={user.username}>{user.nameTh}</p>
+            <p>{user.nameTh}</p>
             <h4>ชื่อ(ภาษาอังกฤษ) </h4>
-            <p key={user.username}>{user.nameEng}</p>
+            <p>{user.nameEng}</p>
             <h4>คณะ </h4>
-            <p key={user.username}>{user.faculty}</p>
+            <p>{user.faculty}</p>
             <h4>สาขา </h4>
-            <p key={user.username}>{user.major}</p>
+            <p>{user.major}</p>
           </div>
           <div className="student_profile_right">
             <h4>Email </h4>
-            <p key={user.username}>{user.email}</p>
+            <p>{user.email}</p>
             <h4>เบอร์มือถือ</h4>
-            <p key={user.username}>{user.phoneNumber}</p>
+            <p>{user.phoneNumber}</p>
             <h4>ระดับการศึกษา</h4>
-            <p key={user.username}>{user.educationLevel}</p>
+            <p>{user.educationLevel}</p>
             <h4>ปีการศึกษาที่เข้า</h4>
-            <p key={user.username}>{user.year}</p>
+            <p>{user.year}</p>
             <h4>จบการศึกษาจาก</h4>
-            <p key={user.username}>{user.oldSchool}</p>
+            <p>{user.oldSchool}</p>
             <h4>สถานภาพ</h4>
-            <p key={user.username}>{user.status}</p>
+            <p>{user.status}</p>
           </div>
         </div>
       </div>
@@ -65,13 +65,13 @@ export default function ProfileStudent() {
         <h2>ข้อมูลอาจารย์ที่ปรึกษา</h2>
         <div className="student_teacher_profile_text">
           <h4>อาจารย์ที่ปรึกษา</h4>
-          <p key={user.username}>{user.advisor}</p>
+          <p>{user.advisor}</p>
           <h4>สังกัดอาจารย์ที่ปรึกษา</h4>
-          <p key={user.username}> {user.aa}</p>
+          <p> {user.aa}</p>
           <h4>เบอร์โทรศัพท์อาจารย์ที่ปรึกษา</h4>
-          <p key={user.username}>{user.phone_number_advisor}</p>
+          <p>{user.phone_number_advisor}</p>
           <h4>อีเมล์อาจารย์ที่ปรึกษา</h4>
-          <p key={user.username}>{user.email_advisor}</p>
+          <p>{user.email_advisor}</p>
         </div>
       </div>
     </div>

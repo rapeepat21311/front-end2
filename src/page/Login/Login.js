@@ -31,14 +31,14 @@ function Login() {
 
   useEffect(() => {
     if (user.username) {
-      navigate("/grade");
-      console.log(user);
+      navigate("/");
+      // console.log(user);
     }
   }, [user]);
 
   function handleSubmit(e) {
     e?.preventDefault();
-    console.log(loginData);
+    // console.log(loginData);
 
     login(loginData)
       .then((res) => {
@@ -46,12 +46,13 @@ function Login() {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
         });
-        console.log(JSON.stringify(res?.data));
+        // console.log(JSON.stringify(res?.data));
         alert(res.data);
         dispatch({
           type: userReducerConst.LOG_IN,
           payload: {
             token: res.data.token,
+            _id: res.data.payload.user._id,
             username: res.data.payload.user.username,
             role: res.data.payload.user.role,
             studentId: res.data.payload.user.studentId,
