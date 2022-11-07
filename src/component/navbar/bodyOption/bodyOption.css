@@ -1,0 +1,28 @@
+.bodyOption {
+  display: flex;
+  justify-content: stretch;
+}
+
+.bodyOption_title{
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.bodyOption_icon{
+  object-fit: contain;
+  width: 25px !important;
+  height: 50px !important;
+  margin-left: 20px;
+}
+
+select {
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  
+  background-color: wheat; 
+  cursor: pointer;
+  height: 30px;
+  color: black;
+}

@@ -1,0 +1,36 @@
+.headerOptions{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: rgba(255, 255, 255, 0.596);
+    cursor: pointer;
+    margin-top: 35px;
+}
+
+.headerOptions:hover {
+    color: black;
+}
+
+.headerOption_title { 
+    font-size: 14px;
+    /* font-weight: 100; */
+}
+
+.headerOption_icon {
+    object-fit: contain; 
+    width: 25px !important;
+     height: 50px !important;
+}
+
+select {
+   font-size: 12px;
+   padding: 5px;
+   border-radius: 10px;
+   display: flex;
+   margin-right: 20px;
+   margin-top: 30px;
+   background-color: rgba(247, 244, 239, 0.404); 
+   cursor: pointer;
+   height: 30px;
+   color: black;
+}

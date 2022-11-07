@@ -1,0 +1,43 @@
+import React, { useState } from "react";
+import Body from "../home";
+import Header from "../../component/Header/Header";
+import Footer from "../../component/Footer/Footer";
+import "./Profile.css";
+
+const tabDefault = [
+  {
+    tabName: "studentData",
+    tabLabel: "ประวัตินักศึกษา",
+    isActive: true,
+  },
+  {
+    tabName: "paratoon",
+    tabLabel: "ภาระทุน",
+    isActive: false,
+  },
+  {
+    tabName: "Events",
+    tabLabel: "ชั่วโมงจิตอาสา",
+    isActive: false,
+  },
+];
+
+function profile() {
+  
+  const [navTab, setNavTab] = useState(tabDefault);
+  return (
+    <>
+      <Header />
+      <div className="profile">
+        <div className="profile_title">
+          <h1>ประวัตินักศึกษา</h1>
+        </div>
+
+        <div className="profile_tab_container"></div>
+      </div>
+      <Footer />
+    </>
+  );
+}
+
+export default profile;
