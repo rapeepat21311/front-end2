@@ -42,18 +42,13 @@ function Header() {
           <HomeOutlinedIcon />
         </Link>
         <h3>
-          <Link className="link" to="/grade">
-            ผลการเรียน
-          </Link>
-        </h3>
-        <h3>
           <Link className="link" to="/profile">
             ประวัตินักศึกษา
           </Link>
         </h3>
         <h3>
-          <Link className="link" to="/capital">
-            ภาระทุน
+          <Link className="link" to="/result">
+            ผลการศึกษา
           </Link>
         </h3>
         <h3>
@@ -67,8 +62,8 @@ function Header() {
           </Link>
         </h3>
         <h3>
-          <Link className="link" to="/review">
-            ตรวจสอบจบ
+          <Link className="link" to="/perform">
+            ผลงาน
           </Link>
         </h3>
       </div>
