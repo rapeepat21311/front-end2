@@ -9,11 +9,10 @@ import Admin from "../page/privateAdmin";
 //Page User
 import Home from "../page/home";
 import Login from "../page/Login/Login";
-import Grade from "../page/grade/grade";
-import Capital from "../page/capital/capital";
+import Eport from "../page/eport/eport";
+import Perform from "../page/perform/perform";
 import Classl from "../page/class/class";
 import Result from "../page/result/result";
-import Review from "../page/review/review";
 import News from "../page/news/news";
 import NotFound from "../page/notFound";
 import Profile from "../page/profile/index";
@@ -61,6 +60,7 @@ function PrivateRoute() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />
+<<<<<<< HEAD
         <Route
           path="/grade"
           element={
@@ -93,9 +93,21 @@ function PrivateRoute() {
             </UserRouter>
           }
         />
+=======
+
+        <Route path="/eport" element={<Eport />} />
+
+        <Route path="/perform" element={<Perform />} />
+
+        <Route path="/classl" element={<Classl />} />
+
+        <Route path="/result" element={<Result />} />
+
+>>>>>>> main
         <Route
-          path="/review"
+          path="/eport"
           element={
+<<<<<<< HEAD
             <UserRouter>
               <Review />
             </UserRouter>
@@ -107,6 +119,11 @@ function PrivateRoute() {
             <UserRouter>
               <News />
             </UserRouter>
+=======
+            <AdminRoutes>
+              <Eport />
+            </AdminRoutes>
+>>>>>>> main
           }
         />
         <Route

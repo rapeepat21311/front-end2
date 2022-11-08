@@ -122,13 +122,15 @@ justify-content: center;
   margin:  20px 0px;
   width: 304px;
   height: 200px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
 .card_container h3 {
   text-align:center ;
   font-size: 17px;
   color: #999999;
-  align-items:flex-end;
 }
 
 .card_container h3:hover{

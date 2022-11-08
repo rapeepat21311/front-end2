@@ -1,0 +1,222 @@
+  .result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #e3f5fa 4%,
+        #bff5c8 12.25%,
+        #95e0fd 31.25%,
+        #b6f8d1 50%
+      );
+  }
+
+  .result_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 50%;
+    
+  }
+
+  .result_title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+    position: absolute;
+    width: 185px;
+    height: 40px;
+    left: 240px;
+    top: 104px;
+    height: 100px; 
+    width: 100%;
+    font-size: 36px
+  }
+
+  .result_header{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 24px;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 960px;
+    height: 128px;
+    left: 240px;
+    top: 168px;
+    background-color: bisque;
+  }
+
+  .result_student_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    flex: 1;
+    width: 218px;
+    height: 128px;
+  }
+
+  .result_group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 13px;
+    width: 468px;
+    height: 128px;
+    /* background-color: #b6f8d1; */
+    
+    
+  }
+  .result_group_row{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    width: 319px;
+    height: 48px;
+    justify-content: flex-start;
+  }
+
+  .result_group_section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+
+
+  .result_group_text_label{
+    color: #0A0C12;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+  }
+
+  .result_group_text_highlight{
+    color: #0D47A1;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .result_student_info h1{
+    display: flex;
+    font-size: 28px;
+  }
+
+  .result_profile{
+    border:3px solid white;
+    border-radius: 67px;
+    width: 128px;
+    height: 128px;
+  }
+
+  .grade_sum{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* background-color: #0A0C12; */
+
+  }
+  .grade_sum_left{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #0D47A1;
+    width: 304px;
+    height: 126px;
+    text-align: left;
+    margin-left: 25px;
+    border: 1px solid black;
+    border-radius: 16px;
+    background-color: rgba(186, 186, 186, 0.322);
+  }
+
+  .grade_sum_right{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 304px;
+    height: 126px;
+    text-align: right;
+    margin-left: 25px;
+    border: 1px solid black;
+    border-radius: 16px;
+    background-color: rgba(186, 186, 186, 0.322);
+  }
+
+
+
+
+
+  .grade_text_left{
+    width: 121px;
+    height: 24px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    font-family: 'FC Iconic';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #0A0C12;
+  }
+  
+
+  .grade_text_right{
+    width: 121px;
+    height: 24px;
+    margin-right: 15px;
+    font-family: 'FC Iconic';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #0A0C12;
+  }
+
+
+  .table_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  table {
+    border: 2px solid forestgreen;
+    width: 800px;
+    height: 200px;
+  }
+    
+  th {
+    border-bottom: 1px solid black;
+  }
+    
+  td {
+    text-align: center;
+  }
+
+  
