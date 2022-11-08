@@ -16,7 +16,9 @@ function Header() {
   const navigate = useNavigate();
   const { user } = useSelector((state) => ({ ...state }));
 
-  const [data, setData] = useState([]);
+  const [profileBar, setProfileBar] = useState(false);
+
+  const showLoginLogOut = () => setProfileBar(!profileBar);
 
   const Login = () => {
     navigate("/login");
@@ -70,14 +72,24 @@ function Header() {
       </div>
 
       <div className="header_right">
-        <h1>
+        <h1 onClick={showLoginLogOut}>
           <AccountCircleIcon />
         </h1>
 
         {user !== null ? (
-          <p onClick={Logout}>Log out</p>
+          <p
+            className={profileBar ? "log_out_active" : "log_out"}
+            onClick={Logout}
+          >
+            Log out
+          </p>
         ) : (
-          <p onClick={Login}>Log in</p>
+          <p
+            className={profileBar ? "log_out_active" : "log_out"}
+            onClick={Login}
+          >
+            Log in
+          </p>
         )}
       </div>
     </div>

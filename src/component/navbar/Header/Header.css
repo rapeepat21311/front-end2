@@ -3,12 +3,12 @@
   /* position: fixed; */
   border-bottom: 0.5px solid lightgray;
   width: 100%;
-  top : 0;
+  top: 0;
   bottom: 0;
-  left:  0;
+  left: 0;
   right: 0;
   z-index: 999;
-  
+
   background: linear-gradient(102deg, #e2b3da, #47e0d9, #d492ce, #040104);
   background-size: 1000% 100%;
 
@@ -96,8 +96,6 @@
   padding: 10px;
 }
 
-
-
 .link:hover {
   color: #040104;
 }
@@ -107,9 +105,20 @@
   align-items: center;
   justify-content: center;
   margin-right: 16px;
+  cursor: pointer;
 }
 
-.log_out  {
-  margin-right: 20px;
-  color: white;
+.header_right p:hover {
+    color: white;
+}
+
+.log_out {
+  position: absolute;
+  right: -100%;
+  transition: 850ms;
+}
+
+.log_out_active {
+  right: 0;
+  transition: 350ms;
 }
