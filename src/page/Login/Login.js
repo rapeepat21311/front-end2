@@ -34,25 +34,16 @@ function Login() {
     }
   };
 
-<<<<<<< HEAD
   // useEffect(() => {
   //   if (user.username) {
   //     navigate("/grade");
   //     console.log(user);
   //   }
   // }, [user, navigate]);
-=======
-  useEffect(() => {
-    if (user.username) {
-      navigate("/");
-      // console.log(user);
-    }
-  }, [user]);
->>>>>>> main
 
   function handleSubmit(e) {
     e?.preventDefault();
-    // console.log(loginData);
+    console.log(loginData);
 
     login(loginData)
       .then((res) => {
@@ -61,16 +52,11 @@ function Login() {
           withCredentials: true,
         });
         // console.log(JSON.stringify(res?.data));
-<<<<<<< HEAD
         alert(`Login Success ${res.data.payload.user.nameTh}`);
-=======
-        alert(res.data);
->>>>>>> main
         dispatch({
           type: userReducerConst.LOG_IN,
           payload: {
             token: res.data.token,
-            _id: res.data.payload.user._id,
             username: res.data.payload.user.username,
             role: res.data.payload.user.role,
             studentId: res.data.payload.user.studentId,

@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 
 import { userReducerConst } from "../component/reducer/consUserRed";
 import AdminRoutes from "./AdminRoutes";
@@ -22,7 +27,6 @@ import { useDispatch } from "react-redux";
 function PrivateRoute() {
   const dispatch = useDispatch();
   const idToken = localStorage.token;
-  console.log("===>", idToken);
   if (idToken) {
     currentUser(idToken)
       .then((res) => {
@@ -59,41 +63,8 @@ function PrivateRoute() {
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
+
         <Route path="/" element={<Home />} />
-<<<<<<< HEAD
-        <Route
-          path="/grade"
-          element={
-            <UserRouter>
-              <Grade />
-            </UserRouter>
-          }
-        />
-        <Route
-          path="/capital"
-          element={
-            <UserRouter>
-              <Capital />
-            </UserRouter>
-          }
-        />
-        <Route
-          path="/classl"
-          element={
-            <UserRouter>
-              <Classl />
-            </UserRouter>
-          }
-        />
-        <Route
-          path="/result"
-          element={
-            <UserRouter>
-              <Result />
-            </UserRouter>
-          }
-        />
-=======
 
         <Route path="/eport" element={<Eport />} />
 
@@ -103,29 +74,17 @@ function PrivateRoute() {
 
         <Route path="/result" element={<Result />} />
 
->>>>>>> main
         <Route
           path="/eport"
           element={
-<<<<<<< HEAD
-            <UserRouter>
-              <Review />
-            </UserRouter>
-          }
-        />
-        <Route
-          path="/news"
-          element={
-            <UserRouter>
-              <News />
-            </UserRouter>
-=======
             <AdminRoutes>
               <Eport />
             </AdminRoutes>
->>>>>>> main
           }
         />
+
+        <Route path="/news" element={<News />} />
+
         <Route
           path="/profile"
           element={
@@ -134,7 +93,6 @@ function PrivateRoute() {
             </UserRouter>
           }
         />
-
         <Route
           path="/admin-page"
           element={
