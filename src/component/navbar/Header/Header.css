@@ -68,6 +68,8 @@
   align-items: center;
   justify-content: center;
   color: wheat;
+  margin-left: 25px;
+  /* background-color: red; */
 }
 
 .Header_center {
@@ -75,6 +77,8 @@
   align-items: center;
   justify-content: center;
   margin: auto;
+  /* background-color: purple; */
+  padding: 0;
 }
 
 /* h3 {
@@ -102,8 +106,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
   margin-right: 16px;
 }
 
-
+.log_out  {
+  margin-right: 20px;
+  color: white;
+}

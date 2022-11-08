@@ -6,7 +6,7 @@ export function userRedu(state = null, action) {
       return action.payload;
     case userReducerConst.LOG_OUT:
       localStorage.clear();
-      return action.payload;
+      return null;
     default:
       return state;
   }

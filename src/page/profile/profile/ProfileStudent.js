@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from "react";
+import React from "react"; // { useContext, useEffect }
 import { useSelector } from "react-redux";
 
-import userContext from "../../../context/userContext";
-import { listUser, readUser } from "../../../route/function/user";
+// import userContext from "../../../context/userContext";
+// import { listUser, readUser } from "../../../route/function/user";
 
 import "./profileStudent.css";
 

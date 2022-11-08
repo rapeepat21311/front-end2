@@ -1,9 +1,14 @@
-import React, { useState, useEffect, useCallback, useContext } from "react";
+import React, {
+  useState,
+  // useEffect,
+  // , useCallback
+  // useContext,
+} from "react";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 
-import userContext from "../../context/userContext";
-import { payloadDocUser } from "./user";
+// import userContext from "../../context/userContext";
+// import { payloadDocUser } from "./user";
 import { userReducerConst } from "../../component/reducer/consUserRed";
 import { login } from "../../route/function/auth";
 
@@ -16,25 +21,25 @@ function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const [user, setUser] = useContext(userContext);
+  // const [user, setUser] = useContext(userContext);
 
   const [loginData, setLoginData] = useState(defaultLoginData);
 
   // Check Role
   const roleBaseRedirect = (role) => {
     if (role === "admin") {
-      navigate("/");
+      navigate("/admin-page");
     } else {
-      navigate("/profile");
+      navigate("/");
     }
   };
 
-  useEffect(() => {
-    if (user.username) {
-      navigate("/grade");
-      console.log(user);
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user.username) {
+  //     navigate("/grade");
+  //     console.log(user);
+  //   }
+  // }, [user, navigate]);
 
   function handleSubmit(e) {
     e?.preventDefault();
@@ -46,8 +51,8 @@ function Login() {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
         });
-        console.log(JSON.stringify(res?.data));
-        alert(res.data);
+        // console.log(JSON.stringify(res?.data));
+        alert(`Login Success ${res.data.payload.user.nameTh}`);
         dispatch({
           type: userReducerConst.LOG_IN,
           payload: {
@@ -82,18 +87,6 @@ function Login() {
         dispatch({ type: userReducerConst.LOG_OUT });
         // console.log(err);
       });
-    // console.log("handleClick LoginData ----> " + loginData);
-    // const userCheck = userData.find(
-    //   (item) =>
-    //     item.username === loginData.username &&
-    //     item.password === loginData.password
-    // );
-    // console.log("userCheck --->" + userCheck);
-    // if (userCheck !== undefined) {
-    //   setUser(userCheck);
-    // } else {
-    //   console.log("checkUserData --->");
-    // }
   }
 
   function chageHandler(e) {
@@ -128,7 +121,6 @@ function Login() {
           onChange={chageHandler}
         />
         <button type="submit">Login</button>
-        {/* <p>{errMsg}</p> */}
       </form>
     </div>
   );

@@ -1,16 +1,11 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  BrowserRouter,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { userReducerConst } from "../component/reducer/consUserRed";
 import AdminRoutes from "./AdminRoutes";
 import UserRouter from "./userRouter";
 // Page Andmin
-
+import Admin from "../page/privateAdmin";
 //Page User
 import Home from "../page/home";
 import Login from "../page/Login/Login";
@@ -28,6 +23,7 @@ import { useDispatch } from "react-redux";
 function PrivateRoute() {
   const dispatch = useDispatch();
   const idToken = localStorage.token;
+  console.log("===>", idToken);
   if (idToken) {
     currentUser(idToken)
       .then((res) => {
@@ -64,34 +60,70 @@ function PrivateRoute() {
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-
         <Route path="/" element={<Home />} />
-
-        <Route path="/grade" element={<Grade />} />
-
-        <Route path="/capital" element={<Capital />} />
-
-        <Route path="/classl" element={<Classl />} />
-
-        <Route path="/result" element={<Result />} />
-
+        <Route
+          path="/grade"
+          element={
+            <UserRouter>
+              <Grade />
+            </UserRouter>
+          }
+        />
+        <Route
+          path="/capital"
+          element={
+            <UserRouter>
+              <Capital />
+            </UserRouter>
+          }
+        />
+        <Route
+          path="/classl"
+          element={
+            <UserRouter>
+              <Classl />
+            </UserRouter>
+          }
+        />
+        <Route
+          path="/result"
+          element={
+            <UserRouter>
+              <Result />
+            </UserRouter>
+          }
+        />
         <Route
           path="/review"
           element={
-            <AdminRoutes>
+            <UserRouter>
               <Review />
-            </AdminRoutes>
+            </UserRouter>
           }
         />
-
-        <Route path="/news" element={<News />} />
-
+        <Route
+          path="/news"
+          element={
+            <UserRouter>
+              <News />
+            </UserRouter>
+          }
+        />
         <Route
           path="/profile"
           element={
             <UserRouter>
               <Profile />
             </UserRouter>
+          }
+        />
+
+        <Route
+          path="/admin-page"
+          element={
+            <AdminRoutes>
+              <Admin />
+            </AdminRoutes>
           }
         />
         <Route path="*" element={<NotFound />} />

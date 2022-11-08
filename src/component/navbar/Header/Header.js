@@ -1,33 +1,29 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./Header.css";
-// import "../HeaderOption/headerOption.css";
 
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
-// import HeaderOptions from "../HeaderOption/headerOption";
-// import grade from "../../page/grade";
-
+import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { defaultUser } from "../../../page/Login/user";
-import userContext from "../../../context/userContext";
+
 import { userReducerConst } from "../../reducer/consUserRed";
 
 import { useDispatch } from "react-redux";
 
 function Header() {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { user } = useSelector((state) => ({ ...state }));
 
-  const [open, setOpen] = useState(false);
+  const [data, setData] = useState([]);
 
-  const [user, setUser] = useContext(userContext);
-
-  const handleOpen = () => {
-    setOpen(!open);
+  const Login = () => {
+    navigate("/login");
   };
 
   const Logout = () => {
+    navigate("/");
     dispatch({ type: userReducerConst.LOG_OUT, payload: null });
   };
 
@@ -74,22 +70,15 @@ function Header() {
       </div>
 
       <div className="header_right">
-        <a onClick={handleOpen}>
+        <h1>
           <AccountCircleIcon />
-        </a>
-        {open ? (
-          <ul>
-            <Link to="/login" onClick={Logout}>
-              Log Out
-            </Link>
-          </ul>
-        ) : (
-          <div></div>
-        )}
+        </h1>
 
-        {/* <Link to="/login">
-          <HeaderOptions Icon={AccountCircleIcon} />
-        </Link> */}
+        {user !== null ? (
+          <p onClick={Logout}>Log out</p>
+        ) : (
+          <p onClick={Login}>Log in</p>
+        )}
       </div>
     </div>
   );
