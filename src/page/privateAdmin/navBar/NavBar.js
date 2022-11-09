@@ -40,7 +40,7 @@ function NavBar() {
             <></>
           ) : (
             <>
-              <h2>sub Menu</h2>
+              <h2>ผู้ใช้งาน</h2>
               <h2>sub Menu</h2>
               <h2>sub Menu</h2>
               <h2>sub Menu</h2>

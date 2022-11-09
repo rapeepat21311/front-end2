@@ -19,8 +19,8 @@ function LoadingRedirect() {
 
   return (
     <div>
-      <h1>No Permission</h1>
-      <p>Redirect in {count}</p>
+      <h1>ยังไม่สามารถเข้าหน้านี้ได้กรุณา ล็อคอิน</h1>
+      <p>ระบบจะพาท่านไปสู่หน้าแรกใน {count}s</p>
     </div>
   );
 }
