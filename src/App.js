@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import "./App.css";
-import UserContext from "./context/userContext";
+import NavigateContext from "./context/userContext";
 
 import PrivateRoute from "./route/PrivateRoute";
 
+const defaultPath = { path: "/admin-page", menulist: "Admin" };
+
 function App() {
-  const [user, setUser] = useState([]);
+  const [currentPath, setCurrentPath] = useState({
+    path: "/admin-page/list-user",
+    menulist: "ผู้ใช้งาน",
+  });
   return (
     <div className="App">
-      <UserContext.Provider value={[user, setUser]}>
+      <NavigateContext.Provider value={{ currentPath, setCurrentPath }}>
         <PrivateRoute />
-      </UserContext.Provider>
+      </NavigateContext.Provider>
     </div>
   );
 }

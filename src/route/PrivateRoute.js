@@ -1,16 +1,13 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  BrowserRouter,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { userReducerConst } from "../component/reducer/consUserRed";
 import AdminRoutes from "./AdminRoutes";
 import UserRouter from "./userRouter";
 // Page Andmin
 import Admin from "../page/privateAdmin";
+import Layout from "../page/privateAdmin/navBar/NavBar";
+import ListUser from "../page/privateAdmin/component/ListUser";
 //Page User
 import Home from "../page/home";
 import Login from "../page/Login/Login";
@@ -77,9 +74,9 @@ function PrivateRoute() {
         <Route
           path="/eport"
           element={
-            <AdminRoutes>
+            <UserRouter>
               <Eport />
-            </AdminRoutes>
+            </UserRouter>
           }
         />
 
@@ -93,14 +90,30 @@ function PrivateRoute() {
             </UserRouter>
           }
         />
+        {/* Router Admin */}
         <Route
           path="/admin-page"
           element={
             <AdminRoutes>
-              <Admin />
+              <Layout>
+                <Admin />
+              </Layout>
             </AdminRoutes>
           }
         />
+
+        <Route
+          path="/admin-page/list-user"
+          element={
+            <AdminRoutes>
+              <Layout>
+                <ListUser />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+
+        {/* Check default Path */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

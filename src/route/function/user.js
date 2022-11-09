@@ -36,22 +36,11 @@ import axios from "axios";
 */
 
 export const listUser = async (authtoken) => {
-  return await axios
-    .get(
-      "localhost:8080/api/users",
-      {},
-      {
-        headers: {
-          authtoken,
-        },
-      }
-    )
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((err) => {
-      console.log("CHECK FALSEBACK ---->", err);
-    });
+  return await axios.get(process.env.REACT_APP_API + "/users", {
+    headers: {
+      authtoken,
+    },
+  });
 };
 
 export const readUser = async (authtoken) => {

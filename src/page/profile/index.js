@@ -13,19 +13,16 @@ const navTab = [
     tabName: "studentData",
     tabLabel: "ประวัตินักศึกษา",
     component: <ProfileStudent />,
-    // isActive: true,
   },
   {
     tabName: "paratoonData",
     tabLabel: "ภาระทุน",
     component: <Paratoon />,
-    // isActive: false,
   },
   {
     tabName: "Data",
     tabLabel: "ประวัตินักศึกษา",
     component: <Events />,
-    // isActive: false,
   },
 ];
 

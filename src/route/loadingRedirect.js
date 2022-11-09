@@ -12,7 +12,7 @@ function LoadingRedirect() {
       setCount((cC) => --cC);
     }, 1000);
 
-    count === 0 && navigate("/");
+    count === 0 && navigate("/login");
 
     return () => clearInterval(timeCurrentRedirec);
   }, [count, navigate]);
