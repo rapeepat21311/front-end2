@@ -1,11 +1,15 @@
 import React from "react";
 import Header from "../../component/navbar/Header/Header";
 
+import "./class.css"
+
 function classl() {
   return (
     <div>
       <Header />
-      <h1>This class</h1>
+      <div className="classl">
+
+      </div>
     </div>
   );
 }

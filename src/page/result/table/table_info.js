@@ -1,9 +1,9 @@
 import React from "react";
-import { tableList } from "../../tableList";
 
-function Table() {
-    return (
-      <div className="Table">
+function Table({ dataList = [] }) {
+  return (
+    <div className="general-table">
+      {!!dataList.length&&
         <table>
           <tr>
             <th>no</th>
@@ -12,20 +12,21 @@ function Table() {
             <th>หน่วยกิต</th>
             <th>เกรด</th>
           </tr>
-          {tableList.map((val, key) => {
+          {dataList.map((val, i) => {
             return (
-              <tr key={key}>
-                <td>{val.no}</td>
+              <tr key={i + ""}>
+                <td>{i + 1}</td>
                 <td>{val.รหัสวิชา}</td>
                 <td>{val.ชื่อรายวิชา}</td>
                 <td>{val.หน่วยกิต}</td>
                 <td>{val.เกรด}</td>
               </tr>
-            )
+            );
           })}
         </table>
-      </div>
-    );
-  }
-    
-  export default Table;
+      }
+    </div>
+  );
+}
+
+export default Table;

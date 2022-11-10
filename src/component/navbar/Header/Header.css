@@ -112,7 +112,7 @@
     color: white;
 }
 
-.log_out {
+/* .log_out {
   position: absolute;
   right: -100%;
   transition: 850ms;
@@ -121,4 +121,4 @@
 .log_out_active {
   right: 0;
   transition: 350ms;
-}
+} */
