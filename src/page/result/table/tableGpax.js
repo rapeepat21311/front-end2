@@ -4,7 +4,7 @@ import { TableGpaxList } from "../../../tableList";
 function TableGpax() {
 
     return (
-      <div className="Table" style={{display:"flex",flexDirection:"row",width:"475px"}}>
+      <div className="Table">
         
           {TableGpaxList.map((val, i) => {
             return (

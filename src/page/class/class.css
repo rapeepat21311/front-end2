@@ -14,3 +14,43 @@
         #b6f8d1 50%
       );
   }
+
+
+  .classl_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* margin-left: 50%; */
+    background-color: darkgoldenrod;
+    
+  }
+
+  .classl_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    width: 960px;
+
+    font-size: 25px;
+    background-color:red;
+  }
+
+  .classl_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    width: 960px;
+    /* height: 128px; */
+    /* left: 240px; */
+    /* top: 168px; */
+    background-color: bisque;
+  }
+  .classl_header p{
+    cursor: pointer;
+  }

@@ -4,7 +4,7 @@ import React from "react";
 function TableGpa({dataList=[]}) {
 
     return (
-      <div className="result-vertical-table" style={{display:"flex",flexDirection:"row",width:"475px"}}>
+      <div className="result-vertical-table">
         
           {dataList.map((val, i) => {
             return (
