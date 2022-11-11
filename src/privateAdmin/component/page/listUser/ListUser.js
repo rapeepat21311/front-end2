@@ -1,17 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { listUser } from "../../../route/function/user";
-import NavBar from "../navBar/NavBar";
+import { Button, Modal } from "antd";
+import { listUser } from "../../../../route/function/user";
 
 function ListUser() {
   const { user } = useSelector((state) => ({ ...state }));
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [data, setData] = useState([]);
 
   useEffect(() => {
     loadData(user.token);
-    console.log(data._id);
-  }, []);
+  }, [user.token]);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   const loadData = (authtoken) => {
     listUser(authtoken)
@@ -35,7 +47,8 @@ function ListUser() {
             <th scope="col">สาขาวิชา</th>
             <th scope="col">สถานภาพ</th>
             <th scope="col">สถานะ</th>
-            <th scope="col"></th>
+            <th scope="col">active</th>
+            <th scope="col">แก้ไข</th>
           </tr>
         </thead>
         <tbody>
@@ -55,6 +68,16 @@ function ListUser() {
           })}
         </tbody>
       </table>
+      <Modal
+        title="Basic Modal"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Modal>
     </div>
   );
 }
