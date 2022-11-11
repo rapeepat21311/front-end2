@@ -20,6 +20,7 @@ import NotFound from "../page/notFound";
 import Profile from "../page/profile/index";
 import { currentUser } from "./function/auth";
 import { useDispatch } from "react-redux";
+import EditUser from "../privateAdmin/component/page/editUser/EditUser";
 
 function PrivateRoute() {
   const dispatch = useDispatch();
@@ -108,6 +109,17 @@ function PrivateRoute() {
             <AdminRoutes>
               <Layout>
                 <ListUser />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+
+        <Route
+          path="/admin-page/edit-user"
+          element={
+            <AdminRoutes>
+              <Layout>
+                <EditUser />
               </Layout>
             </AdminRoutes>
           }
