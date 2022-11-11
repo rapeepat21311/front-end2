@@ -5,9 +5,9 @@ import { userReducerConst } from "../component/reducer/consUserRed";
 import AdminRoutes from "./AdminRoutes";
 import UserRouter from "./userRouter";
 // Page Andmin
-import Admin from "../page/privateAdmin";
-import Layout from "../page/privateAdmin/navBar/NavBar";
-import ListUser from "../page/privateAdmin/component/ListUser";
+import Admin from "../privateAdmin";
+import Layout from "../privateAdmin/navBar/NavBar";
+import ListUser from "../privateAdmin/component/page/listUser/ListUser";
 //Page User
 import Home from "../page/home";
 import Login from "../page/Login/Login";

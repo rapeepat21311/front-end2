@@ -1,5 +1,3 @@
-import ListUser from "../component/ListUser";
-
 export const pageComponentMenuList1 = [
   { path: "/admin-page", menulist: "Admin" },
   {

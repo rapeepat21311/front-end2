@@ -2,8 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import "./index.css";
-import NavBar from "./navBar/NavBar";
-
 function Index() {
   const { user } = useSelector((state) => ({ ...state }));
 

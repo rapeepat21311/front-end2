@@ -1,13 +1,13 @@
-import React, { useState, useContext, Children } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import "./index.css";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import CloseIcon from "@mui/icons-material/Close";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { pageComponentMenuList1 } from "../componentMapPage/AdminPage";
-import navigateContext from "../../../context/userContext";
+// import navigateContext from "../../context/userContext";
 
 function NavBar({ children }) {
   const navigate = useNavigate();
