@@ -21,7 +21,7 @@ const navTab = [
   },
   {
     tabName: "Data",
-    tabLabel: "ประวัตินักศึกษา",
+    tabLabel: "ชั่วโมงกิจกรรมจิตอาสา",
     component: <Events />,
   },
 ];
