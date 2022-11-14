@@ -1,29 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Button, Modal } from "antd";
-import { listUser } from "../../../../route/function/user";
+import { listUser, updateUser } from "../../../../route/function/user";
+import { EditOutlined } from "@ant-design/icons";
+import { Link, useNavigate } from "react-router-dom";
 
 function ListUser() {
   const { user } = useSelector((state) => ({ ...state }));
+  const navigate = useNavigate();
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [data, setData] = useState([]);
-
+  // const [vales, setValues] = useContext();
   useEffect(() => {
     loadData(user.token);
+    // sendId(user.token);
   }, [user.token]);
 
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
+  // const sendId = (authtoken, id, vales) => {
+  //   updateUser(authtoken, id, vales)
+  //     .then((res) => {
+  //       console.log("ส่งไอดีได้บ่อ", res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
+  // console.log(sendId);
 
   const loadData = (authtoken) => {
     listUser(authtoken)
@@ -62,22 +63,15 @@ function ListUser() {
                 <td>{users.faculty}</td>
                 <td>{users.email}</td>
                 <td>{users.status}</td>
-                <td>sss</td>
+                <td>....</td>
+                <Link to={`/admin-page/edit-user/${users._id}`}>
+                  <EditOutlined />
+                </Link>
               </tr>
             );
           })}
         </tbody>
       </table>
-      <Modal
-        title="Basic Modal"
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Modal>
     </div>
   );
 }

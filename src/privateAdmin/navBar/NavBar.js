@@ -79,7 +79,7 @@ function NavBar({ children }) {
           </>
         )}
       </div>
-      <div className="layout_main" style={{ width: sideBar ? "85%" : "100%" }}>
+      <div className="layout_main" style={{ width: sideBar ? "100%" : "100%" }}>
         <div className="navbar_container_admin">
           {/* <div className="navbar_admin"> */}
           {sideBar ? (

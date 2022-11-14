@@ -1,8 +1,7 @@
 .profile_student {
-
   display: flex;
   flex-direction: row;
-  border-radius: 16px;
+  /* border-radius: 16px; */
   
 }
 
@@ -15,9 +14,9 @@
 
 .profile_student_container_left h2 {
   display: flex;
-  text-decoration: underline rgb(235, 10, 47);
-  justify-content: flex-start;
-  
+  /* text-decoration: underline rgb(235, 10, 47); */
+  /* background-color: blue; */
+  /* justify-content: flex-start; */
   margin-left: 20px;
 }
 
@@ -58,8 +57,7 @@
 
 .student_teacher_profile_right {
   width: 32%;
-  /* height: 25%; */
-  align-self: flex-start;
+  /* align-self: flex-start; */
   text-align: left;
   margin-left: 25px;
   border: 1px solid black;

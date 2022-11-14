@@ -1,6 +1,5 @@
 .Header {
   display: flex;
-  /* position: fixed; */
   border-bottom: 0.5px solid lightgray;
   width: 100%;
   top: 0;
@@ -8,6 +7,7 @@
   left: 0;
   right: 0;
   z-index: 999;
+  justify-content: space-between;
 
   background: linear-gradient(102deg, #e2b3da, #47e0d9, #d492ce, #040104);
   background-size: 1000% 100%;
@@ -65,20 +65,19 @@
 
 .Header_left {
   display: flex;
+  width: 15%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   color: wheat;
-  margin-left: 25px;
-  /* background-color: red; */
+  padding-left: 25px;
+  background-color: red;
 }
 
 .Header_center {
+  width: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: auto;
-  /* background-color: purple; */
-  padding: 0;
+  justify-content: flex-start;
 }
 
 /* h3 {
@@ -86,14 +85,12 @@
 } */
 
 .link {
+  display: flex;
   text-decoration: none;
   color: white;
   font-weight: bolder;
   font-size: 14px;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
+  margin-right: 40px;
 }
 
 .link:hover {
@@ -106,10 +103,11 @@
   justify-content: center;
   margin-right: 16px;
   cursor: pointer;
+  color: white;
 }
 
 .header_right p:hover {
-    color: white;
+    color: blue;
 }
 
 /* .log_out {

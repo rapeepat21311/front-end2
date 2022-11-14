@@ -5,7 +5,7 @@ import Footer from "../../component/navbar/Footer/Footer";
 import "./index.css";
 
 import ProfileStudent from "./profile/ProfileStudent";
-// import Paratoon from "./Paratoon/Paratoon";
+import Paratoon from "./Paratoon/Paratoon";
 import Events from "./events/Events";
 
 const navTab = [
@@ -14,11 +14,11 @@ const navTab = [
     tabLabel: "ประวัตินักศึกษา",
     component: <ProfileStudent />,
   },
-  // {
-  //   tabName: "paratoonData",
-  //   tabLabel: "ภาระทุน",
-  //   component: <Paratoon />,
-  // },
+  {
+    tabName: "paratoonData",
+    tabLabel: "ภาระทุน",
+    component: <Paratoon />,
+  },
   {
     tabName: "Data",
     tabLabel: "ประวัตินักศึกษา",

@@ -80,7 +80,6 @@
   font-size: 48px;
   padding-top: 40px;
   align-items: flex-start;
-  color: #0d47a1;
 }
 
 .profile_tab_container {
@@ -93,12 +92,12 @@
 }
 
 .profile_tab {
-  height: 48px;
+  /* height: 48px; */
   padding: 8px;
 }
 
 .profile_tab_active {
-  border-bottom: 2px solid #274c77;
+  border-bottom: 1px solid #274c77;
 }
 
 .profile_tab_text {

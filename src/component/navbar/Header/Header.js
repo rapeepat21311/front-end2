@@ -20,6 +20,8 @@ function Header() {
 
   const showLoginLogOut = () => setProfileBar(!profileBar);
 
+  
+
   const Login = () => {
     navigate("/login");
   };
@@ -71,21 +73,29 @@ function Header() {
           <AccountCircleIcon />
         </h1>
 
-        {user !== null ? (
-          <p
-            className={profileBar ? "log_out_active" : "log_out"}
-            onClick={Logout}
-          >
-            Log out
-          </p>
-        ) : (
-          <p
-            className={profileBar ? "log_out_active" : "log_out"}
-            onClick={Login}
-          >
-            Log in
-          </p>
-        )}
+        <div>
+          {profileBar ? (
+            <div>
+              {user !== null ? (
+                <p
+                  className={profileBar ? "log_out_active" : "log_out"}
+                  onClick={Logout}
+                >
+                  Log out
+                </p>
+              ) : (
+                <p
+                  className={profileBar ? "log_out_active" : "log_out"}
+                  onClick={Login}
+                >
+                  Log in
+                </p>
+              )}
+            </div>
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
     </div>
   );

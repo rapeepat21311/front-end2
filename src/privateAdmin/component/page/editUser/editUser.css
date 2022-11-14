@@ -1,0 +1,105 @@
+.edit_page_body {
+    width: 50%;
+    margin-left: 20px;
+}
+.edit_page_body h4 {
+    display: flex;
+    font-size: 12px;
+}
+.edit_page_body input {
+    margin-top: 2px;
+}
+
+.edit_page_body select {
+    margin-top: 2px;
+}
+
+.edit_header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* background-color: aqua; */
+    flex-direction: column;
+}
+
+.img_edit_user img{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    width: 165px;
+    height: 176px;
+}
+
+.edit_user_container_id_noun {
+    display: flex;
+}
+
+.edit_user_container_id_noun h4 {
+    display: flex;
+}
+
+
+.edit_user_container_id_noun_left input {
+    padding-left: 5px;
+    background-color: gray;
+}
+
+.edit_user_container_id_noun_right {
+     display: flex;
+     flex-direction: column;
+     margin-left: 10%;
+     
+}
+
+.edit_user_container_id_noun_right select {
+    padding: 2px;
+}
+
+.edit_user_name_lastname_Th {
+    display: flex;
+    margin-top: 20px;
+}
+
+
+.edit_user_name_lastname_Th h4 {
+    display: flex;
+}
+/* 
+.edit_user_name_lastname_Th input {
+    padding: 2.4px;
+} */
+
+.edit_user_lastname {
+    margin-left: 10%;
+}
+
+.edit_user_year {
+    margin-top: 20px;
+    display: flex;
+}
+
+.edit_user_year_center {
+    margin-left: 3%;
+}
+
+.edit_user_year_right {
+    /* background-color: blue; */
+    margin-left: 3%;
+}
+
+.edit_user_year_right select {
+    display: flex;
+    width: 100%;
+    margin-top: 2px;
+    /* background-color: aqua; */
+}
+
+/* .edit_user_year_right option {
+    display: flex;
+    background-color: red;
+    margin-top: auto;
+    justify-content: flex-end;
+    align-items: center;
+} */
+

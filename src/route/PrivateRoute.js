@@ -8,6 +8,7 @@ import UserRouter from "./userRouter";
 import Admin from "../privateAdmin";
 import Layout from "../privateAdmin/navBar/NavBar";
 import ListUser from "../privateAdmin/component/page/listUser/ListUser";
+import EditUser from "../privateAdmin/component/page/editUser/EditUser";
 //Page User
 import Home from "../page/home";
 import Login from "../page/Login/Login";
@@ -20,7 +21,6 @@ import NotFound from "../page/notFound";
 import Profile from "../page/profile/index";
 import { currentUser } from "./function/auth";
 import { useDispatch } from "react-redux";
-import EditUser from "../privateAdmin/component/page/editUser/EditUser";
 
 function PrivateRoute() {
   const dispatch = useDispatch();
@@ -115,7 +115,7 @@ function PrivateRoute() {
         />
 
         <Route
-          path="/admin-page/edit-user"
+          path={`/admin-page/edit-user/:id`}
           element={
             <AdminRoutes>
               <Layout>
