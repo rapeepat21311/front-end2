@@ -23,6 +23,11 @@ export default function CreateBox() {
     indexOfLastVolunteerHours
   );
 
+  // const handleSelectDataList = (e) => {
+  //   const value = e.target.value;
+  //   setVolunteerHoursPerPage(value);
+  // };
+
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -49,12 +54,10 @@ export default function CreateBox() {
           );
         })}
       </div>
-      <select>
-        <option onClick={setVolunteerHoursPerPage(25)}>25</option>
-        <option onClick={setVolunteerHoursPerPage(50)}>50</option>
-        <option onClick={setVolunteerHoursPerPage(75)}>75</option>
-        <option onClick={setVolunteerHoursPerPage(100)}>100</option>
-      </select>
+      {/* <select onClick={(e) => handleSelectDataList(e)}>
+        <option value="8">8</option>
+        <option value="10">10</option>
+      </select> */}
       <Pagination
         volunteerHoursPerPage={volunteerHoursPerPage}
         totalVolunteerHours={volunteerHours.length}
