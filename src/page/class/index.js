@@ -33,6 +33,7 @@ function Index() {
     <>
       <Header />
       <div className="class">
+        <div className="class_header"><p>{"หน้าหลัก > ตารางเรียน"}</p></div>
         <div className="class_title">
           <h1>ตารางเรียน</h1>
         </div>

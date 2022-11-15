@@ -19,6 +19,7 @@
   /* animation: colorChange 5s infinite alternate; */
 }
 
+
 @keyframes colorChange {
   to {
     background-position: 0%;
@@ -133,11 +134,12 @@
   margin-top: 16px;
   /* background-color: rgb(68, 1, 59); */
 }
-
-.select_year{
+.class_header{
   display: flex;
-  width: 10%;
-  height: 0px;
-  margin-left: 835px;
+  /* background-color: #0d47a1; */
+  width: 70%;
+  justify-content: flex-start;
 }
-
+.class_header p {
+  font-size: 14px;
+}
