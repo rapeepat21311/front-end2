@@ -1,0 +1,143 @@
+.class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(
+      circle at center,
+      #ffffff 0%,
+      #e3f5fa 4%,
+      #bff5c8 12.25%,
+      #95e0fd 31.25%,
+      #b6f8d1 50%
+    )
+    center top/200% 200%;
+  color: rgb(14, 14, 14);
+  font-weight: bold;
+  /* animation: colorChange 5s infinite alternate; */
+}
+
+@keyframes colorChange {
+  to {
+    background-position: 0%;
+  }
+}
+
+@-webkit-keyframes Header {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
+  }
+}
+@-moz-keyframes Header {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
+  }
+}
+@-o-keyframes Header {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
+  }
+}
+@keyframes Header {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
+  }
+}
+
+.class_title {
+  display: flex;
+  justify-content: flex-start;
+  width: 70%;
+}
+
+.class_title h1 {
+  font-size: 48px;
+  padding-top: 40px;
+  align-items: flex-start;
+  color: #0d47a1;
+}
+
+.class_tab_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 70%;
+  height: 48px;
+  cursor: pointer;
+}
+
+.class_tab {
+  height: 48px;
+  padding: 8px;
+}
+
+.class_tab_active {
+  border-bottom: 2px solid #274c77;
+}
+
+.class_tab_text {
+  cursor: pointer;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #faf9f6;
+}
+
+.class_tab_text:hover {
+  color: #274c77;
+}
+
+.class_tab_text_active {
+  color: #274c77;
+}
+
+.class h3 {
+  color: white;
+  padding: 10px;
+}
+
+.class_header h3:hover {
+  color: black;
+}
+
+.class_component {
+  width: 70%;
+  margin-top: 16px;
+  /* background-color: rgb(68, 1, 59); */
+}
+
+.select_year{
+  display: flex;
+  width: 10%;
+  height: 0px;
+  margin-left: 835px;
+}
+

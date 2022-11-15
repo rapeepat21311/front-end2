@@ -14,7 +14,7 @@ import Home from "../page/home";
 import Login from "../page/Login/Login";
 import Eport from "../page/eport/eport";
 import Perform from "../page/perform/perform";
-import Classl from "../page/class/class";
+import Classl from "../page/class/index";
 import Result from "../page/result/result";
 import News from "../page/news/news";
 import NotFound from "../page/notFound";
