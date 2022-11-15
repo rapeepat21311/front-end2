@@ -7,6 +7,7 @@ import "./index.css";
 import ProfileStudent from "./profile/ProfileStudent";
 import Paratoon from "./Paratoon/Paratoon";
 import Events from "./events/Events";
+import CreateBox from "./events/CreateBox";
 
 const navTab = [
   {
@@ -22,7 +23,7 @@ const navTab = [
   {
     tabName: "Data",
     tabLabel: "ชั่วโมงกิจกรรมจิตอาสา",
-    component: <Events />,
+    component: <CreateBox />,
   },
 ];
 
