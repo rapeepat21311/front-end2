@@ -133,3 +133,11 @@
   margin-top: 16px;
   /* background-color: rgb(68, 1, 59); */
 }
+
+.select_year{
+  display: flex;
+  width: 10%;
+  height: 0px;
+  margin-left: 835px;
+}
+
