@@ -1,8 +1,8 @@
-.classl{
+/* .classl{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
     height: 100vh;
     width: 100vw;
     background: radial-gradient(
@@ -13,7 +13,7 @@
         #95e0fd 31.25%,
         #b6f8d1 50%
       );
-  }
+  } */
 
 
   .classl_body{
@@ -54,3 +54,4 @@
   .classl_header p{
     cursor: pointer;
   }
+
