@@ -3,10 +3,11 @@
   border-bottom: 0.5px solid lightgray;
   width: 100%;
   top: 0;
-  bottom: 0;
+  /* bottom: 0; */
   left: 0;
   right: 0;
   z-index: 999;
+  /* position: fixed; */
   justify-content: space-between;
 
   background: linear-gradient(102deg, #e2b3da, #47e0d9, #d492ce, #040104);
@@ -70,7 +71,7 @@
   justify-content: flex-start;
   color: wheat;
   padding-left: 25px;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .Header_center {
@@ -88,7 +89,6 @@
   display: flex;
   text-decoration: none;
   color: white;
-  font-weight: bolder;
   font-size: 14px;
   margin-right: 40px;
 }
@@ -98,10 +98,12 @@
 }
 
 .header_right {
+  right: 0;
+  width: 10%;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  margin-right: 16px;
+  /* background-color: green; */
   cursor: pointer;
   color: white;
 }

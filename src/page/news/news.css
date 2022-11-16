@@ -1,0 +1,21 @@
+.news_container {
+    width: 60%;
+    display: flex;
+    flex-flow: column wrap;
+    padding-left: 10px;
+}
+
+
+.home_page_and_redirect_page {
+    width: 60%;
+    display: flex;
+    font-size: small;
+    margin-top: 5px;
+    /* background-color: blue; */
+}
+
+.news_title {
+    width: 60%;
+    display: flex;
+    /* background-color: brown; */
+}

@@ -6,7 +6,7 @@ import "./index.css";
 
 import ProfileStudent from "./profile/ProfileStudent";
 import Paratoon from "./Paratoon/Paratoon";
-import Events from "./events/Events";
+import Events from "./events/backlist/Events";
 import CreateBox from "./events/CreateBox";
 
 const navTab = [
@@ -57,6 +57,23 @@ function Index() {
               </div>
             );
           })}
+          {activeIndex !== 0 ? (
+            <div className="select_term">
+              <h4>ภาคเรียนที่</h4>
+              <select>
+                {/* map year นักศึกษา */}
+                <option>1/2562</option>
+                <option>2/2562</option>
+                <option>3/2563</option>
+                <option>1/2563</option>
+                <option>2/2563</option>
+                <option>1/2564</option>
+                <option>2/2564</option>
+              </select>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
         <div className="profile_component">{navTab[activeIndex].component}</div>
       </div>

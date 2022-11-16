@@ -56,7 +56,7 @@ function ListUser() {
           {data.map((users, index) => {
             return (
               <tr>
-                <th>{users.studentId}</th>
+                <td>{users.studentId}</td>
                 <td>{users.nameTh}</td>
                 <td>{users.year}</td>
                 <td>{users.educationLevel}</td>

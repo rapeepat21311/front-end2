@@ -1,11 +1,11 @@
-.home_body {
+/* .home_body {
   position: absolute;
-}
+} */
 
-.body {
+/* .body {
 
   width: 90%;
-}
+} */
 
 @keyframes colorChange {
   to {
@@ -60,9 +60,9 @@
 
 .home_body{
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
   background: radial-gradient(
       circle at center,
       #ffffff 0%,

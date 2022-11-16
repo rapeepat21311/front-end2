@@ -28,74 +28,81 @@ function NavBar({ children }) {
 
   const showSideBar = () => setSideBar(!sideBar);
   return (
-    <div className="layout_container">
-      <div
-        className={sideBar ? "sidebar_container_active" : "sidebar_container"}
-      >
-        <h1 onClick={openSildebarMenu1}>
-          <AccountCircleIcon />
-          Menu1
-        </h1>
-        {openMenu1 ? (
-          <></>
-        ) : (
-          <>
-            {pageComponentMenuList1.map((sideBar, index) => {
-              return (
-                <div
-                  className={`menu_list_1 ${
-                    index === activeIndex && "menu_list_1_active"
-                  }`}
-                  onClick={() => {
-                    navigate(sideBar.path);
-                    setActiveIndex(index);
-                  }}
-                >
-                  <h2
-                    className={`menu_list_text ${
-                      index === activeIndex && "menu_list_text_active"
-                    }`}
-                  >
-                    {sideBar.menulist}
-                  </h2>
-                </div>
-              );
-            })}
-          </>
-        )}
+    <>
+      <div className="layout_container">
+        <div
+          className="layout_main"
+          style={{ width: sideBar ? "100%" : "100%" }}
+        >
+          <div className="navbar_container_admin">
+            {/* <div className="navbar_admin"> */}
+            {sideBar ? (
+              <h1 onClick={showSideBar}>
+                <CloseIcon />
+              </h1>
+            ) : (
+              <h1 onClick={showSideBar}>
+                <FormatListBulletedIcon />
+              </h1>
+            )}
+            <p>{user.email}</p>
+          </div>
+          <div
+            className={
+              sideBar ? "sidebar_container_active" : "sidebar_container"
+            }
+          >
+            <h1 onClick={openSildebarMenu1}>
+              <AccountCircleIcon />
+              Menu1
+            </h1>
+            {openMenu1 ? (
+              <></>
+            ) : (
+              <>
+                {pageComponentMenuList1.map((sideBar, index) => {
+                  return (
+                    <div
+                      className={`menu_list_1 ${
+                        index === activeIndex && "menu_list_1_active"
+                      }`}
+                      onClick={() => {
+                        navigate(sideBar.path);
+                        setActiveIndex(index);
+                      }}
+                    >
+                      <h2
+                        className={`menu_list_text ${
+                          index === activeIndex && "menu_list_text_active"
+                        }`}
+                      >
+                        {sideBar.menulist}
+                      </h2>
+                    </div>
+                  );
+                })}
+              </>
+            )}
 
-        <h1 onClick={openSildebarMenu2}>
-          <AccountCircleIcon />
-          Menu2
-        </h1>
-        {openMenu2 ? (
-          <></>
-        ) : (
-          <>
-            <h2>sub Menu</h2>
-            <h2>sub Menu</h2>
-            <h2>sub Menu</h2>
-            <h2>sub Menu</h2>
-          </>
-        )}
-      </div>
-      <div className="layout_main" style={{ width: sideBar ? "100%" : "100%" }}>
-        <div className="navbar_container_admin">
-          {/* <div className="navbar_admin"> */}
-          {sideBar ? (
-            <h1 onClick={showSideBar}>
-              <CloseIcon />
+            <h1 onClick={openSildebarMenu2}>
+              <AccountCircleIcon />
+              Menu2
             </h1>
-          ) : (
-            <h1 onClick={showSideBar}>
-              <FormatListBulletedIcon />
-            </h1>
-          )}
-          <p>{user.email}</p>
+            {openMenu2 ? (
+              <></>
+            ) : (
+              <>
+                <h2>sub Menu</h2>
+                <h2>sub Menu</h2>
+                <h2>sub Menu</h2>
+                <h2>sub Menu</h2>
+              </>
+            )}
+          </div>
         </div>
-        {children}
       </div>
-    </div>
+      <div>{children}</div>
+    </>
   );
 }
 

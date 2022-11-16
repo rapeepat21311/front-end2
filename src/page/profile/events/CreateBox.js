@@ -8,11 +8,10 @@ export default function CreateBox() {
   const [volunteerHours, setVolunteerHours] = useState(mockDataActivity);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [volunteerHoursPerPage, setVolunteerHoursPerPage] = useState(8);
-
-  const handleClick = (e) => {
-    setCurrentPage(Number(e.target.id));
-  };
+  const [volunteerHoursPerPage] = useState(8);
+  const [pageNumberLimit, setPageNumberLimit] = useState(6);
+  const [maxPageLimit, setMaxPageLimit] = useState(6);
+  const [minPageLimit, setMinPageLimit] = useState(0);
 
   const indexOfLastVolunteerHours = currentPage * volunteerHoursPerPage;
   const indexOfFirstVolunteerHours =
@@ -39,6 +38,7 @@ export default function CreateBox() {
             <div className="box_activity_container">
               <div className="box_activity_img">
                 <img src={item.image} />
+                {item.id}
               </div>
               <div className="box_activity_title">
                 <h2>{item.title}</h2>
@@ -62,7 +62,13 @@ export default function CreateBox() {
         volunteerHoursPerPage={volunteerHoursPerPage}
         totalVolunteerHours={volunteerHours.length}
         paginate={paginate}
-        handleChangePage={handleClick}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        maxPageLimit={maxPageLimit}
+        setMaxPageLimit={setMaxPageLimit}
+        minPageLimit={minPageLimit}
+        setMinPageLimit={setMinPageLimit}
+        pageNumberLimit={pageNumberLimit}
       />
     </>
   );

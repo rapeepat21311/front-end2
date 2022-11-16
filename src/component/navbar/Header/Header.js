@@ -34,7 +34,7 @@ function Header() {
   return (
     <div className="Header">
       <div className="Header_left">
-        <h1> EPORTFOLIO </h1>
+        <h1> s </h1>
       </div>
 
       <div className="Header_center">

@@ -1,6 +1,7 @@
 .layout_container {
     display: flex;
     flex-direction: row;
+    z-index: 999;
 }
 
 
@@ -23,6 +24,9 @@
     left: 0;
     transition: 350ms;
     border: 1px solid gray ;
+    /* z-index: 0; */
+    /* opacity: 0.5; */
+    background-color: blueviolet;
     cursor: pointer;
 }
 
@@ -80,6 +84,8 @@
     align-items: center;
     color : white;
 }
+
+
 
 /* .sidebar_admin_close {
     display: none;

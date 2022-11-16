@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import LoadingNews from "./LoadingNews";
-import Pagination from "./Pagination";
+import LoadingNews from "../LoadingNews";
+import Pagination from "../Pagination";
 
 export default function Events() {
   const [news, setNews] = useState([]);
