@@ -3,7 +3,8 @@ import Header from "../../component/navbar/Header/Header";
 import { recommentNews } from "./recommentEvent";
 import "./news.css";
 
-import LastesNews from "./LastesNews";
+import Footer from "../../component/navbar/Footer/Footer";
+import LastesNews from "./lastedNews/LastesNews";
 import { mockDataLastesNews } from "./mockDataNews";
 //imgae material
 
@@ -72,8 +73,13 @@ function News() {
               perPage={lastedNewsPerPage}
             />
           </div>
+          <div className="event_update_title">
+            <h1>ข่าวสารล่าสุด</h1>
+            <h2>ดูข่าวสารทั้งหมด</h2>
+          </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
