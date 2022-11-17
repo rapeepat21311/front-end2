@@ -1,26 +1,15 @@
 .box_activity_suppe {
   display: flex;
   flex-flow: row wrap;
-  /* justify-content: space-between; */
-}
-
-.select_term {
-  display: flex;
-  width: 56%;
-  justify-content: flex-end;
-  align-items: center;
-  /* background-color: blue; */
-  }
-
-.select_term h4 {
-  font-size: 14px;
-  margin-right: 5px;
+  width: 100%;
+  /* background-color: red; */
+  justify-content: space-between;
 }
 
 .box_activity_container {
   display: flex;
-  width: 46.8%;
-  margin-right: 12px;
+  width:48.49%;
+  /* margin-right: 12px; */
   margin-bottom: 20px;
   border-radius: 16px;
   border: 1px solid black;
@@ -43,7 +32,9 @@
 .box_activity_title {
   display: flex;
   width: 100%;
+  padding-left: 10px;
   flex-direction: column;
+  text-align: start;
 }
 
 
