@@ -4,6 +4,7 @@
     align-items: center;
     /* background-color: aqua; */
     flex-flow: row nowrap;
+    margin-bottom: 24px;
     position: relative;
 }
 
@@ -11,7 +12,9 @@
     font-size: 20px;
     padding:1px 5px 1px 5px;
     border: 1px solid black;
+    border-radius: 16px;
     cursor: pointer;
+    
 }
 
 .page_number button {

@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import { userReducerConst } from "../component/reducer/consUserRed";
+import { currentUser } from "./function/auth";
 import AdminRoutes from "./AdminRoutes";
 import UserRouter from "./userRouter";
 // Page Andmin
@@ -19,8 +21,8 @@ import Result from "../page/result/result";
 import News from "../page/news/news";
 import NotFound from "../page/notFound";
 import Profile from "../page/profile/index";
-import { currentUser } from "./function/auth";
-import { useDispatch } from "react-redux";
+import LastesNews from "../page/news/lastedNews";
+import LastedEvent from "../page/news/lastedEvent";
 
 function PrivateRoute() {
   const dispatch = useDispatch();
@@ -82,6 +84,8 @@ function PrivateRoute() {
         />
 
         <Route path="/news" element={<News />} />
+        <Route path="/news/last-news" element={<LastesNews />} />
+        <Route path="/news/last-events" element={<LastedEvent />} />
 
         <Route
           path="/profile"
@@ -91,6 +95,7 @@ function PrivateRoute() {
             </UserRouter>
           }
         />
+
         {/* Router Admin */}
         <Route
           path="/admin-page"

@@ -4,18 +4,28 @@ import { recommentNews } from "./recommentEvent";
 import "./news.css";
 
 import Footer from "../../component/navbar/Footer/Footer";
-import LastesNews from "./lastedNews/LastesNews";
-import { mockDataLastesNews } from "./mockDataNews";
-//imgae material
+import LastesNews from "./lastedNews/component/LastesNews";
+import LastedEvent from "./lastedEvent/component/LastedEvent";
+// data mock
+import { mockDataLastesNews } from "./lastedNews/component/mockDataNews";
+import { mockDataLastesEvent } from "./lastedEvent/component/mockDataEvent";
 
-import RemoveRedEyeRoundedIcon from "@mui/icons-material/RemoveRedEyeRounded";
+//imgae material
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import RoomIcon from "@mui/icons-material/Room";
+import EastIcon from "@mui/icons-material/East";
+import { useNavigate } from "react-router";
 
 function News() {
+  const navigate = useNavigate();
+  //data
   const [newsRecomment, setNewsRecomment] = useState(recommentNews);
   const [lastesNewsData, setLastesNewsData] = useState(mockDataLastesNews);
+  const [lastedEvent, setLastedEvent] = useState(mockDataLastesEvent);
+  //hover
+  const [hover, setHover] = useState(false);
+  const [hoverNews, setHoverNews] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [lastedNewsPerPage, setLastedNewsPerPage] = useState(3);
@@ -23,7 +33,7 @@ function News() {
   return (
     <>
       <Header />
-      <div className="home_body">
+      <div className="news_body">
         <div className="news_container">
           <div className="home_page_and_redirect_page">
             <p>หน้าหลัก</p> {" > "} <p>ข่าวสารและกิจกรรม</p>
@@ -64,7 +74,23 @@ function News() {
           </div>
           <div className="news_update_title">
             <h1>ข่าวสารล่าสุด</h1>
-            <h2>ดูข่าวสารทั้งหมด</h2>
+            <h2
+              className="news_title_h2"
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              onClick={() => {
+                navigate("/news/last-news");
+              }}
+            >
+              {hover ? (
+                <>
+                  ดูข่าวสารทั้งหมด
+                  <EastIcon />
+                </>
+              ) : (
+                "ดูข่าวสารทั้งหมด"
+              )}
+            </h2>
           </div>
           <div className="news_update_box_cotainer">
             <LastesNews
@@ -74,8 +100,15 @@ function News() {
             />
           </div>
           <div className="event_update_title">
-            <h1>ข่าวสารล่าสุด</h1>
-            <h2>ดูข่าวสารทั้งหมด</h2>
+            <h1>กิจกรรมล่าสุด</h1>
+            <h2>ดูกิจกรรมทั้งหมด</h2>
+          </div>
+          <div className="news_update_box_cotainer">
+            <LastedEvent
+              mockDataLastedEvent={lastedEvent}
+              currentPage={currentPage}
+              perPage={lastedNewsPerPage}
+            />
           </div>
         </div>
       </div>

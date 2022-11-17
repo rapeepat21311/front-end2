@@ -33,7 +33,7 @@ function Index() {
   return (
     <>
       <Header />
-      <div className="home_body">
+      <div className="profile_body">
         <div className="profile">
           <div className="profile_title">
             <h1>ประวัตินักศึกษา</h1>
