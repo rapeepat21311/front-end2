@@ -33,49 +33,53 @@ function Index() {
   return (
     <>
       <Header />
-      <div className="profile">
-        <div className="profile_title">
-          <h1>ประวัตินักศึกษา</h1>
-        </div>
+      <div className="home_body">
+        <div className="profile">
+          <div className="profile_title">
+            <h1>ประวัตินักศึกษา</h1>
+          </div>
 
-        <div className="profile_tab_container">
-          {navTab.map((tab, index) => {
-            return (
-              <div
-                className={`profile_tab ${
-                  index === activeIndex && "profile_tab_active"
-                } `}
-                onClick={() => setActiveIndex(index)}
-              >
-                <h1
-                  className={`profile_tab_text ${
-                    index === activeIndex && "profile_tab_text_active"
-                  }`}
+          <div className="profile_tab_container">
+            {navTab.map((tab, index) => {
+              return (
+                <div
+                  className={`profile_tab ${
+                    index === activeIndex && "profile_tab_active"
+                  } `}
+                  onClick={() => setActiveIndex(index)}
                 >
-                  {tab.tabLabel}
-                </h1>
+                  <h1
+                    className={`profile_tab_text ${
+                      index === activeIndex && "profile_tab_text_active"
+                    }`}
+                  >
+                    {tab.tabLabel}
+                  </h1>
+                </div>
+              );
+            })}
+            {activeIndex !== 0 ? (
+              <div className="select_term">
+                <h4>ภาคเรียนที่</h4>
+                <select>
+                  {/* map year นักศึกษา */}
+                  <option>1/2562</option>
+                  <option>2/2562</option>
+                  <option>3/2563</option>
+                  <option>1/2563</option>
+                  <option>2/2563</option>
+                  <option>1/2564</option>
+                  <option>2/2564</option>
+                </select>
               </div>
-            );
-          })}
-          {activeIndex !== 0 ? (
-            <div className="select_term">
-              <h4>ภาคเรียนที่</h4>
-              <select>
-                {/* map year นักศึกษา */}
-                <option>1/2562</option>
-                <option>2/2562</option>
-                <option>3/2563</option>
-                <option>1/2563</option>
-                <option>2/2563</option>
-                <option>1/2564</option>
-                <option>2/2564</option>
-              </select>
-            </div>
-          ) : (
-            <></>
-          )}
+            ) : (
+              <></>
+            )}
+          </div>
+          <div className="profile_component">
+            {navTab[activeIndex].component}
+          </div>
         </div>
-        <div className="profile_component">{navTab[activeIndex].component}</div>
       </div>
       <Footer />
     </>

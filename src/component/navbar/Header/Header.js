@@ -69,9 +69,9 @@ function Header() {
       </div>
 
       <div className="header_right">
-        <h1 onClick={showLoginLogOut}>
+        <div className="profile_login_logout_navbar" onClick={showLoginLogOut}>
           <AccountCircleIcon />
-        </h1>
+        </div>
 
         <div>
           {profileBar ? (
