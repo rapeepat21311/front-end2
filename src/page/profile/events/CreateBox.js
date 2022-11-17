@@ -13,14 +13,14 @@ export default function CreateBox() {
   const [maxPageLimit, setMaxPageLimit] = useState(6);
   const [minPageLimit, setMinPageLimit] = useState(0);
 
-  const indexOfLastVolunteerHours = currentPage * volunteerHoursPerPage;
-  const indexOfFirstVolunteerHours =
-    indexOfLastVolunteerHours - volunteerHoursPerPage;
+ const indexOfLastVolunteerHours = currentPage * volunteerHoursPerPage;
+ const indexOfFirstVolunteerHours =
+   indexOfLastVolunteerHours - volunteerHoursPerPage;
 
-  const currentVolunteerHours = volunteerHours.slice(
-    indexOfFirstVolunteerHours,
-    indexOfLastVolunteerHours
-  );
+ const currentVolunteerHours = volunteerHours.slice(
+   indexOfFirstVolunteerHours,
+   indexOfLastVolunteerHours
+ ); 
 
   // const handleSelectDataList = (e) => {
   //   const value = e.target.value;

@@ -1,13 +1,12 @@
 .news_container {
-  width: 100%;
+  width: 66.7%;
   display: flex;
-  flex-flow: column wrap;
-  /* background-color: blanchedalmond; */
-  padding-left: 20%;
+  
+  flex-flow: column nowrap;
 }
 
 .home_page_and_redirect_page {
-  width: 60%;
+  width: 100%;
   display: flex;
   font-size: small;
   margin-top: 5px;
@@ -16,7 +15,7 @@
 }
 
 .news_title {
-  width: 60%;
+  width: 100%;
   display: flex;
   /* background-color: brown; */
 }
@@ -26,8 +25,9 @@
   background-color: #ffffff;
   border: 1px solid black;
   border-radius: 16px;
-  width: 960px;
+  width: 100%;
   margin-top: 8px;
+  margin-bottom: 56px;
 }
 
 .box_news_img {
@@ -62,22 +62,42 @@
 .news_recomment_description {
   display: flex;
   flex-direction: column;
+  position: relative;
   /* background-color: blue; */
+}
+
+.news_recomment_bookmark {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right:20px;
+  width: 48px;
+  height: 48px;
+  border:1px solid black;
+  border-radius: 30px;
+}
+.news_recomment_bookmark:hover {
+  background-color: black;
+  color: white;
 }
 
 .recomment_news_title {
   display: flex;
   justify-content: flex-start;
   text-align: start;
-  width: 100%;
+  width: 90%;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
   margin-top: 20px;
 }
 
+
 .news_description {
   display: flex;
+  width: 90%;
   text-align: start;
   margin-top: 12px;
   font-weight: 400;
@@ -121,4 +141,84 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+}
+
+
+.news_update_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px; ;
+}
+
+.news_update_title h1 {
+  color: #0D47A1;
+  font-size: 32px;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.news_update_title h2 {
+  font-weight: 400;
+}
+
+.news_update_box_cotainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /* background-color: gold; */
+}
+
+
+.box_news_update {
+  display: flex;
+  width: 32%;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  /* background-color: red; */
+}
+
+.box_news_update_img {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.box_news_update_img img {
+  padding: 8px;
+  width: 288px;
+  height: 266px;
+  border-radius: 16px;
+}
+
+.box_news_update_date_views {
+  display: flex;
+  padding-left: 8px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+
+.news_update_views {
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.news_update_views p {
+  margin-left: 6px;
+}
+
+.box_news_update_title {
+  padding-left: 8px;
+  text-align: start;
+  margin-bottom: 12px;
+}
+
+.box_news_update_link_description {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  padding-right: 8px;
 }

@@ -3,13 +3,22 @@ import Header from "../../component/navbar/Header/Header";
 import { recommentNews } from "./recommentEvent";
 import "./news.css";
 
+import LastesNews from "./LastesNews";
+import { mockDataLastesNews } from "./mockDataNews";
 //imgae material
+
+import RemoveRedEyeRoundedIcon from "@mui/icons-material/RemoveRedEyeRounded";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import RoomIcon from "@mui/icons-material/Room";
 
 function News() {
   const [newsRecomment, setNewsRecomment] = useState(recommentNews);
+  const [lastesNewsData, setLastesNewsData] = useState(mockDataLastesNews);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [lastedNewsPerPage, setLastedNewsPerPage] = useState(3);
+
   return (
     <>
       <Header />
@@ -30,6 +39,9 @@ function News() {
               </div>
             </div>
             <div className="news_recomment_description">
+              <div className="news_recomment_bookmark">
+                <BookmarkBorderIcon />
+              </div>
               <div className="recomment_news_title">{newsRecomment.title}</div>
               <div className="news_description">
                 {newsRecomment.description}
@@ -48,6 +60,17 @@ function News() {
                 <p>{newsRecomment.eventScope}</p>
               </div>
             </div>
+          </div>
+          <div className="news_update_title">
+            <h1>ข่าวสารล่าสุด</h1>
+            <h2>ดูข่าวสารทั้งหมด</h2>
+          </div>
+          <div className="news_update_box_cotainer">
+            <LastesNews
+              mockDataLastesNews={lastesNewsData}
+              currentPage={currentPage}
+              perPage={lastedNewsPerPage}
+            />
           </div>
         </div>
       </div>
