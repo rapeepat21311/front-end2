@@ -17,8 +17,6 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-
-
 const mockTermData = { detailTable: mockTableList, GpaTable: mockTableGpaList };
 const mockAccumulateData = mockTableGpaxList;
 
@@ -34,7 +32,7 @@ export default function Result() {
   useEffect(() => {
     setTerm(calDefaultTerm);
     fetchAccumulate();
-  }, []);
+  }, [term]);
 
   useEffect(() => {
     if (term !== null) {
@@ -45,7 +43,7 @@ export default function Result() {
   const fetchTerm = useCallback(() => {
     // send term state to apis
     setTermData(mockTermData);
-  }, [term]);
+  }, []);
   const fetchAccumulate = useCallback(() => {
     setAccumulateData(mockAccumulateData);
   }, []);
@@ -106,7 +104,7 @@ export default function Result() {
           />
         </div>
         <div className="select_year">
-            <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+          <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
             <InputLabel id="demo-simple-select-standard-label">Year</InputLabel>
             <Select>
               <MenuItem value="">

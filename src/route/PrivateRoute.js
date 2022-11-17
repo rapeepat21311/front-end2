@@ -13,7 +13,7 @@ import EditUser from "../privateAdmin/component/page/editUser/EditUser";
 import Home from "../page/home";
 import Login from "../page/Login/Login";
 import Eport from "../page/eport/eport";
-import Perform from "../page/perform/perform";
+import Perform from "../page/perform/index";
 import Classl from "../page/class/index";
 import Result from "../page/result/result";
 import News from "../page/news/news";

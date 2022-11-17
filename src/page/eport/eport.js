@@ -1,13 +1,24 @@
 import React from "react";
 import Header from "../../component/navbar/Header/Header";
 
-function capital() {
+import "./eport.css"
+
+function eport() {
   return (
     <div>
       <Header />
-      <h1>This Capital</h1>
+      <div className="eport">
+        <div className="eport_title"><p>{"หน้าหลัก > e-Portfolio"}</p></div>
+          <div className="eport_header">
+            <h1> e-Portfolio</h1>
+          </div>
+          <div className="container_eport">
+            <div className="eport_container_left"><p>1231231</p></div>
+            <div className="eport_container_right"><p>oooooooo</p></div>
+          </div>
+      </div>
     </div>
   );
 }
 
-export default capital;
+export default eport;

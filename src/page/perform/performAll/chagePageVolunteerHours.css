@@ -1,0 +1,41 @@
+.page_number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    flex-flow: row nowrap;
+    position: relative;
+}
+
+.page_number h2{
+    font-size: 20px;
+    padding:1px 5px 1px 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.page_number button {
+    display: flex;
+    font-size: 20px;
+    padding:2px 5px 2px 5px;
+    border: 1px solid black;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.select_page_number {
+    background-color:white;
+    opacity: 0.5;
+    color:black;
+}
+
+.select_page_number_active {
+    opacity: 1;
+
+}
+/* .page_number h2:hover {
+    background-color: crimson;
+} */
