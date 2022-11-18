@@ -8,14 +8,14 @@ export default function Paratoon() {
       <table>
         <thead>
           <tr>
-            <th className="table_left_radius">ภาคการศึกษา</th>
+            <th>ภาคการศึกษา</th>
             <th>ทุนการศึกษา</th>
             <th>จำนวนเงิน</th>
             <th>รับ</th>
             <th>คงเหลือ</th>
             <th>ประเภท</th>
             <th>ผู้ให้ทุน</th>
-            <th className="table_right_radius">ส่วนลดทุน</th>
+            <th>ส่วนลดทุน</th>
           </tr>
         </thead>
         {mockDataParacapital.map((item) => {
@@ -28,7 +28,7 @@ export default function Paratoon() {
               <td>{item.remaining}</td>
               <td>{item.type}</td>
               <td>{item.funder}</td>
-              <td>{item.capitalDiscount}</td>
+              <td className="capital_discount">{item.capitalDiscount}</td>
             </tr>
           );
         })}

@@ -34,6 +34,10 @@
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 11px;
 }
+
+.capital_discount {
+  text-align: end;
+}
 /* .table_capital_container thead th:hover,
 .table_capital_container thead tr:hover,
 .table_capital_container th:hover {
