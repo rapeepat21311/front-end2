@@ -147,7 +147,7 @@
 
 .select_C {
   display: flex;
-  background-color: red;
+  /* background-color: red; */
   top:40px;
   right: 10px;
   margin-top: 16px;

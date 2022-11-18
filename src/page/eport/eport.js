@@ -13,8 +13,8 @@ function eport() {
             <h1> e-Portfolio</h1>
           </div>
           <div className="container_eport">
-            <div className="eport_container_left"><p>1231231</p></div>
-            <div className="eport_container_right"><p>oooooooo</p></div>
+            <div className="eport_container_left"><p></p></div>
+            <div className="eport_container_right"><p></p></div>
           </div>
       </div>
     </div>
