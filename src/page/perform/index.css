@@ -91,7 +91,7 @@
     width: 70%;
     height: 48px;
     cursor: pointer;
-
+    
     position: relative;
     /* background-color:green; */
   }
@@ -123,21 +123,21 @@
     color: #274c77;
   }
   
-.select_year {
+/* .select_year {
   display: flex;
   background-color: red;
   top : 0px;
-  right: 0px;
+  right: 0px; */
   /* justify-content: flex-start; */
-  align-items: center;
+  /* align-items: center;
   position: absolute;
-}
+} */
 
-.select_year h4 {
+/* .select_year h4 {
   background-color: rebeccapurple;
   font-size: 14px;
   margin-right: 5px;
-}
+} */
 
   .perform h3 {
     color: white;

@@ -31,7 +31,7 @@ export default function Classl() {
   return (
     <div>
       {/* <Header /> */}
-      <div className="classl">
+      {/* <div className="classl"> */}
         <div className="classl_body">
           <div className="classl_title"></div>
           <div className="classl_header"></div>
@@ -48,10 +48,10 @@ export default function Classl() {
             </Select>
           </FormControl>
         </div>
-        <div className="class_table">
+        {/* <div className="class_table"> */}
           <TableC dataList={mockClassData.detailTable} />
-        </div>
+        {/* </div> */}
       </div>
-    </div>
+    // </div>
   );
 }

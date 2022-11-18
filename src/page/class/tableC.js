@@ -3,7 +3,7 @@ import "./tableC.css"
 
 function TableC({ dataList = [] }) {
   return (
-    <div className="class_table">
+    <div className="class_table_container">
       {!!dataList.length&&
         <table>
           <tr>

@@ -4,7 +4,7 @@ import "./testTable.css"
 
 function TableT({ dataList = [] }) {
   return (
-    <div className="test_table">
+    <div className="test_table_container">
       {!!dataList.length&&
         <table>
           <tr>

@@ -49,7 +49,7 @@ export default function Result() {
   }, []);
   // console.log("check ---->", user.username);
   return (
-    <div style={{ backgroundColor: "red" }}>
+    <div>
       <Header />
 
       <div className="result">
@@ -103,22 +103,17 @@ export default function Result() {
             icon="graph"
           />
         </div>
-        <div className="select_year">
-          <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-            <InputLabel id="demo-simple-select-standard-label">Year</InputLabel>
-            <Select>
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={1}>1/2565</MenuItem>
-              <MenuItem value={2}>2/2565</MenuItem>
-            </Select>
-          </FormControl>
-        </div>
-        <div>
+        <div className="table_data">
           <Table dataList={termData.detailTable} />
+        <div className="select_year">
+        <h4>ภาคเรียนที่</h4>
+            <select>
+              <option>1/2565</option>
+              <option>2/2565</option>
+            </select>
         </div>
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        </div>
+        <div className="table_gp">
           <TableGpa dataList={termData.GpaTable} />
           <TableGpa dataList={accumulateData} />
         </div>

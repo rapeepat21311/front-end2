@@ -2,7 +2,7 @@ import React from "react";
 
 function Table({ dataList = [] }) {
   return (
-    <div className="general-table">
+    <div className="general-table_container">
       {!!dataList.length&&
         <table>
           <tr>

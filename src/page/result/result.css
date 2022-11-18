@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background: radial-gradient(
         circle at center,
@@ -45,12 +45,7 @@
     gap: 24px;
     width: 960px;
     margin-top: 24px;
-    /* height: 128px; */
-    /* left: 240px; */
-    /* top: 168px; */
-    /* background-color: bisque; */
   }
-
   .result_student_info{
     display: flex;
     flex-direction: column;
@@ -89,7 +84,8 @@
     gap: 24px;
     width: 319px;
     /* height: 48px; */
-    justify-content: flex-start;
+    justify-content: flex-start,
+    
   }
 
   .result_group_section{
@@ -143,6 +139,10 @@
     flex-direction: row;
     align-items: center;
     margin-top: 24px;
+    /* background-color: #3d3b63; */
+    width: 68%;
+    gap: 24px;
+    justify-content: center;
     /* background-color: #0A0C12; */
 
   }
@@ -154,7 +154,7 @@
     width: 304px;
     height: 126px;
     text-align: left;
-    margin-left: 25px;
+    /* margin-left: 25px; */
     margin-top: 40px;
     border: 1px solid black;
     border-radius: 16px;
@@ -209,44 +209,77 @@
     color: #0A0C12;
   }
 
-/* 
-  .table_container{
-    width: 100%;
-    height: 100vh;
+  .table_data{
     display: flex;
+    /* background-color: #3d3b63; */
+    width: 68%;
     justify-content: center;
     align-items: center;
-    background-color: #0A0C12;
-  } */
-
-  /* table {
-    border: 2px solid forestgreen;
-    width: 950px;
-    height: 200px;
-    margin-top: 80px;
-    align-self:center ;
-    
-  } */
-/*     
-  th {
-    border-bottom: 1px solid black;
+    position: relative;
   }
-    
-  td {
+   
+
+  .general-table_container{
+    display: flex;
+    width: 100%;
+    /* background-color: #3d3b63; */
+    margin-top: 8px;
+  }
+
+  .general-table_container table {
+    background-color: #3d3b63;
+    border-collapse: collapse;
+    border-radius: 16px;
+    font-size: 1em;
+    color: white;
+    overflow: hidden;
+    width: auto;
+    width: 100%;
     text-align: center;
-  } */
+    margin-bottom: 50px;
+    margin-top: 40px;
+    
+  }
+  .general-table_container thead {
+    background-color: #8B8C89;
+   
+  }
+  .general-table_container th {
+    letter-spacing: 0.3px;
+    /* text-shadow: 0 1px 1px #2b2a466b; */
+    text-align: center;
+  }
+  .general-table_container table > thead > tr > th {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .general-table_container td {
+    background-color: #ffffff;
+    color: black;
+  }
+  .general-table_container td strong {
+    color: white;
+  }
+  .general-table_container td,
+  .general-table_container th {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 11px;
+  }
+
+  .table_gp{
+    display: flex;
+    width: 68%;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* background-color: #3d3b63; */
+  }
 
 
   .select_year{
     display: flex;
-    width: 20%;
-    height: 0px;
-    top: 175px;
-    position: absolute;
-    margin-left: 940px;
-    margin-bottom: 200px;
-    /* position: absolute; */
-    background-color: pink;
+    top : 0;
+    right: 0;
+    margin-top: 16px;
+    position: absolute
   }
 
   .select_year Select {
@@ -261,22 +294,34 @@
   }
 
   .result-vertical-table{
-    margin-top:50px;
+    margin-top:16px;
     display:flex;
     flex-Direction:row;
-    width:475px;
+    width:68%;
+    background-color: #ffffff;
   }
 
   .vertical_table_cell{
     width: calc(100%);
     width:100%;
-    height: 40px;
+    height: 48px;
     border: black 1px solid;
     border-collapse: collapse;
     box-sizing: border-box;
+  } 
+
+
+
+
+  .grade{
+    display: flex;
+    width: 10%;
+    font-size: 20px;
+    justify-content: baseline;
+    align-items: center;
+    margin-right: 10px;
+    /* height: 100px; */
+    flex-direction: column-reverse;
+    /* background-color: firebrick; */
   }
 
-
-
-
-  
