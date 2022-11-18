@@ -7,6 +7,7 @@
   left: 0;
   right: 0;
   z-index: 999;
+  position: sticky;
   /* justify-content: space-between; */
   background-color: rgb(188, 235, 255);
   /* background: linear-gradient(
@@ -14,6 +15,9 @@
     rgba(255, 255, 255, 0.6) -0.35%,
     rgba(255, 255, 255, 0.2) 100%
   ); */
+  transition-property: all; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
   box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(12px);
   /* 
@@ -25,6 +29,10 @@
     -o-animation: Header 26s ease infinite;
     animation: Header 26s ease infinite; */
 }
+
+
+
+
 
 @-webkit-keyframes Header {
   0% {
@@ -118,7 +126,7 @@
   display: flex;
   background-color: black;
   padding: 8px;
-  border-radius:80px 80px 80px 80px;
+  border-radius: 80px 80px 80px 80px;
   color: #ffffff;
 }
 

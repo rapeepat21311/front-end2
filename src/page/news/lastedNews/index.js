@@ -8,8 +8,11 @@ import LastesNews from "./component/LastesNews";
 import PaginationNews from "../Pagination/PaginatioNews";
 
 import { mockDataLastesNews } from "./component/mockDataNews";
+import { useNavigate } from "react-router";
 
 function Index() {
+  const navigate = useNavigate();
+
   const [lastesNewsData, setLastesNewsData] = useState(mockDataLastesNews);
   // จำนวน Page จำนวน Document
   const [currentPage, setCurrentPage] = useState(1);
@@ -28,7 +31,8 @@ function Index() {
       <div className="news_body">
         <div className="news_container">
           <div className="home_page_and_redirect_page">
-            <p>หน้าหลัก </p> {" > "} <p>ข่าวสารและกิจกรรม</p> {" > "}{" "}
+            <p onClick={() => navigate("/")}>หน้าหลัก </p> {" > "}{" "}
+            <p onClick={() => navigate("/news")}>ข่าวสารและกิจกรรม</p> {" > "}{" "}
             <p>ข่าวสารทั้งหมด</p>
           </div>
           <div className="news_update_title">

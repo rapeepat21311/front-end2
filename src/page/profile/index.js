@@ -8,6 +8,7 @@ import ProfileStudent from "./profile/ProfileStudent";
 import Paratoon from "./Paratoon/Paratoon";
 import Events from "./events/backlist/Events";
 import CreateBox from "./events/CreateBox";
+import { Navigate, useNavigate } from "react-router";
 
 const navTab = [
   {
@@ -28,6 +29,8 @@ const navTab = [
 ];
 
 function Index() {
+  const navigate = useNavigate();
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -37,6 +40,10 @@ function Index() {
         className={activeIndex === 1 ? "profile_body_capital" : "profile_body"}
       >
         <div className={activeIndex === 1 ? "profile_capital" : "profile"}>
+          <div className="profile_title_link_home_page">
+            <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
+            <p>ประวัตินักศึกษา</p>
+          </div>
           <div className="profile_title">
             <h1>ประวัตินักศึกษา</h1>
           </div>

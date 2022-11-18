@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
@@ -19,8 +19,6 @@ function Header() {
   const [profileBar, setProfileBar] = useState(false);
 
   const showLoginLogOut = () => setProfileBar(!profileBar);
-
-  
 
   const Login = () => {
     navigate("/login");
