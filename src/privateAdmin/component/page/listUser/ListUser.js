@@ -65,7 +65,9 @@ function ListUser() {
                 <td>{users.status}</td>
                 <td>....</td>
                 <Link to={`/admin-page/edit-user/${users._id}`}>
-                  <EditOutlined />
+                  <td>
+                    <EditOutlined />
+                  </td>
                 </Link>
               </tr>
             );

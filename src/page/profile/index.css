@@ -210,3 +210,15 @@ justify-content: center;
   margin-top: 16px;
   /* background-color: rgb(68, 1, 59); */
 }
+
+
+@media only screen  and (min-width :1440px){
+  .profile_body {
+    height: 100vh;
+  }
+  .profile {
+    width: 68%;
+    height: 100%;
+    /* background-color: #ffffff; */
+  }
+}

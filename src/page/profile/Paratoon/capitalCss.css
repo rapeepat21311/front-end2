@@ -1,17 +1,70 @@
-.table_capital_container {
+.table_capital_container table {
+	/* background-color: #3d3b63; */
+	border-collapse: collapse;
+	border-radius: 16px;
+	font-size: 1em;
+	color: white;
+	overflow: hidden;
+	width: auto;
+	width: 100%;
+  text-align: start;
+  margin-bottom: 50px;
+}
+.table_capital_container thead {
+	background-color: #8B8C89;
+ 
+}
+.table_capital_container th {
+	letter-spacing: 0.3px;
+	/* text-shadow: 0 1px 1px #2b2a466b; */
+  text-align: start;
+}
+.table_capital_container table > thead > tr > th {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.table_capital_container td {
+	background-color: #ffffff;
+	color: black;
+}
+.table_capital_container td strong {
+	color: white;
+}
+.table_capital_container td,
+.table_capital_container th {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 11px;
+}
+/* .table_capital_container thead th:hover,
+.table_capital_container thead tr:hover,
+.table_capital_container th:hover {
+    background-color: #f3646c;
+} */
+/* .table_capital_container tbody tr:hover td,
+.table_capital_container tbody tr:hover td a {
+	background-color: #a32959;
+	color: white;
+} */
+
+
+/* ..table_capital_container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  /* padding-bottom: 20%; */
+  padding-bottom: 20%;
   
-  /* background-color: green; */
+  background-color: green;
 }
 
+thead {
+  background-color: green;
+  border:none;
+}
 
 table {
   border:solid black 1px;
   border-radius:16px;
   width: 100%;
+  margin-bottom: 54px;
 }
 
 td, th {
@@ -20,7 +73,7 @@ td, th {
 }
 
 th {
-  background-color: blue;
+  background-color: #8B8C89;
   border-top: none;
   border-bottom: none;
 }
@@ -41,7 +94,7 @@ td:first-child, th:first-child {
 
 .table_right_radius{
   border-top-right-radius: 16px;
-}
+} */
 
 
 
