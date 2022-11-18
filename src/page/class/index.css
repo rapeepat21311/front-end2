@@ -86,6 +86,7 @@
 
 .class_tab_container {
   display: flex;
+  position: relative;
   flex-direction: row;
   justify-content: flex-start;
   width: 70%;
@@ -142,4 +143,20 @@
 }
 .class_header p {
   font-size: 14px;
+}
+
+.select_C {
+  display: flex;
+  /* background-color: red; */
+  top : 100px;
+  right: 0px;
+  /* justify-content: flex-start; */
+  align-items: center;
+  position: absolute;
+}
+
+.select_C h4 {
+  /* background-color: rebeccapurple; */
+  font-size: 14px;
+  margin-right: 5px;
 }

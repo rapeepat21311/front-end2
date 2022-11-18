@@ -33,7 +33,9 @@ function Index() {
     <>
       <Header />
       <div className="class">
-        <div className="class_header"><p>{"หน้าหลัก > ตารางเรียน"}</p></div>
+        <div className="class_header">
+          <p>{"หน้าหลัก > ตารางเรียน"}</p>
+        </div>
         <div className="class_title">
           <h1>ตารางเรียน</h1>
         </div>
@@ -57,6 +59,13 @@ function Index() {
               </div>
             );
           })}
+          <div className="select_C">
+            <h4>ภาคเรียนที่</h4>
+            <select>
+              <option>1/2565</option>
+              <option>2/2565</option>
+            </select>
+          </div>
         </div>
         <div className="class_component">{navTab[activeIndex].component}</div>
       </div>
@@ -65,4 +74,4 @@ function Index() {
   );
 }
 
-export default Index; 
+export default Index;
