@@ -33,8 +33,10 @@ function Index() {
   return (
     <>
       <Header />
-      <div className="profile_body">
-        <div className="profile">
+      <div
+        className={activeIndex === 1 ? "profile_body_capital" : "profile_body"}
+      >
+        <div className={activeIndex === 1 ? "profile_capital" : "profile"}>
           <div className="profile_title">
             <h1>ประวัตินักศึกษา</h1>
           </div>

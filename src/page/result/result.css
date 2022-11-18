@@ -219,29 +219,39 @@
     background-color: #0A0C12;
   } */
 
-  table {
+  /* table {
     border: 2px solid forestgreen;
     width: 950px;
     height: 200px;
     margin-top: 80px;
     align-self:center ;
     
-  }
-    
+  } */
+/*     
   th {
     border-bottom: 1px solid black;
   }
     
   td {
     text-align: center;
-  }
+  } */
 
 
   .select_year{
     display: flex;
-    width: 10%;
+    width: 20%;
     height: 0px;
-    margin-left: 835px;
+    top: 175px;
+    position: absolute;
+    margin-left: 940px;
+    margin-bottom: 200px;
+    /* position: absolute; */
+    background-color: pink;
+  }
+
+  .select_year Select {
+    width: 200px;
+    background-color: #fff;
   }
 
   .Table{

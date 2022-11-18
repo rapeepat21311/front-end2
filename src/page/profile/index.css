@@ -1,6 +1,23 @@
 .profile_body{
   display: flex;
   /* flex-direction: row; */
+  height: 940px;
+  /* width: 100vw; */
+  background: radial-gradient(
+      circle at center,
+      #ffffff 0%,
+      #e3f5fa 4%,
+      #bff5c8 12.25%,
+      #95e0fd 31.25%,
+      #b6f8d1 50%
+    );
+justify-content: center;
+  /* align-items: center; */
+}
+
+.profile_body_capital{
+  display: flex;
+  /* flex-direction: row; */
   height: 100%;
   /* width: 100vw; */
   background: radial-gradient(
@@ -21,7 +38,27 @@ justify-content: center;
   align-items: center;
   justify-content: flex-start;
   width: 68%;
-  height: 100vh;
+  height: 940px;
+  /* background: radial-gradient(
+      circle at center,
+      #ffffff 0%,
+      #e3f5fa 4%,
+      #bff5c8 12.25%,
+      #95e0fd 31.25%,
+      #b6f8d1 50%
+    )
+    center top/200% 200%;
+  color: rgb(14, 14, 14); */
+  font-weight: bold;
+  /* animation: colorChange 5s infinite alternate; */
+} 
+.profile_capital {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 68%;
+  height: 100%;
   /* background: radial-gradient(
       circle at center,
       #ffffff 0%,

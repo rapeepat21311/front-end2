@@ -3,7 +3,6 @@
 } */
 
 
-
 @keyframes colorChange {
   to {
     background-position: 0%;
@@ -58,7 +57,7 @@
 .home_body{
   display: flex;
   /* flex-direction: row; */
-  height: 100vh;
+  height: 90vh;
   /* width: 100vw; */
   background: radial-gradient(
       circle at center,
@@ -75,6 +74,7 @@ justify-content: center;
 .body_header {
   display: flex;
   justify-content: space-between;
+  margin-top: 80px;
 }
 
 .body_left {
@@ -98,6 +98,7 @@ justify-content: center;
    flex-direction: row;
    flex-wrap: wrap;
    justify-content: space-between;
+   /* background-color: aqua; */
 }
 
 /* 
@@ -124,6 +125,7 @@ justify-content: center;
   align-items: center;
   justify-content: center;
   justify-content: space-evenly;
+  border-radius: 16px;
 }
 
 .card_container h3 {

@@ -33,13 +33,11 @@ export default function Classl() {
       {/* <Header /> */}
       <div className="classl">
         <div className="classl_body">
-          <div className="classl_title">
-          </div>
-          <div className="classl_header">
-          </div>
+          <div className="classl_title"></div>
+          <div className="classl_header"></div>
         </div>
         <div className="select_year">
-            <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+          <FormControl variant="standard" sx={{ m: 1 }}>
             <InputLabel id="demo-simple-select-standard-label">Year</InputLabel>
             <Select>
               <MenuItem value="">
@@ -50,9 +48,9 @@ export default function Classl() {
             </Select>
           </FormControl>
         </div>
-          <div className="class_table">
+        <div className="class_table">
           <TableC dataList={mockClassData.detailTable} />
-          </div>
+        </div>
       </div>
     </div>
   );
