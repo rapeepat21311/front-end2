@@ -5,6 +5,7 @@ import "./result.css";
 import Table from "./table/table_info";
 import Card from "./resultCard";
 import TableGpa from "./table/tableGpa";
+import Footer from "../../component/navbar/Footer/Footer"
 
 import {
   mockTableList,
@@ -118,6 +119,7 @@ export default function Result() {
           <TableGpa dataList={accumulateData} />
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
