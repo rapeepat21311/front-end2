@@ -1,14 +1,23 @@
+.volunteer_body {
+  /* background-color: yellow; */
+  position: relative;
+  height: 1064px;
+}
+
 .box_activity_suppe {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
+  width: 960px;
+  /* height: 944px; */
   /* background-color: red; */
   justify-content: space-between;
 }
 
 .box_activity_container {
   display: flex;
-  width:48.49%;
+  /* width:48.49%; */
+  width: 468px;
+  height: 144px;
   /* margin-right: 12px; */
   margin-bottom: 20px;
   border-radius: 16px;

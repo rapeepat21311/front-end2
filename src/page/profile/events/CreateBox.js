@@ -8,19 +8,19 @@ export default function CreateBox() {
   const [volunteerHours, setVolunteerHours] = useState(mockDataActivity);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [volunteerHoursPerPage] = useState(8);
+  const [volunteerHoursPerPage] = useState(12);
   const [pageNumberLimit, setPageNumberLimit] = useState(6);
   const [maxPageLimit, setMaxPageLimit] = useState(6);
   const [minPageLimit, setMinPageLimit] = useState(0);
 
- const indexOfLastVolunteerHours = currentPage * volunteerHoursPerPage;
- const indexOfFirstVolunteerHours =
-   indexOfLastVolunteerHours - volunteerHoursPerPage;
+  const indexOfLastVolunteerHours = currentPage * volunteerHoursPerPage;
+  const indexOfFirstVolunteerHours =
+    indexOfLastVolunteerHours - volunteerHoursPerPage;
 
- const currentVolunteerHours = volunteerHours.slice(
-   indexOfFirstVolunteerHours,
-   indexOfLastVolunteerHours
- ); 
+  const currentVolunteerHours = volunteerHours.slice(
+    indexOfFirstVolunteerHours,
+    indexOfLastVolunteerHours
+  );
 
   // const handleSelectDataList = (e) => {
   //   const value = e.target.value;
@@ -32,32 +32,34 @@ export default function CreateBox() {
   };
   return (
     <>
-      <div className="box_activity_suppe">
-        {currentVolunteerHours.map((item) => {
-          return (
-            <div className="box_activity_container">
-              <div className="box_activity_img">
-                <img src={item.image} />
-                {item.id}
-              </div>
-              <div className="box_activity_title">
-                <h2>{item.title}</h2>
-                <div className="box_activity_location">
-                  <p>{item.location}</p>
+      <div className="volunteer_body">
+        <div className="box_activity_suppe">
+          {currentVolunteerHours.map((item) => {
+            return (
+              <div className="box_activity_container">
+                <div className="box_activity_img">
+                  <img src={item.image} />
+                  {item.id}
                 </div>
-                <div className="box_activity_hr">
-                  <p>{item.date}</p>
-                  <p>ชม.กิจกรรม {item.hr}</p>
+                <div className="box_activity_title">
+                  <h2>{item.title}</h2>
+                  <div className="box_activity_location">
+                    <p>{item.location}</p>
+                  </div>
+                  <div className="box_activity_hr">
+                    <p>{item.date}</p>
+                    <p>ชม.กิจกรรม {item.hr}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-      {/* <select onClick={(e) => handleSelectDataList(e)}>
+            );
+          })}
+        </div>
+        {/* <select onClick={(e) => handleSelectDataList(e)}>
         <option value="8">8</option>
         <option value="10">10</option>
       </select> */}
+      </div>
       <Pagination
         volunteerHoursPerPage={volunteerHoursPerPage}
         totalVolunteerHours={volunteerHours.length}

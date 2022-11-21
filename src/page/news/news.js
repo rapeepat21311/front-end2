@@ -24,8 +24,8 @@ function News() {
   const [lastesNewsData, setLastesNewsData] = useState(mockDataLastesNews);
   const [lastedEvent, setLastedEvent] = useState(mockDataLastesEvent);
   //hover
-  const [hover, setHover] = useState(false);
-  const [hoverNews, setHoverNews] = useState(false);
+  const [hoverallEvent, setHoverAllEvent] = useState(false);
+  const [hoverallNews, setHoverAllNews] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [lastedNewsPerPage, setLastedNewsPerPage] = useState(3);
@@ -77,13 +77,13 @@ function News() {
             <h1>ข่าวสารล่าสุด</h1>
             <h2
               className="news_title_h2"
-              onMouseEnter={() => setHover(true)}
-              onMouseLeave={() => setHover(false)}
+              onMouseEnter={() => setHoverAllNews(true)}
+              onMouseLeave={() => setHoverAllNews(false)}
               onClick={() => {
                 navigate("/news/last-news");
               }}
             >
-              {hover ? (
+              {hoverallNews ? (
                 <>
                   ดูข่าวสารทั้งหมด
                   <EastIcon />
@@ -102,7 +102,23 @@ function News() {
           </div>
           <div className="event_update_title">
             <h1>กิจกรรมล่าสุด</h1>
-            <h2>ดูกิจกรรมทั้งหมด</h2>
+            <h2
+              className="news_title_h2"
+              onMouseEnter={() => setHoverAllEvent(true)}
+              onMouseLeave={() => setHoverAllEvent(false)}
+              onClick={() => {
+                navigate("/news/last-events");
+              }}
+            >
+              {hoverallEvent ? (
+                <>
+                  ดูข่าวสารทั้งหมด
+                  <EastIcon />
+                </>
+              ) : (
+                "ดูข่าวสารทั้งหมด"
+              )}
+            </h2>
           </div>
           <div className="news_update_box_cotainer">
             <LastedEvent

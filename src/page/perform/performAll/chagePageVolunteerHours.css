@@ -1,11 +1,8 @@
 .page_number {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: aqua; */
-    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
     margin-bottom: 24px;
-    position: relative;
 }
 
 .page_number h2{
