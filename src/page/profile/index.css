@@ -44,6 +44,7 @@
   letter-spacing: 0.5px;
   color: #333333;
   /* background-color: gold; */
+  border-bottom: 0.5px solid #cccccc;
   cursor: pointer;
 }
 
@@ -181,7 +182,6 @@
   justify-self: start;
   align-items: center;
   /* background-color: gold; */
-  height: 479px;
   height: 48px;
   padding: 8px;
 }
@@ -247,12 +247,18 @@
   height: 40px;
 }
 
+.select_term h4 {
+  margin-bottom: 20px;
+}
+
 .select_term select {
   width: 103px;
   height: 100%;
   text-align: center;
   border-radius: 8px;
+  margin-bottom: 20px;
   padding: 8px 8px 8px 16px;
+
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -274,7 +280,7 @@
   /* background-color: rgb(68, 1, 59); */
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1441px) {
   .profile_body {
     height: 100vh;
   }
@@ -282,5 +288,37 @@
     width: 68%;
     height: 100%;
     /* background-color: #ffffff; */
+  }
+  .profile_tab_container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* width: 44%; */
+  }
+  .select_term {
+    /* width: 56%; */
+    background-color: gold;
+  }
+}
+
+
+@media only screen and (max-width: 1439px) {
+  .profile_body {
+    height: 100vh;
+  }
+  .profile {
+    width: 68%;
+    height: 100%;
+    /* background-color: #ffffff; */
+  }
+  .profile_tab_container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* width: 44%; */
+  }
+  .select_term {
+    /* width: 56%; */
+    background-color: gold;
   }
 }
