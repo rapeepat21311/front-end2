@@ -1,17 +1,17 @@
 .table_capital_container table {
-	/* background-color: #3d3b63; */
+	background-color: #3d3b63;
 	border-collapse: collapse;
 	border-radius: 16px;
 	font-size: 1em;
-	color: white;
+	color: black;
 	overflow: hidden;
 	width: auto;
-	width: 100%;
+	width: 960px;
   text-align: start;
   margin-bottom: 50px;
 }
 .table_capital_container thead {
-	background-color: #8B8C89;
+	background-color: #E7ECEF;
  
 }
 .table_capital_container th {
@@ -19,9 +19,9 @@
 	/* text-shadow: 0 1px 1px #2b2a466b; */
   text-align: start;
 }
-.table_capital_container table > thead > tr > th {
+/* .table_capital_container table > thead > tr > th {
 	border: 1px solid rgba(0, 0, 0, 0.1);
-}
+} */
 .table_capital_container td {
 	background-color: #ffffff;
 	color: black;
@@ -34,6 +34,7 @@
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 11px;
 }
+
 
 .capital_discount {
   text-align: end;

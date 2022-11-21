@@ -22,7 +22,7 @@
   margin-bottom: 20px;
   border-radius: 16px;
   border: 1px solid black;
-  background-color: wheat;
+  background-color: #ffffff;
 }
 
 .box_activity_img img {
@@ -80,4 +80,15 @@
   /* justify-content: flex-end; */
   /* background-color: black; */
   /* width: 100%; */
+}
+
+
+@media only screen and (min-width : 1441px) {
+  .box_activity_suppe {
+    width: 100%;
+    /* background-color: pink; */
+  }
+  .box_activity_container{
+    width: 49%;
+  }
 }

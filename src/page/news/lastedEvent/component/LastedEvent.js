@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 
 import EastIcon from "@mui/icons-material/East";
+import RoomIcon from "@mui/icons-material/Room";
 
 function LastedEvent({ mockDataLastedEvent, currentPage, perPage }) {
   // const navigate = useNavigate();
@@ -45,7 +46,10 @@ function LastedEvent({ mockDataLastedEvent, currentPage, perPage }) {
             >
               <div className="news_update_date">{item.date}</div>
               <div className="box_lasted_event_title">{item.title}</div>
-              <div className="news_event_location">{item.location}</div>
+              <div className="news_event_location">
+                <RoomIcon />
+                <p>{item.location}</p>
+              </div>
               <div
                 className={` ${
                   hover === item.id

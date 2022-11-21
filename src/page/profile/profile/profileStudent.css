@@ -1,23 +1,29 @@
 .profile_student {
   display: flex;
   flex-direction: row;
+  width: 960px;
   /* border-radius: 16px; */
-  
 }
 
 .profile_student_container_left {
   width: 632px;
-  border: 1px solid black;
+  border: 1px solid #a7c7e7;
+  backdrop-filter: blur(16px);
   border-radius: 16px;
   background-color: whitesmoke;
 }
 
 .profile_student_container_left h2 {
   display: flex;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  color: #333333;
+  padding: 16px 16px 16px;
   /* text-decoration: underline rgb(235, 10, 47); */
   /* background-color: blue; */
-  /* justify-content: flex-start; */
-  margin-left: 20px;
 }
 
 .profile_student_left {
@@ -27,18 +33,26 @@
 }
 
 .profile_student_left h4 {
-  color: #999999;
-  text-align: left;
-  font-size: 12px;
-  margin-top: 10px;
-  margin-bottom: 2px;
+  color: #777777;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
 }
 
 .profile_student_left p {
-  color: #0a0c12;
-  font-size: 14px;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  color: #333333;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  padding: 8px 12px 8px 0px;
 }
 
 .student_profile_left {
@@ -60,56 +74,69 @@
   /* align-self: flex-start; */
   text-align: left;
   margin-left: 25px;
-  border: 1px solid black;
+  border: 1px solid #a7c7e7;
+  backdrop-filter: blur(16px);
   border-radius: 16px;
   background-color: whitesmoke;
 }
 
 .student_teacher_profile_right h2 {
-    padding-left: 10px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  color: #333333;
+  padding: 16px 20px 30px;
 }
 
-
 .student_teacher_profile_text {
-    padding-left: 10px;
+  padding-left: 20px;
 }
 
 .student_teacher_profile_text h4 {
-    color: #999999;
-    text-align: left;
-    font-size: 12px;
-    margin-top: 10px;
-    margin-bottom: 2px;
+  color: #777777;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.student_teacher_profile_text p {
+  color: #333333;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  padding: 8px 12px 8px 0px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .profile_student_container_left {
+    width: 68%;
+    font-size: 24px;
   }
-  
-  .student_teacher_profile_text p {
-    color: #0a0c12;
+  .profile_student_left h4 {
     font-size: 14px;
-    margin-top: 2px;
-    margin-bottom: 2px;
+  }
+  .profile_student_left p {
+    font-size: 18px;
   }
 
-
-  @media only screen and (min-width : 1440px) {
-    .profile_student_container_left {
-      width: 68%;
-      font-size: 24px;
-    }
-    .profile_student_left h4 {
-      font-size: 14px;
-    }
-    .profile_student_left p {
-      font-size: 18px;
-    }
-    
-    .student_teacher_profile_right {
-      width: 30%;
-      font-size: 24px;
-    }
-    .student_teacher_profile_text h4 {
-      font-size: 14px;
-    }
-    .student_teacher_profile_text p {
-      font-size: 18px;
-    }
+  .student_teacher_profile_right {
+    width: 30%;
+    font-size: 24px;
   }
+  .student_teacher_profile_text h4 {
+    font-size: 14px;
+  }
+  .student_teacher_profile_text p {
+    font-size: 18px;
+  }
+}
