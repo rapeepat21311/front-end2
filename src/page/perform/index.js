@@ -8,6 +8,7 @@ import { Button } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 // import {Stack} from "@mui/material";
 import { TbPlus } from "react-icons/tb";
+import Footer from "../../component/navbar/Footer/Footer";
 
 const navTab = [
   {
@@ -80,6 +81,7 @@ function Perform() {
         </div>
         <div className="perform_component">{navTab[activeIndex].component}</div>
       </div>
+      <Footer/>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import mockDataActivity from "./MockDataEvent";
 import Pagination from "./Pagination";
 import "./createbox.css";
@@ -6,6 +7,8 @@ import "./createbox.css";
 
 export default function CreateBox() {
   const [volunteerHours, setVolunteerHours] = useState(mockDataActivity);
+  const navigate = useNavigate();
+  const {id} = useParams();
 
   const [currentPage, setCurrentPage] = useState(1);
   const [volunteerHoursPerPage] = useState(8);
@@ -29,13 +32,14 @@ export default function CreateBox() {
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
+    navigate('/detail')
   };
   return (
     <>
       <div className="pbox_activity_suppe">
         {currentVolunteerHours.map((item) => {
           return (
-            <div className="pbox_activity_container">
+            <div className="pbox_activity_container" onClick={paginate} >
               <div className="pbox_activity_img">
                 <img src={item.image} />
                 {item.id}

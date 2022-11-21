@@ -23,6 +23,7 @@ import NotFound from "../page/notFound";
 import Profile from "../page/profile/index";
 import LastesNews from "../page/news/lastedNews";
 import LastedEvent from "../page/news/lastedEvent";
+import Detail from "../page/perform/detail/detailPer"
 
 function PrivateRoute() {
   const dispatch = useDispatch();
@@ -73,6 +74,8 @@ function PrivateRoute() {
         <Route path="/classl" element={<Classl />} />
 
         <Route path="/result" element={<Result />} />
+
+        <Route path="/detail" element={<Detail/>} />
 
         <Route
           path="/eport"
