@@ -37,7 +37,7 @@ function Header() {
 
       <div className="Header_center">
         <Link className="link" to="/">
-          <HomeOutlinedIcon />
+          หน้าหลัก
         </Link>
         <h3>
           <Link className="link" to="/profile">
@@ -46,7 +46,17 @@ function Header() {
         </h3>
         <h3>
           <Link className="link" to="/result">
-            ผลการศึกษา
+            ผลการเรียน
+          </Link>
+        </h3>
+        <h3>
+          <Link className="link" to="/classl">
+            ตารางสอน
+          </Link>
+        </h3>
+        <h3>
+          <Link className="link" to="/perform">
+            ผลงาน
           </Link>
         </h3>
         <h3>
@@ -55,13 +65,8 @@ function Header() {
           </Link>
         </h3>
         <h3>
-          <Link className="link" to="/classl">
-            ตารางเรียน/สอบ
-          </Link>
-        </h3>
-        <h3>
-          <Link className="link" to="/perform">
-            ผลงาน
+          <Link className="link" to="/eport">
+            e-Protfolio
           </Link>
         </h3>
       </div>

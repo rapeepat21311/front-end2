@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../component/navbar/Header/Header";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import "./index.css";
 import CreateBox from "./performAll/CreateBox";
@@ -30,13 +31,15 @@ const navTab = [
 
 function Perform() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const navigate = useNavigate();
 
   return (
     <>
       <Header />
       <div className="perform">
         <div className="perform_header">
-          <p>{"หน้าหลัก > ตารางเรียน"}</p>
+        <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
+            <p>ผลงาน</p>
         </div>
         <div className="perform_title">
           <h1>ผลงาน</h1>
@@ -60,7 +63,7 @@ function Perform() {
               </div>
             );
           })}
-          <div className="select_term">
+          <div className="select_per">
             <h4>ภาคเรียนที่</h4>
             <select>
               <option>1/2565</option>

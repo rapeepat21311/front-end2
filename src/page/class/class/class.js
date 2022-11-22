@@ -37,16 +37,6 @@ export default function Classl() {
           <div className="classl_header"></div>
         </div>
         <div className="select_year">
-          <FormControl variant="standard" sx={{ m: 1 }}>
-            <InputLabel id="demo-simple-select-standard-label">Year</InputLabel>
-            <Select>
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={1}>1/2565</MenuItem>
-              <MenuItem value={2}>2/2565</MenuItem>
-            </Select>
-          </FormControl>
         </div>
         {/* <div className="class_table"> */}
           <TableC dataList={mockClassData.detailTable} />

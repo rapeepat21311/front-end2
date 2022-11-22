@@ -17,6 +17,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const mockTermData = { detailTable: mockTableList, GpaTable: mockTableGpaList };
 const mockAccumulateData = mockTableGpaxList;
@@ -29,6 +30,7 @@ export default function Result() {
 
   const [termData, setTermData] = useState(defaultTermData);
   const [accumulateData, setAccumulateData] = useState([]);
+  const navigete = useNavigate();
 
   useEffect(() => {
     setTerm(calDefaultTerm);
@@ -55,6 +57,10 @@ export default function Result() {
 
       <div className="result">
         <div className="result_body">
+          <div className="result_H">
+          <p onClick={()=> navigete("/")}>หน้าหลัก</p>{" > "}
+          <p>ผลการศึกษา</p>
+          </div>
           <div className="result_title">
             <p>ผลการศึกษา(1/2555)</p>
           </div>

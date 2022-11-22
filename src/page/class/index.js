@@ -3,6 +3,7 @@ import Body from "../home/home";
 import Header from "../../component/navbar/Header/Header";
 import Footer from "../../component/navbar/Footer/Footer";
 import "./index.css";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import Class from "../class/class/class";
 // import Paratoon from "./Paratoon/Paratoon";
@@ -28,13 +29,15 @@ const navTab = [
 
 function Index() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const navigate = useNavigate();
 
   return (
     <>
       <Header />
       <div className="class">
         <div className="class_header">
-          <p>{"หน้าหลัก > ตารางเรียน"}</p>
+        <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
+            <p>ตารางเรียน</p>
         </div>
         <div className="class_title">
           <h1>ตารางเรียน</h1>

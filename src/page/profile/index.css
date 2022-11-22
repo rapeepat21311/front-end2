@@ -171,6 +171,7 @@
   cursor: pointer;
   margin-bottom: 16px;
   position: relative;
+  background-color: #0d47a1;
 }
 
 .profile_tab_container:hover {
@@ -318,7 +319,7 @@
     /* width: 44%; */
   }
   .select_term {
-    /* width: 56%; */
-    background-color: gold;
-  }
+    width: 56%;
+    background-color: rgb(8, 247, 255);
+  } 
 }

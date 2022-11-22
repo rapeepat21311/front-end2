@@ -1,7 +1,7 @@
 .pbox_activity_suppe {
   display: flex;
   flex-flow: row wrap;
-  width: 75%;
+  width: 960px;
   margin-top: 40px;
   margin-left: 15%;
   /* background-color: red; */
@@ -10,7 +10,7 @@
 
 .pbox_activity_container {
   display: flex;
-  width:48.49%;
+  width: 470px;
   /* margin-right: 12px; */
   margin-bottom: 20px;
   border-radius: 16px;

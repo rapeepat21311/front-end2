@@ -1,14 +1,21 @@
 import React from "react";
 import Header from "../../component/navbar/Header/Header";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import "./eport.css"
 
-function eport() {
+function Eport() {
+
+  const navigate = useNavigate();
+
   return (
     <div>
       <Header />
       <div className="eport">
-        <div className="eport_title"><p>{"หน้าหลัก > e-Portfolio"}</p></div>
+        <div className="eport_title">
+        <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
+            <p>e-Protfolio</p>
+        </div>
           <div className="eport_header">
             <h1> e-Portfolio</h1>
           </div>
@@ -21,4 +28,4 @@ function eport() {
   );
 }
 
-export default eport;
+export default Eport;
