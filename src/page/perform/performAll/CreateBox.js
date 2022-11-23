@@ -32,14 +32,14 @@ export default function CreateBox() {
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-    navigate('/detail')
+    // navigate('/')
   };
   return (
     <>
       <div className="pbox_activity_suppe">
         {currentVolunteerHours.map((item) => {
           return (
-            <div className="pbox_activity_container" onClick={paginate} >
+            <div className="pbox_activity_container" onClick={()=> navigate("/detail")} >
               <div className="pbox_activity_img">
                 <img src={item.image} />
                 {item.id}

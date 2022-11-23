@@ -144,6 +144,8 @@
   /* background-color: #0d47a1; */
   width: 70%;
   justify-content: flex-start;
+  cursor: pointer;
+
 }
 .class_header p {
   font-size: 14px;
