@@ -1,13 +1,17 @@
 .layout_container {
     display: flex;
+    /* height: 100vh; */
     flex-direction: row;
-    z-index: 999;
+    /* z-index: 999; */
+    position: relative;
+    /* background-color: aquamarine; */
 }
 
 
 .sidebar_container {
     order: -1;
     top: 0;
+    /* background-color: gold; */
     left:   -100%;
     transition: 850px;
     position: absolute;
@@ -18,29 +22,21 @@
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    width: 15%;
-    order : -1;
-    height: 100vh;
+    width: 220px;
+    order : 1;
+    height: 1080px;
     left: 0;
     transition: 350ms;
     border: 1px solid gray ;
     /* z-index: 0; */
     /* opacity: 0.5; */
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     cursor: pointer;
 }
 
 
-.sidebar_container_active h1 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color : black;
-    border-bottom: 1px solid gray;
-}
 .sidebar_container_active h2 {
-    width: 100%;
+    width: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,11 +44,35 @@
     border-bottom: 1px solid rgb(197, 200, 202);
 }
 
+.admin_menu_drop_down_list {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    border-bottom: 1px solid gold;
+    padding-left: 20px;
+    /* margin-left: 30px; */
+    /* background-color: aquamarine; */
+}
+
+.admin_menu_drop_down_list h1 {
+    color: #000;
+    display: flex;
+    width: 70%;
+    /* background-color: gold; */
+    justify-content: center;
+    margin-left: 4px;
+}
+
 .menu_list_1 {
-    width: 100%;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .menu_list_1:hover{
+    /* width: 248px; */
     background-color: rgb(69, 155, 212);
 }
 
@@ -83,6 +103,28 @@
     justify-content: flex-end;
     align-items: center;
     color : white;
+}
+
+.children_admin_page {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 64px;
+    /* left: 23px; */
+    /* background-color: green; */
+}
+
+.children_admin_page_active {
+    display: flex;
+    width: 85%;
+    height: 100vh;
+    /* z-index: -1; */
+    top : 64px;
+    left: 215px;
+    right: 15%;
+    /* background-color: red; */
+    position: absolute;
+    /* align-items: center; */
 }
 
 

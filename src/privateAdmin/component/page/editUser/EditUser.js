@@ -11,6 +11,7 @@ function EditUser() {
 
   const [userData, setUserData] = useState([]);
   const [editUserData, setEditUserData] = useState({
+    noun: "",
     studentId: userData.studentId,
     idNumber: userData.idNumber,
     nameTh: userData.nameTh,
@@ -87,9 +88,13 @@ function EditUser() {
             </div>
             <div className="edit_user_container_id_noun_right">
               <h4>คำนำหน้า</h4>
-              <select>
-                <option value="นางสาว">นางสาว</option>
-                <option value="นาย">นาย</option>
+              <select
+                value={editUserData.noun}
+                onChange={handleChangeEditUserData}
+                name="noun"
+              >
+                <option>นางสาว</option>
+                <option>นาย</option>
               </select>
             </div>
           </div>
@@ -132,6 +137,46 @@ function EditUser() {
                 <option>2565</option>
               </select>
             </div>
+          </div>
+          <div className="edit_user_class_major">
+            <div className="edit_user_class_major_left">
+              <h4>ชั้นปีที่</h4>
+              <select>
+                <option> ---</option>
+                <option> 1</option>
+              </select>
+            </div>
+            <div className="edit_user_class_major_center">
+              <h4>ภาคการศึกษา</h4>
+              <select>
+                <option> ---</option>
+                <option> 1</option>
+              </select>
+            </div>
+            <div className="edit_user_class_major_right">
+              <h4>สาขาวิชา</h4>
+              <select>
+                <option> ---</option>
+                <option> 1</option>
+              </select>
+            </div>
+          </div>
+          <div className="edit_status_student">
+            <div className="edit_student_major">
+              <h4>กลุ่มวิชา/สาขา</h4>
+              <select>
+                <option>...</option>
+              </select>
+            </div>
+            <div className="edit_student_status">
+              <h4>สถานภาพนักศึกษา</h4>
+              <select>
+                <option>...</option>
+              </select>
+            </div>
+          </div>
+          <div className="private_student_edit">
+            <h2>ข้อมูลส่วนตัว</h2>
           </div>
           {/* <button type="submit">update</button> */}
         </form>

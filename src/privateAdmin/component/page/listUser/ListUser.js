@@ -66,7 +66,9 @@ function ListUser() {
                 <td>....</td>
                 <Link to={`/admin-page/edit-user/${users._id}`}>
                   <td>
+                    {/* <p onClick={navigate(`/admin-page/edit-user/${users._id}`)}> */}
                     <EditOutlined />
+                    {/* </p> */}
                   </td>
                 </Link>
               </tr>

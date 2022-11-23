@@ -30,10 +30,7 @@ function NavBar({ children }) {
   return (
     <>
       <div className="layout_container">
-        <div
-          className="layout_main"
-          style={{ width: sideBar ? "100%" : "100%" }}
-        >
+        <div className="layout_main">
           <div className="navbar_container_admin">
             {/* <div className="navbar_admin"> */}
             {sideBar ? (
@@ -52,10 +49,14 @@ function NavBar({ children }) {
               sideBar ? "sidebar_container_active" : "sidebar_container"
             }
           >
-            <h1 onClick={openSildebarMenu1}>
+            <div
+              className="admin_menu_drop_down_list"
+              onClick={openSildebarMenu1}
+            >
               <AccountCircleIcon />
-              Menu1
-            </h1>
+
+              <h1>Menu1</h1>
+            </div>
             {openMenu1 ? (
               <></>
             ) : (
@@ -84,10 +85,13 @@ function NavBar({ children }) {
               </>
             )}
 
-            <h1 onClick={openSildebarMenu2}>
+            <div
+              className="admin_menu_drop_down_list"
+              onClick={openSildebarMenu2}
+            >
               <AccountCircleIcon />
-              Menu2
-            </h1>
+              <h1>Menu2</h1>
+            </div>
             {openMenu2 ? (
               <></>
             ) : (
@@ -100,8 +104,14 @@ function NavBar({ children }) {
             )}
           </div>
         </div>
+        <div
+          className={
+            sideBar ? `children_admin_page_active` : "children_admin_page"
+          }
+        >
+          {children}
+        </div>
       </div>
-      <div>{children}</div>
     </>
   );
 }
