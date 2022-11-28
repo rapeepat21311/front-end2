@@ -51,6 +51,7 @@ function Login() {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
         });
+        // console.log(res.data);
         // console.log(JSON.stringify(res?.data));
         alert(`Login Success ${res.data.payload.user.nameTh}`);
         dispatch({
@@ -59,18 +60,18 @@ function Login() {
             token: res.data.token,
             username: res.data.payload.user.username,
             role: res.data.payload.user.role,
-            studentId: res.data.payload.user.studentId,
-            idNumber: res.data.payload.user.idNumber,
-            nameTh: res.data.payload.user.nameTh,
-            nameEng: res.data.payload.user.nameEng,
+            student_id: res.data.payload.user.student_id,
+            id_number: res.data.payload.user.id_number,
+            name_th: res.data.payload.user.name_th,
+            name_eng: res.data.payload.user.name_eng,
             faculty: res.data.payload.user.faculty,
             major: res.data.payload.user.major,
             email: res.data.payload.user.email,
-            phoneNumber: res.data.payload.user.phoneNumber,
-            educationLevel: res.data.payload.user.educationLevel,
+            phone_number: res.data.payload.user.phone_number,
+            education_level: res.data.payload.user.education_level,
             year: res.data.payload.user.year,
-            oldSchool: res.data.payload.user.oldSchool,
-            status: res.data.payload.user.status,
+            old_school: res.data.payload.user.old_school,
+            student_status: res.data.payload.user.student_status,
             advisor: res.data.payload.user.advisor,
             aa: res.data.payload.user.aa,
             phone_number_advisor: res.data.payload.user.phone_number_advisor,

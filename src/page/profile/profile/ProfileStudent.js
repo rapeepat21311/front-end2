@@ -33,13 +33,13 @@ export default function ProfileStudent() {
         <div className="profile_student_left">
           <div className="student_profile_left">
             <h4>รหัสนักศึกษา </h4>
-            <p>{user.studentId}</p>
+            <p>{user.student_id}</p>
             <h4>เลขประจำตัวประชาชน </h4>
-            <p> {user.idNumber}</p>
+            <p> {user.id_number}</p>
             <h4>ชื่อ(ภาษาไทย) </h4>
-            <p>{user.nameTh}</p>
+            <p>{user.name_th}</p>
             <h4>ชื่อ(ภาษาอังกฤษ) </h4>
-            <p>{user.nameEng}</p>
+            <p>{user.name_eng}</p>
             <h4>คณะ </h4>
             <p>{user.faculty}</p>
             <h4>สาขา </h4>
@@ -49,15 +49,15 @@ export default function ProfileStudent() {
             <h4>Email </h4>
             <p>{user.email}</p>
             <h4>เบอร์มือถือ</h4>
-            <p>{user.phoneNumber}</p>
+            <p>{user.phone_number}</p>
             <h4>ระดับการศึกษา</h4>
-            <p>{user.educationLevel}</p>
+            <p>{user.education_level}</p>
             <h4>ปีการศึกษาที่เข้า</h4>
             <p>{user.year}</p>
             <h4>จบการศึกษาจาก</h4>
-            <p>{user.oldSchool}</p>
+            <p>{user.old_school}</p>
             <h4>สถานภาพ</h4>
-            <p>{user.status}</p>
+            <p>{user.student_status}</p>
           </div>
         </div>
       </div>

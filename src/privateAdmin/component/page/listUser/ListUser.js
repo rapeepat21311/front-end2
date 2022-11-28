@@ -56,13 +56,15 @@ function ListUser() {
           {data.map((users, index) => {
             return (
               <tr>
-                <td>{users.studentId}</td>
-                <td>{users.nameTh}</td>
+                <td>{users.student_id}</td>
+                <td>
+                  {users.prefix_name} {users.name_th} {users.lastname_th}
+                </td>
                 <td>{users.year}</td>
-                <td>{users.educationLevel}</td>
+                <td>{users.education_level}</td>
                 <td>{users.faculty}</td>
                 <td>{users.email}</td>
-                <td>{users.status}</td>
+                <td>{users.student_status}</td>
                 <td>....</td>
                 <Link to={`/admin-page/edit-user/${users._id}`}>
                   <td>
