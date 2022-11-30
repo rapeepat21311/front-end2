@@ -1,41 +1,72 @@
 import React, { useState, useCallback,useEffect } from "react";
-import Header from "../../../component/navbar/Header/Header";
-
-import TableC from "../tableC";
-import {mockTableTestClassList } from "../../../tableList";
-
+import WeekDayComponent from "./weekDayComponent";
 import "./testClass.css";
-import TableT from "../tableT";
+import { mockTestList } from "./dayTestList";
 
-const mockTestClassData = { detailTable:mockTableTestClassList };
-// const defaultClassData = { datailTable: [] };
+
+
+const defaultList = [
+  {
+    id: 0,
+    wkDay: "MON",
+    activityList: [],
+  },
+  {
+    id: 1,
+    wkDay: "TUE",
+    activityList: [],
+  },
+  {
+    id: 2,
+    wkDay: "WED",
+    activityList: [],
+  },
+  {
+    id: 3,
+    wkDay: "THU",
+    activityList: [],
+  },
+  {
+    id: 4,
+    wkDay: "FRI",
+    activityList: [],
+  },
+  {
+    id: 5,
+    wkDay: "SAT",
+    activityList: [],
+  },
+  {
+    id: 6,
+    wkDay: "SUN",
+    activityList: [],
+  },
+];
+
 
 export default function TestClass() {
-  // const [classData, setClassData] = useState(defaultClassData);
+  const [data,setData] = useState(defaultList)
 
-  // useEffect(() => {
-  //   if (classData !== null) {
-  //     fetchClass();
-  //   }
-  // }, [classData]);
+  useEffect(()=>{
+    fetchAPI()
+  },[])
 
-  // const fetchClass = useCallback (()=>{
-  //   setClassData(mockClassData);
-  // },[classData])
+  const fetchAPI = useCallback((year)=>{
+    setData(mockTestList)
+  },[])
+
 
   return (
-    <div>
-      <div className="testClass">
-        <div className="testClass_body">
-          <div className="testClass_title">
-          </div>
-          <div className="testClass_header">
-          </div>
-        </div>
-          <div className="testClass_table">
-          <TableT dataList={mockTestClassData.detailTable} />
-          </div>
+    <div className="test_class">
+      {/* <Header /> */}
+      {/* <div className="classl"> */}
+      <div className="testClass_body">
+        {data.map((weekDay,i)=>{
+          console.log(weekDay)
+          return <WeekDayComponent weekDayData={weekDay}/>
+        })}
       </div>
+
     </div>
   );
 }

@@ -1,13 +1,39 @@
-
+/* 
+.test_class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(
+      circle at center,
+      #ffffff 0%,
+      #e3f5fa 4%,
+      #bff5c8 12.25%,
+      #95e0fd 31.25%,
+      #b6f8d1 50%
+    )
+    center top/200% 200%;
+  color: rgb(14, 14, 14);
+  font-weight: bold;
+  animation: colorChange 5s infinite alternate;
+} */
 
 
   .testClass_body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 1250px;
     width: 100%;
+    margin-top: 24px;
     /* margin-left: 50%; */
-    /* background-color: darkgoldenrod; */
+    background: linear-gradient(110.16deg, rgba(255, 255, 255, 0.6) -0.35%, rgba(255, 255, 255, 0.2) 100%);
+    /* BG/Glassmorphism (Stroke) */
+    
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 16px;
     
   }
 
@@ -39,4 +65,41 @@
   .testClass_header p{
     cursor: pointer;
   }
+
+  .test_week_day_component{
+    display: flex;
+    flex-direction: row;
+    margin-top: 24;
+    /* height: 100px; */
+    width: 95%;
+    margin-top: 24px;
+  }
+
+  .test_week_day_container{
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  .test_week_day_activity_section{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .test_week_day_activity{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+
+  }
+  .test_week_day_activity p1{
+    display: flex;
+    margin-left: 376px;
+    margin-right: 272px;
+  }
+
 
