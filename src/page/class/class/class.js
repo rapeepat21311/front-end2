@@ -1,47 +1,74 @@
-import React, { useState, useCallback,useEffect } from "react";
-import Header from "../../../component/navbar/Header/Header";
-
-import TableC from "../tableC";
-import { mockTableClassList } from "../../../tableList";
+import React, { useState, useCallback, useEffect } from "react";
+import WeekDayComponent from "./weekDayComponent";
+import { mockList } from "./dayClassList";
 
 import "./class.css";
 
+const defaultList = [
+  {
+    id: 0,
+    wkDay: "MON",
+    activityList: [],
+  },
+  {
+    id: 1,
+    wkDay: "TUE",
+    activityList: [],
+  },
+  {
+    id: 2,
+    wkDay: "WED",
+    activityList: [],
+  },
+  {
+    id: 3,
+    wkDay: "THU",
+    activityList: [],
+  },
+  {
+    id: 4,
+    wkDay: "FRI",
+    activityList: [],
+  },
+  {
+    id: 5,
+    wkDay: "SAT",
+    activityList: [],
+  },
+  {
+    id: 6,
+    wkDay: "SUN",
+    activityList: [],
+  },
+];
 
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-
-const mockClassData = { detailTable:mockTableClassList };
-// const defaultClassData = { datailTable: [] };
 
 export default function Classl() {
-  // const [classData, setClassData] = useState(defaultClassData);
+  const [data, setData] = useState(defaultList);
 
-  // useEffect(() => {
-  //   if (classData !== null) {
-  //     fetchClass();
-  //   }
-  // }, [classData]);
+  useEffect(()=>{
+    fetchAPI()
+  },[])
 
-  // const fetchClass = useCallback (()=>{
-  //   setClassData(mockClassData);
-  // },[classData])
-
+  const fetchAPI = useCallback((year) => {
+      setData(mockList)
+  }, []);
   return (
     <div>
       {/* <Header /> */}
       {/* <div className="classl"> */}
-        <div className="classl_body">
-          <div className="classl_title"></div>
-          <div className="classl_header"></div>
-        </div>
-        <div className="select_year">
-        </div>
-        {/* <div className="class_table"> */}
-          <TableC dataList={mockClassData.detailTable} />
-        {/* </div> */}
+      <div className="classl_body">
+        {data.map((weekDay,i)=>{
+          console.log(weekDay)
+          return <WeekDayComponent weekDayData={weekDay}/>
+        })}
       </div>
+
+      <div className="select_year"></div>
+      {/* <div className="class_table"> */}
+      {/* <TableC dataList={mockClassData.detailTable} /> */}
+      {/* </div> */}
+    </div>
     // </div>
   );
 }
