@@ -57,9 +57,7 @@ function ListUser() {
             return (
               <tr>
                 <td>{users.student_id}</td>
-                <td>
-                  {users.prefix_name} {users.name_th} {users.lastname_th}
-                </td>
+                <td>{users.full_name}</td>
                 <td>{users.year}</td>
                 <td>{users.education_level}</td>
                 <td>{users.faculty}</td>

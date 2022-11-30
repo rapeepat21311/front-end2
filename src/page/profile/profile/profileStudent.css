@@ -1,12 +1,93 @@
 .profile_student {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   width: 960px;
   /* border-radius: 16px; */
+  /* background-color: green; */
+}
+
+.profile_student_image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 304px;
+  height: 448px;
+  background-color: #ffffff;
+  border: 1px solid #a7c7e7;
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  margin-right: 24px;
+}
+
+.profile_student_image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 999px;
+  margin-top: 24px;
+}
+
+.profile_student_image_text {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cccccc;
+  margin-top: 16px;
+}
+
+.profile_student_image_text h2 {
+  padding: 0px 16px 0px 16px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  /* identical to box height, or 123% */
+
+  letter-spacing: 0.5px;
+
+  /* Text/Black */
+
+  color: #333333;
+}
+
+.profile_student_image_name {
+  margin-top: 16px;
+}
+
+.profile_student_image_name p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+
+  text-align: center;
+
+  /* Text/Black */
+
+  color: #333333;
+  padding-top: 8px;
+}
+
+.profile_student_status_study {
+  margin-top: 16px;
+  background-color: #93c47d;
+  padding: 0px 16px 0px 16px;
+  border-radius: 99px;
+}
+
+.profile_student_status_inactive {
+  margin-top: 16px;
+  background-color: red;
+  padding: 0px 16px 0px 16px;
+  border-radius: 99px;
 }
 
 .profile_student_container_left {
-  width: 632px;
+  width: 626px;
+  height: 448px;
   border: 1px solid #a7c7e7;
   backdrop-filter: blur(16px);
   border-radius: 16px;
@@ -21,8 +102,8 @@
   font-size: 26px;
   line-height: 32px;
   color: #333333;
-  padding: 16px 16px 16px;
-  border-bottom: 0.25px solid #CCCCCC;
+  padding: 16px 16px 10px 20px;
+  border-bottom: 0.25px solid #cccccc;
   /* text-decoration: underline rgb(235, 10, 47); */
   /* background-color: blue; */
 }
@@ -30,30 +111,48 @@
 .profile_student_left {
   display: flex;
   text-align: left;
-  margin: 20px;
+  margin: 24px 0px 0px 20px;
 }
 
 .profile_student_left h4 {
   color: #777777;
-  font-family: "Roboto";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.5px;
+  /* identical to box height, or 114% */
+
+  display: flex;
+  align-items: flex-end;
+
+  /* Neutral/07 */
+
+  color: #777777;
   margin-bottom: 6px;
 }
 
 .profile_student_left p {
   color: #333333;
-  font-family: "Roboto";
+  padding: 0px 12px 0px 0px;
+  gap: 8px;
+  isolation: isolate;
+
+  width: 292px;
+  height: 24px;
+
+  border-radius: 8px;
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  letter-spacing: 0.5px;
+  /* identical to box height, or 133% */
+
+  /* Text/Black */
+
+  color: #333333;
   margin-bottom: 8px;
-  padding: 8px 12px 8px 0px;
 }
 
 .student_profile_left {
@@ -71,17 +170,42 @@
 }
 
 .student_teacher_profile_right {
-  width: 304px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
   /* align-self: flex-start; */
+  margin-top: 24px;
   text-align: left;
-  margin-left: 25px;
   border: 1px solid #a7c7e7;
   backdrop-filter: blur(16px);
   border-radius: 16px;
   background-color: whitesmoke;
+  /* order: 0; */
 }
 
-.student_teacher_profile_right h2 {
+.student_teacher_profile_title {
+  width: 100%;
+}
+
+.student_teacher_profile_title h2 {
+  /* width: 100%; */
+  /* background-color: gold; */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  /* identical to box height, or 123% */
+
+  letter-spacing: 0.5px;
+  padding: 16px 20px 15px;
+  border-bottom: 0.25px solid #cccccc;
+  /* Text/Black */
+
+  color: #333333;
+}
+
+/* .student_teacher_profile_right h2 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -89,26 +213,33 @@
   line-height: 32px;
   color: #333333;
   padding: 16px 20px 15px;
-  border-bottom: 0.25px solid #CCCCCC;
+  border-bottom: 0.25px solid #cccccc;
+} */
+
+.student_teacher_profile_text_left {
+  width: 50%;
+  padding: 24px 0px 0px 20px;
 }
 
-.student_teacher_profile_text {
-  padding-left: 20px;
-  padding-top: 20px;
-}
-
-.student_teacher_profile_text h4 {
+.student_teacher_profile_text_left h4 {
   color: #777777;
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
   letter-spacing: 0.5px;
-  margin-bottom: 6px;
+
+  /* W&B/04 */
+
+  color: #999999;
+  /* background-color: gold; */
+  /* margin-bottom: 6px; */
 }
 
-.student_teacher_profile_text p {
+.student_teacher_profile_text_left p {
   color: #333333;
   font-family: "Roboto";
   font-style: normal;
@@ -116,8 +247,46 @@
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.5px;
-  margin-bottom: 8px;
-  padding: 8px 12px 8px 0px;
+  /* background-color: gold; */
+  margin-bottom: 16px;
+  /* padding: 8px 12px 8px 0px; */
+}
+
+
+.student_teacher_profile_text_right {
+  /* width: 50%; */
+  padding-top: 24px;
+}
+
+.student_teacher_profile_text_right h4 {
+  color: #777777;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  letter-spacing: 0.5px;
+
+  /* W&B/04 */
+
+  color: #999999;
+  /* background-color: gold; */
+  /* margin-bottom: 6px; */
+}
+
+.student_teacher_profile_text_right p {
+  color: #333333;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  /* background-color: gold; */
+  margin-bottom: 16px;
+  /* padding: 8px 12px 8px 0px; */
 }
 
 @media only screen and (min-width: 1441px) {

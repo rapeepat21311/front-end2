@@ -51,7 +51,7 @@ function Login() {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
         });
-        // console.log(res.data);
+        console.log(res.data);
         // console.log(JSON.stringify(res?.data));
         alert(`Login Success ${res.data.payload.user.nameTh}`);
         dispatch({
@@ -76,6 +76,7 @@ function Login() {
             aa: res.data.payload.user.aa,
             phone_number_advisor: res.data.payload.user.phone_number_advisor,
             email_advisor: res.data.payload.user.email_advisor,
+            user_fullname: res.data.payload.user.user_fullname,
           },
         });
         // เก็บ Token ไว้ที่ Application จนกว่า Token จะหมดอายุ

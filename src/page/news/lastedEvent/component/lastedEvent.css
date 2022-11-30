@@ -13,6 +13,19 @@
 .box_lasted_event {
   display: flex;
   width: 30.84%;
+  height: 450px;
+  flex-direction: column;
+  /* margin-bottom: 24px; */
+  border-radius: 16px;
+  position: relative;
+  /* border: 1px solid black; */
+  /* background-color: blueviolet; */
+  background-color: #ffffff;
+}
+
+.box_lasted_event_active {
+  display: flex;
+  width: 30.84%;
   height: 430px;
   flex-direction: column;
   /* margin-bottom: 24px; */

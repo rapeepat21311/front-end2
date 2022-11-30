@@ -3,6 +3,9 @@
     justify-content: flex-end;
     align-items: flex-end;
     margin-bottom: 24px;
+    /* background-color: green; */
+    position: absolute;
+    top: 0;
 }
 
 .page_number h2{

@@ -29,7 +29,9 @@ function LastedEvent({ mockDataLastedEvent, currentPage, perPage }) {
       {currentEvent.map((item) => {
         return (
           <div
-            className="box_lasted_event"
+            className={
+              hover === item.id ? "box_lasted_event_active" : "box_lasted_event"
+            }
             key={item.id}
             // onClick={()=> navigate(`/news/last-events/${item.id}`)}
           >
