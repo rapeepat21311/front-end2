@@ -94,8 +94,16 @@
   background-color: whitesmoke;
 }
 
-.profile_student_container_left h2 {
+.profiel_student_container_header {
+  /* background-color: red; */
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.25px solid #cccccc;
+  padding-right: 16px;
+}
+
+.profiel_student_container_header h2 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -103,15 +111,20 @@
   line-height: 32px;
   color: #333333;
   padding: 16px 16px 10px 20px;
-  border-bottom: 0.25px solid #cccccc;
-  /* text-decoration: underline rgb(235, 10, 47); */
-  /* background-color: blue; */
 }
+
+/* .profile_student_container_left h2 { */
+/* display: flex; */
+/* text-decoration: underline rgb(235, 10, 47); */
+/* background-color: blue; */
+/* } */
 
 .profile_student_left {
   display: flex;
   text-align: left;
-  margin: 24px 0px 0px 20px;
+  flex-flow: row nowrap;
+  padding: 24px 0px 0px 20px;
+  /* background-color: aqua; */
 }
 
 .profile_student_left h4 {
@@ -157,16 +170,81 @@
 
 .student_profile_left {
   display: flex;
-  width: 50%;
+  width: 45%;
   justify-content: flex-start;
   flex-direction: column;
+  /* background-color: #93c47d; */
+}
+
+.student_profile_left input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2px 12px 2px 12px;
+  background: #dddddd;
+  /* Neutral/A */
+
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  /* width: 292px; */
+  margin-bottom: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 8px;
+  /* identical to box height, or 133% */
+
+  /* Text/Black */
+
+  color: #333333;
 }
 
 .student_profile_right {
   display: flex;
   width: 50%;
+  margin-left: 24px;
+  /* background-color: gold; */
   flex-flow: column;
-  margin-left: 20px;
+  /* margin-left: 20px; */
+}
+
+.student_profile_right input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2px 12px 2px 12px;
+  background: #dddddd;
+  /* Neutral/A */
+
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  /* width: 292px; */
+  margin-bottom: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 8px;
+  /* identical to box height, or 133% */
+  
+  /* Text/Black */
+  
+  color: #333333;
+}
+
+.student_can_change input {
+  width: 92%;
+  background-color: #ffffff;
+  padding: 2px 12px 2px 12px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
 }
 
 .student_teacher_profile_right {
@@ -251,7 +329,6 @@
   margin-bottom: 16px;
   /* padding: 8px 12px 8px 0px; */
 }
-
 
 .student_teacher_profile_text_right {
   /* width: 50%; */

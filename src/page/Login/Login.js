@@ -58,6 +58,7 @@ function Login() {
           type: userReducerConst.LOG_IN,
           payload: {
             token: res.data.token,
+            _id: res.data.payload.user._id,
             username: res.data.payload.user.username,
             role: res.data.payload.user.role,
             student_id: res.data.payload.user.student_id,

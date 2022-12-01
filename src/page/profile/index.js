@@ -37,19 +37,9 @@ function Index() {
     <>
       <Header />
       <div
-        className={
-          activeIndex === 1 || activeIndex === 2
-            ? "profile_body_capital"
-            : "profile_body"
-        }
+        className={activeIndex === 2 ? "profile_body_capital" : "profile_body"}
       >
-        <div
-          className={
-            activeIndex === 1 || activeIndex === 2
-              ? "profile_capital"
-              : "profile"
-          }
-        >
+        <div className={activeIndex === 2 ? "profile_capital" : "profile"}>
           <div className="profile_title_link_home_page">
             <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
             <p>ประวัตินักศึกษา</p>
