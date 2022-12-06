@@ -16,10 +16,42 @@ import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import RoomIcon from "@mui/icons-material/Room";
 import EastIcon from "@mui/icons-material/East";
 import { useNavigate } from "react-router";
+import Texteditor from "./texteditor/texteditor";
+
+const config = {
+  buttons: [
+    "bold",
+    "italic",
+    "fontsize",
+    "outdent",
+    "indent",
+    "ul",
+    "ol",
+    "align",
+  ],
+  // buttonsXS: [
+  //   "bold",
+  //   "image",
+  //   "|",
+  //   "brush",
+  //   "paragraph",
+  //   "|",
+  //   "align",
+  //   "|",
+  //   "undo",
+  //   "redo",
+  //   "|",
+  //   "eraser",
+  //   "dots",
+  // ],
+  // events: {},
+  // textIcons: false,
+};
 
 function News() {
   const navigate = useNavigate();
   //data
+  // const [value, setValue] = useState("");
   const [newsRecomment, setNewsRecomment] = useState(recommentNews);
   const [lastesNewsData, setLastesNewsData] = useState(mockDataLastesNews);
   const [lastedEvent, setLastedEvent] = useState(mockDataLastesEvent);
@@ -112,11 +144,11 @@ function News() {
             >
               {hoverallEvent ? (
                 <>
-                  ดูข่าวสารทั้งหมด
+                  ดูกิจกรรมทั้งหมด
                   <EastIcon />
                 </>
               ) : (
-                "ดูข่าวสารทั้งหมด"
+                "ดูกิจกรรมทั้งหมด"
               )}
             </h2>
           </div>
@@ -127,6 +159,9 @@ function News() {
               perPage={lastedNewsPerPage}
             />
           </div>
+          {/* <div className="hello_test_editor">
+            <Texteditor setValue={setValue} config={config} />
+          </div> */}
         </div>
       </div>
       <Footer />

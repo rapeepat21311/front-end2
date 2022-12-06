@@ -36,6 +36,7 @@ function Index() {
             <p onClick={() => navigate("/news")}>ข่าวสารและกิจกรรม</p> {" > "}{" "}
             <p>กิจกรรมทั้งหมด</p>
           </div>
+          <div className="back_to_last_news">{"<--"} กลับ</div>
           <div className="event_all_title">
             <h1>กิจกรรมทั้งหมด</h1>
           </div>

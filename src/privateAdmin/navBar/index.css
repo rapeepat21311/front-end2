@@ -1,6 +1,6 @@
 .layout_container {
     display: flex;
-    /* height: 100vh; */
+    height: 100%;
     flex-direction: row;
     /* z-index: 999; */
     position: relative;
@@ -24,13 +24,13 @@
     align-items: center;
     width: 220px;
     order : 1;
-    height: 1080px;
+    height: 1515px;
     left: 0;
     transition: 350ms;
     border: 1px solid gray ;
     /* z-index: 0; */
     /* opacity: 0.5; */
-    /* background-color: blueviolet; */
+    background-color: #fff;
     cursor: pointer;
 }
 
@@ -80,12 +80,13 @@
 .layout_main {
     width: 100%;
     height: 100vh;
+    /* background-color: green; */
 }
 
 .navbar_container_admin {
     display: flex;
     box-sizing: border-box;
-    width: 100%;
+    width: 1440px;
     height: 64px;
     background-color: #343A3F;
 }
@@ -107,7 +108,7 @@
 
 .children_admin_page {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     top: 64px;
     /* left: 23px; */
@@ -117,7 +118,7 @@
 .children_admin_page_active {
     display: flex;
     width: 85%;
-    height: 100vh;
+    height: 100%;
     /* z-index: -1; */
     top : 64px;
     left: 215px;

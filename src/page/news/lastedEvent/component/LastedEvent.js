@@ -6,7 +6,7 @@ import EastIcon from "@mui/icons-material/East";
 import RoomIcon from "@mui/icons-material/Room";
 
 function LastedEvent({ mockDataLastedEvent, currentPage, perPage }) {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [hover, setHover] = useState(0);
 
@@ -64,10 +64,10 @@ function LastedEvent({ mockDataLastedEvent, currentPage, perPage }) {
                 // onClick={() => navigate(`/news/last-news/${item.id}`)}
               >
                 {hover === item.id ? (
-                  <>
+                  <p onClick={() => navigate("/news/last-events/description")}>
                     รายละเอียด
                     <EastIcon />
-                  </>
+                  </p>
                 ) : (
                   <></>
                 )}

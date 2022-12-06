@@ -23,7 +23,10 @@ import NotFound from "../page/notFound";
 import Profile from "../page/profile/index";
 import LastesNews from "../page/news/lastedNews";
 import LastedEvent from "../page/news/lastedEvent";
-import Detail from "../page/perform/detail/detailPer"
+import Detail from "../page/perform/detail/detailPer";
+import Createuser from "../privateAdmin/component/page/createUser/Createuser";
+import LastedNewsDes from "../page/news/lastedNews/component/description/LastedNewsDes";
+import LastedEventDes from "../page/news/lastedEvent/component/description/lasted_event";
 
 function PrivateRoute() {
   const dispatch = useDispatch();
@@ -75,7 +78,7 @@ function PrivateRoute() {
 
         <Route path="/result" element={<Result />} />
 
-        <Route path="/detail" element={<Detail/>} />
+        <Route path="/detail" element={<Detail />} />
 
         <Route
           path="/eport"
@@ -85,10 +88,14 @@ function PrivateRoute() {
             </UserRouter>
           }
         />
-
         <Route path="/news" element={<News />} />
         <Route path="/news/last-news" element={<LastesNews />} />
+        <Route path="/news/last-news/description" element={<LastedNewsDes />} />
         <Route path="/news/last-events" element={<LastedEvent />} />
+        <Route
+          path="/news/last-events/description"
+          element={<LastedEventDes />}
+        />
 
         <Route
           path="/profile"
@@ -100,6 +107,18 @@ function PrivateRoute() {
         />
 
         {/* Router Admin */}
+
+        <Route
+          path="/admin-page/create-user"
+          element={
+            <AdminRoutes>
+              <Layout>
+                <Createuser />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+
         <Route
           path="/admin-page"
           element={

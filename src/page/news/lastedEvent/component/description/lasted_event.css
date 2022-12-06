@@ -1,0 +1,33 @@
+.events_title_box_description {
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+
+  text-align: center;
+  letter-spacing: 0.5px;
+
+  /* Text/Black */
+
+  color: #333333;
+}
+
+.box_event_description {
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  /* or 133% */
+
+  text-align: center;
+  letter-spacing: 0.5px;
+
+  /* Text/Black */
+
+  color: #333333;
+}

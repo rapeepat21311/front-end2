@@ -8,25 +8,25 @@ export default function Paratoon() {
       <table>
         <tr>
           <th>ภาคการศึกษา</th>
+          <th>ประเภท</th>
           <th>ทุนการศึกษา</th>
+          <th>ผู้ให้ทุน</th>
           <th>จำนวนเงิน</th>
           <th>รับ</th>
-          <th>คงเหลือ</th>
-          <th>ประเภท</th>
-          <th>ผู้ให้ทุน</th>
           <th>ส่วนลดทุน</th>
+          <th>คงเหลือ</th>
         </tr>
 
         {mockDataParacapital.map((item) => {
           return (
             <tr>
               <td>{item.term}</td>
+              <td>{item.type}</td>
               <td>{item.capital}</td>
+              <td>{item.funder}</td>
+              <td>{item.remaining}</td>
               <td>{item.money}</td>
               <td>{item.get}</td>
-              <td>{item.remaining}</td>
-              <td>{item.type}</td>
-              <td>{item.funder}</td>
               <td className="capital_discount">{item.capitalDiscount}</td>
             </tr>
           );
@@ -38,12 +38,12 @@ export default function Paratoon() {
           <h1> ประเภทของทุนการศึกษา</h1>
         </div>
         <div className="type_capital_description">
-          <p>D : ตัดรายการโดยการลดหนี้</p>
-          <p>E : ต้องชำระเงิน - ไม่คืนส่วนที่เหลือ (ภายนอก)</p>
-          <p>N : ไม่ต้องชำระเงิน - ไม่คืนส่วนที่เหลือ (ภายใน)</p>
-          <p>P : ต้องชำระเงินบางส่วน</p>
-          <p>R : ไม่ต้องชำระเงิน - คืนส่วนที่เหลือ (ทบวง)</p>
-          <p></p>
+          <p>E30 : ตัดรายการโดยการลดหนี้</p>
+          <p>E50 : ต้องชำระเงิน - ไม่คืนส่วนที่เหลือ(ภายนอก)</p>
+          <p>E100 : ไม่ต้องชำระเงิน - ไม่คืนส่วนที่เหลือ (ภายใน)</p>
+          <p>S30 : ต้องชำระเงินบางส่วน</p>
+          <p>S50 : ไม่ต้องชำระเงิน - คืนส่วนที่เหลือ (ทบวง)</p>
+          <p>S100 : ไม่ต้องชำระเงิน - คืนส่วนที่เหลือ (ทบวง)</p>
         </div>
       </div>
     </div>

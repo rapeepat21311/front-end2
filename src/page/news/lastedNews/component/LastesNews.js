@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import RemoveRedEyeRoundedIcon from "@mui/icons-material/RemoveRedEyeRounded";
 import EastIcon from "@mui/icons-material/East";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 export default function LastesNews({
   mockDataLastesNews,
@@ -52,8 +53,10 @@ export default function LastesNews({
               >
                 {hover === item.id ? (
                   <>
-                    รายละเอียด
-                    <EastIcon />
+                    <Link to="/news/last-news/description">
+                      รายละเอียด
+                      <EastIcon />
+                    </Link>
                   </>
                 ) : (
                   "รายละเอียด"
