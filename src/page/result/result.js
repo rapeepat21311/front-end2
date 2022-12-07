@@ -13,11 +13,8 @@ import {
   mockTableGpaxList,
 } from "../../tableList";
 
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import { Navigate, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
+import TableGpax from "./table/tableGpax";
 
 const mockTermData = { detailTable: mockTableList, GpaTable: mockTableGpaList };
 const mockAccumulateData = mockTableGpaxList;
@@ -62,7 +59,7 @@ export default function Result() {
           <p>ผลการศึกษา</p>
           </div>
           <div className="result_title">
-            <p>ผลการศึกษา(1/2555)</p>
+            <p>ผลการศึกษา</p>
           </div>
           <div className="result_header">
             <div className="result_profile"></div>
@@ -121,8 +118,12 @@ export default function Result() {
         </div>
         </div>
         <div className="table_gp">
+          <div className="table_gp_container">
           <TableGpa dataList={termData.GpaTable} />
-          <TableGpa dataList={accumulateData} />
+          </div>
+          <div className="table_gpx_container">
+          <TableGpax dataList={accumulateData} />
+          </div>
         </div>
       </div>
       <Footer/>

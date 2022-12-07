@@ -84,7 +84,11 @@
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
+    cursor: pointer;
+  }
 
+  .week_day_activity :hover{
+    color: blue;
   }
   .week_day_activity p1{
     display: flex;

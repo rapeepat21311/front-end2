@@ -1,21 +1,30 @@
 import React from "react";
+const colorId = {
+  id1:"#E8EBED",
+  id2:"#FFFFFF",
+  id3:"#E8EBED",
+  id4:"#FFFFFF",
+  id5:"#E8EBED",
+  id6:"#FFFFFF",
+}
+
 
 function Table({ dataList = [] }) {
   return (
-    <div className="general-table_container">
+    <div className="general-table_container" >
       {!!dataList.length&&
-        <table>
-          <tr>
-            <th>no</th>
+        <table >
+          <tr style={{backgroundColor: colorId[`id${dataList.id}`]}}>
+            <th>id</th>
             <th>รหัสวิชา</th>
             <th>ชื่อรายวิชา</th>
             <th>หน่วยกิต</th>
             <th>เกรด</th>
           </tr>
-          {dataList.map((val, i) => {
+          {dataList.map((val, id) => {
             return (
-              <tr key={i + ""}>
-                <td>{i + 1}</td>
+              <tr key={id + ""} >
+                <td>{id + 1}</td>
                 <td>{val.รหัสวิชา}</td>
                 <td>{val.ชื่อรายวิชา}</td>
                 <td>{val.หน่วยกิต}</td>

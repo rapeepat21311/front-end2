@@ -1,21 +1,33 @@
 import React from "react";
 import { TableGpaxList } from "../../../tableList";
 
-function TableGpax() {
-
-    return (
-      <div className="Table">
-        
-          {TableGpaxList.map((val, i) => {
+function TableGpax({ dataList = [] }) {
+  return (
+    <div className="table_gpx_container">
+      {!!dataList.length && (
+        <table>
+          <tr>
+            <th>ผลการเรียนเฉลี่ยสะสม</th>
+          </tr>
+          {dataList.map((val, i) => {
             return (
-              <div key={i +''} style={{display:"flex",flexDirection:"column",width:"20%"}}>
-                <div className="vertical_table_cell" >{val.subject}</div>
-                <div className="vertical_table_cell">{val.credit}</div>
+              <div className="gpx_container">
+                <div className="gpx_container_section">
+                  <tr key={i + ""}>
+                    <td>{val.label}</td>
+                    {/* <td>{val.value}</td> */}
+                  </tr>
+                  <tr key={i + ""}>
+                    <td>{val.value}</td>
+                  </tr>
+                </div>
               </div>
-            )
+            );
           })}
-      </div>
-    );
-  }
-    
-  export default TableGpax;
+        </table>
+      )}
+    </div>
+  );
+}
+
+export default TableGpax;

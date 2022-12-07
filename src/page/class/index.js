@@ -8,6 +8,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import Class from "../class/class/class";
 // import Paratoon from "./Paratoon/Paratoon";
 import TestClass from "../class/testClass/testClass";
+import Modal from "./Modal/Modal";
 
 const navTab = [
   {
@@ -34,6 +35,8 @@ function Index() {
   return (
     <>
       <Header />
+      <div>
+      </div>
       <div className="class">
         <div className="class_header">
         <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
