@@ -3,7 +3,7 @@ import icon_result from "./image/result.png"
 import icon_perform from "./image/perform.png"
 import icon_news from "./image/news.png"
 import icon_Eport from "./image/ePort.png"
-import icon_class from "./image/vector.png"
+import icon_class from "./image/table.png"
 
 
 export const menuLists = [
