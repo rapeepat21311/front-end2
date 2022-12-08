@@ -32,7 +32,7 @@ function Header() {
   return (
     <div className="Header">
       <div className="Header_left">
-        <img src="blob:https://www.figma.com/08ba1fdb-a518-4a04-b7fb-5cd5eb8e2dfd"/>
+        <img src="blob:https://www.figma.com/08ba1fdb-a518-4a04-b7fb-5cd5eb8e2dfd" />
       </div>
 
       <div className="Header_center">
@@ -95,9 +95,7 @@ function Header() {
                 </p>
               )}
             </div>
-          ) : (
-            <></>
-          )}
+          ) : null}
         </div>
       </div>
     </div>

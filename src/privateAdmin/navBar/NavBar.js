@@ -4,20 +4,38 @@ import "./index.css";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import CloseIcon from "@mui/icons-material/Close";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+
 import { useNavigate } from "react-router-dom";
 
 import { pageComponentMenuList1 } from "../componentMapPage/AdminPage";
+
+import { userReducerConst } from "../../component/reducer/consUserRed";
 // import navigateContext from "../../context/userContext";
+import { useDispatch } from "react-redux";
 
 function NavBar({ children }) {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user } = useSelector((state) => ({ ...state }));
 
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const [profileBar, setProfileBar] = useState(false);
+
+  const showLoginLogOut = () => setProfileBar(!profileBar);
+
   const [sideBar, setSideBar] = useState(false);
   const [openMenu1, setOpenMenu1] = useState(true);
   const [openMenu2, setOpenMenu2] = useState(true);
+
+  const Login = () => {
+    navigate("/login");
+  };
+
+  const Logout = () => {
+    navigate("/");
+    dispatch({ type: userReducerConst.LOG_OUT, payload: null });
+  };
 
   const openSildebarMenu1 = () => {
     setOpenMenu1(!openMenu1);
@@ -42,7 +60,36 @@ function NavBar({ children }) {
                 <FormatListBulletedIcon />
               </h1>
             )}
-            <p>{user.email}</p>
+            <div className="navbar_admin_right">
+              <div
+                className="profile_login_logout_navbar"
+                onClick={showLoginLogOut}
+              >
+                <AccountCircleIcon />
+              </div>
+
+              <div>
+                {profileBar ? (
+                  <div>
+                    {user !== null ? (
+                      <p
+                        className={profileBar ? "log_out_active" : "log_out"}
+                        onClick={Logout}
+                      >
+                        Log out
+                      </p>
+                    ) : (
+                      <p
+                        className={profileBar ? "log_out_active" : "log_out"}
+                        onClick={Login}
+                      >
+                        Log in
+                      </p>
+                    )}
+                  </div>
+                ) : null}
+              </div>
+            </div>
           </div>
           <div
             className={

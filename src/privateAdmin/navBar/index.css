@@ -1,134 +1,150 @@
 .layout_container {
-    display: flex;
-    height: 100%;
-    flex-direction: row;
-    /* z-index: 999; */
-    position: relative;
-    /* background-color: aquamarine; */
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  /* z-index: 999; */
+  position: relative;
+  /* background-color: aquamarine; */
 }
 
-
 .sidebar_container {
-    order: -1;
-    top: 0;
-    /* background-color: gold; */
-    left:   -100%;
-    transition: 850px;
-    position: absolute;
+  order: -1;
+  top: 0;
+  /* background-color: gold; */
+  left: -100%;
+  transition: 850px;
+  position: absolute;
 }
 
 .sidebar_container_active {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    width: 220px;
-    order : 1;
-    height: 1515px;
-    left: 0;
-    transition: 350ms;
-    border: 1px solid gray ;
-    /* z-index: 0; */
-    /* opacity: 0.5; */
-    background-color: #fff;
-    cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  order: 1;
+  height: 1515px;
+  left: 0;
+  transition: 350ms;
+  border: 1px solid gray;
+  /* z-index: 0; */
+  /* opacity: 0.5; */
+  background-color: #fff;
+  cursor: pointer;
 }
 
-
 .sidebar_container_active h2 {
-    width: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color : black;
-    border-bottom: 1px solid rgb(197, 200, 202);
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-bottom: 1px solid rgb(197, 200, 202);
 }
 
 .admin_menu_drop_down_list {
-    display: flex;
-    width: 200px;
-    align-items: center;
-    border-bottom: 1px solid gold;
-    padding-left: 20px;
-    /* margin-left: 30px; */
-    /* background-color: aquamarine; */
+  display: flex;
+  width: 200px;
+  align-items: center;
+  border-bottom: 1px solid gold;
+  padding-left: 20px;
+  /* margin-left: 30px; */
+  /* background-color: aquamarine; */
 }
 
 .admin_menu_drop_down_list h1 {
-    color: #000;
-    display: flex;
-    width: 70%;
-    /* background-color: gold; */
-    justify-content: center;
-    margin-left: 4px;
+  color: #000;
+  display: flex;
+  width: 70%;
+  /* background-color: gold; */
+  justify-content: center;
+  margin-left: 4px;
 }
 
 .menu_list_1 {
-    width: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu_list_1:hover{
-    /* width: 248px; */
-    background-color: rgb(69, 155, 212);
+.menu_list_1:hover {
+  /* width: 248px; */
+  background-color: rgb(69, 155, 212);
 }
-
 
 .layout_main {
-    width: 100%;
-    height: 100vh;
-    /* background-color: green; */
+  width: 100%;
+  height: 100vh;
+  /* background-color: green; */
 }
 
 .navbar_container_admin {
-    display: flex;
-    box-sizing: border-box;
-    width: 1440px;
-    height: 64px;
-    background-color: #343A3F;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 64px;
+  background: #e7ecef;
+  /* BG/Glassmorphism (Effect) */
+  
+  box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
 }
-
 
 .navbar_container_admin h1 {
-    display: flex;
-    align-items: center;
-    color : white;
+  display: flex;
+  align-items: center;
+  /* color: white; */
+  width: 95%;
+
+  color: black;
 }
 
-.navbar_container_admin p{
-    width: 100%;
+.navbar_container_admin p {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+}
+
+.navbar_admin_right {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    color : white;
+    width: 5%;
+    margin-right: 16px;
 }
 
 .children_admin_page {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 64px;
-    /* left: 23px; */
-    /* background-color: green; */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 64px;
+  margin-top: 24px;
+
+  justify-content: center;
+  align-items: center;
+  /* left: 23px; */
+  /* background-color: green; */
 }
 
 .children_admin_page_active {
-    display: flex;
-    width: 85%;
-    height: 100%;
-    /* z-index: -1; */
-    top : 64px;
-    left: 215px;
-    right: 15%;
-    /* background-color: red; */
-    position: absolute;
-    /* align-items: center; */
+  display: flex;
+  width: 88%;
+  height: 100%;
+  margin-top: 24px;
+  
+  /* z-index: -1; */
+  top: 64px;
+  left: 12%;
+  /* right: 15%; */
+  /* background-color: green; */
+  position: absolute;
+  justify-content: center;
+  align-items: center;
 }
-
-
 
 /* .sidebar_admin_close {
     display: none;

@@ -1,3 +1,158 @@
-.test__1 {
+.list_user_page {
+  display: flex;
+  width: 100%;
+  padding-right: 40px;
+  padding-left: 40px;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: red; */
+}
 
+.list_user_title h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  /* identical to box height, or 129% */
+
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e7ecef;
+
+  /* Text/Black */
+
+  color: #333333;
+}
+
+.search_text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  width: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 999px;
+  padding: 8px 16px 8px 16px;
+  margin-top: 16px;
+}
+.search input {
+  width: 100%;
+  border: hidden;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  outline: none;
+  /* border-bottom-style: groove; */
+  /* background-color: red; */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  
+  /* identical to box height, or 133% */
+  
+  /* Text/Dark Grey */
+  
+  color: #9f99a3;
+}
+
+.list_user_text_option {
+  width: 50%;
+  display: flex;
+  margin-top: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  /* background-color: #333333; */
+}
+.list_user_text_option select {
+  width: 23.75%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #274c77;
+  border-radius: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* Text/Black */
+
+  color: #333333;
+}
+
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 16px;
+}
+.table table {
+  background-color: #e8ebed;
+  border-collapse: collapse;
+  border-radius: 16px;
+  font-size: 1em;
+  color: black;
+  overflow: hidden;
+  width: auto;
+  width: 100%;
+  text-align: start;
+  margin-bottom: 50px;
+}
+
+.table thead {
+  background-color: #fff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+
+  /* display: flex;
+  align-items: center; */
+
+  /* Text/Dark Grey */
+
+  color: #9f99a3;
+}
+.table th {
+  letter-spacing: 0.3px;
+  /* text-shadow: 0 1px 1px #2b2a466b; */
+  text-align: start;
+}
+
+.table tr:nth-child(even) {
+  background-color: #fff;
+  z-index: 20px;
+}
+
+.table td {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  /* or 133% */
+
+  /* display: flex;
+  align-items: center; */
+
+  /* Neutral/03 */
+
+  color: #333333;
+}
+
+.table td,
+.table th {
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  padding: 16px 32px 16px 32px;
 }

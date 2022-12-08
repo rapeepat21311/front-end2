@@ -289,7 +289,7 @@
 
 .textarea_address textarea {
   margin-top: 8px;
-  width: 749px;
+  width: 58%;
   height: 134px;
   font-family: "Inter";
   font-style: normal;
@@ -334,4 +334,50 @@
   margin-left: 32px;
   padding-bottom: 189px;
   /* background-color: #333333; */
+}
+
+@media only screen and (max-width: 1440px) {
+  .create_profile_student_container {
+    /* background-color:black; */
+    width: 100%;
+  }
+  .box_create_student {
+    display: flex;
+    width: 100%;
+    /* background-color:red; */
+    /* justify-content: space-between; */
+  }
+  .student_id {
+    /* background-color: black; */
+    width: 40%;
+  }
+  .student_number_id {
+    width: 40%;
+    /* background-color: wheat; */
+  }
+  .box_create_student_three {
+    text-align: start;
+    flex-direction: column;
+    /* width: 50%; */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-end; */
+
+    /* Neutral/07 */
+
+    color: #777777;
+    width: 80%;
+    /* background-color: green; */
+  }
+  .student_in_year {
+    width: 31.88%;
+    /* background-color: #777777; */
+  }
 }
