@@ -1,5 +1,5 @@
 .create_profile_student_container {
-  width: 1440px;
+  width: 80%;
   height: 100%;
   /* background-color: red; */
   display: flex;
@@ -336,29 +336,45 @@
   /* background-color: #333333; */
 }
 
-@media only screen and (max-width: 1440px) {
+
+
+@media only screen and (min-width: 1440px) {
   .create_profile_student_container {
-    /* background-color:black; */
+    /* background-color:green; */
+    /* padding-left: 1.5%; */
     width: 100%;
+    /* position:-ms-page; */
   }
   .box_create_student {
     display: flex;
-    width: 100%;
+    justify-content: space-between;
+    width: 62%;
     /* background-color:red; */
     /* justify-content: space-between; */
   }
   .student_id {
     /* background-color: black; */
-    width: 40%;
+    width: 405px;
   }
   .student_number_id {
-    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 405px;
     /* background-color: wheat; */
   }
+  .student_number_id label {
+    /* background-color: blue; */
+    width: 92%;
+    /* margin-left: 40%; */
+  }
+
   .box_create_student_three {
+    display: flex;
+    justify-content: space-between;
     text-align: start;
     flex-direction: column;
-    /* width: 50%; */
+    width: 50%;
     font-family: "Inter";
     font-style: normal;
     font-weight: 500;
@@ -373,11 +389,28 @@
     /* Neutral/07 */
 
     color: #777777;
-    width: 80%;
+    width: 62%;
     /* background-color: green; */
   }
   .student_in_year {
-    width: 31.88%;
+    display: flex;
+    justify-content: flex-end;
+    width: 32%;
     /* background-color: #777777; */
+  }
+  .student_in_year input {
+    width: 92%;
+  }
+
+  .student_in_year select {
+    width: 100%;
+    /* background-color: aqua; */
+  }
+  .textarea_address {
+    width: 62%;
+    /* background-color: firebrick; */
+  }
+  .textarea_address textarea {
+    width: 97.60%;
   }
 }

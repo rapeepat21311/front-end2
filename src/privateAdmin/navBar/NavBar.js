@@ -5,13 +5,19 @@ import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import CloseIcon from "@mui/icons-material/Close";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
+import AutoAwesomeMosaicOutlinedIcon from "@mui/icons-material/AutoAwesomeMosaicOutlined";
+
 import { useNavigate } from "react-router-dom";
 
-import { pageComponentMenuList1 } from "../componentMapPage/AdminPage";
+import {
+  pageComponentMenuList1,
+  pageComponentMenuList2,
+} from "../componentMapPage/AdminPage";
 
 import { userReducerConst } from "../../component/reducer/consUserRed";
 // import navigateContext from "../../context/userContext";
 import { useDispatch } from "react-redux";
+import SidebarMenu from "./sildbarMenu/component/sidebarMenu";
 
 function NavBar({ children }) {
   const dispatch = useDispatch();
@@ -98,15 +104,25 @@ function NavBar({ children }) {
           >
             <div
               className="admin_menu_drop_down_list"
+              onClick={() => navigate("/admin-page")}
+            >
+              {" "}
+              <p>
+                <AccountCircleIcon />
+              </p>
+              <h1>ภาพรวมระบบ</h1>
+            </div>
+            <div
+              className="admin_menu_drop_down_list"
               onClick={openSildebarMenu1}
             >
-              <AccountCircleIcon />
+              <p>
+                <AccountCircleIcon />
+              </p>
 
-              <h1>Menu1</h1>
+              <h1>ผู้ใช้งาน</h1>
             </div>
-            {openMenu1 ? (
-              <></>
-            ) : (
+            {openMenu1 ? null : (
               <>
                 {pageComponentMenuList1.map((sideBar, index) => {
                   return (
@@ -131,8 +147,114 @@ function NavBar({ children }) {
                 })}
               </>
             )}
-
+            <SidebarMenu
+              openSildeBar={openSildebarMenu2}
+              imageTitle={<AccountCircleIcon />}
+              menulistName={"อาจารย์ที่ปรึกษา"}
+              openMenu={openMenu2}
+              menulist={pageComponentMenuList2}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            />
             <div
+              className="admin_menu_drop_down_list"
+              onClick={openSildebarMenu1}
+            >
+              <p>
+                <AccountCircleIcon />
+              </p>
+
+              <h1>ภาระทุน</h1>
+            </div>
+            <div
+              className="admin_menu_drop_down_list"
+              onClick={openSildebarMenu1}
+            >
+              <p>
+                <AccountCircleIcon />
+              </p>
+
+              <h1>ชั่วโมงกิจกรรม</h1>
+            </div>
+            <div
+              className="admin_menu_drop_down_list"
+              onClick={openSildebarMenu1}
+            >
+              <p>
+                <AccountCircleIcon />
+              </p>
+
+              <h1>ผลการศึกษา</h1>
+            </div>
+            <div
+              className="admin_menu_drop_down_list"
+              onClick={openSildebarMenu1}
+            >
+              <p>
+                <AccountCircleIcon />
+              </p>
+
+              <h1>ตารางเรียน</h1>
+            </div>
+            <div
+              className="admin_menu_drop_down_list"
+              onClick={openSildebarMenu1}
+            >
+              <p>
+                <AccountCircleIcon />
+              </p>
+
+              <h1>ตารางสอบ</h1>
+            </div>
+            <div
+              className="admin_menu_drop_down_list"
+              onClick={openSildebarMenu1}
+            >
+              <p>
+                <AccountCircleIcon />
+              </p>
+
+              <h1>ผลงาน</h1>
+            </div>
+            <div
+              className="admin_menu_drop_down_list"
+              onClick={openSildebarMenu1}
+            >
+              <p>
+                <AccountCircleIcon />
+              </p>
+
+              <h1>ข่าวสาร</h1>
+            </div>
+            <div
+              className="admin_menu_drop_down_list"
+              onClick={openSildebarMenu1}
+            >
+              <p>
+                <AccountCircleIcon />
+              </p>
+
+              <h1>กิจกรรม</h1>
+            </div>
+            {/* <SidebarMenu
+              openSildeBar={openSildebarMenu2}
+              imageTitle={<AccountCircleIcon />}
+              menulistName={"อาจารย์ที่ปรึกษา"}
+              openMenu={openMenu2}
+              menulist={pageComponentMenuList2}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            />
+            <SidebarMenu
+              openSildeBar={openSildebarMenu2}
+              imageTitle={<AccountCircleIcon />}
+              menulistName={"อาจารย์ที่ปรึกษา"}
+              openMenu={openMenu2}
+              menulist={pageComponentMenuList2}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            /> */}
+            {/* <div
               className="admin_menu_drop_down_list"
               onClick={openSildebarMenu2}
             >
@@ -148,7 +270,7 @@ function NavBar({ children }) {
                 <h2>sub Menu</h2>
                 <h2>sub Menu</h2>
               </>
-            )}
+            )} */}
           </div>
         </div>
         <div

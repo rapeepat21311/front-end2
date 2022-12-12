@@ -27,6 +27,9 @@ import Detail from "../page/perform/detail/detailPer";
 import Createuser from "../privateAdmin/component/page/createUser/Createuser";
 import LastedNewsDes from "../page/news/lastedNews/component/description/LastedNewsDes";
 import LastedEventDes from "../page/news/lastedEvent/component/description/lasted_event";
+import ListTeacher from "../privateAdmin/component/page/teacher/list/listTeacher";
+import ListAdmin from "../privateAdmin/component/page/admin/list/listAdmin";
+import EditAdmin from "../privateAdmin/component/page/admin/edit/editAdmin";
 
 function PrivateRoute() {
   const dispatch = useDispatch();
@@ -140,13 +143,54 @@ function PrivateRoute() {
             </AdminRoutes>
           }
         />
-
         <Route
           path={`/admin-page/edit-user/:id`}
           element={
             <AdminRoutes>
               <Layout>
                 <EditUser />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+
+        <Route
+          path="/admin-page/list-teacher"
+          element={
+            <AdminRoutes>
+              <Layout>
+                <ListTeacher />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/edit-user/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <EditUser />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+
+        <Route
+          path="/admin-page/list-admin"
+          element={
+            <AdminRoutes>
+              <Layout>
+                <ListAdmin />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/edit-admin/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <EditAdmin />
               </Layout>
             </AdminRoutes>
           }

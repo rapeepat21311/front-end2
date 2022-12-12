@@ -1,10 +1,18 @@
 export const pageComponentMenuList1 = [
-  { path: "/admin-page", menulist: "Admin" },
+  // { path: "/admin-page", menulist: "Admin" },
   {
     path: "/admin-page/list-user",
-    menulist: "ผู้ใช้งาน",
+    menulist: "นักศึกษา",
   },
-  { component: "", menulist: "Sub menu" },
-  { component: "", menulist: "Sub menu" },
-  { component: "", menulist: "Sub menu" },
+  { path: "/admin-page/list-teacher", menulist: "อาจารย์" },
+  { path: "/admin-page/list-admin", menulist: "ผู้ดูแลระบบ" },
+];
+
+export const pageComponentMenuList2 = [
+  {
+    path: "/admin-page/list-user",
+    menulist: "นักศึกษา",
+  },
+  { path: "/admin-page", menulist: "อาจารย์" },
+  { path: "/admin-page", menulist: "ผู้ดูแลระบบ" },
 ];
