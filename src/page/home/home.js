@@ -5,18 +5,18 @@ import { menuLists } from "../../menuLists";
 
 // import { Link } from "react-router-dom";
 
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import Footer from "../../component/navbar/Footer/Footer";
 
 import "./home.css";
 
 function body() {
   return (
-    <>
+    // <div className="hello_home">
       <div className="home_body">
         <div className="body">
           <div className="body_header">
             <div className="body_left">
-              <h1>ยินดีต้อนรับ</h1>
+              <h2>ยินดีต้อนรับ</h2>
               <h1>Welcome</h1>
             </div>
             <div className="body_right">
@@ -35,7 +35,8 @@ function body() {
           </div>
         </div>
       </div>
-    </>
+        // <Footer /> 
+    // </div>
   );
 }
 

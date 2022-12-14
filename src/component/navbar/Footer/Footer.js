@@ -4,9 +4,8 @@ import "../Footer/Footer.css";
 function Footer() {
   return (
     <div className="footer">
-      <p>
-        สงวนลิขสิทธิ์ 2022 &copy; Teletubbie Esport Gaming Gear 4 Gomu Gomu no
-      </p>
+      <p>Privacy Policy</p>
+      <p> Terms & Condition</p>
     </div>
   );
 }

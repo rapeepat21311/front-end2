@@ -92,14 +92,15 @@
     flex-direction: row;
     height: 50px;
     width: 100%;
-    justify-content: space-evenly;
+    /* justify-content: space-between; */
+    gap: 19px;
     align-items: center;
+    /* background-color: antiquewhite; */
 
   }
-  .test_week_day_activity p1{
-    display: flex;
-    margin-left: 376px;
-    margin-right: 272px;
+  .test_week_day_activity p{
+    margin-left: 19px;
+    
   }
 
 

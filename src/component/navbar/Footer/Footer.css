@@ -1,13 +1,21 @@
 .footer {
   width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 50px;
-  background: radial-gradient(circle at center, #bff5c8 12.25%, #95e0fd 31.25%, #b6f8d1 50%) ;
+  /* background: radial-gradient(circle at center, #bff5c8 12.25%, #95e0fd 31.25%, #b6f8d1 50%) ; */
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-image: url(../../../image/bgmain.png); */
+  /* background-size: 100% 100% ; */
+  /* opacity: 0; */
+  /* z-index: -1; */
   /* bottom: 0px; */
-  
-  /* margin-top: 200px; */
+  gap: 24px;
+  border-top: 1px solid #333333;
+  margin-top: 220px;
   
 }
 

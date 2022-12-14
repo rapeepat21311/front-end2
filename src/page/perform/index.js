@@ -83,8 +83,8 @@ function Perform() {
           </div>
         </div>
         <div className="perform_component">{navTab[activeIndex].component}</div>
-      </div>
       <Footer/>
+      </div>
     </>
   );
 }

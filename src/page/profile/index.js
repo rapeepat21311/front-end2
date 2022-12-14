@@ -89,8 +89,8 @@ function Index() {
             {navTab[activeIndex].component}
           </div>
         </div>
-      </div>
       <Footer />
+      </div>
     </>
   );
 }

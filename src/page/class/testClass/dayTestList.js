@@ -11,12 +11,12 @@ export const mockTestList = [
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
     ],
   },
@@ -32,12 +32,12 @@ export const mockTestList = [
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
     ],
   },
@@ -53,12 +53,12 @@ export const mockTestList = [
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
     ],
   },
@@ -74,12 +74,12 @@ export const mockTestList = [
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
     ],
   },
@@ -95,12 +95,12 @@ export const mockTestList = [
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
     ],
   },
@@ -111,17 +111,17 @@ export const mockTestList = [
       {
         time: "09:00-12:00",
         subject: "SWE324 (1) : General Education for Life Development I",
-        room: "S2406",
+        room: "",
       },
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
     ],
   },
@@ -137,12 +137,12 @@ export const mockTestList = [
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
       {
         time: "09:00-12:00",
         subject: "",
-        room: "S2406",
+        room: "",
       },
     ],
   },

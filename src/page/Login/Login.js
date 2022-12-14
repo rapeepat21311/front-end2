@@ -11,6 +11,8 @@ import { useDispatch } from "react-redux";
 // import { payloadDocUser } from "./user";
 import { userReducerConst } from "../../component/reducer/consUserRed";
 import { login } from "../../route/function/auth";
+import "./login.css";
+import { Checkbox } from "@mui/material";
 
 const defaultLoginData = {
   username: "",
@@ -98,33 +100,49 @@ function Login() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username :</label>
-        <input
-          id="username"
-          type="text"
-          name="username"
-          value={loginData.username}
-          // ref={userRef}
-          autoComplete="off"
-          placeholder="In put you username"
-          onChange={chageHandler}
-          required
-        />
-        <label htmlFor="password">Password :</label>
-        <input
-          id="password"
-          type="password"
-          name="password"
-          value={loginData.password}
-          // ref={passRef}
-          autoComplete="off"
-          placeholder="In put you password"
-          onChange={chageHandler}
-        />
-        <button type="submit">Login</button>
-      </form>
+    <div className="box_body">
+      <div className="box">
+        <div className="box_header_login">
+          <h2>Login</h2>
+        </div>
+        <div className="box_input">
+          <form onSubmit={handleSubmit}>
+            {/* <label htmlFor="username">Username :</label> */}
+            <input
+              id="username"
+              type="text"
+              name="username"
+              value={loginData.username}
+              // ref={userRef}
+              autoComplete="off"
+              placeholder="username"
+              onChange={chageHandler}
+              required
+            />
+            {/* <label htmlFor="password">Password :</label> */}
+            <input
+              id="password"
+              type="password"
+              name="password"
+              value={loginData.password}
+              // ref={passRef}
+              autoComplete="off"
+              placeholder="password"
+              onChange={chageHandler}
+            /> 
+            <div className="check_box">
+              <Checkbox/>
+              <p>Remember me</p>
+            <div className="box_forget">
+              <p>Foget Password?</p>
+            </div>
+            </div>
+            <div className="submit">
+              <button type="submit">บันทึก</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }

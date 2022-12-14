@@ -1,16 +1,10 @@
 .profile_body {
   display: flex;
   /* flex-direction: row; */
-  height: 1000px;
+  height: 100%;
   /* width: 100vw; */
-  background: radial-gradient(
-    circle at center,
-    #ffffff 0%,
-    #e3f5fa 4%,
-    #bff5c8 12.25%,
-    #95e0fd 31.25%,
-    #b6f8d1 50%
-  );
+  background: url(../../image/bgmain.png);
+  background-size: 100%;
   justify-content: center;
   /* align-items: center; */
 }
@@ -20,14 +14,8 @@
   /* flex-direction: row; */
   height: 100%;
   /* width: 100vw; */
-  background: radial-gradient(
-    circle at center,
-    #ffffff 0%,
-    #e3f5fa 4%,
-    #bff5c8 12.25%,
-    #95e0fd 31.25%,
-    #b6f8d1 50%
-  );
+  background-size: 100%;
+  background: url(../../image/bgmain.png);
   justify-content: center;
   /* align-items: center; */
 }
@@ -235,8 +223,8 @@
 .select_term {
   display: flex;
   width: 40%;
-  margin-top: 16px;
-  margin-left: 20px;
+  padding-top: 30px;
+  padding-left: 20px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -283,8 +271,22 @@
 }
 
 @media only screen and (min-width: 1441px) {
+  .profile_body_capital {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow:column ;
+    height: 100%;
+  }
+
   .profile_body {
-    height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow:column ;
+    height: 100%;
   }
   .profile {
     width: 68%;
@@ -293,13 +295,24 @@
   }
   .profile_tab_container {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* align-items: center; */
     /* width: 44%; */
+    /* background-color: red; */
   }
+  .profile_tab {
+    display: flex;
+    /* background-color: red; */
+    /* width: 20%; */
+  }
+
   .select_term {
-    /* width: 56%; */
-    background-color: gold;
+    /* width: 53%; */
+    display: flex;
+    align-items: center;
+    padding-left: 190px;
+    /* position: absolute; */
+    /* background-color: gold; */
   }
 }
 

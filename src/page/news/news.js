@@ -163,8 +163,8 @@ function News() {
             <Texteditor setValue={setValue} config={config} />
           </div> */}
         </div>
-      </div>
       <Footer />
+      </div>
     </>
   );
 }

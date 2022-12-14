@@ -125,8 +125,8 @@ export default function Result() {
           <TableGpax dataList={accumulateData} />
           </div>
         </div>
-      </div>
       <Footer/>
+      </div>
     </div>
   );
 }
