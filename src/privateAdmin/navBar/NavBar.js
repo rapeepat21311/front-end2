@@ -180,6 +180,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
+              onClick={() => navigate("/admin-page/list-activity-hours")}
               // onClick={openSildebarMenu1}
             >
               <p>
@@ -190,6 +191,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
+              onClick={() => navigate("/admin-page/list-grade")}
               // onClick={openSildebarMenu1}
             >
               <p>
@@ -200,6 +202,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
+              onClick={() => navigate("/admin-page/list-timetable")}
               // onClick={openSildebarMenu1}
             >
               <p>
@@ -210,6 +213,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
+              onClick={() => navigate("/admin-page/list-testtable")}
               // onClick={openSildebarMenu1}
             >
               <p>
@@ -220,6 +224,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
+              onClick={() => navigate("/admin-page/list-performance")}
               // onClick={openSildebarMenu1}
             >
               <p>
@@ -230,6 +235,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
+              onClick={() => navigate("/admin-page/list-news")}
               // onClick={openSildebarMenu1}
             >
               <p>
@@ -240,6 +246,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
+              onClick={() => navigate("/admin-page/list-events")}
               // onClick={openSildebarMenu1}
             >
               <p>

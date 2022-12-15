@@ -54,13 +54,13 @@ function CapitalBurdenList() {
                     <td>{item.type_capital}</td>
                     <td>{item.capital}</td>
                     <td>{item.money}</td>
-                    <Link to={`/admin-page/edit-capital_burden/${item.id}`}>
-                      <td>
-                        {/* <p onClick={navigate(`/admin-page/edit-user/${users._id}`)}> */}
-                        <EditOutlined />
-                        {/* </p> */}
-                      </td>
-                    </Link>
+                    {/* <Link to={`/admin-page/edit-capital_burden/${item.id}`}> */}
+                    <td>
+                      {/* <p onClick={navigate(`/admin-page/edit-user/${users._id}`)}> */}
+                      <EditOutlined />
+                      {/* </p> */}
+                    </td>
+                    {/* </Link> */}
                   </tr>
                 );
               })}
