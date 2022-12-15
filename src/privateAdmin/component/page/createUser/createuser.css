@@ -1,5 +1,5 @@
 .create_profile_student_container {
-  width: 80%;
+  width: 1200px;
   height: 100%;
   /* background-color: red; */
   display: flex;
@@ -36,6 +36,8 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
+  margin-bottom: 18px;
+  
   /* identical to box height, or 133% */
 
   display: flex;
@@ -48,7 +50,8 @@
 
 .box_create_student {
   display: flex;
-  width: 67%;
+  width: 100%;
+  gap: 8px;
   /* justify-content: space-between; */
   margin-top: 8px;
   /* background-color: green; */
@@ -58,7 +61,7 @@
   display: flex;
   flex-direction: column;
   text-align: start;
-  width: 50%;
+  /* width: 50%; */
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -175,6 +178,16 @@
   margin-top: 24px;
 }
 
+.box_create_student_three {
+  /* background-color: red; */
+  width: 750px;
+  display: flex;
+  justify-content: space-between;
+  /* grid-template-columns: repeat(3 , 1fr); */
+  gap: 8px;
+  /* background-color: #333333; */
+}
+
 .student_in_year {
   display: flex;
   flex-direction: column;
@@ -189,9 +202,9 @@
   margin-top: 8px;
   /* display: flex; */
   /* align-items: flex-end; */
-
+  width: 229px;
   /* Neutral/07 */
-
+  /* background-color: ghostwhite; */
   color: #777777;
 }
 
@@ -206,11 +219,12 @@
   padding: 8px 12px 8px 8px;
   /* Neutral/F */
   margin-right: 8px;
-  background: #ffffff;
+  /* background: #ffffff; */
+  /* background: #000; */
   /* Interactive/04 */
 
   border: 1px solid #e7ecef;
-  width: 229px;
+  width: 209px;
   /* identical to box height, or 133% */
 
   /* Text/Dark Grey */
@@ -289,7 +303,7 @@
 
 .textarea_address textarea {
   margin-top: 8px;
-  width: 58%;
+  width: 730px;
   height: 134px;
   font-family: "Inter";
   font-style: normal;
@@ -336,9 +350,47 @@
   /* background-color: #333333; */
 }
 
+.close_and_submit_button {
+  display: flex;
+  /* grid-template-columns: repeat(2, 1fr); */
+  margin-top: 24px;
+  gap: 16px;
+  width: 752px;
+  height: 40px;
+  justify-content: flex-end;
+  /* background-color: red; */
+}
 
+.close_and_submit_button button {
+  width: 75px;
+  padding: 4px 16px;
+  border-radius: 99px;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
 
-@media only screen and (min-width: 1440px) {
+  display: flex;
+  align-items: center;
+
+  /* Text/white */
+}
+
+.close_and_submit_button button:nth-child(1) {
+  background-color: #e7ecef;
+  color: #333333;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+}
+.close_and_submit_button button:nth-child(2) {
+  color: #faf9f6;
+  background: #274c77;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+@media only screen and (min-width: 1441px) {
   .create_profile_student_container {
     /* background-color:green; */
     /* padding-left: 1.5%; */
@@ -348,10 +400,24 @@
   .box_create_student {
     display: flex;
     justify-content: space-between;
-    width: 62%;
+    width: 1027.7px;
     /* background-color:red; */
     /* justify-content: space-between; */
   }
+  .box_create_student .student_id input {
+    width: 470px;
+  }
+  .box_create_student .student_id select {
+    width: 490px;
+  }
+  .box_create_student .student_number_id select {
+    width: 490px;
+  }
+
+  .box_create_student .student_number_id input {
+    width: 470px;
+  }
+
   .student_id {
     /* background-color: black; */
     width: 405px;
@@ -365,7 +431,7 @@
   }
   .student_number_id label {
     /* background-color: blue; */
-    width: 92%;
+    width: 490px;
     /* margin-left: 40%; */
   }
 
@@ -374,7 +440,7 @@
     justify-content: space-between;
     text-align: start;
     flex-direction: column;
-    width: 50%;
+    /* width: 50%; */
     font-family: "Inter";
     font-style: normal;
     font-weight: 500;
@@ -389,7 +455,7 @@
     /* Neutral/07 */
 
     color: #777777;
-    width: 62%;
+    /* width: 62%; */
     /* background-color: green; */
   }
   .student_in_year {
@@ -411,6 +477,10 @@
     /* background-color: firebrick; */
   }
   .textarea_address textarea {
-    width: 97.60%;
+    width: 1007.7px;
+  }
+  .close_and_submit_button {
+    width: 1029px;
+    /* background-color: red; */
   }
 }

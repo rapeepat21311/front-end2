@@ -30,6 +30,12 @@ import LastedEventDes from "../page/news/lastedEvent/component/description/laste
 import ListTeacher from "../privateAdmin/component/page/teacher/list/listTeacher";
 import ListAdmin from "../privateAdmin/component/page/admin/list/listAdmin";
 import EditAdmin from "../privateAdmin/component/page/admin/edit/editAdmin";
+import ListTeacherStudent from "../privateAdmin/component/page/manageTeacherStudent/listTeacher/listTeacherStudent";
+import CreateAdmin from "../privateAdmin/component/page/admin/create/createAdmin";
+import EditTeacher from "../privateAdmin/component/page/teacher/edit/editTeacher";
+import CreateTeacher from "../privateAdmin/component/page/teacher/create/createTeacher";
+import AddTeacher from "../privateAdmin/component/page/manageTeacherStudent/addTeacher]/addTeacher";
+import CapitalBurdenList from "../privateAdmin/component/page/capitalBurden/capitalBurdenList/capitalBurdenList";
 
 function PrivateRoute() {
   const dispatch = useDispatch();
@@ -144,6 +150,17 @@ function PrivateRoute() {
           }
         />
         <Route
+          path="/admin-page/create-user"
+          element={
+            <AdminRoutes>
+              <Layout>
+                <Createuser />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+
+        <Route
           path={`/admin-page/edit-user/:id`}
           element={
             <AdminRoutes>
@@ -164,12 +181,24 @@ function PrivateRoute() {
             </AdminRoutes>
           }
         />
+
         <Route
-          path={`/admin-page/edit-user/:id`}
+          path={`/admin-page/create-teacher`}
           element={
             <AdminRoutes>
               <Layout>
-                <EditUser />
+                <CreateTeacher />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+
+        <Route
+          path={`/admin-page/edit-teacher/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <EditTeacher />
               </Layout>
             </AdminRoutes>
           }
@@ -186,11 +215,61 @@ function PrivateRoute() {
           }
         />
         <Route
+          path="/admin-page/create-admin"
+          element={
+            <AdminRoutes>
+              <Layout>
+                <CreateAdmin />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
           path={`/admin-page/edit-admin/:id`}
           element={
             <AdminRoutes>
               <Layout>
                 <EditAdmin />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/manage-teacher`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <ListTeacherStudent />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/add-manage-teacher`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <AddTeacher />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/edit-add-teacher/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <AddTeacher />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/list-capital-burden`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <CapitalBurdenList />
               </Layout>
             </AdminRoutes>
           }

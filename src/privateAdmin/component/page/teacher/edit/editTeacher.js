@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { readUser, updateUser } from "../../../../../route/function/user";
 import "../../editUser/editUser.css";
-import "./editAdmin.css";
+import "../../admin/edit/editAdmin.css";
 
-function EditAdmin() {
+function EditTeacher() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { user } = useSelector((state) => ({ ...state }));
@@ -47,7 +47,7 @@ function EditAdmin() {
       .then((res) => {
         console.log(res.data);
         alert(res.data);
-        navigate("/admin-page/list-user");
+        navigate("/Teacher-page/list-user");
       })
       .catch((err) => {
         alert(err.response);
@@ -69,13 +69,13 @@ function EditAdmin() {
   return (
     <div className="create_profile_student_container">
       <div className="create_profile_student_header">
-        แก้ไขผู้ใช้งาน(ผู้ดูแลระบบ)
+        แก้ไขผู้ใช้งาน(อาจารย์)
       </div>
       <div className="create_profile_student">
-        <div className="title_create_profile_student">ข้อมูลผู้ดูแลระบบ</div>
+        <div className="title_create_profile_student">ข้อมูลอาจารย์</div>
         <div className="box_create_admin">
           <div className="student_id">
-            <label>เลขทะเบียนเจ้าหน้าที่</label>
+            <label>รหัสอาจารย์</label>
             <input
               type="number"
               name="student_id"
@@ -84,7 +84,7 @@ function EditAdmin() {
             />
           </div>
           <div className="student_number_id">
-            <label>หน่วยงาน</label>
+            <label>ตำแหน่ง</label>
             <input
               type="number"
               name="id_number"
@@ -102,6 +102,33 @@ function EditAdmin() {
             defaultValue={userData.user_fullname}
             onChange={handleChangeEditUserData}
           />
+        </div>
+
+        <div className="box_create_student">
+          <div className="student_id">
+            <label>คณะ</label>
+            <select>
+              <option>Placeholder</option>{" "}
+            </select>
+          </div>
+          <div className="student_number_id">
+            <label>สาขา</label>
+            <select>
+              <option>Placeholder</option>{" "}
+            </select>
+          </div>
+        </div>
+        <div className="box_create_student">
+          <div className="student_id">
+            <label>คณะ</label>
+            <select>
+              <option>Placeholder</option>{" "}
+            </select>
+          </div>
+          <div className="student_number_id">
+            <label>สาขา</label>
+            <input placeholder="Placeholder" />
+          </div>
         </div>
       </div>
       <div className="create_username_password_admin">
@@ -124,12 +151,7 @@ function EditAdmin() {
             </select>
           </div>
         </div>
-        <div className="role_admin">
-          <label>บทบาท</label>
-          <select>
-            <option>Placeholder</option>
-          </select>
-        </div>
+
         <div className="close_and_submit_button">
           <button>ยกเลิก</button>
           <button>บันทึก</button>
@@ -139,4 +161,4 @@ function EditAdmin() {
   );
 }
 
-export default EditAdmin;
+export default EditTeacher;

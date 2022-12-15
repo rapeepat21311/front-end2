@@ -147,7 +147,7 @@ function NavBar({ children }) {
                 })}
               </>
             )}
-            <SidebarMenu
+            {/* <SidebarMenu
               openSildeBar={openSildebarMenu2}
               imageTitle={<AccountCircleIcon />}
               menulistName={"อาจารย์ที่ปรึกษา"}
@@ -155,10 +155,22 @@ function NavBar({ children }) {
               menulist={pageComponentMenuList2}
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
-            />
+            /> */}
             <div
               className="admin_menu_drop_down_list"
-              onClick={openSildebarMenu1}
+              // onClick={openSildebarMenu1}
+              onClick={() => navigate("/admin-page/manage-teacher")}
+            >
+              <p>
+                <AccountCircleIcon />
+              </p>
+
+              <h1>อาจารย์ที่ปรึกษา</h1>
+            </div>
+            <div
+              className="admin_menu_drop_down_list"
+              // onClick={openSildebarMenu1}
+              onClick={() => navigate("/admin-page/list-capital-burden")}
             >
               <p>
                 <AccountCircleIcon />
@@ -168,7 +180,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
-              onClick={openSildebarMenu1}
+              // onClick={openSildebarMenu1}
             >
               <p>
                 <AccountCircleIcon />
@@ -178,7 +190,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
-              onClick={openSildebarMenu1}
+              // onClick={openSildebarMenu1}
             >
               <p>
                 <AccountCircleIcon />
@@ -188,7 +200,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
-              onClick={openSildebarMenu1}
+              // onClick={openSildebarMenu1}
             >
               <p>
                 <AccountCircleIcon />
@@ -198,7 +210,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
-              onClick={openSildebarMenu1}
+              // onClick={openSildebarMenu1}
             >
               <p>
                 <AccountCircleIcon />
@@ -208,7 +220,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
-              onClick={openSildebarMenu1}
+              // onClick={openSildebarMenu1}
             >
               <p>
                 <AccountCircleIcon />
@@ -218,7 +230,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
-              onClick={openSildebarMenu1}
+              // onClick={openSildebarMenu1}
             >
               <p>
                 <AccountCircleIcon />
@@ -228,7 +240,7 @@ function NavBar({ children }) {
             </div>
             <div
               className="admin_menu_drop_down_list"
-              onClick={openSildebarMenu1}
+              // onClick={openSildebarMenu1}
             >
               <p>
                 <AccountCircleIcon />
@@ -272,13 +284,13 @@ function NavBar({ children }) {
               </>
             )} */}
           </div>
-        </div>
-        <div
-          className={
-            sideBar ? `children_admin_page_active` : "children_admin_page"
-          }
-        >
-          {children}
+          <div
+            className={
+              sideBar ? `children_admin_page_active` : "children_admin_page"
+            }
+          >
+            {children}
+          </div>
         </div>
       </div>
     </>

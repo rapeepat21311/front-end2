@@ -1,3 +1,15 @@
+.box_create_admin {
+  display: grid;
+  /* background-color: red; */
+  display: flex;
+  width: 62%;
+  margin-top: 18px;
+  justify-content: space-between;
+  /* gap: 13rem; */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
 .admin_name {
   display: flex;
   flex-direction: column;
@@ -17,7 +29,7 @@
 }
 
 .admin_name input {
-  width: 98%;
+  width: 728px;
   padding: 0px;
   margin-top: 8px;
   font-family: "Inter";
@@ -62,7 +74,7 @@
 }
 
 .role_admin select {
-  width: 100%;
+  width: 750px;
   padding: 0px;
   margin-top: 8px;
   font-family: "Inter";
@@ -79,4 +91,220 @@
 
   border: 1px solid #e7ecef;
   border-radius: 8px;
+}
+
+.box_add_student_in_teacher {
+  /* background-color: red; */
+  position: relative;
+  width: 734px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border: 1px solid #e2e3de;
+  border-radius: 8px;
+  /* grid-template-columns: repeat(1,1fr); */
+}
+.close_add_student {
+  position: absolute;
+  /* background-color: green; */
+  top: 16px;
+  right: 12px;
+}
+
+.close_add_student p {
+  width: 24px;
+  height: 24px;
+}
+
+.box_add_student {
+  /* background-color: wheat; */
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 48px;
+  /* margin: 16px 48px 16px 16px; */
+}
+
+.box_add_student_in_teacher_id_student {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  gap: 8px;
+}
+.box_add_student_in_teacher_id_student label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  display: flex;
+  align-items: flex-end;
+
+  /* Neutral/07 */
+
+  color: #777777;
+}
+
+.box_id_student {
+  display: flex;
+  flex-direction: column;
+}
+.box_id_student input {
+  width: 148px;
+  padding: 8px 12px 8px 8px;
+  border: 1px solid #e7ecef;
+  margin-top: 6px;
+  border-radius: 8px;
+}
+
+.box_add_student_in_teacher_major_student label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  display: flex;
+  align-items: flex-end;
+
+  /* Neutral/07 */
+
+  color: #777777;
+}
+.box_add_student_in_teacher_major_student {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.box_name_student {
+  display: flex;
+  flex-direction: column;
+}
+.box_name_student input {
+  width: 443px;
+  padding: 8px 12px 8px 8px;
+  border: 1px solid #e7ecef;
+  margin-top: 6px;
+  border-radius: 8px;
+}
+
+.box_faculty_student {
+  display: flex;
+  flex-direction: column;
+}
+.box_faculty_student input {
+  width: 295.5px;
+  padding: 8px 12px 8px 8px;
+  border: 1px solid #e7ecef;
+  margin-top: 6px;
+  border-radius: 8px;
+}
+
+.box_major_student {
+  display: flex;
+  flex-direction: column;
+}
+.box_major_student input {
+  width: 295.5px;
+  padding: 8px 12px 8px 8px;
+  border: 1px solid #e7ecef;
+  margin-top: 6px;
+  border-radius: 8px;
+}
+
+.report_student {
+  display: flex;
+  width: 750px;
+  margin-left: 30px;
+  margin-top: 18px;
+  /* background-color: red; */
+}
+.report_student .button_report_student {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 159px;
+  height: 36px;
+
+  /* Interactive/04 */
+
+  background: #e7ecef;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 99px;
+  /* background-color: green; */
+}
+
+.report_student .button_report_student h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  display: flex;
+  align-items: center;
+
+  /* Text/Black */
+
+  color: #333333;
+}
+
+@media only screen and (min-width: 1441px) {
+  .box_create_admin {
+    width: 1027.7px;
+    margin-top: 18px;
+  }
+  .box_create_admin .student_id input {
+    width: 470px;
+    /* background-color: aqua; */
+  }
+  .box_create_admin .student_number_id input {
+    width: 470px;
+  }
+  .admin_name {
+    width: 1027.7px;
+  }
+  .admin_name input {
+    width: 98%;
+  }
+  .box_create_student_three {
+    width: 1027.7px;
+    /* background-color: green; */
+  }
+  .role_admin select {
+    width: 1027.7px;
+  }
+  .box_add_student_in_teacher {
+    width: 1014.7px;
+  }
+  .box_add_student_in_teacher_id_student {
+    gap : 16px;
+  }
+  .box_add_student_in_teacher_id_student .box_id_student input {
+    width: 248px;
+    padding: 16px 24px 16px 16px;
+  }
+  .box_add_student_in_teacher_id_student .box_name_student input {
+    width: 543px;
+    padding: 16px 24px 16px 16px;
+  }
+  .box_add_student_in_teacher_major_student {
+    gap: 16px;
+  }
+  .box_add_student_in_teacher_major_student .box_faculty_student input {
+    width: 405.5px;
+    padding: 16px 24px 16px 16px;
+  }
+  .box_add_student_in_teacher_major_student .box_major_student input {
+    width: 385.5px;
+    padding: 16px 24px 16px 16px;
+  }
 }

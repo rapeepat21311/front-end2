@@ -66,14 +66,12 @@ function ListUser() {
           <table>
             <thead>
               <tr>
-                <th scope="col">เลขทะเบียนนักศึกษา</th>
+                <th scope="col">รหัสนักศึกษา</th>
                 <th scope="col">ชื่อ-นามสกุล</th>
                 <th scope="col">คณะ</th>
-                <th scope="col">สาขาวิชา</th>
-                <th scope="col">ภาคการศึกษา</th>
+                <th scope="col">สาขา</th>
                 <th scope="col">อีเมล</th>
                 <th scope="col">สถานะ</th>
-                <th scope="col">{""}</th>
                 <th scope="col">{""}</th>
               </tr>
             </thead>
@@ -85,10 +83,8 @@ function ListUser() {
                     <td>{users.user_fullname}</td>
                     <td>{users.faculty}</td>
                     <td>{"วิศวกรรมซอฟต์แวร์"}</td>
-                    <td>{users.year}</td>
                     <td>{users.email}</td>
-                    <td>{users.student_status}</td>
-                    <td>....</td>
+                    <td>{"offline"}</td>
                     <Link to={`/admin-page/edit-user/${users._id}`}>
                       <td>
                         {/* <p onClick={navigate(`/admin-page/edit-user/${users._id}`)}> */}

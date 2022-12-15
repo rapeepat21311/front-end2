@@ -66,7 +66,7 @@ function ListAdmin() {
           <table>
             <thead>
               <tr>
-                <th scope="col">เลขทะเบียนนักศึกษา</th>
+                <th scope="col">รหัสนักศึกษา</th>
                 <th scope="col">ชื่อ-นามสกุล</th>
                 <th scope="col">คณะ</th>
                 <th scope="col">สาขา</th>
