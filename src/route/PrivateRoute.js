@@ -30,6 +30,19 @@ import LastedEventDes from "../page/news/lastedEvent/component/description/laste
 import ListTeacher from "../privateAdmin/component/page/teacher/list/listTeacher";
 import ListAdmin from "../privateAdmin/component/page/admin/list/listAdmin";
 import EditAdmin from "../privateAdmin/component/page/admin/edit/editAdmin";
+import ListTeacherStudent from "../privateAdmin/component/page/manageTeacherStudent/listTeacher/listTeacherStudent";
+import CreateAdmin from "../privateAdmin/component/page/admin/create/createAdmin";
+import EditTeacher from "../privateAdmin/component/page/teacher/edit/editTeacher";
+import CreateTeacher from "../privateAdmin/component/page/teacher/create/createTeacher";
+import AddTeacher from "../privateAdmin/component/page/manageTeacherStudent/addTeacher]/addTeacher";
+import CapitalBurdenList from "../privateAdmin/component/page/capitalBurden/capitalBurdenList/capitalBurdenList";
+import ActivityHoursList from "../privateAdmin/component/page/activityHours/activityHoursList/activityHoursList";
+import GradeList from "../privateAdmin/component/page/grade/gradeList/gradeList";
+import Timetable from "../privateAdmin/component/page/timeTable/timeTableList/timeTableList";
+import TesttableList from "../privateAdmin/component/page/testTable/testTableList/testTableList";
+import PerformanceList from "../privateAdmin/component/page/performance/performanceList/performanceList";
+import NewsList from "../privateAdmin/component/page/news/newsList/newsList";
+import EventsList from "../privateAdmin/component/page/events/eventsList/eventsList";
 
 function PrivateRoute() {
   const dispatch = useDispatch();
@@ -144,6 +157,17 @@ function PrivateRoute() {
           }
         />
         <Route
+          path="/admin-page/create-user"
+          element={
+            <AdminRoutes>
+              <Layout>
+                <Createuser />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+
+        <Route
           path={`/admin-page/edit-user/:id`}
           element={
             <AdminRoutes>
@@ -164,12 +188,24 @@ function PrivateRoute() {
             </AdminRoutes>
           }
         />
+
         <Route
-          path={`/admin-page/edit-user/:id`}
+          path={`/admin-page/create-teacher`}
           element={
             <AdminRoutes>
               <Layout>
-                <EditUser />
+                <CreateTeacher />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+
+        <Route
+          path={`/admin-page/edit-teacher/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <EditTeacher />
               </Layout>
             </AdminRoutes>
           }
@@ -186,11 +222,131 @@ function PrivateRoute() {
           }
         />
         <Route
+          path="/admin-page/create-admin"
+          element={
+            <AdminRoutes>
+              <Layout>
+                <CreateAdmin />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
           path={`/admin-page/edit-admin/:id`}
           element={
             <AdminRoutes>
               <Layout>
                 <EditAdmin />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/manage-teacher`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <ListTeacherStudent />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/add-manage-teacher`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <AddTeacher />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/edit-add-teacher/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <AddTeacher />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/list-capital-burden`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <CapitalBurdenList />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/list-activity-hours`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <ActivityHoursList />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/list-grade`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <GradeList />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/list-timetable`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <Timetable />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/list-testtable`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <TesttableList />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/list-performance`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <PerformanceList />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/list-news`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <NewsList />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/list-events`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <EventsList />
               </Layout>
             </AdminRoutes>
           }

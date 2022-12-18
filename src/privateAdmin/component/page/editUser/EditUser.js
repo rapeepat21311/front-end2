@@ -242,6 +242,10 @@ function EditUser() {
             </select>
           </div>
         </div>
+        <div className="close_and_submit_button">
+          <button>ยกเลิก</button>
+          <button>บันทึก</button>
+        </div>
       </div>
     </div>
   );

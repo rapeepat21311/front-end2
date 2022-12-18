@@ -7,8 +7,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 import "../../listUser/listuser.css";
+import "./listTeacherStudent.css";
 
-function ListTeacher() {
+function ListTeacherStudent() {
   const { user } = useSelector((state) => ({ ...state }));
   const navigate = useNavigate();
 
@@ -44,7 +45,7 @@ function ListTeacher() {
     <div className="layout_body">
       <div className="list_user_page">
         <div className="list_user_title">
-          <h1>รายชื่อผู้ใช้งาน(นักศึกษา)</h1>
+          <h1>อาจารย์ที่ปรึกษา</h1>
         </div>
         <div className="search_text">
           <div className="search">
@@ -62,12 +63,13 @@ function ListTeacher() {
             </select>
           </div>
         </div>
-        <div className="table">
+        <div className="table_list_teacher_add_student">
           <table>
             <thead>
               <tr>
                 <th scope="col">รหัสนักศึกษา</th>
                 <th scope="col">ชื่อ-นามสกุล</th>
+                <th scope="col">ชั้นปีที่</th>
                 <th scope="col">คณะ</th>
                 <th scope="col">สาขา</th>
                 <th scope="col">อีเมล</th>
@@ -81,11 +83,12 @@ function ListTeacher() {
                   <tr>
                     <td>{users.student_id}</td>
                     <td>{users.user_fullname}</td>
+                    <td>{"4"}</td>
                     <td>{users.faculty}</td>
                     <td>{"วิศวกรรมซอฟต์แวร์"}</td>
                     <td>{users.email}</td>
                     <td>{"offline"}</td>
-                    <Link to={`/admin-page/edit-teacher/${users._id}`}>
+                    <Link to={`/admin-page/edit-add-teacher/${users._id}`}>
                       <td>
                         {/* <p onClick={navigate(`/admin-page/edit-user/${users._id}`)}> */}
                         <EditOutlined />
@@ -103,4 +106,4 @@ function ListTeacher() {
   );
 }
 
-export default ListTeacher;
+export default ListTeacherStudent;
