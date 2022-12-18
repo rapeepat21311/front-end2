@@ -3,14 +3,14 @@
   flex-flow: row wrap;
   width: 960px;
   margin-top: 40px;
-  margin-left: 450px;
+  margin-left: 15%;
   /* background-color: red; */
   justify-content: space-between;
 }
 
 .pbox_activity_container {
   display: flex;
-  width: 468px;
+  width: 470px;
   /* margin-right: 12px; */
   margin-bottom: 20px;
   border-radius: 16px;
@@ -27,7 +27,7 @@
 
 
 .pbox_activity_img img:hover {
-  background-color: rgb(124, 124, 124);
+  background-color: aqua;
 }
 
 

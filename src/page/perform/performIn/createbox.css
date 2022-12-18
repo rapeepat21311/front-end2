@@ -1,16 +1,16 @@
-.pbox_activity_suppe {
+.pnbox_activity_suppe {
   display: flex;
   flex-flow: row wrap;
   width: 960px;
   margin-top: 40px;
-  margin-left: 450px;
+  margin-left: 15%;
   /* background-color: red; */
   justify-content: space-between;
 }
 
-.pbox_activity_container {
+.pnbox_activity_container {
   display: flex;
-  width: 468px;
+  width: 470px;
   /* margin-right: 12px; */
   margin-bottom: 20px;
   border-radius: 16px;
@@ -18,7 +18,7 @@
   background-color: rgba(255, 255, 255, 0.473);
 }
 
-.pbox_activity_img img {
+.pnbox_activity_img img {
   margin: 5px;
   width: 145px;
   height: 112px;
@@ -26,12 +26,12 @@
 }
 
 
-.pbox_activity_img img:hover {
-  background-color: rgb(124, 124, 124);
+.pnbox_activity_img img:hover {
+  background-color: aqua;
 }
 
 
-.pbox_activity_title {
+.pnbox_activity_title {
   display: flex;
   width: 100%;
   padding-left: 10px;
@@ -41,28 +41,28 @@
 }
 
 
-.pbox_activity_location {
+.pnbox_activity_location {
   display: flex;
   margin-top: 30px;
   margin-left: 10px;
   /* background-color: aquamarine; */
 }
 
-.pbox_activity_hr {
+.pnbox_activity_hr {
   display: flex;
   justify-content: space-between;
   padding-right: 10px;
   padding-left: 10px;
 }
 
-.pchange_page_botton {
+.pnchange_page_botton {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
 
-.pchange_page_botton h3 {
+.pnchange_page_botton h3 {
   color: black;
   font-size: 14px;
   border-radius: 16px;

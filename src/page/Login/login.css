@@ -16,6 +16,23 @@
 	
 }
 
+.box_banner{
+	display: flex;
+	position: absolute;
+	/* margin-bottom: 500px; */
+	justify-content: center;
+	align-items: center;
+	/* width: 50px; */
+	/* background-color: aqua; */
+}
+.box_banner img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* margin-bottom: 10px; */
+}
+
 
 
 
@@ -52,22 +69,53 @@
 .box_input{
 	display: flex;
 	/* background-color: aqua; */
-	margin-top: 74px;
+	margin-bottom: 76px;
+	/* margin-top: 74px; */
+}
+
+
+
+
+.box_card{
+	box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 64px 32px;
+
+position: absolute;
+width: 960px;
+height: 674px;
+
+/* BG/Glassmorphism (Fill) */
+
+background: linear-gradient(110.16deg, rgba(255, 255, 255, 0.6) -0.35%, rgba(255, 255, 255, 0.2) 100%);
+/* BG/Glassmorphism (Stroke) */
+
+border: 1px solid rgba(255, 255, 255, 0.48);
+border-radius: 24px;
 }
  
 .box 
 {
 	box-sizing: border-box;
+	width: 560px;
+	height: 316px;
+	/* background-color: bisque; */
+
 
 	/* Auto layout */
 	
 	 display: flex;
 	flex-direction: column;
-	/* margin-bottom: 74px; */
+	margin-top: 120px;
 	align-items: center;
 	padding: 24px;
 	/* position: absolute; */
-	width: 25%;
 	/* height: %; */
 	/* left: 512px;
 	top: 287px;  */
@@ -103,6 +151,7 @@
 	letter-spacing: 0.05em;
 	transition: 0.5s;
 	z-index: 10;
+	
 
 
 }
@@ -135,6 +184,7 @@
 	order: 2;
 	align-self: stretch;
 	flex-grow: 0;
+	background-color: #274C77;
 }
 
 .submit button {
@@ -162,7 +212,7 @@
 
 .box_forget{
 	display: flex;
-	/* background-color: bisque; */
+	background-color: bisque;
 	position: absolute;
 	padding: 10px;
 	margin-left: 290px;

@@ -13,6 +13,7 @@ import { userReducerConst } from "../../component/reducer/consUserRed";
 import { login } from "../../route/function/auth";
 import "./login.css";
 import { Checkbox } from "@mui/material";
+import BannerNBU from "../../image/banner.png"
 
 const defaultLoginData = {
   username: "",
@@ -92,8 +93,8 @@ function Login() {
         dispatch({ type: userReducerConst.LOG_OUT });
         // console.log(err);
       });
-  }
-
+    }
+    
   function chageHandler(e) {
     const { name, value } = e.target;
     setLoginData((prev) => ({ ...prev, [name]: value }));
@@ -101,13 +102,17 @@ function Login() {
 
   return (
     <div className="box_body">
+      <div className="box_card">
+      <div className="box_banner">
+        <img src={BannerNBU}/>
+      </div>
+
       <div className="box">
         <div className="box_header_login">
-          <h2>Login</h2>
+          <h2>Login Menu</h2>
         </div>
         <div className="box_input">
           <form onSubmit={handleSubmit}>
-            {/* <label htmlFor="username">Username :</label> */}
             <input
               id="username"
               type="text"
@@ -118,7 +123,7 @@ function Login() {
               placeholder="username"
               onChange={chageHandler}
               required
-            />
+              />
             {/* <label htmlFor="password">Password :</label> */}
             <input
               id="password"
@@ -141,6 +146,7 @@ function Login() {
               <button type="submit">บันทึก</button>
             </div>
           </form>
+              </div>
         </div>
       </div>
     </div>

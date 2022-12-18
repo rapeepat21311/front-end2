@@ -1,0 +1,110 @@
+.table_capital_container table {
+  background-color: #fff;
+  border-collapse: collapse;
+  border-radius: 16px;
+  font-size: 1em;
+  color: black;
+  overflow: hidden;
+  width: auto;
+  width: 960px;
+  text-align: start;
+  margin-bottom: 50px;
+}
+/* .table_capital_container thead {
+  background-color: #e7ecef;
+} */
+.table_capital_container th {
+  letter-spacing: 0.3px;
+  /* text-shadow: 0 1px 1px #2b2a466b; */
+  text-align: start;
+}
+
+.table_capital_container tr:nth-child(even) {
+  background-color: #e8ebed;
+  z-index: 20px;
+}
+
+.table_capital_container td,
+.table_capital_container th {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px 16px 8px 16px;
+}
+
+.capital_discount {
+  text-align: end;
+}
+
+.type_capital {
+  display: flex;
+  background-color: #fff;
+  flex-flow: row wrap;
+  border-radius: 16px;
+  /* height: 192px; */
+}
+
+.type_capital_header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 16px;
+  padding-top: 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e7ecef;
+}
+
+.type_capital_header h1 {
+  padding-left: 6px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.type_capital_blue {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  display: flex;
+  align-items: center;
+  color: #191970;
+}
+
+.type_capital_description {
+  text-align: start;
+  margin: 16px 0px 16px 16px;
+}
+.type_capital_description p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+@media only screen and (min-width: 1441px) {
+  .table_capital_container table {
+    width: 100%;
+  }
+  .table_capital_container td,
+.table_capital_container th {
+ 
+  padding: 16px 32px 16px 32px;
+}
+}
