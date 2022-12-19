@@ -59,7 +59,8 @@
   /* background-color: aquamarine; */
 }
 
-.admin_menu_drop_down_list p {
+
+.admin_menu_drop_down_list img {
   /* width: 20%; */
   display: flex;
   padding: 20px 0px 20px 20px;
@@ -132,6 +133,7 @@
   box-sizing: border-box;
   width: 100%;
   height: 64px;
+  /* justify-content: space-between; */
   background: #e7ecef;
   /* BG/Glassmorphism (Effect) */
 
@@ -154,6 +156,23 @@
   justify-content: flex-end;
   align-items: center;
   color: white;
+}
+
+.navbar_admin_left {
+  display: flex;
+  position: absolute;
+  /* width: 100vw; */
+  top: 8px;
+  left: 30px;
+  justify-content: flex-start;
+  /* background-color: red; */
+}
+
+.navbar_admin_left img {
+  /* display: flex; */
+  /* top: 50px; */
+  width: 239px;
+  height: 48px;
 }
 
 .navbar_admin_right {

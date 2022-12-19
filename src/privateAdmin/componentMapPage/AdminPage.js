@@ -5,7 +5,7 @@ export const pageComponentMenuList1 = [
     menulist: "นักศึกษา",
   },
   { path: "/admin-page/list-teacher", menulist: "อาจารย์" },
-  { path: "/admin-page/list-admin", menulist: "ผู้ดูแลระบบ" },
+  // { path: "/admin-page/list-admin", menulist: "ผู้ดูแลระบบ" },
 ];
 
 export const pageComponentMenuList2 = [

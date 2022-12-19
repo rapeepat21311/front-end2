@@ -8,6 +8,19 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AutoAwesomeMosaicOutlinedIcon from "@mui/icons-material/AutoAwesomeMosaicOutlined";
 
 import { useNavigate } from "react-router-dom";
+import auto_awesome from "../../image/auto_awesome_mosaic.png";
+import groups from "../../image/groups.png";
+import supervisor_account from "../../image/supervisor_account.png";
+import payments from "../../image/payments.png";
+import diversity_3 from "../../image/diversity_3.png";
+import astrophotography_auto from "../../image/astrophotography_auto.png";
+import table from "../../image/table.png";
+import edit_document from "../../image/edit_document.png";
+import workspace_premium from "../../image/workspace_premium.png";
+import newspaper from "../../image/newspaper.png";
+import interests from "../../image/interests.png";
+
+import logoNBU from "../../image/image 116.png";
 
 import {
   pageComponentMenuList1,
@@ -66,6 +79,9 @@ function NavBar({ children }) {
                 <FormatListBulletedIcon />
               </h1>
             )}
+            <div className="navbar_admin_left">
+              <img src={logoNBU} />
+            </div>
             <div className="navbar_admin_right">
               <div
                 className="profile_login_logout_navbar"
@@ -107,18 +123,14 @@ function NavBar({ children }) {
               onClick={() => navigate("/admin-page")}
             >
               {" "}
-              <p>
-                <AccountCircleIcon />
-              </p>
+              <img src={auto_awesome} />
               <h1>ภาพรวมระบบ</h1>
             </div>
             <div
               className="admin_menu_drop_down_list"
               onClick={openSildebarMenu1}
             >
-              <p>
-                <AccountCircleIcon />
-              </p>
+              <img src={groups} />
 
               <h1>ผู้ใช้งาน</h1>
             </div>
@@ -161,9 +173,7 @@ function NavBar({ children }) {
               // onClick={openSildebarMenu1}
               onClick={() => navigate("/admin-page/manage-teacher")}
             >
-              <p>
-                <AccountCircleIcon />
-              </p>
+              <img src={supervisor_account} />
 
               <h1>อาจารย์ที่ปรึกษา</h1>
             </div>
@@ -172,9 +182,7 @@ function NavBar({ children }) {
               // onClick={openSildebarMenu1}
               onClick={() => navigate("/admin-page/list-capital-burden")}
             >
-              <p>
-                <AccountCircleIcon />
-              </p>
+              <img src={payments} />
 
               <h1>ภาระทุน</h1>
             </div>
@@ -183,9 +191,7 @@ function NavBar({ children }) {
               onClick={() => navigate("/admin-page/list-activity-hours")}
               // onClick={openSildebarMenu1}
             >
-              <p>
-                <AccountCircleIcon />
-              </p>
+              <img src={diversity_3} />
 
               <h1>ชั่วโมงกิจกรรม</h1>
             </div>
@@ -194,9 +200,7 @@ function NavBar({ children }) {
               onClick={() => navigate("/admin-page/list-grade")}
               // onClick={openSildebarMenu1}
             >
-              <p>
-                <AccountCircleIcon />
-              </p>
+              <img src={astrophotography_auto} />
 
               <h1>ผลการศึกษา</h1>
             </div>
@@ -205,9 +209,7 @@ function NavBar({ children }) {
               onClick={() => navigate("/admin-page/list-timetable")}
               // onClick={openSildebarMenu1}
             >
-              <p>
-                <AccountCircleIcon />
-              </p>
+              <img src={table} />
 
               <h1>ตารางเรียน</h1>
             </div>
@@ -216,9 +218,7 @@ function NavBar({ children }) {
               onClick={() => navigate("/admin-page/list-testtable")}
               // onClick={openSildebarMenu1}
             >
-              <p>
-                <AccountCircleIcon />
-              </p>
+              <img src={edit_document} />
 
               <h1>ตารางสอบ</h1>
             </div>
@@ -227,9 +227,7 @@ function NavBar({ children }) {
               onClick={() => navigate("/admin-page/list-performance")}
               // onClick={openSildebarMenu1}
             >
-              <p>
-                <AccountCircleIcon />
-              </p>
+              <img src={workspace_premium} />
 
               <h1>ผลงาน</h1>
             </div>
@@ -238,9 +236,7 @@ function NavBar({ children }) {
               onClick={() => navigate("/admin-page/list-news")}
               // onClick={openSildebarMenu1}
             >
-              <p>
-                <AccountCircleIcon />
-              </p>
+              <img src={newspaper} />
 
               <h1>ข่าวสาร</h1>
             </div>
@@ -249,9 +245,7 @@ function NavBar({ children }) {
               onClick={() => navigate("/admin-page/list-events")}
               // onClick={openSildebarMenu1}
             >
-              <p>
-                <AccountCircleIcon />
-              </p>
+              <img src={interests} />
 
               <h1>กิจกรรม</h1>
             </div>
