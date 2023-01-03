@@ -5,6 +5,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 import "./gradeList.css";
+import vector from "../../../../../image/vector.png";
+import vector_1 from "../../../../../image/vector (1).png";
+import plus from "../../../../../image/add.png";
+import viewButton from "../../../../../image/Button.png";
+import more_vert from "../../../../../image/more_vert.png";
 import { mockGrade } from "./mockData/mockGrade";
 
 function GradeList() {
@@ -15,19 +20,43 @@ function GradeList() {
           <h1>ผลการศึกษา</h1>
         </div>
         <div className="search_text">
-          <div className="search">
-            <input placeholder="seacrch" type="search" />
-            <SearchIcon />
+          <div className="search_left_container">
+            <div className="search">
+              <input placeholder="Search" type="search" />
+              <SearchIcon />
+            </div>
+            <div className="select_term_capital_option">
+              <select>
+                <option>รหัสนักศึกษา</option>
+                <option>รหัสอาจารย์ 1</option>
+              </select>
+            </div>
+            <div className="select_type_capital_option">
+              <select>
+                <option>ภาคเรียน</option>
+                <option>คณะ2</option>
+              </select>
+            </div>
           </div>
           <div className="list_user_text_option">
-            <select>
-              <option>
-                <AccountCircleIcon /> Text
-              </option>
-            </select>
-            <select>
-              <option>Text</option>
-            </select>
+            <div className="export_document_container">
+              <div className="export_document">
+                <button>ส่งออกข้อมูล</button>
+                <img src={vector} />
+              </div>
+            </div>
+            <div className="import_document_container">
+              <div className="import_document">
+                <button>นำเข้าข้อมูล</button>
+                <img src={vector_1} />
+              </div>
+            </div>
+            <div className="add_document_container">
+              <div className="add_document">
+                <img src={plus} />
+                <button>เพิ่มข้อมูล</button>
+              </div>
+            </div>
           </div>
         </div>
         <div className="table_grade_list_admin">
@@ -55,13 +84,12 @@ function GradeList() {
                     <td>{item.name_subject}</td>
                     <td>{item.subject_unit}</td>
                     <td>{item.grade_gpx}</td>
-                    {/* <Link to={`/admin-page/edit-capital_burden/${item.id}`}> */}
                     <td>
-                      {/* <p onClick={navigate(`/admin-page/edit-user/${users._id}`)}> */}
-                      <EditOutlined />
-                      {/* </p> */}
+                      <div className="list_view_delete">
+                        <img src={viewButton} />
+                        <img src={more_vert} />
+                      </div>
                     </td>
-                    {/* </Link> */}
                   </tr>
                 );
               })}
