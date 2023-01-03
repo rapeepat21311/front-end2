@@ -13,7 +13,7 @@ import { userReducerConst } from "../../component/reducer/consUserRed";
 import { login } from "../../route/function/auth";
 import "./login.css";
 import { Checkbox } from "@mui/material";
-import BannerNBU from "../../image/banner.png"
+import BannerNBU from "../../image/banner.png";
 
 const defaultLoginData = {
   username: "",
@@ -93,8 +93,8 @@ function Login() {
         dispatch({ type: userReducerConst.LOG_OUT });
         // console.log(err);
       });
-    }
-    
+  }
+
   function chageHandler(e) {
     const { name, value } = e.target;
     setLoginData((prev) => ({ ...prev, [name]: value }));
@@ -103,50 +103,50 @@ function Login() {
   return (
     <div className="box_body">
       <div className="box_card">
-      <div className="box_banner">
-        <img src={BannerNBU}/>
-      </div>
-
-      <div className="box">
-        <div className="box_header_login">
-          <h2>Login Menu</h2>
+        <div className="box_banner">
+          <img src={BannerNBU} />
         </div>
-        <div className="box_input">
-          <form onSubmit={handleSubmit}>
-            <input
-              id="username"
-              type="text"
-              name="username"
-              value={loginData.username}
-              // ref={userRef}
-              autoComplete="off"
-              placeholder="username"
-              onChange={chageHandler}
-              required
+
+        <div className="box">
+          <div className="box_header_login">
+            <h2>Login Menu</h2>
+          </div>
+          <div className="box_input">
+            <form onSubmit={handleSubmit}>
+              <input
+                id="username"
+                type="text"
+                name="username"
+                value={loginData.username}
+                // ref={userRef}
+                autoComplete="off"
+                placeholder="username"
+                onChange={chageHandler}
+                required
               />
-            {/* <label htmlFor="password">Password :</label> */}
-            <input
-              id="password"
-              type="password"
-              name="password"
-              value={loginData.password}
-              // ref={passRef}
-              autoComplete="off"
-              placeholder="password"
-              onChange={chageHandler}
-            /> 
-            <div className="check_box">
-              <Checkbox/>
-              <p>Remember me</p>
-            <div className="box_forget">
-              <p>Foget Password?</p>
-            </div>
-            </div>
-            <div className="submit">
-              <button type="submit">บันทึก</button>
-            </div>
-          </form>
+              {/* <label htmlFor="password">Password :</label> */}
+              <input
+                id="password"
+                type="password"
+                name="password"
+                value={loginData.password}
+                // ref={passRef}
+                autoComplete="off"
+                placeholder="password"
+                onChange={chageHandler}
+              />
+              <div className="check_box">
+                <Checkbox />
+                <p>Remember me</p>
+                <div className="box_forget">
+                  <p>Foget Password?</p>
+                </div>
               </div>
+              <div className="submit">
+                <button type="submit">บันทึก</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

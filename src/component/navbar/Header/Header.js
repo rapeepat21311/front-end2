@@ -68,7 +68,7 @@ function Header() {
         </h3>
         <h3>
           <Link className="link" to="/eport">
-            e-Protfolio
+          Curriculum Vitae
           </Link>
         </h3>
       </div>

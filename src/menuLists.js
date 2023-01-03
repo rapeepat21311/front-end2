@@ -3,7 +3,7 @@ import icon_result from "./image/result.png"
 import icon_perform from "./image/perform.png"
 import icon_news from "./image/news.png"
 import icon_Eport from "./image/ePort.png"
-import icon_class from "./image/table.png"
+import icon_class from "./image/tableClass.png"
 
 
 export const menuLists = [
@@ -12,5 +12,5 @@ export const menuLists = [
   { name: "ตารางเรียนและสอบ", image: icon_class, link: "classl" },
   { name: "ผลงาน", image:icon_perform, link: "perform" },
   { name: "ข่าวสารและกิจกรรม", image: icon_news, link: "news" },
-  { name: "e-Portfolio", image: icon_Eport, link: "eport" },
+  { name: "Curriculum Vitae", image: icon_Eport, link: "eport" },
 ];
