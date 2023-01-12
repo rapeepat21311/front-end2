@@ -11,7 +11,7 @@ export default function CreateBox() {
   const {id} = useParams();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [volunteerHoursPerPage] = useState(8);
+  const [volunteerHoursPerPage] = useState(12);
   const [pageNumberLimit, setPageNumberLimit] = useState(6);
   const [maxPageLimit, setMaxPageLimit] = useState(6);
   const [minPageLimit, setMinPageLimit] = useState(0);
@@ -63,6 +63,7 @@ export default function CreateBox() {
         <option value="10">10</option>
       </select> */}
       <Pagination
+        shape="rounded"
         volunteerHoursPerPage={volunteerHoursPerPage}
         totalVolunteerHours={volunteerHours.length}
         paginate={paginate}

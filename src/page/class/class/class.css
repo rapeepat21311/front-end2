@@ -85,6 +85,7 @@
     justify-content: space-evenly;
     align-items: center;
     cursor: pointer;
+    /* background-color: #666666; */
   }
 
   .week_day_activity :hover{

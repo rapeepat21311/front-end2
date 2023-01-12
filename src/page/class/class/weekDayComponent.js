@@ -5,7 +5,7 @@ import Modal from "../Modal/Modal";
 
 const colorById = {
   id0: "#FDF9D3",
-  id1: "#FADDDF  ",
+  id1: "#FADDDF ",
   id2: "#D2E9CD",
   id3: "#FDE5BF",
   id4: "#D8E5ED",
@@ -37,7 +37,7 @@ export default function WeekDayComponent({ weekDayData }) {
             <div
               className="week_day_activity"
               onClick={() => setShow(true)}
-              style={{ backgroundColor: activity.noData ? "#8B8C89" : "#fff" }}
+              style={{ backgroundColor: activity.noData ? "#E7ECEF" : "#fff" }}
             >
               <Modal
                 title="SWE324 (1) : General Education for Life Development I"

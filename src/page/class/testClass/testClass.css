@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1250px;
+    height: 550px;
     width: 100%;
     margin-top: 24px;
     /* margin-left: 50%; */
@@ -92,15 +92,21 @@
     flex-direction: row;
     height: 50px;
     width: 100%;
-    /* justify-content: space-between; */
-    gap: 19px;
+    justify-content: space-evenly;
+    /* gap: 19px; */
     align-items: center;
-    /* background-color: antiquewhite; */
+    /* background-color: rgb(217, 144, 48); */
 
   }
   .test_week_day_activity p{
     margin-left: 19px;
     
+  }
+
+  .test_week_day_activity p2 {
+    display: flex;
+    margin-left: 376px;
+    margin-right: 272px;
   }
 
 

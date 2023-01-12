@@ -6,7 +6,7 @@
     height: 100%;
     width: 100vw;
     background: url(../../image/bgmain.png);
-    background-size: 100%;
+    background-size: 100% 100%;
     font-weight: bold;
     /* animation: colorChange 5s infinite alternate; */
   }

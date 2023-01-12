@@ -8,16 +8,6 @@ export const mockTestList = [
         subject: "SWE324 (1) : General Education for Life Development I",
         room: "S2406",
       },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
-      },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
-      },
     ],
   },
   {
@@ -28,16 +18,6 @@ export const mockTestList = [
         time: "09:00-12:00",
         subject: "SWE324 (1) : General Education for Life Development I",
         room: "S2406",
-      },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
-      },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
       },
     ],
   },
@@ -50,16 +30,6 @@ export const mockTestList = [
         subject: "SWE324 (1) : General Education for Life Development I",
         room: "S2406",
       },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
-      },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
-      },
     ],
   },
   {
@@ -70,16 +40,6 @@ export const mockTestList = [
         time: "09:00-12:00",
         subject: "SWE324 (1) : General Education for Life Development I",
         room: "S2406",
-      },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
-      },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
       },
     ],
   },
@@ -92,58 +52,18 @@ export const mockTestList = [
         subject: "SWE324 (1) : General Education for Life Development I",
         room: "S2406",
       },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
-      },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
-      },
     ],
   },
   {
     id: 5,
     wkDay: "SAT",
     activityList: [
-      {
-        time: "09:00-12:00",
-        subject: "SWE324 (1) : General Education for Life Development I",
-        room: "",
-      },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
-      },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
-      },
     ],
   },
   {
     id: 6,
     wkDay: "SUN",
     activityList: [
-      {
-        time: "09:00-12:00",
-        subject: "SWE324 (1) : General Education for Life Development I",
-        room: "S2406",
-      },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
-      },
-      {
-        time: "09:00-12:00",
-        subject: "",
-        room: "",
-      },
     ],
   },
 ];

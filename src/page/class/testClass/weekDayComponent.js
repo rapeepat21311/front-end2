@@ -29,8 +29,8 @@ export default function WeekDayComponent({ weekDayData }) {
       <div className="test_week_day_activity_section">
         {activityData.map((activity) => {
           return (
-            <div className="test_week_day_activity" style={{backgroundColor:activity.noData?"#8B8C89":"#fff"}}>
-              {activity.noData && <p>ไม่มีข้อมูลรายวิชาในวันนี้</p>}
+            <div className="test_week_day_activity" style={{backgroundColor:activity.noData?"#E7ECEF":"#fff"}}>
+              {activity.noData && <p2>ไม่มีข้อมูลรายวิชาในวันนี้</p2>}
               <p> {activity.time} </p>
               <p> {activity.subject} </p>
               <p> {activity.room} </p>

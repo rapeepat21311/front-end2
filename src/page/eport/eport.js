@@ -1,14 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 import Header from "../../component/navbar/Header/Header";
 import { Navigate, useNavigate } from "react-router-dom";
 import { DefaultEditor } from "react-simple-wysiwyg";
 import "./eport.css";
 import { green } from "@mui/material/colors";
 import { Checkbox } from "@mui/material";
+import Switch from "@mui/material/Switch";
+import Box from "@mui/material/Box";
+import Slider from "@mui/material/Slider";
 
 function Eport() {
   const navigate = useNavigate();
   const [html, setHtml] = React.useState("my <b>HTML</b>");
+  const [checked, setChecked] = React.useState(true);
+
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
 
   onchange = (e) => {
     setHtml(e.target.value);
@@ -163,10 +171,127 @@ function Eport() {
             <div className="section_container_resulft">
               <div className="section_container_resulft_detail">
                 <Checkbox />
-                <p>เกียรติบัตรนักเรียนดีเด่นด้านวิชาการ กลุ่ม English Programระดับ มัธยมศึกษาตอนปลาย</p>
+                <p>
+                  เกียรติบัตรนักเรียนดีเด่นด้านวิชาการ กลุ่ม English
+                  Programระดับ มัธยมศึกษาตอนปลาย
+                </p>
               </div>
               <div className="section_container_resulft_year">
                 <p>2022</p>
+              </div>
+            </div>
+          </div>
+          <div className="option_eport">
+            <div className="option_eport_box_img">
+              <p>รูปภาพนักศึกษา</p>
+              <div className="option_toggle">
+                <Switch
+                  checked={checked}
+                  onChange={handleChange}
+                  inputProps={{ "aria-label": "controlled" }}
+                />
+              </div>
+            </div>
+            <div className="option_eport_box_language">
+              <div className="language_box">
+                <p>ภาษา</p>
+                <Checkbox />
+              </div>
+              <div className="slide_bar_one">
+                <div className="slide_bar_thai">
+                  <p>ไทย</p>
+                  <p>0/100</p>
+                </div>
+                <div className="slide_bar_score">
+                  <Box width={250}>
+                    <Slider
+                      defaultValue={0}
+                      aria-label="Default"
+                      valueLabelDisplay="auto"
+                    />
+                  </Box>
+                </div>
+              </div>
+              <div className="slide_bar_two">
+                <div className="slide_bar_english">
+                  <p>อังกฤษ</p>
+                  <p>0/100</p>
+                </div>
+                <div className="slide_bar_score">
+                  <Box width={250}>
+                    <Slider
+                      defaultValue={0}
+                      aria-label="Default"
+                      valueLabelDisplay="auto"
+                    />
+                  </Box>
+                </div>
+              </div>
+            </div>
+            <div className="option_eport_box_skill">
+            <div className="etc_skill">
+                <p>ทักษะอื่นๆ</p>
+                <Checkbox />
+              </div>
+              <div className="slide_bar_T">
+                <div className="slide_bar_think">
+                  <p>ความคิดสร้างสรรค์</p>
+                  <p>0/100</p>
+                </div>
+                <div className="slide_bar_score">
+                  <Box width={250}>
+                    <Slider
+                      defaultValue={0}
+                      aria-label="Default"
+                      valueLabelDisplay="auto"
+                    />
+                  </Box>
+                </div>
+              </div>
+              <div className="slide_bar_Q">
+                <div className="slide_bar_quest">
+                  <p>การแก้ไขปัญหา</p>
+                  <p>0/100</p>
+                </div>
+                <div className="slide_bar_score">
+                  <Box width={250}>
+                    <Slider
+                      defaultValue={0}
+                      aria-label="Default"
+                      valueLabelDisplay="auto"
+                    />
+                  </Box>
+                </div>
+              </div>
+              <div className="slide_bar_lead">
+                <div className="slide_bar_leader">
+                  <p>ความเป็นผู้นำ</p>
+                  <p>0/100</p>
+                </div>
+                <div className="slide_bar_score">
+                  <Box width={250}>
+                    <Slider
+                      defaultValue={0}
+                      aria-label="Default"
+                      valueLabelDisplay="auto"
+                    />
+                  </Box>
+                </div>
+              </div>
+              <div className="slide_bar_MT">
+                <div className="slide_bar_time">
+                  <p>การจัดการเวลา</p>
+                  <p>0/100</p>
+                </div>
+                <div className="slide_bar_score">
+                  <Box width={250}>
+                    <Slider
+                      defaultValue={0}
+                      aria-label="Default"
+                      valueLabelDisplay="auto"
+                    />
+                  </Box>
+                </div>
               </div>
             </div>
           </div>
