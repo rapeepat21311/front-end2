@@ -53,13 +53,17 @@
 
 .profile_student_image_name {
   margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* background-color: green; */
 }
 
 .profile_student_image_name p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  /* font-size: 40px; */
   line-height: 32px;
   /* identical to box height, or 133% */
 
@@ -229,9 +233,9 @@
   line-height: 24px;
   border-radius: 8px;
   /* identical to box height, or 133% */
-  
+
   /* Text/Black */
-  
+
   color: #333333;
 }
 
@@ -353,6 +357,47 @@
   /* margin-bottom: 6px; */
 }
 
+.student_private_phone_number {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 37.93%;
+  width: 100%;
+  padding: 24px 0px 0px 20px;
+  /* background-color: rebeccapurple; */
+}
+.student_private_phone_number h4 {
+  color: #777777;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  letter-spacing: 0.5px;
+
+  /* W&B/04 */
+
+  color: #999999;
+}
+.student_private_phone_number p {
+  color: #333333;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  /* background-color: gold; */
+  margin-bottom: 16px;
+}
+
+.private_address {
+  width: 100%;
+  /* background-color: greenyellow; */
+}
+
 .student_teacher_profile_text_right p {
   color: #333333;
   font-family: "Roboto";
@@ -366,12 +411,65 @@
   /* padding: 8px 12px 8px 0px; */
 }
 
+.document_student_study_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40.93%;
+  padding: 16px 8px 16px 16px;
+}
+
+.document_student_study_left {
+  display: flex;
+  flex-direction: column;
+}
+.document_student_study_left,
+.document_student_study_right h4 {
+  color: #777777;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  letter-spacing: 0.5px;
+
+  /* W&B/04 */
+
+  color: #999999;
+}
+.document_student_study_left p,
+.document_student_study_right p {
+  color: #333333;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  /* background-color: gold; */
+  margin-bottom: 16px;
+}
+
+.document_student_study_right {
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 1441px) {
   .profile_student {
     width: 100%;
   }
+  .student_profile_left {
+    width: 35%;
+  }
+  .student_profile_right {
+    width: 35%;
+    /* background-color: red; */
+  }
   .profile_student_container_left {
-    width: 70%;
+    width: 100%;
     font-size: 24px;
   }
   .profile_student_left h4 {
@@ -379,9 +477,6 @@
   }
   .profile_student_left p {
     font-size: 18px;
-  }
-  .profile_student_container_left {
-    width: 73.4%;
   }
   .student_teacher_profile_right {
     width: 100%;
@@ -392,5 +487,52 @@
   }
   .student_teacher_profile_text p {
     font-size: 18px;
+  }
+  .student_profile_image {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-right: 24px; */
+    /* background-color: red; */
+  }
+  .student_profile_image img {
+    /* width: 65.79%; */
+    width: 200px;
+    height: 200px;
+    border-radius: 99px;
+    margin-right: 24px;
+  }
+  .profile_student_image_name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-right:24px; */
+    width: 100%;
+    /* background-color: green; */
+  }
+  .profile_student_image_name p {
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    /* background-color: purple; */
+  }
+  .status_student {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    /* background-color: red; */
+  }
+  .student_profile_image p {
+    width: 50%;
+    margin-right: 24px;
+  }
+  .edit_private_document {
+    display: flex;
+    width: 100%;
+    gap: 5%;
   }
 }

@@ -159,6 +159,7 @@
 @media only screen and (min-width: 1441px) {
   .news_body {
     background-color: crimson;
+    height: 100%;
   }
   .box_lasted_event_date_active {
     margin-top: 260px;

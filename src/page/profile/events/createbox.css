@@ -89,6 +89,7 @@
     /* background-color: pink; */
   }
   .box_activity_container{
-    width: 49%;
+    width: 47%;
+    padding: 16px 16px;
   }
 }

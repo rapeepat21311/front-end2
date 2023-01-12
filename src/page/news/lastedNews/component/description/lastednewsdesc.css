@@ -3,6 +3,10 @@
 }
 
 .box_last_news_description_container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
   height: 1493px;
   margin-top: 24px;
   background-color: #ffffff;
@@ -61,6 +65,9 @@
 }
 
 .box_news_descirption {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   margin-top: 40px;
 }
 

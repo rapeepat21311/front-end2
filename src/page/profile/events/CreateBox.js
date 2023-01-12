@@ -59,19 +59,19 @@ export default function CreateBox() {
         <option value="8">8</option>
         <option value="10">10</option>
       </select> */}
+        <Pagination
+          volunteerHoursPerPage={volunteerHoursPerPage}
+          totalVolunteerHours={volunteerHours.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          maxPageLimit={maxPageLimit}
+          setMaxPageLimit={setMaxPageLimit}
+          minPageLimit={minPageLimit}
+          setMinPageLimit={setMinPageLimit}
+          pageNumberLimit={pageNumberLimit}
+        />
       </div>
-      <Pagination
-        volunteerHoursPerPage={volunteerHoursPerPage}
-        totalVolunteerHours={volunteerHours.length}
-        paginate={paginate}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        maxPageLimit={maxPageLimit}
-        setMaxPageLimit={setMaxPageLimit}
-        minPageLimit={minPageLimit}
-        setMinPageLimit={setMinPageLimit}
-        pageNumberLimit={pageNumberLimit}
-      />
     </>
   );
 }

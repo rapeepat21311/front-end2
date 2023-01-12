@@ -27,7 +27,12 @@ function LastedNewsDes() {
             <p>รายละเอียดข่าวสาร</p>
           </div>
 
-          <div className="back_to_last_news">{"<--"} กลับ</div>
+          <div
+            className="back_to_last_news"
+            onClick={() => navigate("/news/last-news")}
+          >
+            {"<--"} กลับ
+          </div>
 
           <div className="box_last_news_description_container">
             <div className="image_news_description">

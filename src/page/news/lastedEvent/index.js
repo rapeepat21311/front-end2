@@ -60,8 +60,8 @@ function Index() {
             pageNumberLimit={pageNumberLimit}
           />
         </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
