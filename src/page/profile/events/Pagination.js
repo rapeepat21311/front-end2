@@ -54,7 +54,7 @@ function Pagination({
         if (number < maxPageLimit + 1 && number > minPageLimit) {
           return (
             <>
-              <h2
+              <div
                 className={`select_page_number ${
                   currentPage === number && "select_page_number_active"
                 }`}
@@ -62,8 +62,8 @@ function Pagination({
                   paginate(number);
                 }}
               >
-                {number}
-              </h2>
+                <p>{number}</p>
+              </div>
             </>
             // </li>
           );

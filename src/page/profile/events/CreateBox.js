@@ -39,7 +39,6 @@ export default function CreateBox() {
               <div className="box_activity_container">
                 <div className="box_activity_img">
                   <img src={item.image} />
-                  {item.id}
                 </div>
                 <div className="box_activity_title">
                   <h2>{item.title}</h2>
