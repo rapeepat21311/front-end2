@@ -87,13 +87,22 @@
     cursor: pointer;
     /* background-color: #666666; */
   }
+  .week_day_activity h4{
+    display: flex;
+    /* background-color: aqua; */
+    width: 200px;
+    flex-direction: row;
+    margin-left: 200px;
+    justify-content: flex-end;
+  }
 
   .week_day_activity :hover{
     color: blue;
   }
   .week_day_activity p1{
     display: flex;
-    margin-left: 376px;
-    margin-right: 272px;
+    width: 60%;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 

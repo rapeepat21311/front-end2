@@ -33,7 +33,7 @@ export default function WeekDayComponent({ weekDayData }) {
               {activity.noData && <p2>ไม่มีข้อมูลรายวิชาในวันนี้</p2>}
               <p> {activity.time} </p>
               <p> {activity.subject} </p>
-              <p> {activity.room} </p>
+              <h4> {activity.room} </h4>
             </div>
           );
         })}

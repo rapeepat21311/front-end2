@@ -92,11 +92,20 @@
     flex-direction: row;
     height: 50px;
     width: 100%;
-    justify-content: space-evenly;
-    /* gap: 19px; */
+    justify-content: flex-start;
+    gap: 19px;
     align-items: center;
     /* background-color: rgb(217, 144, 48); */
-
+  }
+  .test_week_day_activity h4{
+    display: flex;
+    /* background-color: aqua; */
+    width: 200px;
+    flex-direction: row;
+    margin-left: 200px;
+    justify-content: flex-end;
+    /* align-items: flex-end; */
+    /* margin-left: 50px; */
   }
   .test_week_day_activity p{
     margin-left: 19px;
@@ -105,8 +114,11 @@
 
   .test_week_day_activity p2 {
     display: flex;
-    margin-left: 376px;
-    margin-right: 272px;
+    flex-direction: row;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    width: 100%;
+    /* background-color: antiquewhite; */
   }
 
 
