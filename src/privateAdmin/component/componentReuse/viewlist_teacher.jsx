@@ -5,7 +5,7 @@ import "./view_document_component.css";
 
 import ModeIcon from "@mui/icons-material/Mode";
 
-function Viewlist_teacher({ onClose, id, data }) {
+function Viewlist_teacher({ onClose, id }) {
   const navigate = useNavigate();
 
   const [getId, setGetId] = useState();
@@ -28,7 +28,7 @@ function Viewlist_teacher({ onClose, id, data }) {
             <ModeIcon className="pen_edit" />
             <p
               className="button_edit_link_navigate"
-              onClick={() => navigate(`/admin-page/edit-user/${id}`)}
+              onClick={() => navigate(`/admin-page/edit-teacher/${id}`)}
             >
               แก้ไข
             </p>
@@ -37,24 +37,21 @@ function Viewlist_teacher({ onClose, id, data }) {
       </div>
       <div className="view_document_user_container">
         <div className="document_user_title">
-          <p>ข้อมูลนักศึกษา</p>
+          <p>ข้อมูลอาจารย์</p>
         </div>
         <div className="view_private_document_text_container">
-          <h1 className="view_field_name">รหัสนักศึกษา</h1>
-          <p className="view_value">{"621111391"}</p>
+          <h1 className="view_field_name">รหัสอาจารย์</h1>
+          <p className="view_value">{"0258001"}</p>
         </div>
         <div className="view_private_document_text_container">
-          <h1 className="view_field_name">เลขที่บัตรประชาชน</h1>
-          <p className="view_value">{"1110201221311"}</p>
+          <h1 className="view_field_name">ตำแหน่ง</h1>
+          <p className="view_value">{"ผศ."}</p>
         </div>
         <div className="view_private_document_text_container">
           <h1 className="view_field_name">ชื่อ-นามสกุล</h1>
-          <p className="view_value">{"นาย ระพีพัฒน์ สุวรรณทอง"}</p>
+          <p className="view_value">{"ศุภกร กลีบพุฒ"}</p>
         </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">Full Name</h1>
-          <p className="view_value">{"Mr.Rapeepat Suwanthon"}</p>
-        </div>
+
         <div className="view_private_document_text_container">
           <h1 className="view_field_name">คณะ</h1>
           <p className="view_value">{"เทคโนโลยีสารสนเทศและนวัตกรรมดิจิทัล"}</p>
@@ -65,70 +62,14 @@ function Viewlist_teacher({ onClose, id, data }) {
           <p className="view_value">{"วิศวกรรมซอฟต์แวร์"}</p>
         </div>
         <div className="view_private_document_text_container">
-          <h1 className="view_field_name">ปีการศึกษาที่เข้า</h1>
-          <p className="view_value">{"1/2562"}</p>
+          <h1 className="view_field_name">หมายเลขโทรศัพท์มือถือ</h1>
+          <p className="view_value">{"019-191-9119"}</p>
         </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">ชื่อรุ่น</h1>
-          <p className="view_value">{"SWE62"}</p>
-        </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">ชั้นปีที่ 4</h1>
-          <p className="view_value">{"Mr.Rapeepat Suwanthon"}</p>
-        </div>
-
         <div className="view_private_document_text_container">
           <h1 className="view_field_name">อีเมลสถาบัน</h1>
-          <p className="view_value">{"rapeepat.suwa@northbkk.ac.th"}</p>
+          <p className="view_value">{"supakorn.klee@northbkk.ac.th"}</p>
         </div>
 
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">สถานภาพ</h1>
-          <p className="view_value">{"กำลังศึกษา"}</p>
-        </div>
-
-        <div className="document_user_title">
-          <p>ข้อมูลส่วนตัว</p>
-        </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">หมายเลขโทรศัพท์บ้าน</h1>
-          <p className="view_value">{"02-999-9999"}</p>
-        </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">หมายเลขโทรศัพท์มือถือ</h1>
-          <p className="view_value">{"096-999-9999"}</p>
-        </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">ที่อยู่ปัจจุบัน</h1>
-          <p className="view_value">
-            {
-              "เลขที่ 77/102-103 อาคารสินสาธร ชั้น 25 ถนนกรุงธนบุรี แขวงคลองต้นไทร เขตคลองสาน กรุงเทพมหานคร 10600"
-            }
-          </p>
-        </div>
-        <div className="document_user_title">
-          <p>ข้อมูลการศึกษา</p>
-        </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">ระดับการศึกษา</h1>
-          <p className="view_value">{"มัธยมศึกษาตอนปลาย"}</p>
-        </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">ชื่อสถานศึกษา</h1>
-          <p className="view_value">{"โรงเรียนนวมินทราชูทิศ กรุงเทพมหานคร"}</p>
-        </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">แผนการเรียน</h1>
-          <p className="view_value">{"ศิลป์-คํานวณ"}</p>
-        </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">ปีจบการศึกษา</h1>
-          <p className="view_value">{"2561"}</p>
-        </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">เกรดระดับมัธยม</h1>
-          <p className="view_value">{"2.78"}</p>
-        </div>
         <div className="document_user_title">
           <p>ข้อมูลบัญชีผู้ใช้</p>
         </div>

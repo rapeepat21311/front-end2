@@ -1,81 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router";
-import { readUser, updateUser } from "../../../../../route/function/user";
-import "../../editUser/editUser.css";
-import "../../admin/edit/editAdmin.css";
+import React from "react";
 
-function EditTeacher() {
-  const { id } = useParams();
-  const navigate = useNavigate();
-  const { user } = useSelector((state) => ({ ...state }));
-
-  const [userData, setUserData] = useState([]);
-  const [editUserData, setEditUserData] = useState({
-    student_id: userData.student_id,
-    id_number: userData.id_number,
-    user_fullname: userData.user_fullname,
-    name_th: userData.name_th,
-    name_eng: userData.name_eng,
-    faculty: userData.faculty,
-    major: userData.major,
-    email: userData.email,
-    phone_number: userData.phone_number,
-    education_level: userData.education_level,
-    year: userData.year,
-    old_school: userData.old_school,
-    status: userData.status,
-    advisor: userData.advisor,
-    aa: userData.aa,
-    phone_number_advisor: userData.phone_number_advisor,
-    email_advisor: userData.email_advisor,
-  });
-
-  useEffect(() => {
-    loadData(user.token, id);
-  }, [user.token, id]);
-
-  const handleChangeEditUserData = (e) => {
-    const { name, value } = e.target;
-    setEditUserData({ ...editUserData, [name]: value });
-  };
-  // console.log(handleChangeEditUserData);
-
-  const handleSaveEdit = async (e) => {
-    e?.preventDefault();
-    await updateUser(user.token, id, editUserData)
-      .then((res) => {
-        console.log(res.data);
-        alert(res.data);
-        navigate("/Teacher-page/list-user");
-      })
-      .catch((err) => {
-        alert(err.response);
-      });
-  };
-
-  const updateData = () => {};
-
-  // get Id
-  const loadData = (authtoken, ID) => {
-    readUser(authtoken, ID)
-      .then((res) => {
-        setUserData(res.data);
-      })
-      .catch((err) => {
-        console.log("ERROR SEVER --->", err.response);
-      });
-  };
+function CreateTeacher() {
   return (
-    // <input
-    //   type="number"
-    //   name="student_id"
-    //   defaultValue={userData.student_id}
-    //   onChange={handleChangeEditUserData}
-    // />
     <div className="create_profile_student_container">
       <div className="create_profile_student_header">
-        แก้ไขผู้ใช้งาน(อาจารย์)
+        เพิ่มผู้ใช้งาน(อาจารย์)
       </div>
       <div className="create_profile_student">
         <div className="prefix_fullname_eng_th_student_container">
@@ -179,4 +108,4 @@ function EditTeacher() {
   );
 }
 
-export default EditTeacher;
+export default CreateTeacher;

@@ -13,17 +13,24 @@ import viewButton from "../../../../../image/Button.png";
 import more_vert from "../../../../../image/more_vert.png";
 
 import "../../listUser/listuser.css";
+import Viewlist_teacher from "../../../componentReuse/viewlist_teacher";
 
 function ListTeacher() {
   const { user } = useSelector((state) => ({ ...state }));
   const navigate = useNavigate();
 
   const [data, setData] = useState([]);
+  const [openViewList, setOpenViewList] = useState(false);
+  const [teacherId, setTeacherId] = useState("");
   // const [vales, setValues] = useContext();
   useEffect(() => {
     loadData(user.token);
     // sendId(user.token);
   }, [user.token]);
+
+  const onClickLinkEditPage = (id) => {
+    setTeacherId(id);
+  };
 
   // const sendId = (authtoken, id, vales) => {
   //   updateUser(authtoken, id, vales)
@@ -84,7 +91,10 @@ function ListTeacher() {
             </div>
           </div>
           <div className="add_document_container">
-            <div className="add_document">
+            <div
+              className="add_document"
+              onClick={() => navigate("/admin-page/create-teacher")}
+            >
               <img src={plus} />
               <button>เพิ่มข้อมูล</button>
             </div>
@@ -119,19 +129,41 @@ function ListTeacher() {
                   {/* <Link to={`/admin-page/edit-teacher/${users._id}`}> */}
                   <td>
                     <div className="list_view_delete">
-                      <img src={viewButton} />
+                      <img
+                        src={viewButton}
+                        onClick={() => (
+                          setOpenViewList(true), onClickLinkEditPage(users._id)
+                        )}
+                      />
                       <img src={more_vert} />
                     </div>
                     {/* <p onClick={navigate(`/admin-page/edit-user/${users._id}`)}> */}
                     {/* <EditOutlined /> */}
                     {/* </p> */}
                   </td>
-                  {/* </Link> */}
                 </tr>
               );
             })}
           </tbody>
         </table>
+      </div>
+      <div
+        className={
+          openViewList
+            ? "view_user_container_active"
+            : "view_user_container_inactive"
+        }
+      >
+        <div
+          className={openViewList ? "view_user_active" : "view_user_inactive"}
+        >
+          {openViewList ? (
+            <Viewlist_teacher
+              id={teacherId}
+              onClose={() => setOpenViewList(false)}
+            />
+          ) : null}
+        </div>
       </div>
     </div>
   );

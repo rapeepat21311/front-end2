@@ -1,5 +1,5 @@
 .create_profile_student_container {
-  width: 1200px;
+  width: 70.583%;
   height: 100%;
   /* background-color: red; */
   display: flex;
@@ -24,8 +24,12 @@
 }
 
 .create_profile_student {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   margin-top: 40px;
   margin-left: 32px;
+  /* background-color: #2196f3; */
   padding-bottom: 30px;
   border-bottom: 1px solid #e7ecef;
 }
@@ -402,8 +406,9 @@
 .student_p_input_value_container {
   display: flex;
   flex-direction: column;
+width: 100%;
 
-  width: 50%;
+  /* width: 50%; */
   gap: 8px;
 }
 
@@ -853,6 +858,11 @@
 
   width: 79%;
 }
+
+.create_teacher_name_container {
+  margin-top: 8px;
+}
+
 
 @media only screen and (min-width: 1441px) {
   .create_profile_student_container {
