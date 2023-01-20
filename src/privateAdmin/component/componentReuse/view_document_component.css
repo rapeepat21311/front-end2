@@ -1,0 +1,131 @@
+.view_document_component {
+  display: flex;
+  flex-direction: column;
+
+  /* background-color: aqua; */
+  height: 100%;
+  padding: 24px;
+  gap: 8px;
+}
+
+.view_header_container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* background-color: teal; */
+}
+.view_header_text_close_modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid #e7ecef;
+  padding-bottom: 16px;
+}
+.header_text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+
+  /* Text/Black */
+
+  color: #333333;
+}
+
+.view_link_to_edit_document {
+  display: flex;
+}
+.button_edit_link_navigate_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 40px;
+  padding: 4px 16px;
+  /* Interactive/03 */
+
+  background: #274c77;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 99px;
+  gap: 6px;
+}
+.pen_edit {
+  color: #faf9f6;
+  width: 24px;
+  height: 24px;
+}
+.button_edit_link_navigate {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #faf9f6;
+}
+
+.view_document_user_container {
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: flex-start; */
+  flex-direction: column;
+
+  /* margin-top: 24px; */
+  /* background-color: rebeccapurple; */
+}
+
+.document_user_title p {
+  margin-top: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  /* neutral/neutral30 */
+
+  color: #454744;
+}
+
+.view_private_document_text_container {
+  display: flex;
+  text-align: start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 8px;
+  /* background-color: #274c77; */
+  /* gap: 8px; */
+}
+.view_field_name {
+  width: 30.333%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  /* Interactive/00 */
+
+  color: #8b8c89;
+}
+.view_value {
+  width: 69.677%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  /* Text/Black */
+
+  color: #333333;
+}
+/* <div className="view_private_document_text_container">
+            <h1 className="view_field_name">รหัสนักศึกษา</h1>
+            <p className="view_value">{"621111391"}</p>
+        </div> */

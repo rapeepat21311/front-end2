@@ -65,101 +65,98 @@ function NavBar({ children }) {
 
   const showSideBar = () => setSideBar(!sideBar);
   return (
-    <>
-      <div className="layout_container">
-        <div className="layout_main">
-          <div className="navbar_container_admin">
-            {/* <div className="navbar_admin"> */}
-            {sideBar ? (
-              <h1 onClick={showSideBar}>
-                <CloseIcon />
-              </h1>
-            ) : (
-              <h1 onClick={showSideBar}>
-                <FormatListBulletedIcon />
-              </h1>
-            )}
-            <div className="navbar_admin_left">
-              <img src={logoNBU} />
+    <div className="test">
+      <div className="layout_main">
+        <div className="navbar_container_admin">
+          {/* <div className="navbar_admin"> */}
+          {sideBar ? (
+            <h1 onClick={showSideBar}>
+              <CloseIcon />
+            </h1>
+          ) : (
+            <h1 onClick={showSideBar}>
+              <FormatListBulletedIcon />
+            </h1>
+          )}
+          <div className="navbar_admin_left">
+            <img src={logoNBU} />
+          </div>
+          <div className="navbar_admin_right">
+            <div
+              className="profile_login_logout_navbar"
+              onClick={showLoginLogOut}
+            >
+              <AccountCircleIcon />
             </div>
-            <div className="navbar_admin_right">
-              <div
-                className="profile_login_logout_navbar"
-                onClick={showLoginLogOut}
-              >
-                <AccountCircleIcon />
-              </div>
 
-              <div>
-                {profileBar ? (
-                  <div>
-                    {user !== null ? (
-                      <p
-                        className={profileBar ? "log_out_active" : "log_out"}
-                        onClick={Logout}
-                      >
-                        Log out
-                      </p>
-                    ) : (
-                      <p
-                        className={profileBar ? "log_out_active" : "log_out"}
-                        onClick={Login}
-                      >
-                        Log in
-                      </p>
-                    )}
-                  </div>
-                ) : null}
-              </div>
+            <div>
+              {profileBar ? (
+                <div>
+                  {user !== null ? (
+                    <p
+                      className={profileBar ? "log_out_active" : "log_out"}
+                      onClick={Logout}
+                    >
+                      Log out
+                    </p>
+                  ) : (
+                    <p
+                      className={profileBar ? "log_out_active" : "log_out"}
+                      onClick={Login}
+                    >
+                      Log in
+                    </p>
+                  )}
+                </div>
+              ) : null}
             </div>
           </div>
+        </div>
+        <div
+          className={sideBar ? "sidebar_container_active" : "sidebar_container"}
+        >
           <div
-            className={
-              sideBar ? "sidebar_container_active" : "sidebar_container"
-            }
+            className="admin_menu_drop_down_list"
+            onClick={() => navigate("/admin-page")}
           >
-            <div
-              className="admin_menu_drop_down_list"
-              onClick={() => navigate("/admin-page")}
-            >
-              {" "}
-              <img src={auto_awesome} />
-              <h1>ภาพรวมระบบ</h1>
-            </div>
-            <div
-              className="admin_menu_drop_down_list"
-              onClick={openSildebarMenu1}
-            >
-              <img src={groups} />
+            {" "}
+            <img src={auto_awesome} />
+            <h1>ภาพรวมระบบ</h1>
+          </div>
+          <div
+            className="admin_menu_drop_down_list"
+            onClick={openSildebarMenu1}
+          >
+            <img src={groups} />
 
-              <h1>ผู้ใช้งาน</h1>
-            </div>
-            {openMenu1 ? null : (
-              <>
-                {pageComponentMenuList1.map((sideBar, index) => {
-                  return (
-                    <div
-                      className={`menu_list_1 ${
-                        index === activeIndex && "menu_list_1_active"
+            <h1>ผู้ใช้งาน</h1>
+          </div>
+          {openMenu1 ? null : (
+            <>
+              {pageComponentMenuList1.map((sideBar, index) => {
+                return (
+                  <div
+                    className={`menu_list_1 ${
+                      index === activeIndex && "menu_list_1_active"
+                    }`}
+                    onClick={() => {
+                      navigate(sideBar.path);
+                      setActiveIndex(index);
+                    }}
+                  >
+                    <h2
+                      className={`menu_list_text ${
+                        index === activeIndex && "menu_list_text_active"
                       }`}
-                      onClick={() => {
-                        navigate(sideBar.path);
-                        setActiveIndex(index);
-                      }}
                     >
-                      <h2
-                        className={`menu_list_text ${
-                          index === activeIndex && "menu_list_text_active"
-                        }`}
-                      >
-                        {sideBar.menulist}
-                      </h2>
-                    </div>
-                  );
-                })}
-              </>
-            )}
-            {/* <SidebarMenu
+                      {sideBar.menulist}
+                    </h2>
+                  </div>
+                );
+              })}
+            </>
+          )}
+          {/* <SidebarMenu
               openSildeBar={openSildebarMenu2}
               imageTitle={<AccountCircleIcon />}
               menulistName={"อาจารย์ที่ปรึกษา"}
@@ -168,88 +165,88 @@ function NavBar({ children }) {
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
             /> */}
-            <div
-              className="admin_menu_drop_down_list"
-              // onClick={openSildebarMenu1}
-              onClick={() => navigate("/admin-page/manage-teacher")}
-            >
-              <img src={supervisor_account} />
+          <div
+            className="admin_menu_drop_down_list"
+            // onClick={openSildebarMenu1}
+            onClick={() => navigate("/admin-page/manage-teacher")}
+          >
+            <img src={supervisor_account} />
 
-              <h1>อาจารย์ที่ปรึกษา</h1>
-            </div>
-            <div
-              className="admin_menu_drop_down_list"
-              // onClick={openSildebarMenu1}
-              onClick={() => navigate("/admin-page/list-capital-burden")}
-            >
-              <img src={payments} />
+            <h1>อาจารย์ที่ปรึกษา</h1>
+          </div>
+          <div
+            className="admin_menu_drop_down_list"
+            // onClick={openSildebarMenu1}
+            onClick={() => navigate("/admin-page/list-capital-burden")}
+          >
+            <img src={payments} />
 
-              <h1>ภาระทุน</h1>
-            </div>
-            <div
-              className="admin_menu_drop_down_list"
-              onClick={() => navigate("/admin-page/list-activity-hours")}
-              // onClick={openSildebarMenu1}
-            >
-              <img src={diversity_3} />
+            <h1>ภาระทุน</h1>
+          </div>
+          <div
+            className="admin_menu_drop_down_list"
+            onClick={() => navigate("/admin-page/list-activity-hours")}
+            // onClick={openSildebarMenu1}
+          >
+            <img src={diversity_3} />
 
-              <h1>ชั่วโมงกิจกรรม</h1>
-            </div>
-            <div
-              className="admin_menu_drop_down_list"
-              onClick={() => navigate("/admin-page/list-grade")}
-              // onClick={openSildebarMenu1}
-            >
-              <img src={astrophotography_auto} />
+            <h1>ชั่วโมงกิจกรรม</h1>
+          </div>
+          <div
+            className="admin_menu_drop_down_list"
+            onClick={() => navigate("/admin-page/list-grade")}
+            // onClick={openSildebarMenu1}
+          >
+            <img src={astrophotography_auto} />
 
-              <h1>ผลการศึกษา</h1>
-            </div>
-            <div
-              className="admin_menu_drop_down_list"
-              onClick={() => navigate("/admin-page/list-timetable")}
-              // onClick={openSildebarMenu1}
-            >
-              <img src={table} />
+            <h1>ผลการศึกษา</h1>
+          </div>
+          <div
+            className="admin_menu_drop_down_list"
+            onClick={() => navigate("/admin-page/list-timetable")}
+            // onClick={openSildebarMenu1}
+          >
+            <img src={table} />
 
-              <h1>ตารางเรียน</h1>
-            </div>
-            <div
-              className="admin_menu_drop_down_list"
-              onClick={() => navigate("/admin-page/list-testtable")}
-              // onClick={openSildebarMenu1}
-            >
-              <img src={edit_document} />
+            <h1>ตารางเรียน</h1>
+          </div>
+          <div
+            className="admin_menu_drop_down_list"
+            onClick={() => navigate("/admin-page/list-testtable")}
+            // onClick={openSildebarMenu1}
+          >
+            <img src={edit_document} />
 
-              <h1>ตารางสอบ</h1>
-            </div>
-            <div
-              className="admin_menu_drop_down_list"
-              onClick={() => navigate("/admin-page/list-performance")}
-              // onClick={openSildebarMenu1}
-            >
-              <img src={workspace_premium} />
+            <h1>ตารางสอบ</h1>
+          </div>
+          <div
+            className="admin_menu_drop_down_list"
+            onClick={() => navigate("/admin-page/list-performance")}
+            // onClick={openSildebarMenu1}
+          >
+            <img src={workspace_premium} />
 
-              <h1>ผลงาน</h1>
-            </div>
-            <div
-              className="admin_menu_drop_down_list"
-              onClick={() => navigate("/admin-page/list-news")}
-              // onClick={openSildebarMenu1}
-            >
-              <img src={newspaper} />
+            <h1>ผลงาน</h1>
+          </div>
+          <div
+            className="admin_menu_drop_down_list"
+            onClick={() => navigate("/admin-page/list-news")}
+            // onClick={openSildebarMenu1}
+          >
+            <img src={newspaper} />
 
-              <h1>ข่าวสาร</h1>
-            </div>
-            <div
-              className="admin_menu_drop_down_list"
-              onClick={() => navigate("/admin-page/list-events")}
-              // onClick={openSildebarMenu1}
-            >
-              <img src={interests} />
+            <h1>ข่าวสาร</h1>
+          </div>
+          <div
+            className="admin_menu_drop_down_list"
+            onClick={() => navigate("/admin-page/list-events")}
+            // onClick={openSildebarMenu1}
+          >
+            <img src={interests} />
 
-              <h1>กิจกรรม</h1>
-            </div>
-            {/* <SidebarMenu
+            <h1>กิจกรรม</h1>
+          </div>
+          {/* <SidebarMenu
               openSildeBar={openSildebarMenu2}
               imageTitle={<AccountCircleIcon />}
               menulistName={"อาจารย์ที่ปรึกษา"}
@@ -267,7 +264,7 @@ function NavBar({ children }) {
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
             /> */}
-            {/* <div
+          {/* <div
               className="admin_menu_drop_down_list"
               onClick={openSildebarMenu2}
             >
@@ -284,17 +281,16 @@ function NavBar({ children }) {
                 <h2>sub Menu</h2>
               </>
             )} */}
-          </div>
-          <div
-            className={
-              sideBar ? `children_admin_page_active` : "children_admin_page"
-            }
-          >
-            {children}
-          </div>
+        </div>
+        <div
+          className={
+            sideBar ? `children_admin_page_active` : "children_admin_page"
+          }
+        >
+          {children}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
