@@ -10,7 +10,25 @@ import UserRouter from "./userRouter";
 import Admin from "../privateAdmin";
 import Layout from "../privateAdmin/navBar/NavBar";
 import ListUser from "../privateAdmin/component/page/listUser/ListUser";
+import Createuser from "../privateAdmin/component/page/createUser/Createuser";
 import EditUser from "../privateAdmin/component/page/editUser/EditUser";
+import CreateTeacher from "../privateAdmin/component/page/teacher/create/createTeacher";
+import ListTeacher from "../privateAdmin/component/page/teacher/list/listTeacher";
+import ListAdmin from "../privateAdmin/component/page/admin/list/listAdmin";
+import EditAdmin from "../privateAdmin/component/page/admin/edit/editAdmin";
+import ListTeacherStudent from "../privateAdmin/component/page/manageTeacherStudent/listTeacher/listTeacherStudent";
+import AddTeacherManageStudent from "../privateAdmin/component/page/manageTeacherStudent/addTeacher/addTeacher";
+import EditTeachersManageStudent from "../privateAdmin/component/page/manageTeacherStudent/editTeachers/editTeachers";
+import CreateAdmin from "../privateAdmin/component/page/admin/create/createAdmin";
+import EditTeacher from "../privateAdmin/component/page/teacher/edit/editTeacher";
+import CapitalBurdenList from "../privateAdmin/component/page/capitalBurden/capitalBurdenList/capitalBurdenList";
+import ActivityHoursList from "../privateAdmin/component/page/activityHours/activityHoursList/activityHoursList";
+import GradeList from "../privateAdmin/component/page/grade/gradeList/gradeList";
+import Timetable from "../privateAdmin/component/page/timeTable/timeTableList/timeTableList";
+import TesttableList from "../privateAdmin/component/page/testTable/testTableList/testTableList";
+import PerformanceList from "../privateAdmin/component/page/performance/performanceList/performanceList";
+import NewsList from "../privateAdmin/component/page/news/newsList/newsList";
+import EventsList from "../privateAdmin/component/page/events/eventsList/eventsList";
 //Page User
 import Home from "../page/home";
 import Login from "../page/Login/Login";
@@ -24,25 +42,8 @@ import Profile from "../page/profile/index";
 import LastesNews from "../page/news/lastedNews";
 import LastedEvent from "../page/news/lastedEvent";
 import Detail from "../page/perform/detail/detailPer";
-import Createuser from "../privateAdmin/component/page/createUser/Createuser";
 import LastedNewsDes from "../page/news/lastedNews/component/description/LastedNewsDes";
 import LastedEventDes from "../page/news/lastedEvent/component/description/lasted_event";
-import ListTeacher from "../privateAdmin/component/page/teacher/list/listTeacher";
-import ListAdmin from "../privateAdmin/component/page/admin/list/listAdmin";
-import EditAdmin from "../privateAdmin/component/page/admin/edit/editAdmin";
-import ListTeacherStudent from "../privateAdmin/component/page/manageTeacherStudent/listTeacher/listTeacherStudent";
-import CreateAdmin from "../privateAdmin/component/page/admin/create/createAdmin";
-import EditTeacher from "../privateAdmin/component/page/teacher/edit/editTeacher";
-import CreateTeacher from "../privateAdmin/component/page/teacher/create/createTeacher";
-import AddTeacher from "../privateAdmin/component/page/manageTeacherStudent/addTeacher]/addTeacher";
-import CapitalBurdenList from "../privateAdmin/component/page/capitalBurden/capitalBurdenList/capitalBurdenList";
-import ActivityHoursList from "../privateAdmin/component/page/activityHours/activityHoursList/activityHoursList";
-import GradeList from "../privateAdmin/component/page/grade/gradeList/gradeList";
-import Timetable from "../privateAdmin/component/page/timeTable/timeTableList/timeTableList";
-import TesttableList from "../privateAdmin/component/page/testTable/testTableList/testTableList";
-import PerformanceList from "../privateAdmin/component/page/performance/performanceList/performanceList";
-import NewsList from "../privateAdmin/component/page/news/newsList/newsList";
-import EventsList from "../privateAdmin/component/page/events/eventsList/eventsList";
 
 function PrivateRoute() {
   const dispatch = useDispatch();
@@ -256,7 +257,7 @@ function PrivateRoute() {
           element={
             <AdminRoutes>
               <Layout>
-                <AddTeacher />
+                <AddTeacherManageStudent />
               </Layout>
             </AdminRoutes>
           }
@@ -266,7 +267,7 @@ function PrivateRoute() {
           element={
             <AdminRoutes>
               <Layout>
-                <AddTeacher />
+                <EditTeachersManageStudent />
               </Layout>
             </AdminRoutes>
           }

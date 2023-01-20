@@ -14,7 +14,7 @@ import { mockNewsList } from "./mockdata/mocknewlist";
 
 function NewsList() {
   return (
-    <div className="list_user_page">
+    <div className={`list_user_page ${viewuser && "list_user_page_inactive"}`}>
       <div className="list_user_title">
         <h1>ข่าวสาร</h1>
       </div>

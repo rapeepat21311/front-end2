@@ -62,7 +62,7 @@ function ListUser() {
   };
 
   return (
-    <div className="list_user_page">
+    <div className={`list_user_page ${viewuser && "list_user_page_inactive"}`}>
       <div className="list_user_title">
         {/* <img src={Keyboard_arrow} /> */}
         <h1>รายชื่อผู้ใช้งาน(นักศึกษา)</h1>

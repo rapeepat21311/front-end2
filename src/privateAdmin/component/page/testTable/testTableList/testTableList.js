@@ -11,7 +11,7 @@ import { mockDataTestTable } from "./mockdata/datamockTestTable";
 
 function TesttableList() {
   return (
-    <div className="list_user_page">
+    <div className={`list_user_page ${viewuser && "list_user_page_inactive"}`}>
       <div className="search_text">
         <div className="search_left_container">
           <div className="search">

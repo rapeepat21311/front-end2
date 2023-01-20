@@ -73,6 +73,7 @@ function EditUser() {
   };
   return (
     <div className="create_profile_student_container">
+      <div className="create_profile_student_header">แก้ไขข้อมูล(นักศึกษา)</div>
       <div className="create_profile_student">
         <div className="title_create_profile_student">ข้อมูลนักศึกษา</div>
         <div className="prefix_fullname_eng_th_student_container">

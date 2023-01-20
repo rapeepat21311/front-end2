@@ -3,7 +3,7 @@ import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import AddIcon from "@mui/icons-material/Add";
 
-function EditTeachers() {
+function EditTeachersManageStudent() {
   return (
     <div className="create_profile_student_container">
       <div className="create_profile_student_header">เพิ่มอาจารย์ที่ปรึกษา</div>
@@ -90,12 +90,17 @@ function EditTeachers() {
           <h3>เพิ่มการประเมิน</h3>
         </div>
       </div>
-      <div className="close_and_submit_button">
-        <button>ยกเลิก</button>
-        <button>บันทึก</button>
+      {/* BUTTON */}
+      <div className="button_onsubmit_unsubmit_container">
+        <div className="button_unsubmit_container">
+          <button className="button_unsubmit">ยกเลิก</button>
+        </div>
+        <div className="button_onsubmit_container">
+          <button className="button_onsubmit">บันทึก</button>
+        </div>
       </div>
     </div>
   );
 }
 
-export default EditTeachers;
+export default EditTeachersManageStudent;

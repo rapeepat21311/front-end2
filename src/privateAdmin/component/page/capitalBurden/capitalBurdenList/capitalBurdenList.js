@@ -16,7 +16,7 @@ import { mockDataCapitalBurden } from "./datamock/mockDataCapitalBurden";
 
 function CapitalBurdenList() {
   return (
-    <div className="list_user_page">
+    <div className={`list_user_page ${viewuser && "list_user_page_inactive"}`}>
       <div className="list_user_title">
         <h1>ภาระทุน</h1>
       </div>
