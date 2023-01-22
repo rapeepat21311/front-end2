@@ -42,7 +42,7 @@ export default function CreateBox() {
             <div className="pnbox_activity_container" onClick={()=> navigate("/detail")} >
               <div className="pnbox_activity_img">
                 <img src={item.image} />
-                {item.id}
+                {/* {item.id} */}
               </div>
               <div className="pnbox_activity_title">
                 <h2>{item.title}</h2>

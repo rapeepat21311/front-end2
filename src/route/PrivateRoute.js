@@ -44,6 +44,7 @@ import LastedEvent from "../page/news/lastedEvent";
 import Detail from "../page/perform/detail/detailPer";
 import LastedNewsDes from "../page/news/lastedNews/component/description/LastedNewsDes";
 import LastedEventDes from "../page/news/lastedEvent/component/description/lasted_event";
+import PerformAdd from "../page/perform/performAdd/performAdd";
 
 function PrivateRoute() {
   const dispatch = useDispatch();
@@ -96,6 +97,8 @@ function PrivateRoute() {
         <Route path="/result" element={<Result />} />
 
         <Route path="/detail" element={<Detail />} />
+
+        <Route path="/performAdd" element={<PerformAdd/>}/>
 
         <Route
           path="/eport"

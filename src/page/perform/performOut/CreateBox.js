@@ -36,20 +36,20 @@ export default function CreateBox() {
   };
   return (
     <>
-      <div className="pbox_activity_suppe">
+      <div className="pobox_activity_suppe">
         {currentVolunteerHours.map((item) => {
           return (
-            <div className="pbox_activity_container" onClick={()=> navigate("/detail")} >
-              <div className="pbox_activity_img">
+            <div className="pobox_activity_container" onClick={()=> navigate("/detail")} >
+              <div className="pobox_activity_img">
                 <img src={item.image} />
-                {item.id}
+                {/* {item.id} */}
               </div>
-              <div className="pbox_activity_title">
+              <div className="pobox_activity_title">
                 <h2>{item.title}</h2>
-                <div className="pbox_activity_location">
+                <div className="pobox_activity_location">
                   <p>{item.location}</p>
                 </div>
-                <div className="pbox_activity_hr">
+                <div className="pobox_activity_hr">
                   <p>{item.date}</p>
                   <p>ประเภท {item.hr}</p>
                 </div>
