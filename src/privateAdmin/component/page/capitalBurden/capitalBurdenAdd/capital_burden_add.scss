@@ -1,0 +1,9 @@
+$width_page: 70.583%;
+
+.capital_burden_page_container {
+  width: $width_page;
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px 0px 24px 32px;
+}

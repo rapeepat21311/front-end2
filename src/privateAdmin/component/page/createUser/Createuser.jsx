@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "./createuser.css";
+import defaultImage from "../../../../image/vector (16).png";
+import { height } from "@mui/system";
 
 function Createuser() {
   const [toggle, setToggle] = useState(false);
+  const [image, setImage] = useState(null);
+  const [fileName, setFilename] = useState("No select File");
 
   const onClickToggle = () => {
     setToggle(!toggle);
@@ -150,6 +154,53 @@ function Createuser() {
               <select className="select_status_on_university">
                 <option>กำลังศึกษา</option>
               </select>
+            </div>
+          </div>
+        </div>
+        <div className="student_avatar_container">
+          <div className="create_title_text_box">
+            <p className="create_title_text">รูปภาพ</p>
+          </div>
+          <div className="student_avatar">
+            <div className="avatar_image_container">
+              <div className="avatar_image">
+                {image ? (
+                  <img
+                    src={image}
+                    alt={fileName}
+                    style={{
+                      width: "100%",
+                      height: "64px",
+                      borderRadius: "8px",
+                    }}
+                  />
+                ) : (
+                  <img src={defaultImage} />
+                )}
+              </div>
+            </div>
+            <div className="avatar_upload_description_text_container">
+              <p>อัปโหลดรูปภาพ (ขนาดไม่เกิน -- mb)</p>
+            </div>
+            <div className="avatar_upload_file">
+              <form
+                onClick={() =>
+                  document.querySelector(".input_avatar_student").click()
+                }
+              >
+                <input
+                  type="file"
+                  className="input_avatar_student"
+                  hidden
+                  onChange={({ target: { files } }) => {
+                    files[0] && setFilename(files[0].name);
+                    if (files) {
+                      setImage(URL.createObjectURL(files[0]));
+                    }
+                  }}
+                />
+                <p>อัพโหลด</p>
+              </form>
             </div>
           </div>
         </div>

@@ -16,7 +16,7 @@ import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import RoomIcon from "@mui/icons-material/Room";
 import EastIcon from "@mui/icons-material/East";
 import { useNavigate } from "react-router";
-import Texteditor from "./texteditor/texteditor";
+
 
 const config = {
   buttons: [
@@ -159,11 +159,8 @@ function News() {
               perPage={lastedNewsPerPage}
             />
           </div>
-          {/* <div className="hello_test_editor">
-            <Texteditor setValue={setValue} config={config} />
-          </div> */}
         </div>
-      <Footer />
+        <Footer />
       </div>
     </>
   );

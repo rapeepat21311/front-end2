@@ -1,0 +1,18 @@
+$width_page: 70.583%;
+
+.add_timetable_page_container {
+  width: $width_page;
+  padding: 24px 0px 24px 32px;
+
+  .addtime_table_title_page {
+    display: flex;
+    h1 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 36px;
+      color: #333333;
+    }
+  }
+}

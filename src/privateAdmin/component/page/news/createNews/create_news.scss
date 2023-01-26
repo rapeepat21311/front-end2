@@ -1,0 +1,112 @@
+$width-page: 70.583%;
+
+.create_news_page_container {
+  padding: 24px 0px 0px 32px;
+  width: $width-page;
+}
+.page_text_container {
+  display: flex;
+  padding: 0px 0px 16px 0px;
+  border-bottom: 1px solid #e7ecef;
+  h1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    /* identical to box height, or 129% */
+
+    display: flex;
+    align-items: center;
+
+    /* Text/Black */
+
+    color: #333333;
+  }
+}
+
+.input_value_container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  width: 100%;
+  .input_value_tittle_text {
+    display: flex;
+    margin-top: 18px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+
+    color: #333333;
+  }
+
+  .text_field_title_container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 8px;
+    h2 {
+      display: flex;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+
+      color: #777777;
+    }
+    p {
+      padding: 8px 12px 8px 8px;
+      height: 40px;
+      text-align: start;
+
+      /* Neutral/D */
+      background: #dddddd;
+      /* Neutral/A */
+
+      border: 1px solid #aaaaaa;
+      border-radius: 8px;
+    }
+    input {
+      padding: 8px 12px 8px 8px;
+      height: 40px;
+
+      /* Neutral/D */
+      background: #ffffff;
+      /* Neutral/A */
+
+      border: 1px solid #aaaaaa;
+      border-radius: 8px;
+    }
+    .texteditor {
+      text-align: start;
+    }
+    
+    select {
+      padding: 8px 12px 8px 8px;
+      height: 40px;
+
+      /* Neutral/D */
+      background: #ffffff;
+      /* Neutral/A */
+
+      border: 1px solid #aaaaaa;
+      border-radius: 8px;
+
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      /* identical to box height, or 133% */
+
+      /* Text/Dark Grey */
+
+      color: #9f99a3;
+    }
+  }
+}

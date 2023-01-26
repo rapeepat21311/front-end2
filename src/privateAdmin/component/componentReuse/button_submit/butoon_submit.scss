@@ -1,0 +1,54 @@
+$width_button: 10.67%;
+
+.button_submit_unsubmit_container {
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+  gap: 16px;
+  .button_unsubmit_reuse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: $width_button;
+    height: 40px;
+
+    /* Interactive/04 */
+
+    background: #e7ecef;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 99px;
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+      color: #333333;
+    }
+
+    /* Text/Black */
+  }
+  .button_submit_reuse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: $width_button;
+    height: 40px;
+
+    background: #274c77;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 99px;
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #faf9f6;
+    }
+  }
+}

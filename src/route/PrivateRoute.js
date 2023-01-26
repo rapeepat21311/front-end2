@@ -22,13 +22,27 @@ import EditTeachersManageStudent from "../privateAdmin/component/page/manageTeac
 import CreateAdmin from "../privateAdmin/component/page/admin/create/createAdmin";
 import EditTeacher from "../privateAdmin/component/page/teacher/edit/editTeacher";
 import CapitalBurdenList from "../privateAdmin/component/page/capitalBurden/capitalBurdenList/capitalBurdenList";
+import Capital_burden_add from "../privateAdmin/component/page/capitalBurden/capitalBurdenAdd/capital_burden_add";
+import Capital_burden_edit from "../privateAdmin/component/page/capitalBurden/capitalBurdenEdit/capital_burdent_edit";
 import ActivityHoursList from "../privateAdmin/component/page/activityHours/activityHoursList/activityHoursList";
+import Add_activity_hours from "../privateAdmin/component/page/activityHours/activityHoursAdd/add_activity_hours";
+import Edit_activity_hours from "../privateAdmin/component/page/activityHours/activityHoursEdit/edit_activity_hours";
 import GradeList from "../privateAdmin/component/page/grade/gradeList/gradeList";
 import Timetable from "../privateAdmin/component/page/timeTable/timeTableList/timeTableList";
+import Add_time_table from "../privateAdmin/component/page/timeTable/addTimeTable/add_time_table";
+import Edit_time_table from "../privateAdmin/component/page/timeTable/editTimeTable/edit_time_table";
 import TesttableList from "../privateAdmin/component/page/testTable/testTableList/testTableList";
+import Add_test_table from "../privateAdmin/component/page/testTable/addTesttable/add_test_table";
+import Edit_test_table from "../privateAdmin/component/page/testTable/editTesttable/edit_test_table";
 import PerformanceList from "../privateAdmin/component/page/performance/performanceList/performanceList";
+import Add_performance from "../privateAdmin/component/page/performance/addPerformance/add_performance";
+import Edit_performance from "../privateAdmin/component/page/performance/editPerformance/edit_performance";
 import NewsList from "../privateAdmin/component/page/news/newsList/newsList";
+import CreateNews from "../privateAdmin/component/page/news/createNews/createNews";
+import EditNews from "../privateAdmin/component/page/news/editNews/editNews";
 import EventsList from "../privateAdmin/component/page/events/eventsList/eventsList";
+import CreateEvent from "../privateAdmin/component/page/events/createEvent/createEvent";
+import EditEvent from "../privateAdmin/component/page/events/editEvent/editEvent";
 //Page User
 import Home from "../page/home";
 import Login from "../page/Login/Login";
@@ -253,7 +267,7 @@ function PrivateRoute() {
           }
         />
         <Route
-          path={`/admin-page/add-manage-teacher`}
+          path={`/admin-page/add-teacher-student-inclass`}
           element={
             <AdminRoutes>
               <Layout>
@@ -263,7 +277,7 @@ function PrivateRoute() {
           }
         />
         <Route
-          path={`/admin-page/edit-add-teacher/:id`}
+          path={`/admin-page/edit-teacher-student-inclass/:id`}
           element={
             <AdminRoutes>
               <Layout>
@@ -272,6 +286,7 @@ function PrivateRoute() {
             </AdminRoutes>
           }
         />
+        {/* capital_burden_page */}
         <Route
           path={`/admin-page/list-capital-burden`}
           element={
@@ -283,11 +298,55 @@ function PrivateRoute() {
           }
         />
         <Route
+          path={`/admin-page/add-capital-burden`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <Capital_burden_add />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/edit-capital-burden/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <Capital_burden_edit />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+
+        {/* activityhour_page */}
+        <Route
           path={`/admin-page/list-activity-hours`}
           element={
             <AdminRoutes>
               <Layout>
                 <ActivityHoursList />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/add-activity-hours`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                {" "}
+                <Add_activity_hours />{" "}
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/edit-activity-hours/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                {" "}
+                <Edit_activity_hours />{" "}
               </Layout>
             </AdminRoutes>
           }
@@ -302,12 +361,33 @@ function PrivateRoute() {
             </AdminRoutes>
           }
         />
+        {/* titme table page */}
         <Route
           path={`/admin-page/list-timetable`}
           element={
             <AdminRoutes>
               <Layout>
                 <Timetable />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/add-timetable`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <Add_time_table />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/edit-timetable/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <Edit_time_table />
               </Layout>
             </AdminRoutes>
           }
@@ -323,6 +403,28 @@ function PrivateRoute() {
           }
         />
         <Route
+          path={`/admin-page/add-testtable`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <Add_test_table />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/edit-testtable/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <Edit_test_table />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        {/* Performance page */}
+
+        <Route
           path={`/admin-page/list-performance`}
           element={
             <AdminRoutes>
@@ -332,6 +434,27 @@ function PrivateRoute() {
             </AdminRoutes>
           }
         />
+        <Route
+          path={`/admin-page/add-performance`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <Add_performance />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/edit-performance/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <Edit_performance />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        {/* news-admin */}
         <Route
           path={`/admin-page/list-news`}
           element={
@@ -343,11 +466,52 @@ function PrivateRoute() {
           }
         />
         <Route
+          path={`/admin-page/create-news`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <CreateNews />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/edit-news/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <EditNews />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+
+        <Route
           path={`/admin-page/list-events`}
           element={
             <AdminRoutes>
               <Layout>
                 <EventsList />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/create-events`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <CreateEvent />
+              </Layout>
+            </AdminRoutes>
+          }
+        />
+        <Route
+          path={`/admin-page/edit-events/:id`}
+          element={
+            <AdminRoutes>
+              <Layout>
+                <EditEvent />
               </Layout>
             </AdminRoutes>
           }

@@ -28,7 +28,9 @@ function Viewlist_teacher_student({ onClose, id }) {
             <ModeIcon className="pen_edit" />
             <p
               className="button_edit_link_navigate"
-              onClick={() => navigate(`/admin-page/edit-teacher/${id}`)}
+              onClick={() =>
+                navigate(`/admin-page/edit-teacher-student-inclass/${id}`)
+              }
             >
               แก้ไข
             </p>
@@ -37,21 +39,16 @@ function Viewlist_teacher_student({ onClose, id }) {
       </div>
       <div className="view_document_user_container">
         <div className="document_user_title">
-          <p>ข้อมูลอาจารย์</p>
+          <p>ข้อมูลอาจารย์ที่ปรึกษา</p>
         </div>
         <div className="view_private_document_text_container">
           <h1 className="view_field_name">รหัสอาจารย์</h1>
           <p className="view_value">{"0258001"}</p>
         </div>
         <div className="view_private_document_text_container">
-          <h1 className="view_field_name">ตำแหน่ง</h1>
-          <p className="view_value">{"ผศ."}</p>
+          <h1 className="view_field_name">ชื่อ-นามสกุล (ไทย)</h1>
+          <p className="view_value">{"นาย ศุภกร กลีบพุฒ"}</p>
         </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">ชื่อ-นามสกุล</h1>
-          <p className="view_value">{"ศุภกร กลีบพุฒ"}</p>
-        </div>
-
         <div className="view_private_document_text_container">
           <h1 className="view_field_name">คณะ</h1>
           <p className="view_value">{"เทคโนโลยีสารสนเทศและนวัตกรรมดิจิทัล"}</p>
@@ -61,29 +58,21 @@ function Viewlist_teacher_student({ onClose, id }) {
           <h1 className="view_field_name">สาขา</h1>
           <p className="view_value">{"วิศวกรรมซอฟต์แวร์"}</p>
         </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">หมายเลขโทรศัพท์มือถือ</h1>
-          <p className="view_value">{"019-191-9119"}</p>
-        </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">อีเมลสถาบัน</h1>
-          <p className="view_value">{"supakorn.klee@northbkk.ac.th"}</p>
-        </div>
 
         <div className="document_user_title">
-          <p>ข้อมูลบัญชีผู้ใช้</p>
+          <p>นักศึกษาในการดูแล</p>
         </div>
         <div className="view_private_document_text_container">
-          <h1 className="view_field_name">Username</h1>
-          <p className="view_value">{"621113759"}</p>
+          <h1 className="view_field_name">ชื่อรุ่น</h1>
+          <p className="view_value">{"SWE62"}</p>
         </div>
         <div className="view_private_document_text_container">
-          <h1 className="view_field_name">Password</h1>
-          <p className="view_value">{"621113759"}</p>
-        </div>
-        <div className="view_private_document_text_container">
-          <h1 className="view_field_name">สถานะของผู้ใช้</h1>
-          <p className="view_value">{"Active"}</p>
+          <h1 className="view_field_name">รายชื่อนักศึกษา</h1>
+          <p className="view_value">{`621102685 เจษฎา ซื้อสวัสดิ
+621109360 เอกพล โตเจริญ
+621111391 ระพีพัฒน์ สุวรรณทอง
+621112703 พัชช์ฐณณท์ เจริญเปี่ยม
+621113759 ศุภกร กลีบพุฒ`}</p>
         </div>
       </div>
     </div>

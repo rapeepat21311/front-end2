@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+
+import defaultImage from "../../../../image/vector (16).png";
 import { useNavigate, useParams } from "react-router";
 import { readUser, updateUser } from "../../../../route/function/user";
 import "./editUser.css";
@@ -60,6 +62,9 @@ function EditUser() {
   };
 
   const updateData = () => {};
+
+  const [image, setImage] = useState(null);
+  const [fileName, setFilename] = useState("No select File");
 
   // get Id
   const loadData = (authtoken, ID) => {
@@ -210,6 +215,53 @@ function EditUser() {
               <select className="select_status_on_university">
                 <option>กำลังศึกษา</option>
               </select>
+            </div>
+          </div>
+        </div>
+        <div className="student_avatar_container">
+          <div className="create_title_text_box">
+            <p className="create_title_text">รูปภาพ</p>
+          </div>
+          <div className="student_avatar">
+            <div className="avatar_image_container">
+              <div className="avatar_image">
+                {image ? (
+                  <img
+                    src={image}
+                    alt={fileName}
+                    style={{
+                      width: "100%",
+                      height: "64px",
+                      borderRadius: "8px",
+                    }}
+                  />
+                ) : (
+                  <img src={defaultImage} />
+                )}
+              </div>
+            </div>
+            <div className="avatar_upload_description_text_container">
+              <p>อัปโหลดรูปภาพ (ขนาดไม่เกิน -- mb)</p>
+            </div>
+            <div className="avatar_upload_file">
+              <form
+                onClick={() =>
+                  document.querySelector(".input_avatar_student").click()
+                }
+              >
+                <input
+                  type="file"
+                  className="input_avatar_student"
+                  hidden
+                  onChange={({ target: { files } }) => {
+                    files[0] && setFilename(files[0].name);
+                    if (files) {
+                      setImage(URL.createObjectURL(files[0]));
+                    }
+                  }}
+                />
+                <p>อัพโหลด</p>
+              </form>
             </div>
           </div>
         </div>

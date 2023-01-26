@@ -1,0 +1,105 @@
+$width_page: 70.538%;
+
+.create_event_page_container {
+  width: $width_page;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0px 24px 32px;
+  gap: 18px;
+
+  .create_news_input_value_text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    h2 {
+      display: flex;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+
+      color: #777777;
+    }
+    p {
+      padding: 8px 12px 8px 8px;
+      height: 40px;
+      text-align: start;
+
+      /* Neutral/D */
+      background: #dddddd;
+      /* Neutral/A */
+
+      border: 1px solid #aaaaaa;
+      border-radius: 8px;
+    }
+    input {
+      padding: 8px 12px 8px 8px;
+      height: 40px;
+
+      /* Neutral/D */
+      background: #ffffff;
+      /* Neutral/A */
+
+      border: 1px solid #aaaaaa;
+      border-radius: 8px;
+    }
+    select {
+      padding: 8px 12px 8px 8px;
+      height: 40px;
+
+      /* Neutral/D */
+      background: #ffffff;
+      /* Neutral/A */
+
+      border: 1px solid #aaaaaa;
+      border-radius: 8px;
+
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      /* identical to box height, or 133% */
+
+      /* Text/Dark Grey */
+
+      color: #9f99a3;
+    }
+    .text_editor {
+      text-align: start;
+    }
+  }
+  .create_event_time_container {
+    display: flex;
+    gap: 8px;
+    .select_time_event {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      gap: 8px;
+      h2 {
+        display: flex;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+
+        color: #777777;
+      }
+      input {
+        width: 100%;
+        height: 40px;
+        padding: 8px 12px 8px 8px;
+
+        /* Neutral/D */
+        background: #ffffff;
+        /* Neutral/A */
+
+        border: 1px solid #aaaaaa;
+        border-radius: 8px;
+      }
+    }
+  }
+}

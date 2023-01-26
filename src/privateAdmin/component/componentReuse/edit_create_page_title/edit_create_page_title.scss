@@ -1,0 +1,17 @@
+$width_container: 100%;
+
+.edit_create_page_title {
+  display: flex;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e7ecef;
+  margin-bottom: 18px;
+  h1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+
+    color: #333333;
+  }
+}

@@ -229,7 +229,7 @@ function Eport() {
               </div>
             </div>
             <div className="option_eport_box_skill">
-            <div className="etc_skill">
+              <div className="etc_skill">
                 <p>ทักษะอื่นๆ</p>
                 <Checkbox />
               </div>
