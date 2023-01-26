@@ -14,6 +14,7 @@ import more_vert from "../../../../image/more_vert.png";
 
 import "./listuser.css";
 import Viewlist from "../../componentReuse/viewlist";
+import Pagination_admin from "../../componentReuse/paginationAdmin/pagination_admin";
 
 function ListUser() {
   const { user } = useSelector((state) => ({ ...state }));
@@ -22,6 +23,17 @@ function ListUser() {
   const [viewuser, setViewuser] = useState(false);
   const [userId, setUserId] = useState("");
   const [data, setData] = useState([]);
+  const [userlistPerpage, setUserListPerPage] = useState(15);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageText, setPageText] = useState(1);
+  const [pageTextPerpage, setPageTextPerpage] = useState(15);
+  const [pageNumberLimit, setPageNumberLimit] = useState(6);
+  const [maxPageLimit, setMaxPageLimit] = useState(6);
+  const [minPageLimit, setMinPageLimit] = useState(0);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   const datamock = [
     {
@@ -159,6 +171,21 @@ function ListUser() {
             </tbody>
           </table>
         </div>
+        <Pagination_admin
+          volunteerHoursPerPage={userlistPerpage}
+          totalVolunteerHours={data.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          maxPageLimit={maxPageLimit}
+          setMaxPageLimit={setMaxPageLimit}
+          setMinPageLimit={setMinPageLimit}
+          minPageLimit={minPageLimit}
+          pageNumberLimit={pageNumberLimit}
+          pageText={pageText}
+          pageTextPerpage={pageTextPerpage}
+          documentLength={data.length}
+        />
       </div>
       <div
         className={

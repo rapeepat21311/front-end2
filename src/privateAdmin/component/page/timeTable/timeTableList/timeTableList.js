@@ -14,12 +14,24 @@ import "./timeTable.css";
 import Viewlist_teacher from "../../../componentReuse/viewlist_teacher";
 import View_TimeTable from "../../../componentReuse/view_timetabe";
 import { useNavigate } from "react-router";
+import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination_admin";
 
 function Timetable() {
   const navigate = useNavigate();
   const [viewTimeTable, setViewtimeTable] = useState(false);
   const [timetableId, setTimeTableId] = useState("");
 
+  const [userlistPerpage, setUserListPerPage] = useState(15);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageText, setPageText] = useState(1);
+  const [pageTextPerpage, setPageTextPerpage] = useState(15);
+  const [pageNumberLimit, setPageNumberLimit] = useState(6);
+  const [maxPageLimit, setMaxPageLimit] = useState(6);
+  const [minPageLimit, setMinPageLimit] = useState(0);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
   const onClickLinkEditPage = (id) => {
     setTimeTableId(id);
   };
@@ -88,7 +100,7 @@ function Timetable() {
             <tbody>
               {mockDataTimeTable.map((item, index) => {
                 return (
-                  <tr>
+                  <tr key={index}>
                     <td>{item.term}</td>
                     <td>{item.code_subject}</td>
                     <td>{item.name_subject}</td>
@@ -114,6 +126,23 @@ function Timetable() {
             </tbody>
           </table>
         </div>
+        <Pagination_admin
+          volunteerHoursPerPage={userlistPerpage}
+          totalVolunteerHours={mockDataTimeTable.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          maxPageLimit={maxPageLimit}
+          setMaxPageLimit={setMaxPageLimit}
+          setMinPageLimit={setMinPageLimit}
+          minPageLimit={minPageLimit}
+          pageNumberLimit={pageNumberLimit}
+          pageText={pageText}
+          setPageText={setPageText}
+          setTextPerPage={setPageTextPerpage}
+          pageTextPerpage={pageTextPerpage}
+          documentLength={mockDataTimeTable.length}
+        />
       </div>
       <div
         className={

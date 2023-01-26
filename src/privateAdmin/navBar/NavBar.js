@@ -108,24 +108,23 @@ function NavBar({ children }) {
         <div
           className={sideBar ? "sidebar_container_active" : "sidebar_container"}
         >
+          <div className="sidebar_button_close_open_container">
+            {sideBar ? (
+              <div className="sidebar_button_close" onClick={showSideBar}>
+                <p>{"<"}</p>
+              </div>
+            ) : (
+              <div className="sidebar_button_open" onClick={showSideBar}>
+                <p>{">"}</p>
+              </div>
+            )}
+          </div>
           <div
             className="admin_menu_drop_down_list"
             onClick={() => navigate("/admin-page")}
           >
-            {" "}
             <img src={auto_awesome} />
             {sideBar ? <h1>ภาพรวมระบบ</h1> : null}
-            <div className="sidebar_button_close_open_container">
-              {sideBar ? (
-                <div className="sidebar_button_close" onClick={showSideBar}>
-                  <p>{"<"}</p>
-                </div>
-              ) : (
-                <div className="sidebar_button_open" onClick={showSideBar}>
-                  <p>{">"}</p>
-                </div>
-              )}
-            </div>
           </div>
           <div
             className="admin_menu_drop_down_list"

@@ -13,11 +13,24 @@ import { mockPerformance } from "./datamock/mockPerformance";
 import Viewlist_teacher from "../../../componentReuse/viewlist_teacher";
 import { useNavigate } from "react-router";
 import View_performance from "../../../componentReuse/view_performance";
+import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination_admin";
 
 function PerformanceList() {
   const navigate = useNavigate();
   const [viewPerformance, setViewPerformance] = useState(false);
   const [performanceId, setPerformanceId] = useState("");
+
+  const [userlistPerpage, setUserListPerPage] = useState(15);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageText, setPageText] = useState(1);
+  const [pageTextPerpage, setPageTextPerpage] = useState(15);
+  const [pageNumberLimit, setPageNumberLimit] = useState(6);
+  const [maxPageLimit, setMaxPageLimit] = useState(6);
+  const [minPageLimit, setMinPageLimit] = useState(0);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   const onClickLinkEditPage = (id) => {
     setPerformanceId(id);
@@ -92,7 +105,7 @@ function PerformanceList() {
             <tbody>
               {mockPerformance.map((item, index) => {
                 return (
-                  <tr>
+                  <tr key={index}>
                     <td>{item.term}</td>
                     <td>{item.date_on_submit}</td>
                     <td>{item.user_fullname}</td>
@@ -118,6 +131,23 @@ function PerformanceList() {
             </tbody>
           </table>
         </div>
+        <Pagination_admin
+          volunteerHoursPerPage={userlistPerpage}
+          totalVolunteerHours={mockPerformance.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          maxPageLimit={maxPageLimit}
+          setMaxPageLimit={setMaxPageLimit}
+          setMinPageLimit={setMinPageLimit}
+          minPageLimit={minPageLimit}
+          pageNumberLimit={pageNumberLimit}
+          pageText={pageText}
+          setPageText={setPageText}
+          setTextPerPage={setPageTextPerpage}
+          pageTextPerpage={pageTextPerpage}
+          documentLength={mockPerformance.length}
+        />
       </div>
       <div
         className={

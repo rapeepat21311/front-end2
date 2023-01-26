@@ -14,6 +14,7 @@ import more_vert from "../../../../../image/more_vert.png";
 
 import "../../listUser/listuser.css";
 import Viewlist_teacher from "../../../componentReuse/viewlist_teacher";
+import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination_admin";
 
 function ListTeacher() {
   const { user } = useSelector((state) => ({ ...state }));
@@ -22,6 +23,18 @@ function ListTeacher() {
   const [data, setData] = useState([]);
   const [openViewList, setOpenViewList] = useState(false);
   const [teacherId, setTeacherId] = useState("");
+
+  const [userlistPerpage, setUserListPerPage] = useState(15);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageText, setPageText] = useState(1);
+  const [pageTextPerpage, setPageTextPerpage] = useState(15);
+  const [pageNumberLimit, setPageNumberLimit] = useState(6);
+  const [maxPageLimit, setMaxPageLimit] = useState(6);
+  const [minPageLimit, setMinPageLimit] = useState(0);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
   // const [vales, setValues] = useContext();
   useEffect(() => {
     loadData(user.token);
@@ -123,7 +136,7 @@ function ListTeacher() {
             <tbody>
               {data.map((users, index) => {
                 return (
-                  <tr>
+                  <tr key={index}>
                     <td>{users.student_id}</td>
                     <td>{"ผศ."}</td>
                     <td>{users.user_fullname}</td>
@@ -153,6 +166,23 @@ function ListTeacher() {
             </tbody>
           </table>
         </div>
+        <Pagination_admin
+          volunteerHoursPerPage={userlistPerpage}
+          totalVolunteerHours={data.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          maxPageLimit={maxPageLimit}
+          setMaxPageLimit={setMaxPageLimit}
+          setMinPageLimit={setMinPageLimit}
+          minPageLimit={minPageLimit}
+          pageNumberLimit={pageNumberLimit}
+          pageText={pageText}
+          setPageText={setPageText}
+          setTextPerPage={setPageTextPerpage}
+          pageTextPerpage={pageTextPerpage}
+          documentLength={data.length}
+        />
       </div>
       <div
         className={

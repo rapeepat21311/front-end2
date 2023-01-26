@@ -420,6 +420,7 @@
 }
 .list_view_delete img {
   background: none;
+  cursor: pointer;
 }
 
 .table td {

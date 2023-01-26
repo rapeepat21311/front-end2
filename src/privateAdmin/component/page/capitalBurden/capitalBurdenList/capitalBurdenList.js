@@ -15,11 +15,24 @@ import "./capitalBurdenList.css";
 import { mockDataCapitalBurden } from "./datamock/mockDataCapitalBurden";
 import Viewlist_teacher from "../../../componentReuse/viewlist_teacher";
 import View_capital_burden from "../../../componentReuse/view_capital_burdent";
+import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination_admin";
 
 function CapitalBurdenList() {
   const navigate = useNavigate();
   const [viewuser, setViewuser] = useState(false);
   const [capitalId, setCapitalId] = useState(null);
+
+  const [userlistPerpage, setUserListPerPage] = useState(15);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageText, setPageText] = useState(1);
+  const [pageTextPerpage, setPageTextPerpage] = useState(15);
+  const [pageNumberLimit, setPageNumberLimit] = useState(6);
+  const [maxPageLimit, setMaxPageLimit] = useState(6);
+  const [minPageLimit, setMinPageLimit] = useState(0);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   const onClickLinkEditPage = (id) => {
     setCapitalId(id);
@@ -91,7 +104,7 @@ function CapitalBurdenList() {
             <tbody>
               {mockDataCapitalBurden.map((item, index) => {
                 return (
-                  <tr>
+                  <tr key={index}>
                     <td>{item.id}</td>
                     <td>{item.name}</td>
                     <td>{item.term}</td>
@@ -116,6 +129,23 @@ function CapitalBurdenList() {
             </tbody>
           </table>
         </div>
+        <Pagination_admin
+          volunteerHoursPerPage={userlistPerpage}
+          totalVolunteerHours={mockDataCapitalBurden.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          maxPageLimit={maxPageLimit}
+          setMaxPageLimit={setMaxPageLimit}
+          setMinPageLimit={setMinPageLimit}
+          minPageLimit={minPageLimit}
+          pageNumberLimit={pageNumberLimit}
+          pageText={pageText}
+          setPageText={setPageText}
+          setTextPerPage={setPageTextPerpage}
+          pageTextPerpage={pageTextPerpage}
+          documentLength={mockDataCapitalBurden.length}
+        />
       </div>
       <div
         className={

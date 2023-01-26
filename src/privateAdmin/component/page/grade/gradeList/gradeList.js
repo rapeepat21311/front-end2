@@ -12,10 +12,23 @@ import viewButton from "../../../../../image/Button.png";
 import more_vert from "../../../../../image/more_vert.png";
 import { mockGrade } from "./mockData/mockGrade";
 import Viewlist_teacher from "../../../componentReuse/viewlist_teacher";
+import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination_admin";
 
 function GradeList() {
   const [viewgrade, setViewGrade] = useState(false);
   const [gradeId, setGradeId] = useState(null);
+
+  const [userlistPerpage, setUserListPerPage] = useState(15);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageText, setPageText] = useState(1);
+  const [pageTextPerpage, setPageTextPerpage] = useState(15);
+  const [pageNumberLimit, setPageNumberLimit] = useState(6);
+  const [maxPageLimit, setMaxPageLimit] = useState(6);
+  const [minPageLimit, setMinPageLimit] = useState(0);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   const onClickLinkEditPage = (id) => {
     setGradeId(id);
@@ -86,7 +99,7 @@ function GradeList() {
             <tbody>
               {mockGrade.map((item, index) => {
                 return (
-                  <tr>
+                  <tr key={index}>
                     <td>{item.student_id}</td>
                     <td>{item.student_fullname}</td>
                     <td>{item.term}</td>
@@ -105,6 +118,23 @@ function GradeList() {
             </tbody>
           </table>
         </div>
+        <Pagination_admin
+          volunteerHoursPerPage={userlistPerpage}
+          totalVolunteerHours={mockGrade.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          maxPageLimit={maxPageLimit}
+          setMaxPageLimit={setMaxPageLimit}
+          setMinPageLimit={setMinPageLimit}
+          minPageLimit={minPageLimit}
+          pageNumberLimit={pageNumberLimit}
+          pageText={pageText}
+          setPageText={setPageText}
+          setTextPerPage={setPageTextPerpage}
+          pageTextPerpage={pageTextPerpage}
+          documentLength={mockGrade.length}
+        />
       </div>
     </>
   );

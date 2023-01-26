@@ -17,8 +17,6 @@ function PaginationNews({
   // const [minPageLimit, setMinPageLimit] = useState(0);
 
   const handleNextButton = () => {
-    setCurrentPage(currentPage + 1);
-
     if (currentPage + 1 > maxPageLimit) {
       setMaxPageLimit(maxPageLimit + pageNumberLimit);
       setMinPageLimit(minPageLimit + pageNumberLimit);

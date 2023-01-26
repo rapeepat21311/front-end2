@@ -1,0 +1,154 @@
+// .pagination_container {
+//   display: flex;
+//   justify-content: center;
+//   width: 100%;
+//   gap: 20px;
+//   //   background-color: red;
+//   list-style-type: none;
+// }
+// .pagination_page {
+//   list-style-type: none;
+//   width: 40px;
+//   height: 40px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   cursor: pointer;
+//   //   background-color: blue;
+// }
+// .pagination_page_link {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   //   background-color: aqua;
+// }
+// .pagination_previous {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   list-style-type: none;
+//   width: 40px;
+//   height: 40px;
+
+//   font-size: 25px;
+//   background: #ffffff;
+//   border-radius: 99px;
+//   cursor: pointer;
+// }
+// .pagination_previous_link {
+// }
+// .pagination_next {
+//   width: 40px;
+//   height: 40px;
+
+//   font-size: 25px;
+//   background: #ffffff;
+//   border-radius: 99px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   list-style-type: none;
+//   cursor: pointer;
+// }
+// .pagination_next_link {
+// }
+// .pagination_dots {
+//   width: 40px;
+//   height: 40px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   list-style-type: none;
+//   cursor: pointer;
+// }
+// .pagination_active {
+//   width: 40px;
+//   height: 40px;
+
+//   font-family: "Inter";
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 18px;
+//   line-height: 24px;
+//   /* identical to box height, or 133% */
+
+//   text-align: center;
+//   filter: drop-shadow(0px 0px 2px #4e95ff);
+//   background-color: #1565c0;
+//   border-radius: 4px;
+//   /* Text/white */
+
+//   color: #faf9f6;
+// }
+
+.page_number_number_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+
+  .previous_page_button {
+    button {
+      width: 40px;
+      height: 40px;
+      font-size: 25px;
+      border: none;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  }
+  .next_page_button {
+    button {
+      font-size: 25px;
+      width: 40px;
+      height: 40px;
+      border: none;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  .pagination_number_container {
+    .select_page_number_admin {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+    .select_page_number_admin_active {
+      width: 40px;
+      height: 40px;
+
+      /* identical to box height, or 133% */
+
+      text-align: center;
+      filter: drop-shadow(0px 0px 2px #4e95ff);
+      background-color: #1565c0;
+      border-radius: 4px;
+      /* Text/white */
+
+      color: #faf9f6;
+    }
+  }
+  .pagination_text_admin {
+    font-family: "FC Iconic";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 32px;
+    /* identical to box height, or 229% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #666666;
+  }
+}

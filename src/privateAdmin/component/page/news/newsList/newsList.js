@@ -14,11 +14,24 @@ import { mockNewsList } from "./mockdata/mocknewlist";
 import Viewlist_teacher from "../../../componentReuse/viewlist_teacher";
 import { useNavigate } from "react-router";
 import View_news from "../../../componentReuse/view_news";
+import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination_admin";
 
 function NewsList() {
+  const navigate = useNavigate();
   const [viewnews, setViewNews] = useState(false);
   const [newsId, setNewsId] = useState("");
-  const navigate = useNavigate();
+
+  const [userlistPerpage, setUserListPerPage] = useState(15);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageText, setPageText] = useState(1);
+  const [pageTextPerpage, setPageTextPerpage] = useState(15);
+  const [pageNumberLimit, setPageNumberLimit] = useState(6);
+  const [maxPageLimit, setMaxPageLimit] = useState(6);
+  const [minPageLimit, setMinPageLimit] = useState(0);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   const onClickLinkEditPage = (id) => {
     setNewsId(id);
@@ -88,7 +101,7 @@ function NewsList() {
             <tbody>
               {mockNewsList.map((item, index) => {
                 return (
-                  <tr>
+                  <tr key={index}>
                     <td>{item.number}</td>
                     <td>{item.news_title}</td>
                     <td>{item.news_type}</td>
@@ -111,6 +124,23 @@ function NewsList() {
             </tbody>
           </table>
         </div>
+        <Pagination_admin
+          volunteerHoursPerPage={userlistPerpage}
+          totalVolunteerHours={mockNewsList.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          maxPageLimit={maxPageLimit}
+          setMaxPageLimit={setMaxPageLimit}
+          setMinPageLimit={setMinPageLimit}
+          minPageLimit={minPageLimit}
+          pageNumberLimit={pageNumberLimit}
+          pageText={pageText}
+          setPageText={setPageText}
+          setTextPerPage={setPageTextPerpage}
+          pageTextPerpage={pageTextPerpage}
+          documentLength={mockNewsList.length}
+        />
       </div>
       <div
         className={

@@ -13,11 +13,24 @@ import "./eventList.css";
 import Viewlist_teacher from "../../../componentReuse/viewlist_teacher";
 import View_event from "../../../componentReuse/view_event";
 import { useNavigate } from "react-router";
+import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination_admin";
 
 function EventsList() {
   const navigate = useNavigate();
   const [viewEvent, setViewEvent] = useState(false);
   const [eventId, setEventId] = useState("");
+
+  const [userlistPerpage, setUserListPerPage] = useState(15);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageText, setPageText] = useState(1);
+  const [pageTextPerpage, setPageTextPerpage] = useState(15);
+  const [pageNumberLimit, setPageNumberLimit] = useState(6);
+  const [maxPageLimit, setMaxPageLimit] = useState(6);
+  const [minPageLimit, setMinPageLimit] = useState(0);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   const onClickLinkEditPage = (id) => {
     setEventId(id);
@@ -89,7 +102,7 @@ function EventsList() {
             <tbody>
               {mockEvents.map((item, index) => {
                 return (
-                  <tr>
+                  <tr key={index}>
                     <td>{item.number}</td>
                     <td>{item.event_post_date}</td>
                     <td>{item.event_title}</td>
@@ -113,6 +126,23 @@ function EventsList() {
             </tbody>
           </table>
         </div>
+        <Pagination_admin
+          volunteerHoursPerPage={userlistPerpage}
+          totalVolunteerHours={mockEvents.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          maxPageLimit={maxPageLimit}
+          setMaxPageLimit={setMaxPageLimit}
+          setMinPageLimit={setMinPageLimit}
+          minPageLimit={minPageLimit}
+          pageNumberLimit={pageNumberLimit}
+          pageText={pageText}
+          setPageText={setPageText}
+          setTextPerPage={setPageTextPerpage}
+          pageTextPerpage={pageTextPerpage}
+          documentLength={mockEvents.length}
+        />
       </div>
       <div
         className={
