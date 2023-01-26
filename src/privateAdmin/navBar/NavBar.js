@@ -7,6 +7,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 import AutoAwesomeMosaicOutlinedIcon from "@mui/icons-material/AutoAwesomeMosaicOutlined";
 
+import LogOutIcon from "../../image/vector (19).png";
 import { useNavigate } from "react-router-dom";
 import auto_awesome from "../../image/auto_awesome_mosaic.png";
 import groups from "../../image/groups.png";
@@ -85,18 +86,19 @@ function NavBar({ children }) {
             {profileBar ? (
               <div>
                 {user !== null ? (
-                  <p
+                  <div
                     className={profileBar ? "log_out_active" : "log_out"}
                     onClick={Logout}
                   >
-                    Log out
-                  </p>
+                    <p>ออกจากระบบ</p>
+                    <img src={LogOutIcon} />
+                  </div>
                 ) : (
                   <p
                     className={profileBar ? "log_out_active" : "log_out"}
                     onClick={Login}
                   >
-                    Log in
+                    เข้าสู่ระบบ
                   </p>
                 )}
               </div>

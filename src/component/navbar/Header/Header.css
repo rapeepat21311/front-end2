@@ -7,21 +7,21 @@
   left: 0;
   right: 0;
   z-index: 999;
-  background: linear-gradient(110.16deg, rgba(255, 255, 255, 0.6) -0.35%, rgba(255, 255, 255, 0.2) 100%);
-/* BG/Glassmorphism (Stroke) */
+  background: linear-gradient(
+    110.16deg,
+    rgba(255, 255, 255, 0.6) -0.35%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  /* BG/Glassmorphism (Stroke) */
 
-border: 1px solid rgba(255, 255, 255, 0.48);
-/* BG/Glassmorphism (Effect) */
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  /* BG/Glassmorphism (Effect) */
 
-box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.05);
-backdrop-filter: blur(12px);
+  box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
   background: url(../../../image/bgmain.png);
   /* background-size: 200px; */
 }
-
-
-
-
 
 @-webkit-keyframes Header {
   0% {
@@ -77,7 +77,7 @@ backdrop-filter: blur(12px);
   padding-left: 25px;
   /* background-color: red; */
 }
-.Header_left img{
+.Header_left img {
   display: flex;
   width: 57px;
   height: 48px;
@@ -135,20 +135,41 @@ backdrop-filter: blur(12px);
   position: absolute;
   right: -100%;
   transition: 850ms;
-}
-
-.log_out_active {
-  right: 0;
-  transition: 350ms;
-
 } */
 
+.log_out_active {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  right: 0;
+  top: 60px;
+  width: 207px;
+  height: 56px;
+  padding: 8px 24px 8px 24px;
+  transition: 350ms;
+  background: #ffffff;
+  border-radius: 8px;
+  position: absolute;
+}
+.log_out_active p {
+  padding: 0px 24px 0px 0px;
+  /* width: 50%; */
+  font-family: "FC Iconic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  /* background: red; */
+  /* tertiary/tertiary10 */
 
+  color: #001c39;
+}
 
-@media only screen and (min-width:1440px) {
+@media only screen and (min-width: 1440px) {
   .Header_center {
     display: flex;
-    gap:16px ;
+    gap: 16px;
     /* background-color: #040104; */
-  }  
+  }
 }
