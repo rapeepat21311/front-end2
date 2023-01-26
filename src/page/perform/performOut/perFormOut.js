@@ -4,7 +4,7 @@ import Header from "../../../component/navbar/Header/Header";
 
 import "./performAll.css";
 
-function perform() {
+function PerformOut() {
   
 
   return (
@@ -20,4 +20,4 @@ function perform() {
   );
 }
 
-export default perform;
+export default PerformOut;

@@ -2,15 +2,15 @@
   display: flex;
   flex-flow: row wrap;
   width: 960px;
-  margin-top: 40px;
-  margin-left: 15%;
-  /* background-color: red; */
+  /* margin-top: 40px; */
+  margin-left: 450px;
+  background-color: red;
   justify-content: space-between;
 }
 
 .pnbox_activity_container {
   display: flex;
-  width: 470px;
+  width: 468px;
   /* margin-right: 12px; */
   margin-bottom: 20px;
   border-radius: 16px;
@@ -27,42 +27,102 @@
 
 
 .pnbox_activity_img img:hover {
-  background-color: aqua;
+  background-color: rgb(124, 124, 124);
 }
 
 
 .pnbox_activity_title {
   display: flex;
-  width: 100%;
-  padding-left: 10px;
   flex-direction: column;
-  text-align: start;
-  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 275px;
+  height: 108px;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+.pnbox_activity_title h2{
+  width: 300px;
+  height: 48px;
+  
+  /* Medium/Paragraph 1 */
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  /* or 133% */
+  
+  
+  /* Text/Black */
+  
+  color: #333333;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  background-color: red;
 }
 
 
 .pnbox_activity_location {
   display: flex;
-  margin-top: 30px;
-  margin-left: 10px;
-  /* background-color: aquamarine; */
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 300px;
+  height: 16px;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  background-color: aquamarine;
 }
 
 .pnbox_activity_hr {
   display: flex;
-  justify-content: space-between;
-  padding-right: 10px;
-  padding-left: 10px;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  background-color: gold;
+  width: 300px;
+  height: 24px;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 3;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
-.pnchange_page_botton {
+.pchange_page_botton {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
 
-.pnchange_page_botton h3 {
+.pchange_page_botton h3 {
   color: black;
   font-size: 14px;
   border-radius: 16px;

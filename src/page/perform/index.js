@@ -4,6 +4,8 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 import "./index.css";
 import CreateBox from "./performAll/CreateBox";
+import PerformIn from "./performIn/CreateBox";
+import PerformOut from "./performOut/CreateBox";
 
 import { Button } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
@@ -20,12 +22,12 @@ const navTab = [
   {
     tabName: "performIn",
     tabLabel: "ผลงานภายใน",
-    component: <performIn />,
+    component: <PerformIn />,
   },
   {
     tabName: "performOut",
     tabLabel: "ผลงานภายนอก",
-    component: <performOut />,
+    component: <PerformOut />,
   },
 ];
 
@@ -38,8 +40,8 @@ function Perform() {
       <Header />
       <div className="perform">
         <div className="perform_header">
-        <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
-            <p>ผลงาน</p>
+          <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
+          <p>ผลงาน</p>
         </div>
         <div className="perform_title">
           <h1>ผลงาน</h1>
@@ -70,20 +72,21 @@ function Perform() {
               <option>2/2565</option>
             </select>
             <div className="button_upload">
-              <Button variant="contained" component="label" aria-label="add">
-                  <TbPlus size={25} />
+              <Button variant="contained" component="label" aria-label="add"
+              onClick={()=> navigate("/performAdd")}>
+                <TbPlus size={25} />
                 เพิ่มรางวัล
-                <input hidden accept="image/*" multiple type="file" />
+                {/* <input hidden accept="image/*" multiple type="file" />
                 <IconButton color="primary" aria-label="add" component="label">
                   <input hidden accept="image/*" type="file" />
-                  {/* <PhotoCamera /> */}
-                </IconButton>
+                  <PhotoCamera />
+                </IconButton> */}
               </Button>
             </div>
           </div>
         </div>
         <div className="perform_component">{navTab[activeIndex].component}</div>
-      <Footer/>
+        <Footer />
       </div>
     </>
   );

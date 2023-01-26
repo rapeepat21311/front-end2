@@ -1,9 +1,13 @@
-import image from "../../../image/Image.png"
+import Thebest from "../../../image/Thebest.png"
+import SBAC from "../../../image/SBACRUN.png"
+import Quiz from "../../../image/Quiz.png"
+import QuizOut from "../../../image/QuizOut.png"
+import Noimg from "../../../image/Noimg.png"
 const mockDataActivity = [
 
   {
     id: 1,
-    image: image,
+    image: Quiz,
     title: "รางวัลชนะเลิศการแข่งขันตอบคำถาม",
     location: "มหาวิทยาลัยนอร์ทกรุงเทพ",
     date: "1 ธันวาคม 2565",
@@ -11,23 +15,23 @@ const mockDataActivity = [
   },
   {
     id: 2,
-    image: image,
-    title: "รางวัลชนะเลิศการแข่งขันตอบคำถาม",
+    image: SBAC,
+    title: "ดร.นันทนา ชวศิริกุลฑล รองอธิการบดีฝ่ายบริหารและกิจการนักศึกษา ",
     location: "มหาวิทยาลัยนอร์ทกรุงเทพ",
     date: "1 ธันวาคม 2565",
     hr: "รางวัลภายใน",
   },
   {
     id: 3,
-    image: image,
-    title: "รางวัลชนะเลิศการแข่งขันตอบคำถาม",
+    image: SBAC,
+    title: "ดร.นันทนา ชวศิริกุลฑล รองอธิการบดีฝ่ายบริหารและกิจการนักศึกษา ",
     location: "มหาวิทยาลัยนอร์ทกรุงเทพ",
     date: "1 ธันวาคม 2565",
     hr: "รางวัลภายใน",
   },
    {
     id: 4,
-    image: image,
+    image: Quiz,
     title: "รางวัลชนะเลิศการแข่งขันตอบคำถาม",
     location: "มหาวิทยาลัยนอร์ทกรุงเทพ",
     date: "1 ธันวาคม 2565",
@@ -35,7 +39,7 @@ const mockDataActivity = [
   },
   {
     id: 5,
-    image: image,
+    image: Quiz,
     title: "รางวัลชนะเลิศการแข่งขันตอบคำถาม",
     location: "มหาวิทยาลัยนอร์ทกรุงเทพ",
     date: "1 ธันวาคม 2565",
@@ -43,8 +47,8 @@ const mockDataActivity = [
   },
   {
     id: 6,
-    image: image,
-    title: "รางวัลชนะเลิศการแข่งขันตอบคำถาม",
+    image: SBAC,
+    title: "ดร.นันทนา ชวศิริกุลฑล รองอธิการบดีฝ่ายบริหารและกิจการนักศึกษา ",
     location: "มหาวิทยาลัยนอร์ทกรุงเทพ",
     date: "1 ธันวาคม 2565",
     hr: "รางวัลภายใน",

@@ -2,9 +2,9 @@ import React from "react";
 import Header from "../../../component/navbar/Header/Header";
 
 
-import "./performIn.css";
+import "./perFormIn.css";
 
-function perform() {
+function performIn() {
   
 
   return (
@@ -20,4 +20,4 @@ function perform() {
   );
 }
 
-export default perform;
+export default performIn;
