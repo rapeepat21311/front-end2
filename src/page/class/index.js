@@ -35,12 +35,11 @@ function Index() {
   return (
     <>
       <Header />
-      <div>
-      </div>
+      <div></div>
       <div className="class">
         <div className="class_header">
-        <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
-            <p>ตารางเรียน</p>
+          <p onClick={() => navigate("/dashboard")}>หน้าหลัก</p> {" > "}
+          <p>ตารางเรียน</p>
         </div>
         <div className="class_title">
           <h1>ตารางเรียน</h1>
@@ -74,7 +73,7 @@ function Index() {
           </div>
         </div>
         <div className="class_component">{navTab[activeIndex].component}</div>
-      <Footer />
+        <Footer />
       </div>
     </>
   );

@@ -41,7 +41,7 @@ function Index() {
       >
         <div className={activeIndex === 2 ? "profile_capital" : "profile"}>
           <div className="profile_title_link_home_page">
-            <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
+            <p onClick={() => navigate("/dashboard")}>หน้าหลัก</p> {" > "}
             <p>ประวัตินักศึกษา</p>
           </div>
           <div className="profile_title">
@@ -89,7 +89,7 @@ function Index() {
             {navTab[activeIndex].component}
           </div>
         </div>
-      <Footer />
+        <Footer />
       </div>
     </>
   );

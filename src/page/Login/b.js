@@ -73,7 +73,7 @@
 //       if (userCheck !== undefined) {
 //         const newUserObjectData = { ...userCheck };
 //         setUser(newUserObjectData);
-//         navigate("/");
+//         navigate("/dashboard");
 //         setSuccess(true);
 //       } else {
 //         setErrMsg("wrong username or password");

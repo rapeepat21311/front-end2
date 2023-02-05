@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import CloseIcon from "@mui/icons-material/Close";
 import AddIcon from "@mui/icons-material/Add";
 
 function EditTeachersManageStudent() {
+  const [mapSearchStudent, setMapSearchStudent] = useState(1);
+  let ComponentmapSearchStudent = [];
+  for (let i = 0; i <= mapSearchStudent; i++) {
+    ComponentmapSearchStudent.push(
+      <div className="box_add_student">
+        <div className="box_add_student_in_teacher_id_student">
+          <div className="box_id_student">
+            <label>รหัสนักศึกษา</label>
+            <input placeholder="Placeholder" />
+          </div>
+          <div className="box_name_student">
+            <label>ชื่อ-นามสกุล</label>
+            <input placeholder="Placeholder" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  useEffect(() => {
+    console.log("mapSearchStudent", mapSearchStudent);
+  }, [mapSearchStudent]);
+
   return (
     <div className="create_profile_student_container">
       <div className="create_profile_student_header">เพิ่มอาจารย์ที่ปรึกษา</div>
@@ -54,35 +77,17 @@ function EditTeachersManageStudent() {
         <div className="title_create_profile_student">นักศึกษาในการดูแล</div>
         <div className="box_add_student_in_teacher">
           <div className="close_add_student">
-            <p>
+            <p onClick={() => setMapSearchStudent(mapSearchStudent - 1)}>
               <CloseIcon />
             </p>
           </div>
-          <div className="box_add_student">
-            <div className="box_add_student_in_teacher_id_student">
-              <div className="box_id_student">
-                <label>รหัสนักศึกษา</label>
-                <input placeholder="Placeholder" />
-              </div>
-              <div className="box_name_student">
-                <label>ชื่อ-นามสกุล</label>
-                <input placeholder="Placeholder" />
-              </div>
-            </div>
-            <div className="box_add_student_in_teacher_major_student">
-              <div className="box_faculty_student">
-                <label>คณะ</label>
-                <input placeholder="Placeholder" />
-              </div>
-              <div className="box_major_student">
-                <label>สาขา</label>
-                <input placeholder="Placeholder" />
-              </div>
-            </div>
-          </div>
+          {ComponentmapSearchStudent}
         </div>
       </div>
-      <div className="report_student">
+      <div
+        className="report_student"
+        onClick={() => setMapSearchStudent(mapSearchStudent + 1)}
+      >
         <div className="button_report_student">
           <p>
             <AddIcon />

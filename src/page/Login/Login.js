@@ -33,7 +33,7 @@ function Login() {
     if (role === "admin") {
       navigate("/admin-page");
     } else {
-      navigate("/");
+      navigate("/dashboard");
     }
   };
 

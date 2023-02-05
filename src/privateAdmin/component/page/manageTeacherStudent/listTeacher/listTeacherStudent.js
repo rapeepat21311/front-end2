@@ -107,7 +107,12 @@ function ListTeacherStudent() {
                   <img src={vector_1} />
                 </div>
               </div>
-              <div className="add_document_container">
+              <div
+                className="add_document_container"
+                onClick={() =>
+                  navigate("/admin-page/add-teacher-student-inclass")
+                }
+              >
                 <div className="add_document">
                   <img src={plus} />
                   <button>เพิ่มข้อมูล</button>

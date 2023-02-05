@@ -27,7 +27,7 @@ function Header() {
   };
 
   const Logout = () => {
-    navigate("/");
+    navigate("/dashboard");
     dispatch({ type: userReducerConst.LOG_OUT, payload: null });
   };
 

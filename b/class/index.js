@@ -36,8 +36,8 @@ function Index() {
       <Header />
       <div className="class">
         <div className="class_header">
-        <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
-            <p>ตารางเรียน</p>
+          <p onClick={() => navigate("/dashboard")}>หน้าหลัก</p> {" > "}
+          <p>ตารางเรียน</p>
         </div>
         <div className="class_title">
           <h1>ตารางเรียน</h1>

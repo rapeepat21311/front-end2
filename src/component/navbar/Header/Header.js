@@ -11,7 +11,7 @@ import { userReducerConst } from "../../reducer/consUserRed";
 
 import { useDispatch } from "react-redux";
 
-import iconNbu from "./../../../image/NBU.png"
+import iconNbu from "./../../../image/NBU.png";
 
 function Header() {
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ function Header() {
   const showLoginLogOut = () => setProfileBar(!profileBar);
 
   const Login = () => {
-    navigate("/login");
+    navigate("/dashboard");
   };
 
   const Logout = () => {
@@ -34,11 +34,11 @@ function Header() {
   return (
     <div className="Header">
       <div className="Header_left">
-        <img src={iconNbu}/>
+        <img src={iconNbu} />
       </div>
 
       <div className="Header_center">
-        <Link className="link" to="/">
+        <Link className="link" to="/dashboard">
           หน้าหลัก
         </Link>
         <h3>
@@ -68,7 +68,7 @@ function Header() {
         </h3>
         <h3>
           <Link className="link" to="/eport">
-          Curriculum Vitae
+            Curriculum Vitae
           </Link>
         </h3>
       </div>

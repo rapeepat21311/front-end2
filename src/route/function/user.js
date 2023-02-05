@@ -51,6 +51,14 @@ export const readUser = async (authtoken, id) => {
   });
 };
 
+export const createUser = async (authtoken, values) => {
+  return await axios.get(process.env.REACT_APP_API + "/createuser", {
+    headers: {
+      authtoken,
+    },
+  });
+};
+
 export const updateUser = async (authtoken, id, values) => {
   return await axios.put(
     process.env.REACT_APP_API + "/edit_user/" + id,

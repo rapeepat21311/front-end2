@@ -68,7 +68,7 @@ function News() {
       <div className="news_body">
         <div className="news_container">
           <div className="home_page_and_redirect_page">
-            <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}{" "}
+            <p onClick={() => navigate("/dashboard")}>หน้าหลัก</p> {" > "}{" "}
             <p>ข่าวสารและกิจกรรม</p>
           </div>
           <div className="news_title">

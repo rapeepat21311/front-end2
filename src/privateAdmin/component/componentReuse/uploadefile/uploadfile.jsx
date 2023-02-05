@@ -13,7 +13,7 @@ function Uploadfile({
     <div className="student_avatar">
       <div className="avatar_image_container">
         <div className="avatar_image">
-          {image ? (
+          {image !== null || image !== undefined ? (
             <img
               src={image}
               alt={fileName}

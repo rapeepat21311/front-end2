@@ -69,16 +69,6 @@ function AddTeacherManageStudent() {
                 <input placeholder="Placeholder" />
               </div>
             </div>
-            <div className="box_add_student_in_teacher_major_student">
-              <div className="box_faculty_student">
-                <label>คณะ</label>
-                <input placeholder="Placeholder" />
-              </div>
-              <div className="box_major_student">
-                <label>สาขา</label>
-                <input placeholder="Placeholder" />
-              </div>
-            </div>
           </div>
         </div>
       </div>

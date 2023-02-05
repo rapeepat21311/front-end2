@@ -98,9 +98,9 @@ function PrivateRoute() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
 
-        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Home />} />
 
         <Route path="/eport" element={<Eport />} />
 
@@ -112,7 +112,7 @@ function PrivateRoute() {
 
         <Route path="/detail" element={<Detail />} />
 
-        <Route path="/performAdd" element={<PerformAdd/>}/>
+        <Route path="/performAdd" element={<PerformAdd />} />
 
         <Route
           path="/eport"

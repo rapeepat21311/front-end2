@@ -28,7 +28,7 @@ function Eport() {
       <div className="eport">
         <div className="eport_body">
           <div className="eport_title">
-            <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
+            <p onClick={() => navigate("/dashboard")}>หน้าหลัก</p> {" > "}
             <p>Curriculum Vitae</p>
           </div>
           <div className="eport_header">

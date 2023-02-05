@@ -57,7 +57,7 @@ export default function Result() {
       <div className="result">
         <div className="result_body">
           <div className="result_H">
-            <p onClick={() => navigete("/")}>หน้าหลัก</p>
+            <p onClick={() => navigete("/dashboard")}>หน้าหลัก</p>
             {" > "}
             <p>ผลการศึกษา</p>
           </div>
@@ -116,13 +116,13 @@ export default function Result() {
         </div>
         <div className="table_data">
           <Table dataList={termData.detailTable} />
-            <div className="select_year">
-              <h4>ภาคเรียนที่</h4>
-              <select>
-                <option>1/2565</option>
-                <option>2/2565</option>
-              </select>
-            </div>
+          <div className="select_year">
+            <h4>ภาคเรียนที่</h4>
+            <select>
+              <option>1/2565</option>
+              <option>2/2565</option>
+            </select>
+          </div>
         </div>
         <div className="table_gp">
           <div className="table_gp_container">

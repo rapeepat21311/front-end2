@@ -40,7 +40,7 @@ function Perform() {
       <Header />
       <div className="perform">
         <div className="perform_header">
-          <p onClick={() => navigate("/")}>หน้าหลัก</p> {" > "}
+          <p onClick={() => navigate("/dashboard")}>หน้าหลัก</p> {" > "}
           <p>ผลงาน</p>
         </div>
         <div className="perform_title">
@@ -72,8 +72,12 @@ function Perform() {
               <option>2/2565</option>
             </select>
             <div className="button_upload">
-              <Button variant="contained" component="label" aria-label="add"
-              onClick={()=> navigate("/performAdd")}>
+              <Button
+                variant="contained"
+                component="label"
+                aria-label="add"
+                onClick={() => navigate("/performAdd")}
+              >
                 <TbPlus size={25} />
                 เพิ่มรางวัล
                 {/* <input hidden accept="image/*" multiple type="file" />

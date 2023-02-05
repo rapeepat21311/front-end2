@@ -7,7 +7,7 @@ function Index() {
 
   return (
     <div className="admin_page">
-      <h2>Admin Page</h2>
+      <h2>Admin Dashboard</h2>
       <h3>WelCome {user.advisor}</h3>
     </div>
   );
