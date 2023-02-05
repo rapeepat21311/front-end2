@@ -33,6 +33,56 @@ function View_activity_hours({ onClose, id }) {
           </div>
         </div>
       </div>
+      <div className="view_document_user_container">
+        <div className="document_user_title">
+          <p>ข้อมูลชั่วโมงกิจกรรม</p>
+        </div>
+        <div className="view_private_document_text_container">
+          <h1 className="view_field_name">ภาคการศึกษา</h1>
+          <p className="view_value">{"2/2565"}</p>
+        </div>
+        <div className="view_private_document_text_container">
+          <h1 className="view_field_name">ชื่อกิจกรรม</h1>
+          <p className="view_value">{"Big Cleaning Day 2022"}</p>
+        </div>
+        <div className="view_private_document_text_container">
+          <h1 className="view_field_name">ตำแหน่ง</h1>
+          <p className="view_value">{"ผู้เข้าร่วม"}</p>
+        </div>
+        <div className="view_private_document_text_container">
+          <h1 className="view_field_name">วันที่ทำกิจกรรม </h1>
+          <p className="view_value">{"12/12/2565"}</p>
+        </div>
+        <div className="view_private_document_text_container">
+          <h1 className="view_field_name">ชั่วโมงกิจกรรมสะสม</h1>
+          <p className="view_value">{"6"}</p>
+        </div>
+      </div>
+      <div className="view_document_user_container">
+        <div className="document_user_title">
+          <p>ข้อมูลนักศึกษา</p>
+        </div>
+        <div className="view_private_document_text_container">
+          <h1 className="view_field_name">รหัสนักศึกษา</h1>
+          <p className="view_value">{"621113759"}</p>
+        </div>
+        <div className="view_private_document_text_container">
+          <h1 className="view_field_name">ชื่อ-นามสกุล (ไทย)</h1>
+          <p className="view_value">{"นาย ศุภกร กลีบพุฒ"}</p>
+        </div>
+        <div className="view_private_document_text_container">
+          <h1 className="view_field_name">คณะ</h1>
+          <p className="view_value">{"เทคโนโลยีสารสนเทศและนวัตกรรมดิจิทัล"}</p>
+        </div>
+        <div className="view_private_document_text_container">
+          <h1 className="view_field_name">สาขา </h1>
+          <p className="view_value">{"วิศวกรรมซอฟต์แวร์"}</p>
+        </div>
+        <div className="view_private_document_text_container">
+          <h1 className="view_field_name">อีเมลสถาบัน</h1>
+          <p className="view_value">{"supakorn.klee@northbkk.ac.th"}</p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -86,11 +86,11 @@ function GradeList() {
           <table>
             <thead>
               <tr>
-                <th scope="col">ภาคเรียน</th>
-                <th scope="col">ชื่อกิจกรรม</th>
                 <th scope="col">รหัสนักศึกษา</th>
                 <th scope="col">ชื่อ-นามสกุล</th>
-                <th scope="col">ชั่วโมงกิจกรรม</th>
+                <th scope="col">ภาคการศึกษา</th>
+                <th scope="col">รหัสวิชา</th>
+                <th scope="col">รายวิชา</th>
                 <th scope="col">หน่วยกิต</th>
                 <th scope="col">เกรด</th>
                 <th scope="col">{""}</th>

@@ -47,28 +47,28 @@
 }
 .table_capital_burden th:nth-child(1) {
   /* background-color: red; */
-  width: 102px;
+  width: 9%;
   text-align: start;
 }
 .table_capital_burden th:nth-child(2) {
   /* background-color: red; */
-  width: 315px;
+  width: 27.73%;
 }
 .table_capital_burden th:nth-child(3) {
   /* background-color: red; */
-  width: 108.33px;
+  width: 9.51%;
 }
 .table_capital_burden th:nth-child(4) {
   /* background-color: red; */
-  width: 80.33px;
+  width: 7.04%;
 }
 .table_capital_burden th:nth-child(5) {
   /* background-color: red; */
-  width: 315px;
+  width: 27.73%;
 }
 .table_capital_burden th:nth-child(6) {
   /* background-color: red; */
-  width: 112px;
+  width: 9.9%;
 }
 
 .table_capital_burden td {

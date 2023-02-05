@@ -97,6 +97,7 @@
   /* background-color: red; */
   position: relative;
   width: 734px;
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   padding: 8px;
@@ -286,7 +287,7 @@
     width: 1014.7px;
   }
   .box_add_student_in_teacher_id_student {
-    gap : 16px;
+    gap: 16px;
   }
   .box_add_student_in_teacher_id_student .box_id_student input {
     width: 248px;

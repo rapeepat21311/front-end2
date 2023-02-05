@@ -1,111 +1,110 @@
 .table_activity_hours_admin {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* width: 100%; */
-    margin-top: 16px;
-    /* background-color: chocolate; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+  margin-top: 16px;
+  /* background-color: chocolate; */
+}
+.table_activity_hours_admin table {
+  background-color: #e8ebed;
+  border-collapse: collapse;
+  border-radius: 16px;
+  font-size: 1em;
+  color: black;
+  overflow: hidden;
+  width: auto;
+  /* width: 100%; */
+  text-align: start;
+  margin-bottom: 50px;
+}
+
+.table_activity_hours_admin thead {
+  background-color: #fff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+
+  /* display: flex;
+      align-items: center; */
+
+  /* Text/Dark Grey */
+
+  color: #9f99a3;
+}
+.table_activity_hours_admin th {
+  letter-spacing: 0.3px;
+  /* text-shadow: 0 1px 1px #2b2a466b; */
+  text-align: start;
+}
+
+.table_activity_hours_admin tr:nth-child(even) {
+  background-color: #fff;
+  z-index: 20px;
+}
+.table_activity_hours_admin th:nth-child(1) {
+  /* background-color: red; */
+  width: 9.89%;
+  text-align: start;
+}
+.table_activity_hours_admin th:nth-child(2) {
+  /* background-color: red; */
+  width: 22.62%;
+}
+.table_activity_hours_admin th:nth-child(3) {
+  /* background-color: red; */
+  width: 11.8%;
+}
+.table_activity_hours_admin th:nth-child(4) {
+  /* background-color: red; */
+  width: 22.63%;
+}
+.table_activity_hours_admin th:nth-child(5) {
+  /* background-color: red; */
+  width: 12.59%;
+}
+.table_activity_hours_admin th:nth-child(6) {
+  /* background-color: red; */
+  width: 11.36%;
+}
+
+.table_activity_hours_admin td {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  /* or 133% */
+
+  /* display: flex;
+      align-items: center; */
+
+  /* Neutral/03 */
+
+  color: #333333;
+}
+
+.table_activity_hours_admin td,
+.table_activity_hours_admin th {
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  /* text-align: center; */
+  padding: 8px 16px;
+}
+
+@media only screen and (min-width: 1441px) {
+  .table_activity_hours_admin {
+    width: 100%;
+    /* background-color: red; */
   }
   .table_activity_hours_admin table {
-    background-color: #e8ebed;
-    border-collapse: collapse;
-    border-radius: 16px;
-    font-size: 1em;
-    color: black;
-    overflow: hidden;
-    width: auto;
-    /* width: 100%; */
-    text-align: start;
-    margin-bottom: 50px;
+    width: 100%;
+    /* background-color: rebeccapurple; */
   }
-  
-  .table_activity_hours_admin thead {
-    background-color: #fff;
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
-    /* or 171% */
-  
-    /* display: flex;
-      align-items: center; */
-  
-    /* Text/Dark Grey */
-  
-    color: #9f99a3;
-  }
-  .table_activity_hours_admin th {
-    letter-spacing: 0.3px;
-    /* text-shadow: 0 1px 1px #2b2a466b; */
-    text-align: start;
-  }
-  
-  .table_activity_hours_admin tr:nth-child(even) {
-    background-color: #fff;
-    z-index: 20px;
-  }
-  .table_activity_hours_admin th:nth-child(1) {
-    /* background-color: red; */
-    width: 96px;
-    text-align: start;
-  }
-  .table_activity_hours_admin th:nth-child(2) {
-    /* background-color: red; */
-    width: 265px;
-  }
-  .table_activity_hours_admin th:nth-child(3) {
-    /* background-color: red; */
-    width: 134px;
-  }
-  .table_activity_hours_admin th:nth-child(4) {
-    /* background-color: red; */
-    width: 265px;
-  }
-  .table_activity_hours_admin th:nth-child(5) {
-    /* background-color: red; */
-    width: 143px;
-  }
-  .table_activity_hours_admin th:nth-child(6) {
-    /* background-color: red; */
-    width: 129px;
-  }
-  
-  .table_activity_hours_admin td {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    /* or 133% */
-  
-    /* display: flex;
-      align-items: center; */
-  
-    /* Neutral/03 */
-  
-    color: #333333;
-  }
-  
   .table_activity_hours_admin td,
   .table_activity_hours_admin th {
-    /* border: 1px solid rgba(0, 0, 0, 0.1); */
-    /* text-align: center; */
-    padding: 8px 16px;
+    padding: 16px 32px;
   }
-  
-  @media only screen and (min-width: 1441px) {
-    .table_activity_hours_admin {
-      width: 100%;
-      /* background-color: red; */
-    }
-    .table_activity_hours_admin table {
-      width: 100%;
-      /* background-color: rebeccapurple; */
-    }
-    .table_activity_hours_admin td,
-    .table_activity_hours_admin th {
-      padding: 16px 32px;
-    }
-  }
-  
+}
