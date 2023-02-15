@@ -238,7 +238,7 @@
 }
 
 .list_user_text_option button {
-  background-color: white;
+  background: none;
   border: none;
   font-family: "Inter";
   font-style: normal;
@@ -328,7 +328,7 @@
 
 .add_document button {
   /* border: none; */
-  background-color: #274c77;
+  background: none;
   color: #fff;
 }
 
@@ -455,8 +455,8 @@
   width: 100%;
   height: 100%;
 
-  /* background-color: #274c77; */
-  /* opacity: 0.5; */
+  background-color: rgba(0, 0, 0, 0.24);
+
   z-index: 55;
 }
 
@@ -466,47 +466,28 @@
   height: 100%;
   background-color: #ffffff;
   /* border: 1px solid black; */
-
+  /* background-color: rebeccapurple; */
   overflow-y: scroll;
   z-index: 999;
-  /* opacity: 1; */
+  opacity: 1;
 }
 
-@media only screen and (min-width: 1441px) {
-  .table {
-    width: 100%;
-    /* background-color: red; */
-  }
-  .table table {
-    width: 100%;
-    /* background-color: rebeccapurple; */
-  }
-  .table td,
-  .table th {
-    padding: 16px 32px;
-  }
-
-  .table_user_teacher {
-    width: 100%;
-    /* background-color: red; */
-  }
-  .table_user_teacher table {
-    width: 100%;
-    /* background-color: rebeccapurple; */
-  }
-  .table_user_teacher td,
-  .table_user_teacher th {
-    padding: 16px 32px;
-  }
+.table_user_teacher {
+  width: 100%;
+}
+.table_user_teacher table {
+  width: 100%;
+}
+.table_user_teacher td,
+.table_user_teacher th {
+  padding: 16px 32px;
 }
 
 .table_user_teacher {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 100%; */
   margin-top: 16px;
-  /* background-color: chocolate; */
 }
 .table_user_teacher table {
   background-color: #e8ebed;
@@ -516,7 +497,6 @@
   color: black;
   overflow: hidden;
   width: 100%;
-  /* width: 100%; */
   text-align: start;
   margin-bottom: 50px;
 }
@@ -528,18 +508,10 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
-  /* or 171% */
-
-  /* display: flex;
-  align-items: center; */
-
-  /* Text/Dark Grey */
-
   color: #9f99a3;
 }
 .table_user_teacher th {
   letter-spacing: 0.3px;
-  /* text-shadow: 0 1px 1px #2b2a466b; */
   text-align: start;
 }
 
@@ -549,22 +521,18 @@
 }
 .table_user_teacher th:nth-child(1),
 .table_user_teacher td:nth-child(1) {
-  /* background-color: red; */
   width: 11.8%;
 }
 .table_user_teacher th:nth-child(2),
 .table_user_teacher td:nth-child(2) {
-  /* background-color: red; */
   width: 8.45%;
 }
 .table_user_teacher th:nth-child(3),
 .table_user_teacher td:nth-child(3) {
-  /* background-color: red; */
   width: 14.26%;
 }
 .table_user_teacher th:nth-child(4),
 .table_user_teacher td:nth-child(4) {
-  /* background-color: red; */
   width: 14.26%;
 }
 .table_user_teacher th:nth-child(5),
@@ -572,13 +540,10 @@
   width: 14.26%;
 }
 .table_user_teacher th:nth-child(6).table_user_teacher td:nth-child(6) {
-  /* background-color: red; */
   width: 15.85%;
 }
 .table_user_teacher th:nth-child(7),
 .table_user_teacher td:nth-child(7) {
-  /* background-color: red; */
-  /* text-align: center; */
   width: 11.97%;
 }
 .table_user_teacher th:nth-child(7) {
@@ -591,7 +556,119 @@
 
 .table_user_teacher th:nth-child(8),
 .table_user_teacher td:nth-child(8) {
-  /* background-color: red; */
+  width: 9.15%;
+}
+.table_user_teacher td {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.table_user_teacher td,
+.table_user_teacher th {
+  padding: 8px 16px;
+}
+/* 
+@media only screen and (min-width: 1441px) {
+  .table {
+    width: 100%;
+  }
+  .table table {
+    width: 100%;
+  }
+  .table td,
+  .table th {
+    padding: 16px 32px;
+  }
+
+  .table_user_teacher {
+    width: 100%;
+  }
+  .table_user_teacher table {
+    width: 100%;
+  }
+  .table_user_teacher td,
+  .table_user_teacher th {
+    padding: 16px 32px;
+  }
+}
+
+.table_user_teacher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+.table_user_teacher table {
+  background-color: #e8ebed;
+  border-collapse: collapse;
+  border-radius: 16px;
+  font-size: 1em;
+  color: black;
+  overflow: hidden;
+  width: 100%;
+  text-align: start;
+  margin-bottom: 50px;
+}
+
+.table_user_teacher thead {
+  background-color: #fff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #9f99a3;
+}
+.table_user_teacher th {
+  letter-spacing: 0.3px;
+  text-align: start;
+}
+
+.table_user_teacher tr:nth-child(even) {
+  background-color: #fff;
+  z-index: 20px;
+}
+.table_user_teacher th:nth-child(1),
+.table_user_teacher td:nth-child(1) {
+  width: 11.8%;
+}
+.table_user_teacher th:nth-child(2),
+.table_user_teacher td:nth-child(2) {
+  width: 8.45%;
+}
+.table_user_teacher th:nth-child(3),
+.table_user_teacher td:nth-child(3) {
+  width: 14.26%;
+}
+.table_user_teacher th:nth-child(4),
+.table_user_teacher td:nth-child(4) {
+  width: 14.26%;
+}
+.table_user_teacher th:nth-child(5),
+.table_user_teacher td:nth-child(5) {
+  width: 14.26%;
+}
+.table_user_teacher th:nth-child(6).table_user_teacher td:nth-child(6) {
+  width: 15.85%;
+}
+.table_user_teacher th:nth-child(7),
+.table_user_teacher td:nth-child(7) {
+  width: 11.97%;
+}
+.table_user_teacher th:nth-child(7) {
+  text-align: center;
+}
+.table_user_teacher td:nth-child(7) {
+  text-align: start;
+  padding-left: 40px;
+}
+
+.table_user_teacher th:nth-child(8),
+.table_user_teacher td:nth-child(8) {
   width: 9.15%;
 }
 .list_view_delete {
@@ -609,18 +686,10 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  /* or 133% */
-
-  /* display: flex;
-  align-items: center; */
-
-  /* Neutral/03 */
-
   color: #333333;
 }
 
 .table_user_teacher td,
 .table_user_teacher th {
-  /* border: 1px solid rgba(0, 0, 0, 0.1); */
   padding: 8px 16px;
-}
+} */

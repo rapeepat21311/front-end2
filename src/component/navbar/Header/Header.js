@@ -23,7 +23,7 @@ function Header() {
   const showLoginLogOut = () => setProfileBar(!profileBar);
 
   const Login = () => {
-    navigate("/dashboard");
+    navigate("/");
   };
 
   const Logout = () => {

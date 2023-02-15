@@ -15,6 +15,7 @@ import more_vert from "../../../../../image/more_vert.png";
 import "../../listUser/listuser.css";
 import Viewlist_teacher from "../../../componentReuse/viewlist_teacher";
 import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination_admin";
+import { listTeachers } from "../../../../../route/function/teacher";
 
 function ListTeacher() {
   const { user } = useSelector((state) => ({ ...state }));
@@ -57,8 +58,9 @@ function ListTeacher() {
   // console.log(sendId);
 
   const loadData = (authtoken) => {
-    listUser(authtoken)
+    listTeachers(authtoken)
       .then((res) => {
+        console.log(res);
         setData(res.data);
       })
       .catch((err) => {
@@ -137,12 +139,12 @@ function ListTeacher() {
               {data.map((users, index) => {
                 return (
                   <tr key={index}>
-                    <td>{users.student_id}</td>
-                    <td>{"ผศ."}</td>
-                    <td>{users.user_fullname}</td>
-                    <td>{users.faculty}</td>
-                    <td>{"วิศวกรรมซอฟต์แวร์"}</td>
-                    <td>{users.email}</td>
+                    <td>{users.teacher_id}</td>
+                    <td>{users.teacher_postion}</td>
+                    <td>{users.teacher_name_th}</td>
+                    <td>{users.teacher_faculty}</td>
+                    <td>{users.teacher_major}</td>
+                    <td>{users.email_education}</td>
                     <td>{"Active"}</td>
                     {/* <Link to={`/admin-page/edit-teacher/${users._id}`}> */}
                     <td>

@@ -12,7 +12,7 @@ function LoadingRedirect() {
       setCount((cC) => --cC);
     }, 1000);
 
-    count === 0 && navigate("/login");
+    count === 0 && navigate("/");
 
     return () => clearInterval(timeCurrentRedirec);
   }, [count, navigate]);
@@ -20,7 +20,7 @@ function LoadingRedirect() {
   return (
     <div>
       <h1>ยังไม่สามารถเข้าหน้านี้ได้กรุณา ล็อคอิน</h1>
-      <p>ระบบจะพาท่านไปสู่หน้าแรกใน {count}s</p>
+      <p>ระบบจะพาท่านไปสู่หน้าแรกใน {count} s</p>
     </div>
   );
 }

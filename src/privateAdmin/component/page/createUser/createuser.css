@@ -441,6 +441,9 @@
   gap: 8px;
   /* background-color: teal; */
 }
+.prefix_student_select_container {
+  width: 100%;
+}
 
 .prefix_student_name {
   display: flex;
@@ -466,6 +469,7 @@
 }
 
 .select_prefix_student_name {
+  width: 100%;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -507,7 +511,6 @@
   flex-direction: column;
   gap: 8px;
   width: 45%;
-  /* background-color: rebeccapurple; */
 }
 
 .input_student_fullname_th_text {
@@ -914,7 +917,14 @@
 }
 .avatar_upload_file {
   width: 16.366%;
-
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Primary/09 */
+  
+  background: #e3f2fd;
+  border-radius: 999px;
   /* display: flex; */
   /* justify-content: flex-end; */
 }

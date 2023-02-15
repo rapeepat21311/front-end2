@@ -69,70 +69,115 @@ function EditAdmin() {
   return (
     <div className="create_profile_student_container">
       <div className="create_profile_student_header">
-        แก้ไขผู้ใช้งาน(ผู้ดูแลระบบ)
+        แก้ไขข้อมูลผู้ดูแลระบบ
       </div>
       <div className="create_profile_student">
-        <div className="title_create_profile_student">ข้อมูลผู้ดูแลระบบ</div>
-        <div className="box_create_admin">
-          <div className="student_id">
-            <label>เลขทะเบียนเจ้าหน้าที่</label>
-            <input
-              type="number"
-              name="student_id"
-              defaultValue={userData.student_id}
-              onChange={handleChangeEditUserData}
-            />
+        <div className="prefix_fullname_eng_th_student_container">
+          <div className="student_p_input_value_container">
+            <div className="prefix_student_text_container">
+              <p className="prefix_student_text">รหัสอาจารย์</p>
+            </div>
+            <div className="input_value_studentid_container">
+              <input className="input_value_studentid" type="number" />
+            </div>
           </div>
-          <div className="student_number_id">
-            <label>หน่วยงาน</label>
-            <input
-              type="number"
-              name="id_number"
-              defaultValue={userData.id_number}
-              onChange={handleChangeEditUserData}
-            />
+          <div className="student_p_input_value_container">
+            <div className="prefix_student_text_container">
+              <p className="prefix_student_text">ตำแหน่ง</p>
+            </div>
+            <div className="input_value_studentid_container">
+              <input className="input_value_studentid" type="text" />
+            </div>
           </div>
         </div>
-
-        <div className="admin_name">
-          <label>ชื่อ-นามสกุล (ไทย)</label>
-          <input
-            type="text"
-            name="user_fullname"
-            defaultValue={userData.user_fullname}
-            onChange={handleChangeEditUserData}
-          />
-        </div>
-      </div>
-      <div className="create_username_password_admin">
-        <div className="title_create_profile_student_oldSchool">
-          ข้อมูลบัญชีผู้ใช้
-        </div>
-        <div className="box_create_student_three">
-          <div className="student_in_year">
-            <label>Username</label>
-            <input placeholder="Placeholder" />
+        <div className="create_teacher_name_container">
+          <div className="prefix_student_text_container">
+            <p className="prefix_student_text">ชื่อ-นามสกุล(ไทย)</p>
           </div>
-          <div className="student_in_year">
-            <label>Password</label>
-            <input placeholder="Placeholder" />
-          </div>
-          <div className="student_in_year">
-            <label>ประเภทความปลอดภัย</label>
-            <select>
-              <option>Placeholder</option>{" "}
-            </select>
+          <div className="input_value_studentid_container">
+            <input className="input_value_studentid" type="text" />
           </div>
         </div>
-        <div className="role_admin">
-          <label>บทบาท</label>
-          <select>
-            <option>Placeholder</option>
+        <div className="create_student_select_container">
+          <div className="create_student_select_major_container">
+            <div className="create_title_text_box">
+              <p className="create_title_text">เลือกคณะ</p>
+            </div>
+            <div className="create_student_select_option">
+              <select className="select_major">
+                <option></option>
+              </select>
+            </div>
+          </div>
+          <div className="create_student_select_faculty_container">
+            <div className="create_title_text_box">
+              <p className="create_title_text">เลือกสาขา</p>
+            </div>
+            <div className="create_student_select_option">
+              <select className="select_major">
+                <option></option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div className="create_student_select_container">
+          <div className="create_student_select_major_container">
+            <div className="create_title_text_box">
+              <p className="create_title_text">หมายเลขโทรศัพท์</p>
+            </div>
+            <div className="input_value_studentid_container">
+              <input className="input_value_studentid" type="text" />
+            </div>
+          </div>
+          <div className="create_student_select_faculty_container">
+            <div className="create_title_text_box">
+              <p className="create_title_text">อีเมลสถาบัน</p>
+            </div>
+            <div className="create_student_email">
+              <input type="text" className="input_value_email_student" />
+              <p className="set_email_student_text">@northbkk.ac.th</p>
+            </div>
+          </div>
+        </div>
+        {/* <div className="create_teacher_name_container">
+        <div className="prefix_student_text_container">
+          <p className="prefix_student_text">บทบาทของผู้ใช้งาน</p>
+        </div>
+        <div className="input_value_studentid_container">
+          <select name="" id="">
+            <option value="">ผู้ใช้งานทั่วไป</option>
+            <option value="">ผู้ดูแลระบบ</option>
           </select>
         </div>
-        <div className="close_and_submit_button">
-          <button>ยกเลิก</button>
-          <button>บันทึก</button>
+      </div> */}
+      </div>
+      <div className="create_profile_student">
+        <div className="title_create_profile_student">ข้อมูลบัญชีผู้ใช้</div>
+        <div className="prefix_fullname_eng_th_student_container">
+          <div className="student_p_input_value_container">
+            <div className="prefix_student_text_container">
+              <p className="prefix_student_text">username</p>
+            </div>
+            <div className="input_value_studentid_container">
+              <input className="input_student_class" type="text" />
+            </div>
+          </div>
+          <div className="student_p_input_value_container">
+            <div className="prefix_student_text_container">
+              <p className="prefix_student_text">password</p>
+            </div>
+            <div className="input_value_studentid_container">
+              <input className="input_student_class" type="text" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="button_onsubmit_unsubmit_container">
+        <div className="button_unsubmit_container">
+          <button className="button_unsubmit">ยกเลิก</button>
+        </div>
+        <div className="button_onsubmit_container">
+          <button className="button_onsubmit">บันทึก</button>
         </div>
       </div>
     </div>

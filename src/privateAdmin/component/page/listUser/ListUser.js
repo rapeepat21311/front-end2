@@ -141,7 +141,7 @@ function ListUser() {
               {data.map((users, index) => {
                 return (
                   <>
-                    <tr>
+                    <tr key={user._id}>
                       <td>{users.student_id}</td>
                       <td>{users.user_fullname}</td>
                       <td>{users.faculty}</td>

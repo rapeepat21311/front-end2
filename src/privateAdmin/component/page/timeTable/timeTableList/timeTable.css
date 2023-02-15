@@ -4,7 +4,6 @@
   justify-content: center;
   width: 100%;
   margin-top: 16px;
-  /* background-color: chocolate; */
 }
 .table_timetable table {
   background-color: #e8ebed;
@@ -14,7 +13,7 @@
   color: black;
   overflow: hidden;
   width: auto;
-  /* width: 100%; */
+  width: 100%;
   text-align: start;
   margin-bottom: 50px;
 }

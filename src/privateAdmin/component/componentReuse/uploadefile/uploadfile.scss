@@ -16,6 +16,13 @@
 }
 
 .avatar_upload_file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Primary/09 */
+
+  background: #e3f2fd;
+  border-radius: 999px;
   h6 {
     font-family: "FC Iconic";
     font-style: normal;
