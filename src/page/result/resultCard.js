@@ -1,4 +1,5 @@
 import React from "react";
+import DonutG from "../../image/grade.png"
 
 function ResultCard({topic="",abbr="",date="",grade="",icon=""}) {
   return (
@@ -7,6 +8,7 @@ function ResultCard({topic="",abbr="",date="",grade="",icon=""}) {
       <p className="grade_text_left">{abbr}</p>
       {icon === "graph" && <div></div>}
       <div className="grade">{grade}</div>
+      <img src={DonutG} />
     </div>
   );
 }

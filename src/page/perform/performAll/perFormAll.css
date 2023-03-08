@@ -125,12 +125,16 @@
     padding: 10px;
   }
   
-  .perform_header h3:hover {
+  .perform_header p{
     color: black;
+    gap: 10px;
+    
   }
 
   .perform_header{
     display: flex;
-    width: 70%;
+    width: 100%;
+    background-color: #b6f8d1;
+
     justify-content: flex-start;
   }

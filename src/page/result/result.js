@@ -7,7 +7,10 @@ import Card from "./resultCard";
 import TableGpa from "./table/tableGpa";
 import Footer from "../../component/navbar/Footer/Footer";
 
-import Imgprofile from "../../image/supakorn.png";
+import IconProfile from "../../image/supakorn.png";
+
+
+
 
 import {
   mockTableList,
@@ -66,9 +69,9 @@ export default function Result() {
           </div>
           <div className="result_header">
             <div className="result_profile">
-              {/* <div className="img_profile"> 
-              <Imgprofile/>
+              {/* <div className="img_profile">
               </div> */}
+              <img src={IconProfile}/>
             </div>
             <div className="result_student_info">
               <h3>{"นาย"}</h3>
@@ -103,19 +106,16 @@ export default function Result() {
           <Card
             topic="ผลการเรียนเฉลี่ย"
             abbr="GPA"
-            grade={"3.00"}
             date={"2/2565"}
+          
           />
           <Card
             topic="ผลการเรียนเฉลี่ยสะสม"
             abbr="GPAX"
-            grade={"3.00"}
             date={"1/2562-2/2565"}
             icon="graph"
           />
         </div>
-        <div className="table_data">
-          <Table dataList={termData.detailTable} />
           <div className="select_year">
             <h4>ภาคเรียนที่</h4>
             <select>
@@ -123,6 +123,8 @@ export default function Result() {
               <option>2/2565</option>
             </select>
           </div>
+        <div className="table_data">
+          <Table dataList={termData.detailTable} />
         </div>
         <div className="table_gp">
           <div className="table_gp_container">

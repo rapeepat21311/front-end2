@@ -8,7 +8,7 @@ const defaultList = [
   {
     id: 0,
     wkDay: "MON",
-    activityList: [],
+    activityList: []
   },
   {
     id: 1,

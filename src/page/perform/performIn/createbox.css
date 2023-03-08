@@ -1,10 +1,10 @@
 .pnbox_activity_suppe {
   display: flex;
   flex-flow: row wrap;
-  width: 960px;
+  width: 100%;
   /* margin-top: 40px; */
-  margin-left: 450px;
-  background-color: red;
+  /* margin-left: 450px; */
+  /* background-color: red; */
   justify-content: space-between;
 }
 
@@ -14,7 +14,7 @@
   /* margin-right: 12px; */
   margin-bottom: 20px;
   border-radius: 16px;
-  border: 1px solid black;
+  border: 1px solid rgba(255, 255, 255, 0.48);
   background-color: rgba(255, 255, 255, 0.473);
 }
 
@@ -72,7 +72,7 @@
   flex: none;
   order: 0;
   flex-grow: 1;
-  background-color: red;
+  /* background-color: red; */
 }
 
 
@@ -93,7 +93,7 @@
   order: 2;
   align-self: stretch;
   flex-grow: 0;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 .pnbox_activity_hr {
@@ -102,7 +102,7 @@
   align-items: flex-start;
   padding: 0px;
   gap: 8px;
-  background-color: gold;
+  /* background-color: gold; */
   width: 300px;
   height: 24px;
   

@@ -36,32 +36,34 @@ export default function LastesNews({
             <div className="box_news_update_img">
               <img src={item.image} />
             </div>
-            <div className="box_news_update_date_views">
-              <div className="news_update_date">{item.date}</div>
-              <div className="news_update_views">
-                <RemoveRedEyeRoundedIcon />
-                <p>{item.id}</p>
+            <div className="box_news_container_dvtd">
+              <div className="box_news_update_date_views">
+                <div className="news_update_date">{item.date}</div>
+                <div className="news_update_views">
+                  <RemoveRedEyeRoundedIcon />
+                  <p>{item.id}</p>
+                </div>
               </div>
-            </div>
-            <div className="box_news_update_title">{item.title}</div>
-            <div className="box_news_update_link_description">
-              <p
-                className="news_title_h2"
-                onMouseEnter={() => onMouseEnter(item.id)}
-                onMouseLeave={() => onMouseLeave(item.id)}
-                // onClick={() => navigate(`/news/last-news/${item.id}`)}
-              >
-                {hover === item.id ? (
-                  <>
-                    <Link to="/news/last-news/description">
-                      รายละเอียด
-                      <EastIcon />
-                    </Link>
-                  </>
-                ) : (
-                  "รายละเอียด"
-                )}
-              </p>
+              <div className="box_news_update_title">{item.title}</div>
+              <div className="box_news_update_link_description">
+                <p
+                  className="news_title_h2"
+                  onMouseEnter={() => onMouseEnter(item.id)}
+                  onMouseLeave={() => onMouseLeave(item.id)}
+                  // onClick={() => navigate(`/news/last-news/${item.id}`)}
+                >
+                  {hover === item.id ? (
+                    <>
+                      <Link to="/news/last-news/description">
+                        รายละเอียด
+                        <EastIcon />
+                      </Link>
+                    </>
+                  ) : (
+                    "รายละเอียด"
+                  )}
+                </p>
+              </div>
             </div>
           </div>
         );

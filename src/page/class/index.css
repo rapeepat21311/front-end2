@@ -5,7 +5,8 @@
   justify-content: flex-start;
   height: 100%;
   width: 100vw;
-  background: url(../../image/bgmain.png);
+  background: url(../../image/NewBG1.png);
+  background-size: 100%;
 
   font-weight: bold;
   /* animation: colorChange 5s infinite alternate; */
@@ -183,7 +184,7 @@
 }
 
 .select_C h4 {
-  margin-bottom: 20px;
+  margin-bottom: 2px;
   /* background-color: rebeccapurple; */
   font-size: 14px;
   margin-right: 5px;

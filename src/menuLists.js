@@ -8,9 +8,9 @@ import icon_class from "./image/tableClass.png"
 
 export const menuLists = [
   { name: "ประวัตินักศึกษา", image: icon_profile, link: "profile" },
+  { name: "ผลงาน", image:icon_perform, link: "perform" },
+  { name: "Curriculum Vitae", image: icon_Eport, link: "eport" },
   { name: "ผลการศึกษา", image: icon_result, link: "result" },
   { name: "ตารางเรียนและสอบ", image: icon_class, link: "classl" },
-  { name: "ผลงาน", image:icon_perform, link: "perform" },
   { name: "ข่าวสารและกิจกรรม", image: icon_news, link: "news" },
-  { name: "Curriculum Vitae", image: icon_Eport, link: "eport" },
 ];

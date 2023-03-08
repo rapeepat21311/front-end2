@@ -45,13 +45,14 @@ export default function CreateBox() {
                 {/* {item.id} */}
               </div>
               <div className="pnbox_activity_title">
-                <h2>{item.title}</h2>
+                {/* <h2>{item.title}</h2> */}
+                <img  src={item.title}/>
                 <div className="pnbox_activity_location">
-                  <p>{item.location}</p>
+                  {/* <p>{item.location}</p> */}
                 </div>
                 <div className="pnbox_activity_hr">
-                  <p>{item.date}</p>
-                  <p>ประเภท {item.hr}</p>
+                  {/* <p>{item.date}</p> */}
+                  {/* <p>ประเภท {item.hr}</p> */}
                 </div>
               </div>
             </div>

@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   /* flex-direction: row; */
-  height: 1000%;
+  height: 100%;
   /* width: 100vw; */
   position: relative;
-  background: url(../../image/bgmain.png);
+  background: url(../../image/NewBG1.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   /* justify-content: center; */
@@ -54,22 +54,27 @@
 .news_title {
   width: 100%;
   display: flex;
-  font-family: "Roboto";
+  font-family: 'Inter';
   font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
+  font-weight: 500;
+  font-size: 36px;
   line-height: 48px;
-  /* identical to box height, or 150% */
+  /* identical to box height, or 133% */
 
   display: flex;
   align-items: center;
-  letter-spacing: 0.5px;
 
   /* Primary/00 */
 
-  color: #0d47a1;
+  color: #0D47A1;
 
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
   /* background-color: brown; */
   margin-bottom: 8px;
 }
@@ -145,7 +150,7 @@
   /* background-color: blue; */
 }
 
-.news_recomment_bookmark {
+/* .news_recomment_bookmark {
   display: flex;
   position: absolute;
   justify-content: center;
@@ -160,20 +165,34 @@
 .news_recomment_bookmark:hover {
   background-color: #42a5f5;
   color: #ffffff;
-}
+} */
 
 .recomment_news_title {
   display: flex;
   justify-content: flex-start;
   text-align: start;
-  font-family: "FC Iconic";
+  font-family: 'FC Iconic';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
+  /* identical to box height, or 140% */
+
+
+  /* neutral/neutral25 */
+
+  color: #393C39;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
   width: 90%;
+  margin-left: 5px;
   margin-top: 20px;
-  color: #393c39;
 }
 
 .news_description {
@@ -186,6 +205,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  margin-left: 5px;
   /* or 150% */
 
   letter-spacing: 0.5px;
@@ -196,6 +216,7 @@
   margin-top: 20px;
   text-align: start;
   color: #757873;
+  /* margin-left: 8px; */
 }
 
 .news_location p {
@@ -243,6 +264,7 @@
   text-align: start;
   color: #757873;
 }
+
 .news_event_scope p {
   margin-left: 10px;
   font-family: "FC Iconic";
@@ -280,32 +302,41 @@
 
 .news_update_box_cotainer {
   display: flex;
-  height: 1500px;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  /* background-color: gold; */
-  margin-bottom: 14px;
-  /* height: 100vh; */
-  /* position: relative; */
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+
+  width: 960px;
+  height: 456px;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
+
 /* 173-224 */
 .box_news_update {
   display: flex;
   width: 32%;
   flex-direction: column;
-  height: 470px;
-  margin-bottom: 24px;
+  height: 450px;
+  /* margin-bottom: 24px; */
   /* margin-bottom: 24px; */
   /* border: 1px solid black; */
+  /* background: #FFFFFF;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 16px 16px; */
   /* background-color: red; */
 }
 
 .box_news_update:hover {
-  background: linear-gradient(
-    110.16deg,
-    rgba(255, 255, 255, 0.6) -0.35%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
+  background: linear-gradient(110.16deg,
+      rgba(255, 255, 255, 0.6) -0.35%,
+      rgba(255, 255, 255, 0.2) 100%);
   border-radius: 16px;
 }
 
@@ -315,10 +346,21 @@
 }
 
 .box_news_update_img img {
-  padding: 8px;
-  width: 288px;
-  height: 266px;
-  border-radius: 16px;
+  /* padding: 8px; */
+  width: 304px;
+  height: 456px;
+  /* border-radius: 16px; */
+}
+
+
+.box_news_container_dvtd{
+  /* display: flex; */
+  width: 90%;
+  margin-left: 15px;
+  background-color: #003c70;
+  background: #FFFFFF;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 16px 16px;
 }
 
 .box_news_update_date_views {
@@ -333,9 +375,9 @@
   line-height: 24px;
   /* identical to box height, or 171% */
 
-  letter-spacing: 0.5px;
-
   /* Neutral/06 */
+  /* height: 128px; */
+  /* background-color: #003c70; */
 
   color: #666666;
 }
@@ -432,20 +474,24 @@
     height: 2200px;
     /* background-size: 2000px 2000px; */
   }
+
   .news_container {
     height: 1900px;
   }
+
   .news_update_box_cotainer {
     height: 2000px;
     /* background-color: green; */
   }
+
   .box_news_update {
     height: 580px;
     margin-bottom: 24px;
   }
+
   .box_news_update_img img {
     width: 90%;
     height: 100%;
   }
-  
+
 }

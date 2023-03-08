@@ -3,6 +3,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import mockDataActivity from "./MockDataEvent";
 import Pagination from "./Pagination";
 import "./createbox.css";
+
+import DetailThebest from "../../../image/DetailThebest.png"
 // import LoadingNews from "./LoadingNews";
 
 export default function CreateBox() {
@@ -45,13 +47,15 @@ export default function CreateBox() {
                 {/* {item.id} */}
               </div>
               <div className="pbox_activity_title">
-                <h2>{item.title}</h2>
+
+                <img src={item.title} />
+                {/* <h2>{item.title}</h2> */}
                 <div className="pbox_activity_location">
-                  <p>{item.location}</p>
+                  {/* <p>{item.location}</p> */}
                 </div>
                 <div className="pbox_activity_hr">
-                  <p>{item.date}</p>
-                  <p>ประเภท {item.hr}</p>
+                  {/* <p>{item.date}</p> */}
+                  {/* <p>ประเภท {item.hr}</p> */}
                 </div>
               </div>
             </div>

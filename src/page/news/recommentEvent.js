@@ -1,9 +1,9 @@
 export const recommentNews = {
   title:
-    "กิจกรรม 88 SANDBOX จับมือกว่า 30 พันธมิตร ตอกย้ำบทบาท ECOSYSTEM ผลักดัน STARTUP ไทยสู่ระดับโลก",
+    "นอร์ทกรุงเทพ โบว์ลิ่งเกมส์ 2565 ครั้งที่ 4",
   description:
-    "88 SANDBOX พัฒนา startup ในงาน 88 Match & Member รวบรวมดาวเด่นด้าน Smart City 2022",
-  location: "Thamasat Grand Hall",
+    "88 SANDBOX พัฒนาศักยภาพ Startup ในงาน 88 Match & Mentor รวบรวมดาวเด่นด้าน Smart City 2022",
+  location: "Blu-O Rhythm & Bowl,Major Cineplex Rangsit",
   timeScope: "8:00 น. - 15.00 น.",
   eventScope: "กิจกรรมภายใน",
 };

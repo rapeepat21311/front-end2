@@ -2,18 +2,26 @@ import React from "react";
 // import BodyOption from "../../component/bodyOption/bodyOption";
 import Card from "./Home/MenuCard";
 import { menuLists } from "../../menuLists";
+import BanerBar from '../../image/BanerBar.png'
 
 // import { Link } from "react-router-dom";
 
 import Footer from "../../component/navbar/Footer/Footer";
 
 import "./home.css";
+import { useNavigate } from "react-router-dom";
+// import BanerBar from "../../svgimage/baner_bar";
 
-function body() {
+function Body() {
+
+  const navigate = useNavigate();
+
+
   return (
     // <div className="hello_home">
       <div className="home_body">
         <div className="body">
+            <img  onClick={()=> navigate("/news/last-events/description")} src={BanerBar}/>
           <div className="body_header">
             <div className="body_left">
               <h2>ยินดีต้อนรับ</h2>
@@ -40,4 +48,4 @@ function body() {
   );
 }
 
-export default body;
+export default Body;

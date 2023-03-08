@@ -8,8 +8,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: url(../../../image/bgmain.png); */
-  /* background-size: 100% 100% ; */
+  background-image: url(../../../image/NewBG1.png);
+
+  background-size: 100% ;
   /* opacity: 0; */
   /* z-index: -1; */
   /* bottom: 0px; */

@@ -72,20 +72,25 @@ function Perform() {
               <option>2/2565</option>
             </select>
             <div className="button_upload">
+              <div className="button_upload_box">
+
               <Button
                 variant="contained"
-                component="label"
+                // component="label"
                 aria-label="add"
                 onClick={() => navigate("/performAdd")}
-              >
-                <TbPlus size={25} />
-                เพิ่มรางวัล
+                >
+                <TbPlus size={16} />
+                <p>
+                เพิ่มข้อมูลผลงาน
+                </p>
                 {/* <input hidden accept="image/*" multiple type="file" />
                 <IconButton color="primary" aria-label="add" component="label">
-                  <input hidden accept="image/*" type="file" />
-                  <PhotoCamera />
-                </IconButton> */}
+                <input hidden accept="image/*" type="file" />
+                <PhotoCamera />
+              </IconButton> */}
               </Button>
+              </div>
             </div>
           </div>
         </div>

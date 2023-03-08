@@ -4,15 +4,25 @@ import Header from "../../../component/navbar/Header/Header";
 import Footer from "../../../component/navbar/Footer/Footer";
 import { TbArrowNarrowLeft } from "react-icons/tb";
 
-import "./performAdd.css";
+import "./performAdd.scss";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
+import JPGdefaultimage from "../../../image/vector (18).png";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import { DefaultEditor } from "react-simple-wysiwyg";
+import Uploadfile from "../../../privateAdmin/component/componentReuse/uploadefile/uploadfile";
+import Texteditor from "../../news/texteditor/texteditor";
+import BackIcon from "../../../image/BackIcon.png"
+
+
+import DefaultPicture from "../../../image/addpicture.png";
+import { Button } from "@mui/material";
 
 function PerformAdd() {
   const navigate = useNavigate();
+  const [imageJPG, setImageJPG] = useState(null);
+  const [jpgName, setJPGname] = useState("");
+  const [value, setValue] = useState("");
 
   return (
     <>
@@ -26,9 +36,10 @@ function PerformAdd() {
           <p>เพิ่มข้อมูลผลงาน</p>
         </div>
         <div className="performAdd_title">
-          <p onClick={() => navigate("/perform")}>
-            <TbArrowNarrowLeft /> กลับ
+          <p>
+          <img onClick={() => navigate("/perform")} src={BackIcon}/>     
           </p>
+          {/* <p onClick={() => navigate("/perform")}>กลับ</p> */}
         </div>
         <div className="performAdd_container">
           <div className="performAdd_container_box">
@@ -77,12 +88,58 @@ function PerformAdd() {
             </div>
             <div className="performAdd_container_detail">
               <p>ราละเอียด</p>
-              <div className="performAdd_container_detail_text">
-                <div className="performAdd_container_text_box">
-                  <DefaultEditor value=""/>
+              {/* <div className="performAdd_container_detail_text"> */}
+              <div className="performAdd_container_text_box">
+                {/* <h2>เนื้อหากิจกรรม</h2> */}
+                <Texteditor
+                  setValue={setValue}
+                  value={value}
+                  className={"text_editor"}
+                />
+              </div>
+              {/* </div> */}
+            </div>
+            <div className="performAdd_container_img">
+              <div className="performAdd_container_img_text">
+                <p>รูปภาพรางวัล</p>
+                <p1>{"(-/-) เพิ่มจำนวนรูป"}</p1>
+              </div>
+              {/* <div className="performAdd_container_imgin"> */}
+              <Uploadfile
+                image={DefaultPicture}
+                setImage={setImageJPG}
+                fileName={jpgName}
+                setFilename={setJPGname}
+                defaultImage={JPGdefaultimage}
+                placeholder={"อัปโหลดไฟล์ .JPG (ขนาดไม่เกิน 5 mb)"}
+              />
+              {/* </div> */}
+            </div>
+            <div className="performAdd_container_env">
+              <div className="performAdd_container_img_text">
+                <p>รูปภาพบรรยากาศ</p>
+                <p1>{"(-/-) เพิ่มจำนวนรูป"}</p1>
+              </div>
+              <Uploadfile
+                image={DefaultPicture}
+                setImage={setImageJPG}
+                fileName={jpgName}
+                setFilename={setJPGname}
+                defaultImage={JPGdefaultimage}
+                placeholder={"อัปโหลดไฟล์ .JPG (ขนาดไม่เกิน 5 mb)"}
+              />
+              <div className="performAdd_box_button">
+                <div className="performAdd_container_button">
+                  <Button>
+                    <p>ยกเลิก</p>
+                  </Button>
+                </div>
+                <div className="performAdd_container_button_agree">
+                  <Button>
+                    <p onClick={()=> navigate("/perform")}>บันทึก</p>
+                  </Button>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

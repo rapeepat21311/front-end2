@@ -9,14 +9,40 @@
   width: 960px;
   text-align: start;
   margin-bottom: 50px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* background-color: #191970; */
+  /* or 150% */
+
+
+  /* Neutral/03 */
+
+  color: #333333;
 }
+
 /* .table_capital_container thead {
   background-color: #e7ecef;
 } */
 .table_capital_container th {
   letter-spacing: 0.3px;
   /* text-shadow: 0 1px 1px #2b2a466b; */
-  text-align: start;
+  text-align:start;
+  /* margin-left: px; */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  /* background-color: #191970; */
+
+  /* or 171% */
+
+  /* Text/Dark Grey */
+
+  color: #9F99A3;
 }
 
 .table_capital_container tr:nth-child(even) {
@@ -26,12 +52,16 @@
 
 .table_capital_container td,
 .table_capital_container th {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 16px 32px 16px 32px;
+  /* margin-left: 24px; */
+  /* background-color: aquamarine; */
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  padding: 24px;
 }
 
 .capital_discount {
-  text-align: end;
+  /* display: flex; */
+text-align: center;
+ 
 }
 
 .type_capital {
@@ -50,6 +80,7 @@
   padding-top: 16px;
   margin-bottom: 10px;
   border-bottom: 1px solid #e7ecef;
+
 }
 
 .type_capital_header h1 {
@@ -84,6 +115,7 @@
   text-align: start;
   margin: 16px 0px 16px 16px;
 }
+
 .type_capital_description p {
   font-family: "Inter";
   font-style: normal;
@@ -97,6 +129,41 @@
 
   color: #000000;
 }
+.table_capital_container tr:nth-child(even) {
+  /* background-color: #fff; */
+  height: 48px;
+  /* margin-right: 10px; */
+  /* z-index: 50px; */
+}
+.table_capital_container th:nth-child(1),
+  .table_capital_container td:nth-child(1) {
+    width: 11.25%;
+    /* background-color: #333333; */
+  }
+.table_capital_container th:nth-child(2),
+  .table_capital_container td:nth-child(2) {
+    width: 8.3%;
+  }
+.table_capital_container th:nth-child(3),
+  .table_capital_container td:nth-child(3) {
+    width: 37%;
+  }
+.table_capital_container th:nth-child(4),
+  .table_capital_container td:nth-child(4) {
+    width: 10.8%;
+  }
+.table_capital_container th:nth-child(5),
+  .table_capital_container td:nth-child(5) {
+    width: 10.8%;
+  }
+.table_capital_container th:nth-child(6),
+  .table_capital_container td:nth-child(6) {
+    width: 10.8%;
+  }
+.table_capital_container th:nth-child(7),
+  .table_capital_container td:nth-child(7) {
+    width: 10.8%;
+  }
 
 @media only screen and (min-width: 1441px) {
   .table_capital_container table {

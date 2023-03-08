@@ -59,6 +59,10 @@ import Detail from "../page/perform/detail/detailPer";
 import LastedNewsDes from "../page/news/lastedNews/component/description/LastedNewsDes";
 import LastedEventDes from "../page/news/lastedEvent/component/description/lasted_event";
 import PerformAdd from "../page/perform/performAdd/performAdd";
+import PerformEdit from "../page/perform/performEdit/performEdit"
+import CV from "../component/cv/cv"
+import FavoriteNews from "../page/news/favoriteNews/favorite_news"
+import EventDetail from "../page/profile/events/eventDetail";
 
 function PrivateRoute() {
   const dispatch = useDispatch();
@@ -114,6 +118,15 @@ function PrivateRoute() {
 
         <Route path="/performAdd" element={<PerformAdd />} />
 
+        <Route path="/performEdit" element={<PerformEdit/>} />
+
+        <Route path="/CurriculumVitae" element={<CV/>} />
+
+        <Route path="/favorite" element={<FavoriteNews />} />
+
+
+
+
         <Route
           path="/eport"
           element={
@@ -123,6 +136,7 @@ function PrivateRoute() {
           }
         />
         <Route path="/news" element={<News />} />
+        <Route path="/news/favorite" element={<FavoriteNews />} />
         <Route path="/news/last-news" element={<LastesNews />} />
         <Route path="/news/last-news/description" element={<LastedNewsDes />} />
         <Route path="/news/last-events" element={<LastedEvent />} />
@@ -138,6 +152,9 @@ function PrivateRoute() {
               <Profile />
             </UserRouter>
           }
+        />
+        <Route path="/profile/event-detail" element={<EventDetail/>}
+
         />
 
         {/* Router Admin */}

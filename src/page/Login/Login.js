@@ -14,6 +14,8 @@ import { login } from "../../route/function/auth";
 import "./login.css";
 import { Checkbox } from "@mui/material";
 import BannerNBU from "../../image/banner.png";
+import PasswordIcon from "../../svgimage/password_icon"
+import UserIcon from "../../svgimage/user_icon"
 
 const defaultLoginData = {
   username: "",
@@ -109,9 +111,12 @@ function Login() {
 
         <div className="box">
           <div className="box_header_login">
-            <h2>Login Menu</h2>
+            <p>เข้าสู่ระบบ</p>
           </div>
           <div className="box_input">
+            <div className="box_icon">
+                <UserIcon/>
+            </div>
             <form onSubmit={handleSubmit}>
               <input
                 id="username"
@@ -120,11 +125,15 @@ function Login() {
                 value={loginData.username}
                 // ref={userRef}
                 autoComplete="off"
-                placeholder="username"
+                placeholder= "ชื่อผู้ใช้งาน"
                 onChange={chageHandler}
                 required
-              />
+                />
+        
               {/* <label htmlFor="password">Password :</label> */}
+              <div className="box_icon_pass">     
+                  <PasswordIcon/>
+              </div>
               <input
                 id="password"
                 type="password"
@@ -132,9 +141,9 @@ function Login() {
                 value={loginData.password}
                 // ref={passRef}
                 autoComplete="off"
-                placeholder="password"
+                placeholder="รหัสผ่าน"
                 onChange={chageHandler}
-              />
+                />
               <div className="check_box">
                 <Checkbox />
                 <p>Remember me</p>

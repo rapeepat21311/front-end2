@@ -3,7 +3,7 @@
   flex-flow: row wrap;
   width: 960px;
   /* margin-top: 40px; */
-  margin-left: 450px;
+  /* margin-left: 450px; */
   /* background-color: red; */
   justify-content: space-between;
 }
@@ -14,12 +14,14 @@
   /* margin-right: 12px; */
   margin-bottom: 20px;
   border-radius: 16px;
-  border: 1px solid black;
+  border: 1px solid rgba(255, 255, 255, 0.48);
   background-color: rgba(255, 255, 255, 0.473);
 }
 
 .pbox_activity_img img {
-  margin: 5px;
+  margin: 1px;
+  margin-top: 8px;
+  margin-left: 8px;
   width: 145px;
   height: 112px;
   border-radius: 16px;
@@ -37,9 +39,13 @@
   align-items: flex-start;
   padding: 0px;
   gap: 8px;
+  margin-top: 8px;
+  margin-left: 12px;
   
   width: 275px;
   height: 108px;
+
+  /* background-color: #333333; */
   
   
   /* Inside auto layout */

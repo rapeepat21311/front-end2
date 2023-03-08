@@ -45,7 +45,7 @@ function Index() {
             <p>ประวัตินักศึกษา</p>
           </div>
           <div className="profile_title">
-            <h1>ประวัตินักศึกษา</h1>
+            <p>ประวัตินักศึกษา</p>
           </div>
 
           <div className="profile_tab_container">

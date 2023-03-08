@@ -9,8 +9,12 @@
   flex-flow: row wrap;
 
   width: 960px;
+  padding: 0px;
+
   /* height: 944px; */
-  background-color: red;
+  /* background-color: red; */
+  /* gap: 24px; */
+  /* margin-bottom: 24px; */
   justify-content: space-between;
 }
 
@@ -18,37 +22,42 @@
   display: flex;
   /* width:48.49%; */
   width: 468px;
-  /* height: 144px; */
+  /* background-color: #333333; */
+  /* height: 150px; */
   /* margin-right: 12px; */
   margin-bottom: 20px;
   border-radius: 16px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background-color: #ffffff;
 }
 
 .box_activity_img img {
-  margin: 5px;
+  margin: 1px;
   width: 145px;
-  height: 112px;
+  height: 120px;
   border-radius: 16px;
+  /* background-color: aqua; */
 }
 
 
 .box_activity_img img:hover {
-  background-color: aqua;
+  background-color: rgba(138, 141, 141, 0.83);
 }
 
+.box_activity_title img{
+  width: 80%;
+}
 
 .box_activity_title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 8px;
-  margin-top: 18px;
-  
+  margin-left: 24px;
+  /* gap: px; */
+  margin-top: 4px;
   width: 275px;
-  height: 108px;
+  height: 100px;
   /* display: flex;
   width: 100%;
   margin-bottom: 18px; */
@@ -126,6 +135,7 @@
   width: 100%;
   justify-content: center;
   align-items: center;
+  /* background-color: #333333; */
 }
 
 .change_page_botton h3 {

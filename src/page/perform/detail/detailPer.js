@@ -4,12 +4,14 @@ import { TbArrowNarrowLeft } from "react-icons/tb";
 import Big_icon from "../../../image/Frame 11469.png";
 import { useNavigate } from "react-router-dom";
 import "./detailPer.css";
-import Thebestproject from "../../../image/thebestproject.png"
-import Detailpro from "../../../image/detailpro.png"
-import Footer from "../../../component/navbar/Footer/Footer"
+import Thebestproject from "../../../image/thebestproject.png";
+import Detailpro from "../../../image/detailpro.png";
+import Footer from "../../../component/navbar/Footer/Footer";
+import Edit from "../../../image/edit.png";
+import BackIcon from "../../../image/BackIcon.png"
+import TBJ from "../../../image/TBJ.png"
 
 function DetailPer() {
-
   const navigate = useNavigate();
 
   return (
@@ -23,10 +25,15 @@ function DetailPer() {
         </div>
         <div className="detail_title">
           <p onClick={() => navigate("/perform")}>
-            <TbArrowNarrowLeft /> กลับ
+          <img  src={BackIcon}/> 
           </p>
         </div>
         <div className="detail_container">
+        <img onClick={() => navigate("/performEdit")} src={TBJ}/> 
+          {/* <div className="detail_container_header">
+            <img src={Edit} />
+            <p onClick={() => navigate("/performEdit")}>แก้ไข</p>
+          </div>
           <div className="detail_sub_header">
             <img src={Thebestproject} />
           </div>
@@ -90,7 +97,7 @@ function DetailPer() {
           </div>
           <div className="detail_image_column_reward">
             <img src={Detailpro} />
-          </div>
+          </div> */}
         </div>
         <Footer />
       </div>
