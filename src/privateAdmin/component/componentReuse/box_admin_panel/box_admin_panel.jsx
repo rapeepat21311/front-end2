@@ -1,4 +1,3 @@
-import { height } from "@mui/system";
 import React from "react";
 import "./box_admin_panel.scss";
 function Box_admin_panel({

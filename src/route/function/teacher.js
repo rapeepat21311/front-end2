@@ -8,7 +8,7 @@ export const listTeachers = async (authtoken) => {
   });
 };
 export const getTeacher = async (authtoken, id) => {
-  return await axios.get(process.env.REACT_APP_API + "/getTeacher/:id", {
+  return await axios.get(process.env.REACT_APP_API + "/getTeacher/" + id, {
     headers: {
       authtoken,
     },
@@ -27,7 +27,7 @@ export const createTeacher = async (authtoken, values) => {
 };
 export const editTeacher = async (authtoken, id, values) => {
   return await axios.put(
-    process.env.REACT_APP_API + "/editTeacher/:id",
+    process.env.REACT_APP_API + "/editTeacher/" + id,
     values,
     {
       headers: {
@@ -37,7 +37,18 @@ export const editTeacher = async (authtoken, id, values) => {
   );
 };
 export const deleteTeacher = async (authtoken, id, values) => {
-  return await axios.get(process.env.REACT_APP_API + "/deleteTeacher/:id", {
+  return await axios.delete(
+    process.env.REACT_APP_API + "/deleteTeacher/" + id,
+    {
+      headers: {
+        authtoken,
+      },
+    }
+  );
+};
+
+export const avisorList = async (authtoken) => {
+  return await axios.get(`${process.env.REACT_APP_API}/list_teacher_re_users`, {
     headers: {
       authtoken,
     },

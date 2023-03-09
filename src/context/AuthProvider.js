@@ -1,6 +1,8 @@
 import { createContext, useState } from "react";
 import { defaultUser } from "../page/Login/user";
 
+export const AuthContext = createContext(null);
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(defaultUser);
 

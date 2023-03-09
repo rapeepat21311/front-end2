@@ -15,13 +15,14 @@ function EditTeacher() {
 
   useEffect(() => {
     getTeacherId(user.token, id);
-  }, [teacherData]);
+    // console.log("--->", teacherData);
+  }, [user.token, id]);
 
-  const getTeacherId = (token, id) => {
-    getTeacher(token, id)
+  const getTeacherId = (token, ID) => {
+    getTeacher(token, ID)
       .then((res) => {
-        console.log("data --->", res.data);
-        // setTeacherData(res.data);
+        // console.log("data --->", res);
+        setTeacherData(res.data);
       })
       .catch((e) => {
         console.log(e);
@@ -39,10 +40,11 @@ function EditTeacher() {
 
     editTeacher(user.token, id, teacherData)
       .then((res) => {
-        alert(res.data);
+        alert(res.data.msg);
+        navigate("/admin-page/list-teacher");
       })
       .catch((e) => {
-        alert(e);
+        alert(e.msg);
       });
   };
 
@@ -141,18 +143,34 @@ function EditTeacher() {
             </div>
           </div>
         </div>
-        <div className="create_teacher_name_container">
-          <div className="prefix_student_text_container">
-            <p className="prefix_student_text">ชื่อ-นามสกุล(ไทย)</p>
+        <div className="prefix_fullname_eng_th_student_container">
+          <div className="student_p_input_value_container">
+            <div className="prefix_student_text_container">
+              <p className="prefix_student_text">ชื่อ</p>
+            </div>
+            <div className="input_value_studentid_container">
+              <input
+                className="input_value_studentid"
+                type="string"
+                name="teacher_first_name_th"
+                defaultValue={teacherData.teacher_first_name_th}
+                onChange={handleChange}
+              />
+            </div>
           </div>
-          <div className="input_value_studentid_container">
-            <input
-              className="input_value_studentid"
-              type="text"
-              name="teacher_name_th"
-              defaultValue={teacherData.teacher_name_th}
-              onChange={handleChange}
-            />
+          <div className="student_p_input_value_container">
+            <div className="prefix_student_text_container">
+              <p className="prefix_student_text">นามสกุล</p>
+            </div>
+            <div className="input_value_studentid_container">
+              <input
+                className="input_value_studentid"
+                type="text"
+                name="teacher_last_name_th"
+                defaultValue={teacherData.teacher_last_name_th}
+                onChange={handleChange}
+              />
+            </div>
           </div>
         </div>
         <div className="create_student_select_container">

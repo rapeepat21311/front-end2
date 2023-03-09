@@ -72,17 +72,32 @@ function CreateTeacher() {
             </div>
           </div>
         </div>
-        <div className="create_teacher_name_container">
-          <div className="prefix_student_text_container">
-            <p className="prefix_student_text">ชื่อ-นามสกุล(ไทย)</p>
+        <div className="prefix_fullname_eng_th_student_container">
+          <div className="student_p_input_value_container">
+            <div className="prefix_student_text_container">
+              <p className="prefix_student_text">ชื่อ</p>
+            </div>
+            <div className="input_value_studentid_container">
+              <input
+                className="input_value_studentid"
+                type="string"
+                name="teacher_first_name_th"
+                onChange={handleChange}
+              />
+            </div>
           </div>
-          <div className="input_value_studentid_container">
-            <input
-              className="input_value_studentid"
-              type="text"
-              name="teacher_first_name_th"
-              onChange={handleChange}
-            />
+          <div className="student_p_input_value_container">
+            <div className="prefix_student_text_container">
+              <p className="prefix_student_text">นามสกุล</p>
+            </div>
+            <div className="input_value_studentid_container">
+              <input
+                className="input_value_studentid"
+                type="text"
+                name="teacher_last_name_th"
+                onChange={handleChange}
+              />
+            </div>
           </div>
         </div>
         <div className="create_student_select_container">

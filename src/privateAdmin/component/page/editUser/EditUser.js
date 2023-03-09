@@ -11,61 +11,32 @@ function EditUser() {
   const navigate = useNavigate();
   const { user } = useSelector((state) => ({ ...state }));
 
-  const [userData, setUserData] = useState([]);
-  // const [editUserData, setEditUserData] = useState({
-  //   student_id: userData.student_id,
-  //   id_number: userData.id_number,
-  //   user_fullname: userData.user_fullname,
-  //   name_th: userData.name_th,
-  //   name_eng: userData.name_eng,
-  //   faculty: userData.faculty,
-  //   major: userData.major,
-  //   email: userData.email,
-  //   phone_number: userData.phone_number,
-  //   education_level: userData.education_level,
-  //   year: userData.year,
-  //   old_school: userData.old_school,
-  //   status: userData.status,
-  //   advisor: userData.advisor,
-  //   aa: userData.aa,
-  //   phone_number_advisor: userData.phone_number_advisor,
-  //   email_advisor: userData.email_advisor,
-  // });
+  const [userData, setUserData] = useState({});
+  const [image, setImage] = useState(null);
+  const [fileName, setFilename] = useState("No select File");
 
   useEffect(() => {
     loadData(user.token, id);
   }, [user.token, id]);
 
   useEffect(() => {
-    console.log(userData.user_image);
-  }, []);
+    console.log("data --->", userData);
+    // console.log(userData.user_image);
+  }, [userData]);
 
   const handleChangeEditUserData = (e) => {
-    const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
-  };
-  // console.log(handleChangeEditUserData);
-
-  const [toggle, setToggle] = useState(false);
-
-  const onClickToggle = () => {
-    setToggle(!toggle);
-  };
-
-  const handleSaveEdit = async (e) => {
     e?.preventDefault();
-    await updateUser(user.token, id, userData)
-      .then((res) => {
-        console.log(res.data);
-        alert(res.data);
-        navigate("/admin-page/list-user");
-      })
-      .catch((err) => {
-        alert(err.response);
-      });
+
+    const { name, value } = e.target;
+    setUserData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleEdit = useCallback((e) => {
+  const hanldeChangeFiles = (e) => {
+    setFilename(e.target.files[0]);
+    setImage(URL.createObjectURL(e.target.files[0]));
+  };
+
+  const handleEdit = (e) => {
     e?.preventDefault();
 
     const formData = new FormData();
@@ -81,9 +52,9 @@ function EditUser() {
     formData.append("user_last_name_eng", userData.user_last_name_eng);
     formData.append("faculty", userData.faculty);
     formData.append("major", userData.major);
-    // formData.append("year", userData.year);
+    formData.append("year", userData.year);
     formData.append("model_name", userData.model_name);
-    // formData.append("class_year_student", userData.class_year_student);
+    formData.append("class_year_student", userData.class_year_student);
     formData.append(
       "student_email_education",
       userData.student_email_education
@@ -97,18 +68,19 @@ function EditUser() {
     formData.append("last_major", userData.last_major);
     formData.append("year_end_old_school", userData.year_end_old_school);
     formData.append("gpx_hight_school", userData.gpx_hight_school);
-    formData.append("user_status", userData.user_status);
+    formData.append("user_status", userData.user_status || false);
+    // for (var pair of formData.entries()) {
+    //   console.log("formdata -->", pair[0] + ", " + pair[1]);
+    // }
     updateUser(user.token, id, formData)
-      .then(() => {
-        alert("Edit User Success");
+      .then((res) => {
+        alert(res.data.msg);
+        navigate("/admin-page/list-user");
       })
       .catch((e) => {
         console.log(e);
       });
-  }, []);
-
-  const [image, setImage] = useState(null);
-  const [fileName, setFilename] = useState("No select File");
+  };
 
   // get Id
   const loadData = (authtoken, ID) => {
@@ -166,9 +138,21 @@ function EditUser() {
                 name="prefix_name"
                 onChange={handleChangeEditUserData}
               >
-                <option className="option_prefix_student">นาย</option>
-                <option className="option_prefix_student">นางสาว</option>
-                <option className="option_prefix_student">นาง</option>
+                <option
+                  className="option_prefix_student"
+                  value={userData.prefix_name}
+                >
+                  นาย
+                </option>
+                <option className="option_prefix_student" value={"นาย"}>
+                  นาย
+                </option>
+                <option className="option_prefix_student" value={"นางสาว"}>
+                  นางสาว
+                </option>
+                <option className="option_prefix_student" value={"นาง"}>
+                  นาง
+                </option>
               </select>
             </div>
           </div>
@@ -237,8 +221,21 @@ function EditUser() {
               <p className="create_title_text">เลือกคณะ</p>
             </div>
             <div className="create_student_select_option">
-              <select className="select_major" defaultValue={userData.faculty}>
-                <option>{userData.faculty}</option>
+              <select
+                className="select_major"
+                name="faculty"
+                onChange={handleChangeEditUserData}
+              >
+                <option value={userData.faculty}>{userData.faculty}</option>
+                <option value={"เทคโนโลยีสารสนเทศและนวัตกรรมดิจิทัล"}>
+                  เทคโนโลยีสารสนเทศและนวัตกรรมดิจิทัล
+                </option>
+                <option value={"บริหารธุรการ "}>บริหารธุรการ </option>
+                <option value={"ศิลปศาสตร์"}>ศิลปศาสตร์ </option>
+                <option value={"รัฐศาสตร์"}>รัฐศาสตร์ </option>
+                <option value={"นิเทศศาสตร์"}>นิเทศศาสตร์ </option>
+                <option value={"ศึกษาศาสตร์"}>ศึกษาศาสตร์ </option>
+                <option value={"พยาบาลศาสตร์"}>พยาบาลศาสตร์ </option>
               </select>
             </div>
           </div>
@@ -247,8 +244,13 @@ function EditUser() {
               <p className="create_title_text">เลือกสาขา</p>
             </div>
             <div className="create_student_select_option">
-              <select className="select_major">
+              <select
+                className="select_major"
+                name="major"
+                onChange={handleChangeEditUserData}
+              >
                 <option>{userData.major}</option>
+                <option value={"วิศวกรรมซอฟต์แวร์"}>วิศวกรรมซอฟต์แวร์</option>
               </select>
             </div>
           </div>
@@ -290,7 +292,7 @@ function EditUser() {
             </div>
             <div className="input_student_year_box">
               <input
-                type="text"
+                type="number"
                 className="input_student_year"
                 name="class_year_student"
                 defaultValue={userData.class_year_student}
@@ -336,7 +338,7 @@ function EditUser() {
               <div className="avatar_image">
                 <img
                   src={
-                    image ? image : ""
+                    image ? image : null
                     // : `http://localhost:8080/uploads/${userData[0]?.user_image.filename}`
                   }
                   alt={fileName}
@@ -361,12 +363,8 @@ function EditUser() {
                   type="file"
                   className="input_avatar_student"
                   hidden
-                  onChange={({ target: { files } }) => {
-                    files[0] && setFilename(files[0].name);
-                    if (files) {
-                      setImage(URL.createObjectURL(files[0]));
-                    }
-                  }}
+                  name="user_image"
+                  onChange={hanldeChangeFiles}
                 />
                 <p>อัพโหลด</p>
               </form>
@@ -492,7 +490,7 @@ function EditUser() {
             <div className="input_value_studentid_container">
               <input
                 className="input_value_studentid"
-                type="text"
+                type="number"
                 name="gpx_hight_school"
                 defaultValue={userData.gpx_hight_school}
                 onChange={handleChangeEditUserData}
@@ -545,8 +543,11 @@ function EditUser() {
                     ? "button_toggle_on"
                     : "button_toggle_off"
                 }
-                onClick={(prev) =>
-                  setUserData({ ...prev, user_status: !userData.user_status })
+                onClick={() =>
+                  setUserData((prev) => ({
+                    ...prev,
+                    user_status: !userData.user_status,
+                  }))
                 }
               >
                 <div
@@ -577,8 +578,10 @@ function EditUser() {
         >
           <button className="button_unsubmit">ยกเลิก</button>
         </div>
-        <div className="button_onsubmit_container" onClick={() => handleEdit()}>
-          <button className="button_onsubmit">บันทึก</button>
+        <div className="button_onsubmit_container">
+          <button className="button_onsubmit" onClick={handleEdit}>
+            บันทึก
+          </button>
         </div>
       </div>
     </div>

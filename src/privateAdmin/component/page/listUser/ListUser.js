@@ -1,6 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { listUser, updateUser } from "../../../../route/function/user";
+import {
+  deleteUser,
+  listUser,
+  updateUser,
+} from "../../../../route/function/user";
+import Swal from "sweetalert2";
 import { EditOutlined } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
@@ -62,6 +67,31 @@ function ListUser() {
   //     });
   // };
   // console.log(sendId);
+  const onDeleteUser = (ID) => {
+    Swal.fire({
+      titleText: "ยืนยันที่จะลบไหม",
+      icon: "warning",
+      confirmButtonColor: "green",
+      showCloseButton: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deleteUser(user.token, ID)
+          .then((res) => {
+            Swal.fire({
+              titleText: res.data.msg,
+              showCloseButton: true,
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.reload(false);
+              }
+            });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    });
+  };
 
   const loadData = (authtoken) => {
     listUser(authtoken)
@@ -143,10 +173,10 @@ function ListUser() {
                   <>
                     <tr key={user._id}>
                       <td>{users.student_id}</td>
-                      <td>{users.user_fullname}</td>
+                      <td>{users.user_fullname_th}</td>
                       <td>{users.faculty}</td>
-                      <td>{"วิศวกรรมซอฟต์แวร์"}</td>
-                      <td>{users.email}</td>
+                      <td>{users.major}</td>
+                      <td>{users.student_email_education}</td>
                       <td>{"offline"}</td>
                       {/* <Link to={`/admin-page/edit-user/${users._id}`}> */}
                       <td>
@@ -157,7 +187,10 @@ function ListUser() {
                               setViewuser(!viewuser), userIdData(users._id)
                             )}
                           />
-                          <img src={more_vert} />
+                          <img
+                            src={more_vert}
+                            onClick={() => onDeleteUser(users._id)}
+                          />
                         </div>
                         {/* <p onClick={navigate(`/admin-page/edit-user/${users._id}`)}> */}
                         {/* <EditOutlined /> */}

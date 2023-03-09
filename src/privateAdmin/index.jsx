@@ -4,6 +4,7 @@ import Box_admin_panel from "./component/componentReuse/box_admin_panel/box_admi
 
 import imageGrap1 from "../image/ข้อมูลผลสอบภาษาอังกฤษ.png";
 import imageGrap2 from "../image/ข้อมูลผลสอบภาษาอังกฤษ (1).png";
+import imageGrap3 from "../image/ข้อมูลผลสอบภาษาอังกฤษ (2).png";
 import "./index.scss";
 function Index() {
   const { user } = useSelector((state) => ({ ...state }));
@@ -52,6 +53,7 @@ function Index() {
       </div>
       <div className="box_admin_panel_container">
         <img src={imageGrap1} width="33.33%" height="33.33%" />
+        <img src={imageGrap3} width="33.33%" height="33.33%" />
         <img src={imageGrap2} width="33.33%" height="33.33%" />
       </div>
     </div>

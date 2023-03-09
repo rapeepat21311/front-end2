@@ -17,6 +17,8 @@ import Viewlist_teacher from "../../../componentReuse/viewlist_teacher";
 import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination_admin";
 
 import "../../listUser/listuser.css";
+import { deleteAdmin, readAdmins } from "../../../../../route/function/admin";
+import Viewlist_admin from "../../../componentReuse/view_list_admin";
 
 function ListAdmin() {
   const { user } = useSelector((state) => ({ ...state }));
@@ -47,6 +49,17 @@ function ListAdmin() {
     setTeacherId(id);
   };
 
+  const onDeleteAdminId = (authtoken, id) => {
+    deleteAdmin(authtoken, id)
+      .then((res) => {
+        alert(res.data.msg);
+        window.location.reload(true);
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  };
+
   // const sendId = (authtoken, id, vales) => {
   //   updateUser(authtoken, id, vales)
   //     .then((res) => {
@@ -59,7 +72,7 @@ function ListAdmin() {
   // console.log(sendId);
 
   const loadData = (authtoken) => {
-    listUser(authtoken)
+    readAdmins(authtoken)
       .then((res) => {
         setData(res.data);
       })
@@ -139,12 +152,12 @@ function ListAdmin() {
               {data.map((users, index) => {
                 return (
                   <tr key={index}>
-                    <td>{users.student_id}</td>
-                    <td>{"ผศ."}</td>
-                    <td>{users.user_fullname}</td>
-                    <td>{users.faculty}</td>
-                    <td>{"วิศวกรรมซอฟต์แวร์"}</td>
-                    <td>{users.email}</td>
+                    <td>{users.admin_id}</td>
+                    <td>{users.admin_position}</td>
+                    <td>{users.admin_full_name_th}</td>
+                    <td>{users.admin_faculty}</td>
+                    <td>{users.admin_major}</td>
+                    <td>{users.email_education}</td>
                     <td>{"Active"}</td>
                     {/* <Link to={`/admin-page/edit-teacher/${users._id}`}> */}
                     <td>
@@ -156,7 +169,12 @@ function ListAdmin() {
                             onClickLinkEditPage(users._id)
                           )}
                         />
-                        <img src={more_vert} />
+                        <img
+                          src={more_vert}
+                          onClick={() => {
+                            onDeleteAdminId(user.token, users._id);
+                          }}
+                        />
                       </div>
                       {/* <p onClick={navigate(`/admin-page/edit-user/${users._id}`)}> */}
                       {/* <EditOutlined /> */}
@@ -197,7 +215,7 @@ function ListAdmin() {
           className={openViewList ? "view_user_active" : "view_user_inactive"}
         >
           {openViewList ? (
-            <Viewlist_teacher
+            <Viewlist_admin
               id={teacherId}
               onClose={() => setOpenViewList(false)}
             />

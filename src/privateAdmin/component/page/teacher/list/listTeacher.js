@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { listUser } from "../../../../../route/function/user";
 import { EditOutlined } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
+
+import Swal from "sweetalert2";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
@@ -15,7 +17,10 @@ import more_vert from "../../../../../image/more_vert.png";
 import "../../listUser/listuser.css";
 import Viewlist_teacher from "../../../componentReuse/viewlist_teacher";
 import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination_admin";
-import { listTeachers } from "../../../../../route/function/teacher";
+import {
+  deleteTeacher,
+  listTeachers,
+} from "../../../../../route/function/teacher";
 
 function ListTeacher() {
   const { user } = useSelector((state) => ({ ...state }));
@@ -56,6 +61,31 @@ function ListTeacher() {
   //     });
   // };
   // console.log(sendId);
+  const onDeleteUser = (ID) => {
+    Swal.fire({
+      titleText: "ยืนยันที่จะลบไหม",
+      icon: "warning",
+      confirmButtonColor: "green",
+      showCloseButton: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deleteTeacher(user.token, ID)
+          .then((res) => {
+            Swal.fire({
+              titleText: res.data.msg,
+              showCloseButton: true,
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.reload(false);
+              }
+            });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    });
+  };
 
   const loadData = (authtoken) => {
     listTeachers(authtoken)
@@ -144,7 +174,11 @@ function ListTeacher() {
                     <td>{users.teacher_name_th}</td>
                     <td>{users.teacher_faculty}</td>
                     <td>{users.teacher_major}</td>
-                    <td>{users.email_education}</td>
+                    <td>
+                      {users.email_education === "@northbkk.ac.th"
+                        ? null
+                        : user.email_education}
+                    </td>
                     <td>{"Active"}</td>
                     {/* <Link to={`/admin-page/edit-teacher/${users._id}`}> */}
                     <td>
@@ -156,7 +190,10 @@ function ListTeacher() {
                             onClickLinkEditPage(users._id)
                           )}
                         />
-                        <img src={more_vert} />
+                        <img
+                          src={more_vert}
+                          onClick={() => onDeleteUser(users._id)}
+                        />
                       </div>
                       {/* <p onClick={navigate(`/admin-page/edit-user/${users._id}`)}> */}
                       {/* <EditOutlined /> */}

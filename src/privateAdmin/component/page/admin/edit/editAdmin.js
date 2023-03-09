@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
+import { editAdmin, readAdmin } from "../../../../../route/function/admin";
 import { readUser, updateUser } from "../../../../../route/function/user";
 import "../../editUser/editUser.css";
 import "./editAdmin.css";
@@ -10,60 +11,40 @@ function EditAdmin() {
   const navigate = useNavigate();
   const { user } = useSelector((state) => ({ ...state }));
 
-  const [userData, setUserData] = useState([]);
-  const [editUserData, setEditUserData] = useState({
-    student_id: userData.student_id,
-    id_number: userData.id_number,
-    user_fullname: userData.user_fullname,
-    name_th: userData.name_th,
-    name_eng: userData.name_eng,
-    faculty: userData.faculty,
-    major: userData.major,
-    email: userData.email,
-    phone_number: userData.phone_number,
-    education_level: userData.education_level,
-    year: userData.year,
-    old_school: userData.old_school,
-    status: userData.status,
-    advisor: userData.advisor,
-    aa: userData.aa,
-    phone_number_advisor: userData.phone_number_advisor,
-    email_advisor: userData.email_advisor,
-  });
-
+  const [admin, setAdmin] = useState({});
   useEffect(() => {
     loadData(user.token, id);
+    console.log(admin);
   }, [user.token, id]);
 
   const handleChangeEditUserData = (e) => {
+    e?.preventDefault();
     const { name, value } = e.target;
-    setEditUserData({ ...editUserData, [name]: value });
+    setAdmin((prev) => ({ ...prev, [name]: value }));
   };
   // console.log(handleChangeEditUserData);
 
   const handleSaveEdit = async (e) => {
     e?.preventDefault();
-    await updateUser(user.token, id, editUserData)
+    await editAdmin(user.token, id, admin)
       .then((res) => {
         console.log(res.data);
-        alert(res.data);
-        navigate("/admin-page/list-user");
+        alert(res.data.msg);
+        navigate("/admin-page/list-admin");
       })
       .catch((err) => {
-        alert(err.response);
+        alert(err.msg);
       });
   };
 
-  const updateData = () => {};
-
   // get Id
   const loadData = (authtoken, ID) => {
-    readUser(authtoken, ID)
+    readAdmin(authtoken, ID)
       .then((res) => {
-        setUserData(res.data);
+        setAdmin(res.data);
       })
       .catch((err) => {
-        console.log("ERROR SEVER --->", err.response);
+        alert(err.msg);
       });
   };
   return (
@@ -78,7 +59,13 @@ function EditAdmin() {
               <p className="prefix_student_text">รหัสอาจารย์</p>
             </div>
             <div className="input_value_studentid_container">
-              <input className="input_value_studentid" type="number" />
+              <input
+                className="input_value_studentid"
+                type="number"
+                name="admin_id"
+                value={admin.admin_id}
+                onChange={handleChangeEditUserData}
+              />
             </div>
           </div>
           <div className="student_p_input_value_container">
@@ -86,16 +73,44 @@ function EditAdmin() {
               <p className="prefix_student_text">ตำแหน่ง</p>
             </div>
             <div className="input_value_studentid_container">
-              <input className="input_value_studentid" type="text" />
+              <input
+                className="input_value_studentid"
+                type="text"
+                name="admin_position"
+                value={admin.admin_position}
+                onChange={handleChangeEditUserData}
+              />
             </div>
           </div>
         </div>
-        <div className="create_teacher_name_container">
-          <div className="prefix_student_text_container">
-            <p className="prefix_student_text">ชื่อ-นามสกุล(ไทย)</p>
+        <div className="prefix_fullname_eng_th_student_container">
+          <div className="student_p_input_value_container">
+            <div className="prefix_student_text_container">
+              <p className="prefix_student_text">ชื่อ</p>
+            </div>
+            <div className="input_value_studentid_container">
+              <input
+                className="input_value_studentid"
+                type="text"
+                name="admin_first_name_th"
+                defaultValue={admin.admin_first_name_th}
+                onChange={handleChangeEditUserData}
+              />
+            </div>
           </div>
-          <div className="input_value_studentid_container">
-            <input className="input_value_studentid" type="text" />
+          <div className="student_p_input_value_container">
+            <div className="prefix_student_text_container">
+              <p className="prefix_student_text">นามสกุล</p>
+            </div>
+            <div className="input_value_studentid_container">
+              <input
+                className="input_value_studentid"
+                type="text"
+                name="admin_last_name_th"
+                defaultValue={admin.admin_last_name_th}
+                onChange={handleChangeEditUserData}
+              />
+            </div>
           </div>
         </div>
         <div className="create_student_select_container">
@@ -104,8 +119,14 @@ function EditAdmin() {
               <p className="create_title_text">เลือกคณะ</p>
             </div>
             <div className="create_student_select_option">
-              <select className="select_major">
-                <option></option>
+              <select
+                className="select_major"
+                name="admin_faculty"
+                onChange={handleChangeEditUserData}
+              >
+                <option value={admin.admin_faculty}>
+                  {admin.admin_faculty}
+                </option>
               </select>
             </div>
           </div>
@@ -115,7 +136,7 @@ function EditAdmin() {
             </div>
             <div className="create_student_select_option">
               <select className="select_major">
-                <option></option>
+                <option value={admin.admin_major}>{admin.admin_major}</option>
               </select>
             </div>
           </div>
@@ -126,7 +147,13 @@ function EditAdmin() {
               <p className="create_title_text">หมายเลขโทรศัพท์</p>
             </div>
             <div className="input_value_studentid_container">
-              <input className="input_value_studentid" type="text" />
+              <input
+                className="input_value_studentid"
+                type="text"
+                name="admin_phone_number"
+                value={admin.admin_phone_number}
+                onChange={handleChangeEditUserData}
+              />
             </div>
           </div>
           <div className="create_student_select_faculty_container">
@@ -134,8 +161,14 @@ function EditAdmin() {
               <p className="create_title_text">อีเมลสถาบัน</p>
             </div>
             <div className="create_student_email">
-              <input type="text" className="input_value_email_student" />
-              <p className="set_email_student_text">@northbkk.ac.th</p>
+              <input
+                type="text"
+                className="input_value_email_student"
+                name="email_education"
+                value={admin.email_education}
+                onChange={handleChangeEditUserData}
+              />
+              {/* <p className="set_email_student_text">@northbkk.ac.th</p> */}
             </div>
           </div>
         </div>
@@ -159,7 +192,13 @@ function EditAdmin() {
               <p className="prefix_student_text">username</p>
             </div>
             <div className="input_value_studentid_container">
-              <input className="input_student_class" type="text" />
+              <input
+                className="input_student_class"
+                type="text"
+                name="username"
+                value={admin.username}
+                onChange={handleChangeEditUserData}
+              />
             </div>
           </div>
           <div className="student_p_input_value_container">
@@ -167,7 +206,13 @@ function EditAdmin() {
               <p className="prefix_student_text">password</p>
             </div>
             <div className="input_value_studentid_container">
-              <input className="input_student_class" type="text" />
+              <input
+                className="input_student_class"
+                type="password"
+                name="password"
+                value={admin.password}
+                onChange={handleChangeEditUserData}
+              />
             </div>
           </div>
         </div>
@@ -177,7 +222,9 @@ function EditAdmin() {
           <button className="button_unsubmit">ยกเลิก</button>
         </div>
         <div className="button_onsubmit_container">
-          <button className="button_onsubmit">บันทึก</button>
+          <button className="button_onsubmit" onClick={handleSaveEdit}>
+            บันทึก
+          </button>
         </div>
       </div>
     </div>

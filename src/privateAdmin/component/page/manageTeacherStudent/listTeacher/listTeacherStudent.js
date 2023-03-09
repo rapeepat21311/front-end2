@@ -14,6 +14,7 @@ import "../../listUser/listuser.css";
 import "./listTeacherStudent.css";
 import Viewlist_teacher_student from "../../../componentReuse/viewlist_student_teacher";
 import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination_admin";
+import { avisorList } from "../../../../../route/function/teacher";
 
 function ListTeacherStudent() {
   const { user } = useSelector((state) => ({ ...state }));
@@ -42,6 +43,7 @@ function ListTeacherStudent() {
   // const [vales, setValues] = useContext();
   useEffect(() => {
     loadData(user.token);
+    console.log("data --->", data);
     // sendId(user.token);
   }, [user.token]);
 
@@ -57,9 +59,10 @@ function ListTeacherStudent() {
   // console.log(sendId);
 
   const loadData = (authtoken) => {
-    listUser(authtoken)
+    avisorList(authtoken)
       .then((res) => {
-        setData(res.data);
+        // console.log(res.data.data);
+        setData(res.data.data);
       })
       .catch((err) => {
         console.log(err);
@@ -139,13 +142,16 @@ function ListTeacherStudent() {
                 {data.map((users, index) => {
                   return (
                     <tr key={index}>
-                      <td>{users.student_id}</td>
-                      <td>{"ผศ."}</td>
-                      <td>{users.user_fullname}</td>
-                      <td>{users.faculty}</td>
-                      <td>{"วิศวกรรมซอฟต์แวร์"}</td>
-                      <td>{users.email}</td>
-                      <td>{"4"}</td>
+                      <td>
+                        {/* test */}
+                        {users.teacher_id}
+                      </td>
+                      <td>{users.teacher_position}</td>
+                      <td>{users.teacher_fullname}</td>
+                      <td>{users.teacher_faculty}</td>
+                      <td>{users.teacher_major}</td>
+                      <td>{users.email_education}</td>
+                      <td>{users.user_lenght}</td>
                       {/* <Link to={`/admin-page/edit-teacher/${users._id}`}> */}
                       <td>
                         <div className="list_view_delete">
