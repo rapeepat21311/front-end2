@@ -61,6 +61,7 @@ import LastedEventDes from "../page/news/lastedEvent/component/description/laste
 import PerformAdd from "../page/perform/performAdd/performAdd";
 import PerformEdit from "../page/perform/performEdit/performEdit"
 import CV from "../component/cv/cv"
+import CurriculumVitae from "../page/eport/CurriculumVitae/CurriculumVitae"
 import FavoriteNews from "../page/news/favoriteNews/favorite_news"
 import EventDetail from "../page/profile/events/eventDetail";
 
@@ -120,7 +121,9 @@ function PrivateRoute() {
 
         <Route path="/performEdit" element={<PerformEdit/>} />
 
-        <Route path="/CurriculumVitae" element={<CV/>} />
+        <Route path="/CurriculumVitae" element={<CurriculumVitae/>} />
+
+        <Route path="/Download-CurriculumVitae" element={<CV/>} />
 
         <Route path="/favorite" element={<FavoriteNews />} />
 

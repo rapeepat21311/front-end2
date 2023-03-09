@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
 .eport {
   display: flex;
   flex-direction: column;
@@ -31,6 +33,11 @@
   // background-color: #0d47a1;
   width: 73.2%;
   justify-content: flex-start;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .eport_header {

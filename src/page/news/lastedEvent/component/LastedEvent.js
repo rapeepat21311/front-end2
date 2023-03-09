@@ -33,7 +33,7 @@ function LastedEvent({ mockDataLastedEvent, currentPage, perPage }) {
               hover === item.id ? "box_lasted_event_active" : "box_lasted_event"
             }
             key={item.id}
-            // onClick={()=> navigate(`/news/last-events/${item.id}`)}
+            onClick={()=> navigate(`/news/last-events/${item.id}`)}
           >
             <div className="box_lasted_event_img">
               <img src={item.image} />
@@ -59,9 +59,9 @@ function LastedEvent({ mockDataLastedEvent, currentPage, perPage }) {
                     : "event_title_description_link"
                 }
                 `}
-                // onMouseEnter={() => onMouseEnter(item.id)}
-                // onMouseLeave={() => onMouseLeave(item.id)}
-                // onClick={() => navigate(`/news/last-news/${item.id}`)}
+                onMouseEnter={() => onMouseEnter(item.id)}
+                onMouseLeave={() => onMouseLeave(item.id)}
+                onClick={() => navigate(`/news/last-news/${item.id}`)}
               >
                 {hover === item.id ? (
                   <p onClick={() => navigate("/news/last-events/description")}>

@@ -146,9 +146,9 @@ function Login() {
                 />
               <div className="check_box">
                 <Checkbox />
-                <p>Remember me</p>
+                <p>จดจำรหัสผ่าน</p>
                 <div className="box_forget">
-                  <p>Foget Password?</p>
+                  <p>ลืมรหัสผ่าน?</p>
                 </div>
               </div>
               <div className="submit">

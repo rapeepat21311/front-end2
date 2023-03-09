@@ -11,7 +11,7 @@ import { userReducerConst } from "../../reducer/consUserRed";
 
 import { useDispatch } from "react-redux";
 
-import iconNbu from "./../../../image/NBU.png";
+import iconNbu from "./../../../image/Logo_NBU_png_1.png";
 
 function Header() {
   const dispatch = useDispatch();
@@ -47,28 +47,13 @@ function Header() {
           </Link>
         </h3>
         <h3>
-          <Link className="link" to="/result">
-            ผลการเรียน
-          </Link>
-        </h3>
-        <h3>
-          <Link className="link" to="/classl">
-            ตารางสอน
-          </Link>
-        </h3>
-        <h3>
-          <Link className="link" to="/perform">
-            ผลงาน
+          <Link className="link" to="/favorite">
+            กิจกรมที่สนใจ
           </Link>
         </h3>
         <h3>
           <Link className="link" to="/news">
             ข่าวสารและกิจกรรม
-          </Link>
-        </h3>
-        <h3>
-          <Link className="link" to="/eport">
-            Curriculum Vitae
           </Link>
         </h3>
       </div>

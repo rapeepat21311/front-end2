@@ -10,6 +10,8 @@ import PaginationNews from "../Pagination/PaginatioNews";
 import { mockDataLastesEvent } from "./component/mockDataEvent";
 import { useNavigate } from "react-router";
 
+import BackIcon from "../../../image/BackIcon.png";
+
 function Index() {
   const navigate = useNavigate();
 
@@ -36,7 +38,9 @@ function Index() {
             <p onClick={() => navigate("/news")}>ข่าวสารและกิจกรรม</p> {" > "}{" "}
             <p>กิจกรรมทั้งหมด</p>
           </div>
-          <div className="back_to_last_news">{"<--"} กลับ</div>
+          <div className="back_to_last_news">
+            <img onClick={() => navigate("/dashboard")} src={BackIcon} />
+          </div>
           <div className="event_all_title">
             <h1>กิจกรรมทั้งหมด</h1>
           </div>

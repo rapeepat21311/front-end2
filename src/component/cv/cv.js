@@ -24,13 +24,13 @@ const CV = ({ data }) => {
 
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <div className="cv">
-        <div className="cv-title">
+        {/* <div className="cv-title">
         <p onClick={() => navigate("/dashboard")}>หน้าหลัก</p> {" > "}
           <p>Curriculum Vitae</p>
-        </div>
-        <div className="cv-title-header">
+        </div> */}
+        {/* <div className="cv-title-header">
           <p>Curriculum Vitae</p>
         </div>
         <div className="cv-button">
@@ -43,7 +43,7 @@ const CV = ({ data }) => {
                     <p>Download</p>
                 </Button>
           </div>
-        </div>
+        </div> */}
         <div className="cv-container">
           <div className="cv-header">
             <img className="img-profile" alt="tree" src={CvIcon} />
@@ -260,7 +260,7 @@ const CV = ({ data }) => {
             </div>
           </div>
         </div>
-      <Footer/>
+      {/* <Footer/> */}
       </div>
     </div>
   );

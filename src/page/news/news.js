@@ -127,11 +127,16 @@ function News() {
             </h2>
           </div>
           <div className="news_update_box_cotainer">
-            <LastesNews
+            {/* <LastesNews
               mockDataLastesNews={lastesNewsData}
               currentPage={currentPage}
               perPage={lastedNewsPerPage}
-            />
+            /> */}
+            {/* <LastesNews
+              mockDataLastesNews={lastesNewsData}
+              currentPage={currentPage}
+              perPage={lastedNewsPerPage}
+            /> */}
           </div>
           <div className="event_update_title">
             <h1>กิจกรรมล่าสุด</h1>

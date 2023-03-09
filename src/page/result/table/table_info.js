@@ -1,4 +1,5 @@
 import React from "react";
+// import './Table.css'
 const colorId = {
   id1:"#E8EBED",
   id2:"#FFFFFF",

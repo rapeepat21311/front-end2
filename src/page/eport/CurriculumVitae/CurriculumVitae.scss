@@ -1,120 +1,169 @@
 .curriculumvitae {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    // height: 100vh;
-    width: 100vw;
-    background: url(../../../image/NewBG1.png);
-    background-size: 100% 100%;
-    font-weight: bold;
-    /* animation: colorChange 5s infinite alternate; */
-  }
-
-
-  .curriculumvitae_body {
-    display: flex;
-    width: 70%;
-    flex-direction: column;
-    gap: 24px;
-    margin-right: 200px;
-    // background-color: green;
-  }
-
-  .curriculumvitae_title{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    gap: 757px;
-    
-    position: absolute;
-    height: 40px;
-    left: 233px;
-    right: 249px;
-    top: 208px;
-  }
-
-  .curriculumvitae_button{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 16px;
-    margin-left: 73%;
-    width: 139px;
-    height: 40px;
-    // background-color: red;
-    
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-  }
-.curriculumvitae_button_dl{
-    box-sizing: border-box;
-
-    /* Auto layout */
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 16px;
-    gap: 6px;
-    
-    
-    width: 139px;
-    height: 40px;
-    
-    background: #0B539E;
-    border: 1px solid rgba(0, 0, 0, 0.16);
-    border-radius: 99px;
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    p{
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-        /* identical to box height, or 150% */
-        
-        display: flex;
-        align-items: center;
-        
-        /* Text/white */
-        
-        color: #FAF9F6;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  // height: 100vh;
+  width: 100vw;
+  background: url(../../../image/NewBG1.png);
+  background-size: 100% 100%;
+  font-weight: bold;
+  /* animation: colorChange 5s infinite alternate; */
 }
 
-  .curriculumvitae_header {
+
+.curriculumvitae_body {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  gap: 24px;
+  margin-right: 200px;
+  // background-color: green;
+}
+
+.curriculumvitae_title {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+  margin-left: 300px;
+  width: 75%;
+
+  // background-color: antiquewhite;
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height, or 133% */
+
     display: flex;
-    margin-top: 24px;
-    margin-left: 300px;
-    border-bottom: 1px solid #ffffff;
-    
-    padding-bottom: 10px;
-    gap: 8px;
-    // background-color: #0d47a1;
-    width: 73.2%;
-    justify-content: flex-start;
+    align-items: center;
+
+    /* Primary/00 */
+
+    color: #0D47A1;
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.curriculumvitae_button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  margin-left: 550px;
+  width: 139px;
+  height: 40px;
+  // background-color: red;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.curriculumvitae_button_dl {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px;
+  gap: 6px;
+
+
+  width: 139px;
+  height: 40px;
+
+  background: #0B539E;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 99px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+
+    /* Text/white */
+
+    color: #FAF9F6;
+  }
+}
+
+
+
+.curriculumvitae_header {
+  display: flex;
+  margin-top: 24px;
+  margin-left: 300px;
+  border-bottom: 1px solid #ffffff;
+
+  padding-bottom: 10px;
+  gap: 8px;
+  // background-color: #0d47a1;
+  width: 73.2%;
+  justify-content: flex-start;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.curriculumvitae_container {
+  display: flex;
+  // background-color: red;
+  margin-top: 12px;
+  width: 74%;
+  margin-left: 300px;
+}
+
+
+
+.curriculumvitae_back {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 0px;
+  // gap: 16px;
+  margin-left: 300px;
+  width: 73%;
+  // height: 40px;
+  // background-color: red;
+
+
+  // /* Inside auto layout */
+
+  // flex: none;
+  // order: 1;
+  // flex-grow: 0;
+  img {
+    margin-bottom: 8px;
   }
 
-.curriculumvitae_container{
-    display: flex;
-    // background-color: red;
-    margin-top: 134px;
-    width: 74%;
-    margin-left: 300px;
+  .curriculumvitae_back img :hover {
+    color: #FAF9F6;
+  }
 }
-  
- 

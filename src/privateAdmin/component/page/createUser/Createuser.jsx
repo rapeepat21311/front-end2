@@ -4,12 +4,9 @@ import default_user from "./default_create_user";
 import defaultImage from "../../../../image/vector (16).png";
 import { height } from "@mui/system";
 import { useNavigate } from "react-router";
-import { createUser } from "../../../../route/function/user";
-import { useSelector } from "react-redux";
 
 function Createuser() {
   const navigate = useNavigate();
-  const { user } = useSelector((state) => ({ ...state }));
 
   const [data, setData] = useState(default_user);
   const [image, setImage] = useState(null);
@@ -17,63 +14,27 @@ function Createuser() {
 
   useEffect(() => {
     console.log("--> data --->", data);
-    console.log("filename--->", fileName);
-    // console.log(hanldeChangeFiles);
+  }, [data]);
 
-    console.log("user_image -->", image);
-  }, [data, fileName, image]);
-  const hanldeChangeFiles = (e) => {
-    setFilename(e.target.files[0]);
-    setImage(URL.createObjectURL(e.target.files[0]));
+  const onClickToggle = () => {
+    setData(!data.user_status);
   };
 
   function handleSubmit(e) {
     e?.preventDefault();
 
     const formData = new FormData();
-    formData.append("user_image", fileName);
-    formData.append("username", data.username);
-    formData.append("password", data.password);
-    formData.append("student_id", data.student_id);
-    formData.append("id_number", data.id_number);
-    formData.append("prefix_name", data.prefix_name);
-    formData.append("user_first_name_th", data.user_first_name_th);
-    formData.append("user_last_name_th", data.user_last_name_th);
-    formData.append("user_first_name_eng", data.user_first_name_eng);
-    formData.append("user_last_name_eng", data.user_last_name_eng);
-    formData.append("faculty", data.faculty);
-    formData.append("major", data.major);
-    formData.append("year", data.year);
-    formData.append("model_name", data.model_name);
-    formData.append("class_year_student", data.class_year_student);
-    formData.append("student_email_education", data.student_email_education);
-    formData.append("student_status", data.student_status);
-    formData.append("phone_number_home", data.phone_number_home);
-    formData.append("phone_number", data.phone_number);
-    formData.append("last_address", data.last_address);
-    formData.append("last_level_student", data.last_level_student);
-    formData.append("old_school", data.old_school);
-    formData.append("last_major", data.last_major);
-    formData.append("year_end_old_school", data.year_end_old_school);
-    formData.append("gpx_hight_school", data.gpx_hight_school);
-    formData.append("user_status", data.user_status);
 
-    createUser(user.token, formData)
-      .then(() => {
-        alert("create user success");
-        navigate("/admin-page/list-user");
-      })
-      .catch((e) => {
-        alert(e);
-      });
+    formData.append("user_image", fileName);
   }
-  // useEffect(() => {
-  //   console.log("FORM DATA", formData);
-  // }, [formData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const hanldeChangeFiles = (e) => {
+    setFilename(e.target.file[0]);
   };
 
   return (
@@ -203,16 +164,7 @@ function Createuser() {
                 name="faculty"
                 onChange={handleChange}
               >
-                <option value={""}>เลือกคณะ</option>
-                <option value={"เทคโนโลยีสารสนเทศ"}>
-                  เทคโนโลยีสารสนเทศและนวัตกรรมดิจิทัล{" "}
-                </option>
-                <option value={"บริหารธุรการ "}>บริหารธุรการ </option>
-                <option value={"ศิลปศาสตร์"}>ศิลปศาสตร์ </option>
-                <option value={"รัฐศาสตร์"}>รัฐศาสตร์ </option>
-                <option value={"นิเทศศาสตร์"}>นิเทศศาสตร์ </option>
-                <option value={"ศึกษาศาสตร์"}>ศึกษาศาสตร์ </option>
-                <option value={"พยาบาลศาสตร์"}>พยาบาลศาสตร์ </option>
+                <option>เลือกคณะ</option>
               </select>
             </div>
           </div>
@@ -227,7 +179,6 @@ function Createuser() {
                 onChange={handleChange}
               >
                 <option>เลือกสาขา</option>
-                <option value={"วิศวกรรมซอฟต์แวร์"}>วิศวกรรมซอฟต์แวร์</option>
               </select>
             </div>
           </div>
@@ -312,15 +263,19 @@ function Createuser() {
           <div className="student_avatar">
             <div className="avatar_image_container">
               <div className="avatar_image">
-                <img
-                  src={image ? image : null}
-                  alt={fileName}
-                  style={{
-                    width: "100%",
-                    height: "64px",
-                    borderRadius: "8px",
-                  }}
-                />
+                {data.user_image ? (
+                  <img
+                    src={data.user_image}
+                    alt={fileName}
+                    style={{
+                      width: "100%",
+                      height: "64px",
+                      borderRadius: "8px",
+                    }}
+                  />
+                ) : (
+                  <img src={defaultImage} />
+                )}
               </div>
             </div>
             <div className="avatar_upload_description_text_container">
@@ -336,8 +291,17 @@ function Createuser() {
                   type="file"
                   className="input_avatar_student"
                   hidden
+                  filename="user_image"
                   name="user_image"
-                  onChange={hanldeChangeFiles}
+                  onChange={() => {
+                    // ({ target: { files } }
+                    // )
+                    hanldeChangeFiles();
+                    //   files[0] && setFilename(files[0].name);
+                    //   if (files) {
+                    //     setImage(URL.createObjectURL(files[0]));
+                  }}
+                  // }}
                 />
                 <p>อัพโหลด</p>
               </form>
@@ -471,7 +435,6 @@ function Createuser() {
                 className="input_student_class"
                 type="text"
                 name="username"
-                // value={data.student_id}
                 onChange={handleChange}
               />
             </div>
@@ -485,7 +448,6 @@ function Createuser() {
                 className="input_student_class"
                 type="text"
                 name="password"
-                // value={data.student_id}
                 onChange={handleChange}
               />
             </div>
@@ -501,12 +463,7 @@ function Createuser() {
                 className={
                   data.user_status ? "button_toggle_on" : "button_toggle_off"
                 }
-                onClick={() =>
-                  setData((prev) => ({
-                    ...prev,
-                    user_status: !data.user_status,
-                  }))
-                }
+                onClick={() => onClickToggle()}
               >
                 <div
                   className={

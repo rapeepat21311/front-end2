@@ -6,7 +6,7 @@
 	width: 100%;
 	/* width: 100vw; */
 	background: url(../../image/NewBG1.png);
-	background-color: goldenrod;
+	/* background-color: goldenrod; */
 	justify-content: center;
 	align-items: center;
 	background-repeat: no-repeat;
@@ -76,6 +76,7 @@
 .box_input form input {
 	/* display: flex; */
 	width: 80%;
+	/* margin-left: 30px; */
 	/* text-align: center; */
 	/* background-color: #0B539E; */
 
@@ -247,9 +248,10 @@
 
 .box_forget {
 	display: flex;
-	/* background-color: bisque; */
+	background-color: bisque;
 	position: absolute;
 	padding: 10px;
-	margin-left: 290px;
+	/* margin-left: 100px; */
+	margin-left: 400px;
 
 }

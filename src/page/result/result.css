@@ -281,8 +281,10 @@
   text-align: center;
 }
 
+
 .general-table_container tr:nth-child(even) {
   background-color: #e8ebed;
+  
   z-index: 20px;
 }
 
@@ -319,6 +321,27 @@
     text-align: center;
     /* margin-top: 56px; */
     margin-bottom: 50px;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+/* or 171% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Text/Dark Grey */
+
+color: #9F99A3;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 1;
     /* background-color: #0D47A1; */
 }
 
