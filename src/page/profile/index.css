@@ -2,9 +2,10 @@
 
 .profile_body {
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: column;
   height: 100%;
-  /* width: 100vw; */
+  width: 100%;
+  /* background: red; */
   background: url(../../image/NewBG1.png);
   background-size: 100%;
   justify-content: center;
@@ -47,7 +48,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 68%;
+  /* width: 100%; */
   height: 940px;
   /* background: radial-gradient(
       circle at center,
@@ -402,7 +403,10 @@
 
 @media only screen and (max-width: 1439px) {
   .profile_body {
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
   }
 
   .profile {
@@ -413,7 +417,7 @@
 
   .profile_tab_container {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* align-items: center; */
     /* width: 44%; */
   }

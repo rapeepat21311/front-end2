@@ -53,7 +53,7 @@ function NavBar({ children }) {
   };
 
   const Logout = () => {
-    navigate("/dashboard");
+    navigate("/");
     dispatch({ type: userReducerConst.LOG_OUT, payload: null });
   };
 

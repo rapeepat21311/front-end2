@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Body from "../home/home";
 import Header from "../../component/navbar/Header/Header";
 import Footer from "../../component/navbar/Footer/Footer";
@@ -9,6 +9,7 @@ import Paratoon from "./Paratoon/Paratoon";
 import Events from "./events/backlist/Events";
 import CreateBox from "./events/CreateBox";
 import { Navigate, useNavigate } from "react-router";
+import { useSelector } from "react-redux";
 
 const navTab = [
   {
@@ -29,7 +30,12 @@ const navTab = [
 ];
 
 function Index() {
+  const { user } = useSelector((state) => ({ ...state }));
   const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log(user);
+  }, []);
 
   const [activeIndex, setActiveIndex] = useState(0);
 

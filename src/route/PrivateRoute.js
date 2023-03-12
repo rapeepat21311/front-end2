@@ -59,10 +59,10 @@ import Detail from "../page/perform/detail/detailPer";
 import LastedNewsDes from "../page/news/lastedNews/component/description/LastedNewsDes";
 import LastedEventDes from "../page/news/lastedEvent/component/description/lasted_event";
 import PerformAdd from "../page/perform/performAdd/performAdd";
-import PerformEdit from "../page/perform/performEdit/performEdit"
-import CV from "../component/cv/cv"
-import CurriculumVitae from "../page/eport/CurriculumVitae/CurriculumVitae"
-import FavoriteNews from "../page/news/favoriteNews/favorite_news"
+import PerformEdit from "../page/perform/performEdit/performEdit";
+import CV from "../component/cv/cv";
+import CurriculumVitae from "../page/eport/CurriculumVitae/CurriculumVitae";
+import FavoriteNews from "../page/news/favoriteNews/favorite_news";
 import EventDetail from "../page/profile/events/eventDetail";
 
 function PrivateRoute() {
@@ -71,28 +71,12 @@ function PrivateRoute() {
   if (idToken) {
     currentUser(idToken)
       .then((res) => {
+        console.log("current user", res.data);
         dispatch({
           type: userReducerConst.LOG_IN,
           payload: {
             token: idToken,
-            username: res.data.username,
-            role: res.data.role,
-            studentId: res.data.studentId,
-            idNumber: res.data.idNumber,
-            nameTh: res.data.nameTh,
-            nameEng: res.data.nameEng,
-            faculty: res.data.faculty,
-            major: res.data.major,
-            email: res.data.email,
-            phoneNumber: res.data.phoneNumber,
-            educationLevel: res.data.educationLevel,
-            year: res.data.year,
-            oldSchool: res.data.oldSchool,
-            status: res.data.status,
-            advisor: res.data.advisor,
-            aa: res.data.aa,
-            phone_number_advisor: res.data.phone_number_advisor,
-            email_advisor: res.data.email_advisor,
+            data: res.data,
           },
         });
       })
@@ -119,16 +103,13 @@ function PrivateRoute() {
 
         <Route path="/performAdd" element={<PerformAdd />} />
 
-        <Route path="/performEdit" element={<PerformEdit/>} />
+        <Route path="/performEdit" element={<PerformEdit />} />
 
-        <Route path="/CurriculumVitae" element={<CurriculumVitae/>} />
+        <Route path="/CurriculumVitae" element={<CurriculumVitae />} />
 
-        <Route path="/Download-CurriculumVitae" element={<CV/>} />
+        <Route path="/Download-CurriculumVitae" element={<CV />} />
 
         <Route path="/favorite" element={<FavoriteNews />} />
-
-
-
 
         <Route
           path="/eport"
@@ -156,9 +137,7 @@ function PrivateRoute() {
             </UserRouter>
           }
         />
-        <Route path="/profile/event-detail" element={<EventDetail/>}
-
-        />
+        <Route path="/profile/event-detail" element={<EventDetail />} />
 
         {/* Router Admin */}
 
