@@ -18,6 +18,7 @@
 
 .component_page_admin_container {
   display: flex;
+  height: 100vh;
   /* background-color: aqua; */
   /* width: 100%; */
 }
@@ -45,7 +46,7 @@
   /* top :64.5px; */
   padding: 24px 20px;
   /* order: -1; */
-  height: 1515px;
+  height: 100%;
   left: 0;
   transition: 350ms;
 
@@ -216,9 +217,11 @@
 
 .children_admin_page {
   width: 95%;
+  
 }
 .children_admin_page_active {
   width: 83.33%;
+  height: 100%;
 }
 
 @media only screen and (min-width: 1441px) {

@@ -14,7 +14,11 @@ import "../../listUser/listuser.css";
 import "./listTeacherStudent.css";
 import Viewlist_teacher_student from "../../../componentReuse/viewlist_student_teacher";
 import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination_admin";
-import { avisorList } from "../../../../../route/function/teacher";
+import {
+  avisorDelete,
+  avisorList,
+} from "../../../../../route/function/teacher";
+import Swal from "sweetalert2";
 
 function ListTeacherStudent() {
   const { user } = useSelector((state) => ({ ...state }));
@@ -36,15 +40,15 @@ function ListTeacherStudent() {
     setCurrentPage(pageNumber);
   };
 
-  const userIdData = (_id) => {
-    setUserId(_id);
+  const userIdData = (id) => {
+    setUserId(id);
+    console.log(userId);
   };
 
   // const [vales, setValues] = useContext();
   useEffect(() => {
+    // console.log("data --->", data);
     loadData(user.token);
-    console.log("data --->", data);
-    // sendId(user.token);
   }, [user.token]);
 
   // const sendId = (authtoken, id, vales) => {
@@ -67,6 +71,32 @@ function ListTeacherStudent() {
       .catch((err) => {
         console.log(err);
       });
+  };
+
+  const deleteAvisor = (id) => {
+    Swal.fire({
+      titleText: "ยืนยันที่จะลบหรือไม่ ?",
+      icon: "question",
+      confirmButtonText: "ยืนยัน",
+      confirmButtonColor: "green",
+      showCancelButton: true,
+      cancelButtonText: "ยกเลิก",
+      cancelButtonColor: "red",
+    }).then((res) => {
+      if (res.isConfirmed) {
+        avisorDelete(user.token, id)
+          .then((res) => {
+            Swal.fire({
+              titleText: "ลบสำเร็จ",
+            }).then(window.location.reload(true));
+          })
+          .catch((err) => {
+            Swal.fire({
+              titleText: "ลบไม่สำเร็จ",
+            });
+          });
+      }
+    });
   };
 
   return (
@@ -162,7 +192,10 @@ function ListTeacherStudent() {
                               userIdData(users._id);
                             }}
                           />
-                          <img src={more_vert} />
+                          <img
+                            src={more_vert}
+                            onClick={() => deleteAvisor(users._id)}
+                          />
                         </div>
                         {/* <p onClick={navigate(`/admin-page/edit-user/${users._id}`)}> */}
                       </td>

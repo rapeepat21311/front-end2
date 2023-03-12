@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
-import "./view_document_component.css";
+import "./view_document_component.scss";
 
 import ModeIcon from "@mui/icons-material/Mode";
+import { useSelector } from "react-redux";
+import { avisorId } from "../../../route/function/teacher";
 
 function Viewlist_teacher_student({ onClose, id }) {
+  const { user } = useSelector((state) => ({ ...state }));
   const navigate = useNavigate();
+  const [data, setData] = useState({});
 
-  const [getId, setGetId] = useState();
+  useEffect(() => {
+    avisorId(user.token, id)
+      .then((res) => {
+        setData(res.data.data.data_teacher);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <div className="view_document_component">
@@ -43,20 +53,20 @@ function Viewlist_teacher_student({ onClose, id }) {
         </div>
         <div className="view_private_document_text_container">
           <h1 className="view_field_name">รหัสอาจารย์</h1>
-          <p className="view_value">{"0258001"}</p>
+          <p className="view_value">{data.teacher_id}</p>
         </div>
         <div className="view_private_document_text_container">
           <h1 className="view_field_name">ชื่อ-นามสกุล (ไทย)</h1>
-          <p className="view_value">{"นาย ศุภกร กลีบพุฒ"}</p>
+          <p className="view_value">{data.teacher_fullname}</p>
         </div>
         <div className="view_private_document_text_container">
           <h1 className="view_field_name">คณะ</h1>
-          <p className="view_value">{"เทคโนโลยีสารสนเทศและนวัตกรรมดิจิทัล"}</p>
+          <p className="view_value">{data.teacher_faculty}</p>
         </div>
 
         <div className="view_private_document_text_container">
           <h1 className="view_field_name">สาขา</h1>
-          <p className="view_value">{"วิศวกรรมซอฟต์แวร์"}</p>
+          <p className="view_value">{data.teacher_major}</p>
         </div>
 
         <div className="document_user_title">
@@ -68,11 +78,16 @@ function Viewlist_teacher_student({ onClose, id }) {
         </div>
         <div className="view_private_document_text_container">
           <h1 className="view_field_name">รายชื่อนักศึกษา</h1>
-          <p className="view_value">{`621102685 เจษฎา ซื้อสวัสดิ
-621109360 เอกพล โตเจริญ
-621111391 ระพีพัฒน์ สุวรรณทอง
-621112703 พัชช์ฐณณท์ เจริญเปี่ยม
-621113759 ศุภกร กลีบพุฒ`}</p>
+          <div className="div">
+            {data.students?.map((item) => {
+              return (
+                <div className="container_map_data">
+                  {/* <p>{item.student_id}</p> */}
+                  <p>{item.user_fullname}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

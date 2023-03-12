@@ -98,9 +98,20 @@
   margin-top: 8px;
   /* background-color: #274c77; */
   /* gap: 8px; */
+  .div{
+    width: 69%;
+
+    .container_map_data {
+      display: flex;
+      // background: red;
+      width: 100%;
+      // flex-direction: column;
+      gap: 8px;
+    }
+  }
 }
 .view_field_name {
-  width: 30.333%;
+  width: 40.333%;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;

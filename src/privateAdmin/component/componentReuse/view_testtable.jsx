@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
-import "./view_document_component.css";
+import "./view_document_component.scss";
 
 import ModeIcon from "@mui/icons-material/Mode";
 

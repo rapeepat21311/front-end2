@@ -453,7 +453,7 @@
   top: 0px;
   right: 0px;
   width: 100%;
-  height: 100%;
+  height: 1200px;
 
   background-color: rgba(0, 0, 0, 0.24);
 
@@ -462,8 +462,9 @@
 
 .view_user_active {
   width: 33.33%;
+  padding: 0px 0px 24px 0px;
   /* opacity: 0.1; */
-  height: 100%;
+  height: 70%;
   background-color: #ffffff;
   /* border: 1px solid black; */
   /* background-color: rebeccapurple; */

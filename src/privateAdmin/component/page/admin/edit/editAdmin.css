@@ -151,6 +151,7 @@
 .box_id_student {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .box_id_student input {
   width: 148px;
@@ -158,6 +159,16 @@
   border: 1px solid #e7ecef;
   margin-top: 6px;
   border-radius: 8px;
+}
+
+.search_list_data_user {
+  position: absolute;
+  top: 70px;
+  /* background-color: red; */
+}
+.search_list_data_user_active {
+  height: 60px;
+  overflow-y: scroll;
 }
 
 .box_add_student_in_teacher_major_student label {
@@ -175,6 +186,7 @@
 
   color: #777777;
 }
+
 .box_add_student_in_teacher_major_student {
   display: flex;
   flex-direction: row;
@@ -256,6 +268,18 @@
   /* Text/Black */
 
   color: #333333;
+}
+.select_item_user_fullname_th {
+  display: flex;
+  /* background: rebeccapurple; */
+  flex-direction: row;
+  gap: 8px;
+}
+.user_fullname_th_container_class{
+  width: 100%;
+  display: flex;
+  /* gap: 8px; */
+  /* background-color: #333333; */
 }
 
 @media only screen and (min-width: 1441px) {
