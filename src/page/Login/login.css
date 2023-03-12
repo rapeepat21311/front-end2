@@ -227,6 +227,11 @@
 	border: none;
 	color: #ffff;
 	background: #274C77;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
 	/* background-color: red; */
 }
 
@@ -248,7 +253,7 @@
 
 .box_forget {
 	display: flex;
-	background-color: bisque;
+	/* background-color: bisque; */
 	position: absolute;
 	padding: 10px;
 	/* margin-left: 100px; */
