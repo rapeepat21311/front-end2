@@ -152,7 +152,7 @@ function Login() {
                 </div>
               </div>
               <div className="submit">
-                <button type="submit">บันทึก</button>
+                <button type="submit">เข้าสู่ระบบ</button>
               </div>
             </form>
           </div>
