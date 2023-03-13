@@ -49,7 +49,7 @@ export default function ProfileStudent() {
 
   useEffect(() => {
     loadData(user.token, user._id);
-    // console.log(editValuesInput);
+    console.log(user, "userData");
   }, []);
   // console.log("check ----> ", user.username);
   // const [user, setUser] = useContext(userContext);
@@ -67,9 +67,10 @@ export default function ProfileStudent() {
     e?.preventDefault();
 
     editProfile(user.token, user._id, profileUser)
-      .then((res) => {navigate("/profile")
-      console.log(res.data)
-    })
+      .then((res) => {
+        navigate("/profile");
+        console.log(res.data);
+      })
       .catch((err) => {
         alert(err.response);
       });
@@ -78,6 +79,10 @@ export default function ProfileStudent() {
   const handleClickEdit = () => {
     setEditInput(!editInput);
   };
+
+  useEffect(() => {
+    console.log("hello", user);
+  }, [user]);
 
   const handleChangeValue = (e) => {
     e?.preventDefault();
@@ -198,7 +203,14 @@ export default function ProfileStudent() {
           ) : (
             <>
               <div className="student_profile_image">
-                <img src={`http://localhost:8080/uploads/${user.data.user_image}`} alt="Uploaded Image" />
+                <img
+                  src={
+                    user.user_image
+                      ? `http://localhost:8080/uploads/${user.user_image}`
+                      : null
+                  }
+                  alt="Uploaded Image"
+                />
                 <div className="profile_student_image_name">
                   <p>{editValuesInput.student_id}</p>
                   <p>{editValuesInput.user_fullname_th}</p>
