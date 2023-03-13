@@ -46,6 +46,18 @@ export const deleteUser = async (authtoken, id) => {
   });
 };
 
+export const editProfile = async (authtoken, id, values) => {
+  return await axios.put(
+    process.env.REACT_APP_API + "/editprofile/" + id,
+    values,
+    {
+      headers: {
+        authtoken,
+      },
+    }
+  );
+};
+
 // export const updateUser = async (authtoken, id, values) => {
 //   return await axios.put(
 //     process.env.REACT_APP_API + "/edit_user/" + id,

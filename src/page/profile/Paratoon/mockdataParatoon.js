@@ -5,7 +5,7 @@ export const mockDataParacapital = [
     money: "32,020",
     remaining: "26,020",
     type: "E30",
-    funder: " - ",
+    funder: " มหาวิทยาลัยนอร์ทกรุงเทพ ",
     capitalDiscount: "0",
   },
   {
@@ -14,7 +14,7 @@ export const mockDataParacapital = [
     money: " - ",
     remaining: "-",
     type: "E30",
-    funder: " - ",
+    funder: " มหาวิทยาลัยนอร์ทกรุงเทพ",
     capitalDiscount: "9,000",
   },
   {
@@ -23,7 +23,7 @@ export const mockDataParacapital = [
     money: " - ",
     remaining: "-",
     type: "E30",
-    funder: " - ",
+    funder: " มหาวิทยาลัยนอร์ทกรุงเทพ ",
     capitalDiscount: "9,000",
   },
   {
@@ -32,7 +32,7 @@ export const mockDataParacapital = [
     money: "26,020",
     remaining: "-",
     type: "E30",
-    funder: " - ",
+    funder: " มหาวิทยาลัยนอร์ทกรุงเทพ ",
     capitalDiscount: "0",
   },
   {
@@ -41,7 +41,7 @@ export const mockDataParacapital = [
     money: " - ",
     remaining: "-",
     type: "E30",
-    funder: "-",
+    funder: "มหาวิทยาลัยนอร์ทกรุงเทพ",
     capitalDiscount: "9,000",
   },
   {
@@ -50,7 +50,7 @@ export const mockDataParacapital = [
     money: " - ",
     remaining: "-",
     type: "E30",
-    funder: " - ",
+    funder: " มหาวิทยาลัยนอร์ทกรุงเทพ ",
     capitalDiscount: "9,000",
   },
   {
@@ -59,7 +59,7 @@ export const mockDataParacapital = [
     money: "26,020",
     remaining: "-",
     type: "E30",
-    funder: " - ",
+    funder: " มหาวิทยาลัยนอร์ทกรุงเทพ ",
     capitalDiscount: "0",
   },
   // {

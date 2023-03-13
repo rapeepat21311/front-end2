@@ -95,6 +95,12 @@
     justify-content: flex-start;
     gap: 19px;
     align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
     /* background-color: rgb(217, 144, 48); */
   }
   .test_week_day_activity h4{
@@ -104,6 +110,12 @@
     flex-direction: row;
     margin-left: 200px;
     justify-content: flex-end;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
     /* align-items: flex-end; */
     /* margin-left: 50px; */
   }
@@ -118,6 +130,12 @@
     /* align-items: flex-end; */
     justify-content: flex-end;
     width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
     /* background-color: antiquewhite; */
   }
 

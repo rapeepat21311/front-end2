@@ -1,55 +1,54 @@
-import React, { useContext, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
-// import "../HeaderOption/headerOption.css";
 
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
-// import HeaderOptions from "../HeaderOption/headerOption";
-// import grade from "../../page/grade";
+import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 
-import { Link, Navigate } from "react-router-dom";
-import { defaultUser } from "../../../page/Login/user";
-import AuthContext from "../../../context/AuthProvider";
+import { userReducerConst } from "../../reducer/consUserRed";
+
+import { useDispatch } from "react-redux";
+
+import iconNbu from "./../../../image/Logo_NBU_png_1.png";
 
 function Header() {
-  const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { user } = useSelector((state) => ({ ...state }));
 
-  const { user, setUser } = useContext(AuthContext);
+  const [profileBar, setProfileBar] = useState(false);
 
-  const handleOpen = () => {
-    setOpen(!open);
+  const showLoginLogOut = () => setProfileBar(!profileBar);
+
+  const Login = () => {
+    navigate("/");
   };
 
-  const onLogout = () => {
-    setUser(defaultUser);
-    Navigate("/login");
-    console.log(user);
+  const Logout = () => {
+    navigate("/");
+    dispatch({ type: userReducerConst.LOG_OUT, payload: null });
   };
 
   return (
     <div className="Header">
       <div className="Header_left">
-        <h1> EPORTFOLIO </h1>
+        <img src={iconNbu} />
       </div>
 
       <div className="Header_center">
-        <Link className="link" to="/">
-          <HomeOutlinedIcon />
+        <Link className="link" to="/dashboard">
+          หน้าหลัก
         </Link>
-        <h3>
-          <Link className="link" to="/grade">
-            ผลการเรียน
-          </Link>
-        </h3>
         <h3>
           <Link className="link" to="/profile">
             ประวัตินักศึกษา
           </Link>
         </h3>
         <h3>
-          <Link className="link" to="/capital">
-            ภาระทุน
+          <Link className="link" to="/favorite">
+            กิจกรมที่สนใจ
           </Link>
         </h3>
         <h3>
@@ -57,35 +56,36 @@ function Header() {
             ข่าวสารและกิจกรรม
           </Link>
         </h3>
-        <h3>
-          <Link className="link" to="/classl">
-            ตารางเรียน/สอบ
-          </Link>
-        </h3>
-        <h3>
-          <Link className="link" to="/review">
-            ตรวจสอบจบ
-          </Link>
-        </h3>
       </div>
 
       <div className="header_right">
-        <button onClick={handleOpen}>
+        <div className="profile_login_logout_navbar" onClick={showLoginLogOut}>
           <AccountCircleIcon />
-        </button>
-        {open ? (
-          <ul>
-            <a href="/login" onClick={onLogout}>
-              Log Out
-            </a>
-          </ul>
-        ) : (
-          <div>Is closed </div>
-        )}
+        </div>
 
-        {/* <Link to="/login">
-          <HeaderOptions Icon={AccountCircleIcon} />
-        </Link> */}
+        <div>
+          {profileBar ? (
+            <div>
+              {user !== null ? (
+                <p
+                  className={profileBar ? "log_out_active" : "log_out"}
+                  onClick={Logout}
+                >
+                  Log out
+                </p>
+              ) : (
+                <p
+                  className={profileBar ? "log_out_active" : "log_out"}
+                  onClick={Login}
+                >
+                  Log in
+                </p>
+              )}
+            </div>
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
     </div>
   );

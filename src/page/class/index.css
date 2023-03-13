@@ -23,42 +23,53 @@
   0% {
     background-position: 0% 46%;
   }
+
   50% {
     background-position: 100% 55%;
   }
+
   100% {
     background-position: 0% 46%;
   }
 }
+
 @-moz-keyframes Header {
   0% {
     background-position: 0% 46%;
   }
+
   50% {
     background-position: 100% 55%;
   }
+
   100% {
     background-position: 0% 46%;
   }
 }
+
 @-o-keyframes Header {
   0% {
     background-position: 0% 46%;
   }
+
   50% {
     background-position: 100% 55%;
   }
+
   100% {
     background-position: 0% 46%;
   }
 }
+
 @keyframes Header {
   0% {
     background-position: 0% 46%;
   }
+
   50% {
     background-position: 100% 55%;
   }
+
   100% {
     background-position: 0% 46%;
   }
@@ -68,12 +79,13 @@
   display: flex;
   justify-content: flex-start;
   width: 70%;
-  
+
 }
 
 .class_title h1 {
   font-size: 48px;
   padding-top: 40px;
+
   align-items: flex-start;
   color: #0d47a1;
 }
@@ -99,12 +111,12 @@
 
 .class_tab_text {
   cursor: pointer;
-  font-family: "Roboto";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 32px;
-  color: #faf9f6;
+  color: #274c77;
 }
 
 .class_tab_text:hover {
@@ -116,7 +128,7 @@
 }
 
 .class h3 {
-  color: white;
+  color: #274c77;
   padding: 10px;
 }
 
@@ -129,7 +141,8 @@
   margin-top: 16px;
   /* background-color: rgb(68, 1, 59); */
 }
-.class_header{
+
+.class_header {
   display: flex;
   margin-top: 24px;
   border-bottom: 1px solid #ffffff;
@@ -138,8 +151,10 @@
   width: 70%;
   justify-content: flex-start;
   cursor: pointer;
+  gap: 8px;
 
 }
+
 .class_header p {
   font-size: 14px;
 }
@@ -151,7 +166,7 @@
   /* width: 100%; */
   /* margin-top: 16px; */
   /* margin-left: 20px; */
-  font-family: "Roboto";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -160,19 +175,20 @@
   /* justify-content: flex-end; */
   /* background-color: blue; */
   height: 40px;
-  top:10px;
+  top: 10px;
   right: 10px;
   position: absolute;
   /* position: relative; */
   /* margin-left: 10%; */
 }
-.select_C select{
+
+.select_C select {
   width: 103px;
   height: 100%;
   text-align: center;
   border-radius: 8px;
   padding: 8px 8px 8px 16px;
-  font-family: "Roboto";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -190,7 +206,7 @@
   margin-right: 5px;
 }
 
-.class_table_container{
+.class_table_container {
   display: flex;
   width: 100%;
   /* background-color: #3d3b63; */
@@ -209,27 +225,43 @@
   text-align: center;
   margin-bottom: 50px;
   margin-top: 40px;
-  
+
 }
+
 .class_table_container thead {
   background-color: #8B8C89;
- 
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
 }
+
 .class_table_container th {
   letter-spacing: 0.3px;
   /* text-shadow: 0 1px 1px #2b2a466b; */
   text-align: center;
 }
-.class_table_container table > thead > tr > th {
+
+.class_table_container table>thead>tr>th {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .class_table_container td {
   background-color: #ffffff;
   color: black;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 }
+
 .class_table_container td strong {
   color: white;
 }
+
 .class_table_container td,
 .class_table_container th {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -237,7 +269,7 @@
 }
 
 
-.test_table_container{
+.test_table_container {
   display: flex;
   width: 100%;
   /* background-color: #3d3b63; */
@@ -256,27 +288,33 @@
   text-align: center;
   margin-bottom: 50px;
   margin-top: 40px;
-  
+
 }
+
 .test_table_container thead {
   background-color: #8B8C89;
- 
+
 }
+
 .test_table_container th {
   letter-spacing: 0.3px;
   /* text-shadow: 0 1px 1px #2b2a466b; */
   text-align: center;
 }
-.test_table_container table > thead > tr > th {
+
+.test_table_container table>thead>tr>th {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .test_table_container td {
   background-color: #ffffff;
   color: black;
 }
+
 .test_table_container td strong {
   color: white;
 }
+
 .test_table_container td,
 .test_table_container th {
   border: 1px solid rgba(0, 0, 0, 0.1);

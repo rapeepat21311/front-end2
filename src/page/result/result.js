@@ -1,13 +1,15 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { useSelector } from "react-redux";
 import Header from "../../component/navbar/Header/Header";
-import "./result.css";
+import "./result.scss";
 import Table from "./table/table_info";
 import Card from "./resultCard";
 import TableGpa from "./table/tableGpa";
 import Footer from "../../component/navbar/Footer/Footer";
 
-import IconProfile from "../../image/supakorn.png";
+import IconProfile from "../../image/IconProfile.png";
+import Gradeleft from "../../image/Gradecount.png"
+import Graderight from "../../image/Gradecountright.png"
 
 
 
@@ -74,11 +76,12 @@ export default function Result() {
               <img src={IconProfile}/>
             </div>
             <div className="result_student_info">
-              <h3>{"นาย"}</h3>
-              <h1>{"ศุภกร กลีบพุฒ"}</h1>
-              <h3>
+              <p>{"นาย"}</p>
+              <h1>{"ศุภกร"}</h1>
+              <h1>{"กลีบพุฒ"}</h1>
+              <p>
                 รุ่น: {"SWE62"} ID: {"621113759"}
-              </h3>
+              </p>
             </div>
             <div className="result_group">
               <div className="result_group_section">
@@ -89,24 +92,30 @@ export default function Result() {
               </div>
               <div className="result_group_row">
                 <div className="result_group_section">
-                  <p className="result_group_text_label">สาขา :</p>
+                  <div className="result_group_sub_section">
+                  <p className="result_group_text_label_mj">สาขา :</p>
                   <p className="result_group_text_highlight">
                     {"วิศวกรรมซอฟต์แวร์"}
                   </p>
+                  </div>
                 </div>
                 <div className="result_group_section">
-                  <p className="result_group_text_label">การศึกษา :</p>
+                  <div className="result_group_sub_section_ed">
+                  <p className="result_group_text_label_ed">การศึกษา :</p>
                   <p className="result_group_text_highlight">{"ภาคปกติ"}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div className="grade_sum">
-          <Card
+          <img src={Gradeleft}/>
+          <img src={Graderight}/>
+          {/* <Card
             topic="ผลการเรียนเฉลี่ย"
             abbr="GPA"
-            date={"2/2565"}
+            dates="2/2565"
           
           />
           <Card
@@ -114,7 +123,7 @@ export default function Result() {
             abbr="GPAX"
             date={"1/2562-2/2565"}
             icon="graph"
-          />
+          /> */}
         </div>
           <div className="select_year">
             <h4>ภาคเรียนที่</h4>

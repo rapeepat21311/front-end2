@@ -5,21 +5,31 @@ import { useSelector } from "react-redux";
 // import { listUser, readUser } from "../../../route/function/user";
 import EditRoundedIcon from "@mui/icons-material/EditRounded";
 
-import "./profileStudent.css";
-import { readUser, updateUser } from "../../../route/function/user";
+import "./profileStudent.scss";
+import {
+  editProfile,
+  readUser,
+  updateUser,
+} from "../../../route/function/user";
 import { useNavigate } from "react-router";
 
-import IconProfile from "../../../image/supakorn.png"
+import IconProfile from "../../../image/supakorn.png";
 
 export default function ProfileStudent() {
   const { user } = useSelector((state) => ({ ...state }));
+  // const [users , setUser] =useState({})
   const navigate = useNavigate();
-
+  const [profileUser, setProfileUser] = useState({
+    user_fullname_th: user.user_fullname_th,
+    user_fullname_eng: user.user_fullname_eng,
+    email: user.email,
+    phone_number: user.phone_number,
+  });
   const [editValuesInput, setEditValuesInput] = useState({});
 
   const [valueUser, setValueUser] = useState({
-    user_fullname: editValuesInput.user_fullname,
-    name_eng: editValuesInput.name_eng,
+    user_fullname_th: editValuesInput.user_fullname_th,
+    user_fullname_eng: editValuesInput.user_fullname_eng,
     phone_number: editValuesInput.phone_number,
     email: editValuesInput.email,
   });
@@ -47,6 +57,23 @@ export default function ProfileStudent() {
   //   //code
   //   loadData();
   // }, []);
+  const handleChange = (e) => {
+    e?.preventDefault();
+
+    const { name, value } = e.target;
+    setProfileUser((prev) => ({ ...prev, [name]: value }));
+  };
+  const handleSubmit = (e) => {
+    e?.preventDefault();
+
+    editProfile(user.token, user._id, profileUser)
+      .then((res) => {navigate("/profile")
+      console.log(res.data)
+    })
+      .catch((err) => {
+        alert(err.response);
+      });
+  };
 
   const handleClickEdit = () => {
     setEditInput(!editInput);
@@ -79,8 +106,8 @@ export default function ProfileStudent() {
           <p onClick={handleClickEdit}>
             {editInput ? (
               <div className="student_button_close_submit">
-                <button onClick={handleClickEdit}>ยกเลิก</button>
-                <button onClick={handleClickSubmit}>บันทึก</button>
+                <button onClick={handleChange}>ยกเลิก</button>
+                <button onClick={handleSubmit}>บันทึก</button>
               </div>
             ) : (
               <EditRoundedIcon />
@@ -96,19 +123,19 @@ export default function ProfileStudent() {
                     <h4>ชื่อ(ภาษาไทย) </h4>
                     <input
                       type="text"
-                      name="user_fullname"
+                      name="user_fullname_th"
                       autoComplete="off"
-                      onChange={handleChangeValue}
-                      defaultValue={editValuesInput.user_fullname}
+                      onChange={handleChange}
+                      defaultValue={editValuesInput.user_fullname_th}
                     />
                     <h4>ชื่อ(ภาษาอังกฤษ) </h4>
                     <input
                       className="student_can_change"
                       type="text"
-                      name="name_eng"
+                      name="user_fullname_eng"
                       autoComplete="off"
-                      onChange={handleChangeValue}
-                      defaultValue={editValuesInput.name_eng}
+                      onChange={handleChange}
+                      defaultValue={editValuesInput.user_fullname_eng}
                     />
                   </div>
                   <h4>รหัสนักศึกษา </h4>
@@ -130,7 +157,7 @@ export default function ProfileStudent() {
                       type="email"
                       name="email"
                       autoComplete="off"
-                      onChange={handleChangeValue}
+                      onChange={handleChange}
                       defaultValue={editValuesInput.email}
                     />
                     <h4>เบอร์มือถือ</h4>
@@ -138,7 +165,7 @@ export default function ProfileStudent() {
                       type="tel"
                       name="phone_number"
                       autoComplete="off"
-                      onChange={handleChangeValue}
+                      onChange={handleChange}
                       defaultValue={editValuesInput.phone_number}
                     />
                   </div>
@@ -171,10 +198,10 @@ export default function ProfileStudent() {
           ) : (
             <>
               <div className="student_profile_image">
-                <img src={IconProfile} />
+                <img src={`http://localhost:8080/uploads/${user.data.user_image}`} alt="Uploaded Image" />
                 <div className="profile_student_image_name">
                   <p>{editValuesInput.student_id}</p>
-                  <p>{editValuesInput.user_fullname}</p>
+                  <p>{editValuesInput.user_fullname_th}</p>
                 </div>
                 <div className="status_student">
                   <p
@@ -192,7 +219,7 @@ export default function ProfileStudent() {
                 <h4>รหัสนักศึกษา </h4>
                 <p>{editValuesInput.student_id}</p>
                 <h4>ชื่อ(ภาษาไทย) </h4>
-                <p>{editValuesInput.user_fullname}</p>
+                <p>{editValuesInput.user_fullname_th}</p>
                 <h4>คณะ </h4>
                 <p>{editValuesInput.faculty}</p>
                 <h4>ปีการศึกษาที่เข้า</h4>
@@ -206,7 +233,7 @@ export default function ProfileStudent() {
                 <h4>เลขประจำตัวประชาชน </h4>
                 <p> {editValuesInput.id_number}</p>
                 <h4>ชื่อ(ภาษาอังกฤษ) </h4>
-                <p>{editValuesInput.name_eng}</p>
+                <p>{editValuesInput.user_fullname_eng}</p>
                 <h4>สาขาวิชา </h4>
                 <p>{editValuesInput.major}</p>
                 <h4>อีเมล </h4>
@@ -231,7 +258,7 @@ export default function ProfileStudent() {
           </div>
           <div className="number_phone_home">
             <h4>หมายเลขโทรศัพท์มือถือ</h4>
-            <p>{"05555-888888-555"}</p>
+            <p>{editValuesInput.phone_number}</p>
           </div>
           <div className="private_address">
             <h4>ที่อยู่ปัจจุบัน</h4>
