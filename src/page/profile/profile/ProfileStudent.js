@@ -237,7 +237,7 @@ export default function ProfileStudent() {
                 <h4>ปีการศึกษาที่เข้า</h4>
                 <p>{editValuesInput.year}</p>
                 <h4>ชั้นปีที่</h4>
-                <p>{"4"}</p>
+                <p>{user.year}</p>
                 <h4>สถานภาพ</h4>
                 <p>{editValuesInput.student_status}</p>
               </div>
@@ -249,9 +249,9 @@ export default function ProfileStudent() {
                 <h4>สาขาวิชา </h4>
                 <p>{editValuesInput.major}</p>
                 <h4>อีเมล </h4>
-                <p>{editValuesInput.email}</p>
+                <p>{editValuesInput.student_email_education}</p>
                 <h4>ชื่อรุ่น</h4>
-                <p>{"SWE62"}</p>
+                <p>{editValuesInput.model_name}</p>
               </div>
             </>
           )}
@@ -266,7 +266,7 @@ export default function ProfileStudent() {
         <div className="student_private_phone_number">
           <div className="number_phone_home">
             <h4>หมายเลขโทรศัพท์บ้าน</h4>
-            <p>{"05555-888888-555"}</p>
+            <p>{editValuesInput.phone_number_phone}</p>
           </div>
           <div className="number_phone_home">
             <h4>หมายเลขโทรศัพท์มือถือ</h4>
@@ -274,11 +274,7 @@ export default function ProfileStudent() {
           </div>
           <div className="private_address">
             <h4>ที่อยู่ปัจจุบัน</h4>
-            <p>
-              {
-                "เลขที่ 77/102-103 อาคารสินสาธร ชั้น 25 นนกรุงธนบุรี แขวงคลองต้นไทร เขตคลองสาน กรุงเทพมหานคร 10600"
-              }
-            </p>
+            <p>{editValuesInput.last_address}</p>
           </div>
         </div>
       </div>
@@ -290,17 +286,17 @@ export default function ProfileStudent() {
         <div className="document_student_study_container">
           <div className="document_student_study_left">
             <h4>ระดับการศึกษา</h4>
-            <p>{"ปริญญาตรี"}</p>
+            <p>{editValuesInput.last_level_student}</p>
             <h4>แผนการเรียน</h4>
-            <p>{"ศิลป์คำนวณ"}</p>
+            <p>{editValuesInput.last_major}</p>
             <h4>เกรดระดับมัธยม</h4>
-            <p>{"2.92"}</p>
+            <p>{editValuesInput.gpx_hight_school}</p>
           </div>
           <div className="document_student_study_right">
             <h4>สถานศึกษา</h4>
-            <p>{"โรงเรียนนวมินทราชินูทิศ เตรียมอุดมศึกษาพัฒนาการ"}</p>
+            <p>{editValuesInput.old_school}</p>
             <h4>ปีจบการศึกษา</h4>
-            <p>{"2560"}</p>
+            <p>{editValuesInput.year_end_old_school}</p>
           </div>
         </div>
       </div>
@@ -312,17 +308,17 @@ export default function ProfileStudent() {
         </div>
         <div className="student_teacher_profile_text_left">
           <h4>อาจารย์ที่ปรึกษา</h4>
-          <p>{editValuesInput.advisor}</p>
+          <p>{"อาจารย์พลวัฒน์ ต่อตระกูล"}</p>
           <h4>คณะ</h4>
-          <p> {editValuesInput.faculty}</p>
+          <p> {"เทคโนโลยีสารสนเทศ"}</p>
           <h4>สาขาวิชา</h4>
-          <p> {editValuesInput.major}</p>
+          <p> {"วิศวกรรมซอฟต์แวร์"}</p>
         </div>
         <div className="student_teacher_profile_text_right">
           <h4>เบอร์โทรศัพท์อาจารย์ที่ปรึกษา</h4>
-          <p>{editValuesInput.phone_number_advisor}</p>
+          <p>{"011111111111"}</p>
           <h4>อีเมล์อาจารย์ที่ปรึกษา</h4>
-          <p>{editValuesInput.email_advisor}</p>
+          <p>{"029-5555-55"}</p>
         </div>
       </div>
     </div>
