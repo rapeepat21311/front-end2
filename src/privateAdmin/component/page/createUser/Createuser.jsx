@@ -538,7 +538,7 @@ function Createuser() {
           className="button_unsubmit_container"
           onClick={() => navigate("/admin-page/list-user")}
         >
-          <button className="button_unsubmit">ยกเลิก</button>
+          <button className="button_unsubmit" onClick={() => navigate("/admin-page/list-user")}>ยกเลิก</button>
         </div>
         <div
           className="button_onsubmit_container"

@@ -19,6 +19,7 @@ import Pagination_admin from "../../../componentReuse/paginationAdmin/pagination
 import "../../listUser/listuser.css";
 import { deleteAdmin, readAdmins } from "../../../../../route/function/admin";
 import Viewlist_admin from "../../../componentReuse/view_list_admin";
+import Swal from "sweetalert2";
 
 function ListAdmin() {
   const { user } = useSelector((state) => ({ ...state }));
@@ -50,14 +51,30 @@ function ListAdmin() {
   };
 
   const onDeleteAdminId = (authtoken, id) => {
-    deleteAdmin(authtoken, id)
-      .then((res) => {
-        alert(res.data.msg);
-        window.location.reload(true);
-      })
-      .catch((err) => {
-        alert(err);
-      });
+    Swal.fire({
+      titleText: "คุณต้องการที่จะลบ ใช่หรือไม่?",
+      icon: "warning",
+      confirmButtonColor: "green",
+      confirmButtonText: "ยืนยัน",
+      showCloseButton: true,
+      closeButtonHtml: "ยกเลิก",
+    }).then((res) => {
+      if (res.isConfirmed) {
+        deleteAdmin(authtoken, id)
+          .then((res) => {
+            Swal.fire({
+              titleText: "ลบสำเร็จ",
+            }).then((res) => {
+              if (res.isConfirmed) {
+                window.location.reload(true);
+              }
+            });
+          })
+          .catch((err) => {
+            alert(err);
+          });
+      }
+    });
   };
 
   // const sendId = (authtoken, id, vales) => {

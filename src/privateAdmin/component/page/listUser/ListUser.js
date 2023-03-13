@@ -25,6 +25,7 @@ function ListUser() {
   const { user } = useSelector((state) => ({ ...state }));
   const navigate = useNavigate();
 
+  const [search, setSearch] = useState("");
   const [viewuser, setViewuser] = useState(false);
   const [userId, setUserId] = useState("");
   const [data, setData] = useState([]);
@@ -40,39 +41,27 @@ function ListUser() {
     setCurrentPage(pageNumber);
   };
 
-  const datamock = [
-    {
-      id: "22",
-    },
-  ];
-
   const userIdData = (_id) => {
     setUserId(_id);
   };
 
-  // const [vales, setValues] = useContext();
   useEffect(() => {
     loadData(user.token);
-    console.log("userId ==>", userId);
-    // sendId(user.token);
   }, []);
 
-  // const sendId = (authtoken, id, vales) => {
-  //   updateUser(authtoken, id, vales)
-  //     .then((res) => {
-  //       console.log("ส่งไอดีได้บ่อ", res.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
-  // console.log(sendId);
+  useEffect(() => {
+    if (search.length > 2) {
+    }
+  }, []);
+
   const onDeleteUser = (ID) => {
     Swal.fire({
-      titleText: "ยืนยันที่จะลบไหม",
+      titleText: "คุณต้องการที่จะลบ ใช่หรือไม่?",
       icon: "warning",
       confirmButtonColor: "green",
+      confirmButtonText: "ยืนยัน",
       showCloseButton: true,
+      closeButtonHtml: "ยกเลิก",
     }).then((result) => {
       if (result.isConfirmed) {
         deleteUser(user.token, ID)
@@ -232,7 +221,7 @@ function ListUser() {
             <Viewlist
               onClose={() => setViewuser(false)}
               id={userId}
-              data={datamock}
+              // data={datamock}
             />
           ) : null}
         </div>

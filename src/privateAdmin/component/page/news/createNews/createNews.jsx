@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import "./create_news.scss";
 
 import fileImage from "../../../../../image/vector (17).png";
@@ -13,6 +13,11 @@ function CreateNews() {
   const [pdffileName, setPDFFileName] = useState("");
   const [fileName, setFilename] = useState("No select File");
   const [value, setValue] = useState("");
+
+  useEffect(() => {
+    console.log("file", fileName);
+    console.log("pdffile", pdffileName);
+  }, [fileName,pdffile]);
 
   return (
     <div className="create_news_page_container">

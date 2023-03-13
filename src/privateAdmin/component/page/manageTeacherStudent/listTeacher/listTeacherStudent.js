@@ -75,7 +75,7 @@ function ListTeacherStudent() {
 
   const deleteAvisor = (id) => {
     Swal.fire({
-      titleText: "ยืนยันที่จะลบหรือไม่ ?",
+      titleText: "คุณต้องการที่จะลบ ใช่หรือไม่?",
       icon: "question",
       confirmButtonText: "ยืนยัน",
       confirmButtonColor: "green",

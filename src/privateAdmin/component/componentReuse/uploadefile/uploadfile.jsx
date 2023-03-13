@@ -8,6 +8,7 @@ function Uploadfile({
   placeholder,
   setFilename,
   setImage,
+  multiple_file,
 }) {
   return (
     <div className="student_avatar">

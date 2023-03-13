@@ -185,7 +185,12 @@ function EditTeachersManageStudent() {
       </div>
       <div className="button_onsubmit_unsubmit_container">
         <div className="button_unsubmit_container">
-          <button className="button_unsubmit">ยกเลิก</button>
+          <button
+            className="button_unsubmit"
+            onClick={() => naviagete("/admin-page/manage-teacher")}
+          >
+            ยกเลิก
+          </button>
         </div>
         <div className="button_onsubmit_container">
           <button className="button_onsubmit" onClick={onClickEdit}>

@@ -63,10 +63,12 @@ function ListTeacher() {
   // console.log(sendId);
   const onDeleteUser = (ID) => {
     Swal.fire({
-      titleText: "ยืนยันที่จะลบไหม",
+      titleText: "คุณต้องการที่จะลบ ใช่หรือไม่?",
       icon: "warning",
       confirmButtonColor: "green",
+      confirmButtonText: "ยืนยัน",
       showCloseButton: true,
+      closeButtonHtml: "ยกเลิก",
     }).then((result) => {
       if (result.isConfirmed) {
         deleteTeacher(user.token, ID)
