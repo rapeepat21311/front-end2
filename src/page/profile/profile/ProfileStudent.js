@@ -111,8 +111,8 @@ export default function ProfileStudent() {
           <p onClick={handleClickEdit}>
             {editInput ? (
               <div className="student_button_close_submit">
-                <button onClick={handleChange}>ยกเลิก</button>
-                <button onClick={handleSubmit}>บันทึก</button>
+                <button className="button_close" onClick={handleChange}>ยกเลิก</button>
+                <button className="button_submit" onClick={handleSubmit}>บันทึก</button>
               </div>
             ) : (
               <EditRoundedIcon />
@@ -204,13 +204,8 @@ export default function ProfileStudent() {
             <>
               <div className="student_profile_image">
                 <img
-                  src={
-                    user.user_image
-                      ? `http://localhost:8080/uploads/${user.user_image}`
-                      : null
-                  }
-                  alt="Uploaded Image"
-                />
+                  src={user.user_image? `http://localhost:8080/uploads/${user.user_image}`: null}
+                  alt="Uploaded Image" />
                 <div className="profile_student_image_name">
                   <p>{editValuesInput.student_id}</p>
                   <p>{editValuesInput.user_fullname_th}</p>

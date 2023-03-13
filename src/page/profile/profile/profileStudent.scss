@@ -20,6 +20,82 @@
   margin-right: 24px;
 }
 
+.student_button_close_submit{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  // padding: 0px;
+  gap: 16px;
+  
+  width: 170px;
+  height: 32px;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  // background-color: #93c47d;
+}
+
+.button_close {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px;
+  gap: 6px;
+  
+  width: 83px;
+  height: 32px;
+  
+  /* Interactive/04 */
+  
+  background: #E7ECEF;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 99px;
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+.button_submit {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px;
+  gap: 6px;
+  
+  width: 71px;
+  height: 32px;
+
+  color: #ffffff;
+  
+  background: #0B539E;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 99px;
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
 .student_profile_image {
   display: flex;
   width: 35%;

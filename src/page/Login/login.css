@@ -258,5 +258,7 @@
 	padding: 10px;
 	/* margin-left: 100px; */
 	margin-left: 400px;
-
+	cursor: pointer;
 }
+
+.box_forget :hover{}

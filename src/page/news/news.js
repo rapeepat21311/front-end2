@@ -17,6 +17,9 @@ import RoomIcon from "@mui/icons-material/Room";
 import EastIcon from "@mui/icons-material/East";
 import BowlingImg from "../../image/Bowling.png"
 import { useNavigate } from "react-router";
+import CardEvent from "../../image/CardsEvent.png"
+import CardEventLastes from "../../image/CardsEventlastes.png"
+import Newlastes from "../../image/newlastes.png"
 
 
 const config = {
@@ -126,7 +129,11 @@ function News() {
               )}
             </h2>
           </div>
+          <div className="news_update_box_container_f">
+            <img src={CardEvent}/>
+          </div>
           <div className="news_update_box_cotainer">
+            <img src={CardEventLastes}/>
             {/* <LastesNews
               mockDataLastesNews={lastesNewsData}
               currentPage={currentPage}
@@ -158,13 +165,8 @@ function News() {
               )}
             </h2>
           </div>
-          <div className="news_update_box_cotainer">
-            <LastedEvent
-              mockDataLastedEvent={lastedEvent}
-              currentPage={currentPage}
-              perPage={lastedNewsPerPage}
-            />
-          </div>
+
+          
         </div>
         <Footer />
       </div>

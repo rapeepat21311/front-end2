@@ -86,7 +86,6 @@ function Login() {
           last_major : res.data.payload.user.last_major,
           year_end_old_school : res.data.payload.user.year_end_old_school,
           gpx_hight_school : res.data.payload.user.gpx_hight_school,
-          student_status: res.data.payload.user.student_status,
           user_status : res.data.payload.user.user_status,
           user_image: res.data.payload.user.user_image,
           email_education : res.data.payload.user.student_email_education,
